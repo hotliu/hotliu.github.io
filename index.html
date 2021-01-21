@@ -172,7 +172,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Working-direcotries"><a href="#Working-direcotries" class="headerlink" title="Working direcotries"></a>Working direcotries</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#96;date +%Y%m%d&#96;</span><br><span class="line">printf &quot;\n\n# Working direcotries\n\n&quot; &gt;&gt; &#96;Date&#96;.md</span><br><span class="line">subl &#96;date +%Y%m%d&#96;.md</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125; # moving &#96;.xmind&#96; to there</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125; # organize documents in schedule</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1; pcmanfm -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety; pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange"><a href="#How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange" class="headerlink" title="How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange"></a><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/69188/how-to-set-date-modified-by-date-taken-with-exiftool">How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange</a></h1><p><strong>to be solved</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/103767/how-can-i-rename-files-to-match-their-exif-created-date">metadata - How can I rename files to match their EXIF “created date”? - Photography Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">FileName and Directory tags</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7923.0">Change file(s) created date from file name?</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/faq.html">ExifTool FAQ</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=8477.0">CreateDate vs CreationDate</a></li>
+<li><a target="_blank" rel="noopener" href="https://perlmaven.com/image-exiftool-how-to-change-file-creation-date">Image::ExifTool: How to change file creation date?</a></li>
+<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/27245/is-there-a-free-program-to-batch-change-photo-files-date-to-match-exif">metadata - Is there a free program to (batch) change photo file’s date to match EXIF? - Photography Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7831.0">Change filemodifydate to datetimeoriginal if it’s not the same</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ExifTool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; DIR</span><br><span class="line">#</span><br><span class="line">exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext jpg .</span><br><span class="line">#exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext mp3 .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension jpg -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%-.3nc.%%e &quot;$@&quot;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension mp3 -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%_.1nc.%%e &quot;$@&quot;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -180,6 +194,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Exiftool</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -1249,6 +1274,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
             
             <div class="clearfix"></div>
