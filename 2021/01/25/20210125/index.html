@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>20210104 | Hongtu Liu from China CDC</title>
+  <title>20210125 | Hongtu Liu from China CDC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Well-done works 20210104">
+  <meta name="description" content="Working direcotries12i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBIpcmanfm -n $&amp;#123;i&amp;#125;; cd $&amp;#123;i&amp;#125; # SRA command&#x2F;integrity check # ref to text">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20210104">
-<meta property="og:url" content="http://example.com/2021/01/04/20210104/index.html">
+<meta property="og:title" content="20210125">
+<meta property="og:url" content="http://example.com/2021/01/25/20210125/index.html">
 <meta property="og:site_name" content="Hongtu Liu from China CDC">
-<meta property="og:description" content="Well-done works 20210104">
+<meta property="og:description" content="Working direcotries12i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBIpcmanfm -n $&amp;#123;i&amp;#125;; cd $&amp;#123;i&amp;#125; # SRA command&#x2F;integrity check # ref to text">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-04T13:32:21.000Z">
-<meta property="article:modified_time" content="2021-01-04T13:58:34.775Z">
+<meta property="article:published_time" content="2021-01-25T01:15:58.000Z">
+<meta property="article:modified_time" content="2021-01-25T01:19:00.143Z">
 <meta property="article:author" content="Hongtu Liu">
+<meta property="article:tag" content="SRA">
+<meta property="article:tag" content="integrity">
+<meta property="article:tag" content="vdb-validate">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hongtu Liu from China CDC" type="application/atom+xml">
@@ -154,28 +157,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20210104" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20210125" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      20210104
+      20210125
     </h1>
   
 
         
-        <a href="/2021/01/04/20210104/" class="archive-article-date">
-  	<time datetime="2021-01-04T13:32:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-04</time>
+        <a href="/2021/01/25/20210125/" class="archive-article-date">
+  	<time datetime="2021-01-25T01:15:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Well-done-works"><a href="#Well-done-works" class="headerlink" title="Well-done works"></a>Well-done works</h1><ul>
-<li>20210104</li>
+        <h1 id="Working-direcotries"><a href="#Working-direcotries" class="headerlink" title="Working direcotries"></a>Working direcotries</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBI</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # SRA command&#x2F;integrity check # ref to text as below</span><br></pre></td></tr></table></figure>
+<h1 id="SRA-Integrity-check"><a href="#SRA-Integrity-check" class="headerlink" title="SRA Integrity check"></a>SRA Integrity check</h1><p>You can run our <code>vdb-validate</code> tool. For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vdb-validate --option-file PRJNA_ID_SRR_Acc_List.txt</span><br></pre></td></tr></table></figure>
+<p>This will verify the internal checksums for all of the accessions in your accession list file.</p>
+<p>You can also validate one at a time. For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vdb-validate SRR000001</span><br></pre></td></tr></table></figure>
+<p>You can turn off referential integrity checks if you just want to verify the checksums. It could speed things up. For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vdb-validate -I no --option-file PRJNA_ID_SRR_Acc_List.txt</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ncbi/sra-tools/issues/189">How to check for 100% complete transfer and download? · Issue #189 · ncbi/sra-tools · GitHub</a></li>
 </ul>
 
       
@@ -206,6 +217,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SRA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">integrity</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">vdb-validate</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/04/20210104/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/25/20210125/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +300,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/06/20210106/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          20210106
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/02/20210102/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">20210102</div>
+    <a href="/2021/01/23/20210123/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20210123</div>
       <i class="icon-circle-right"></i>
     </a>
   
