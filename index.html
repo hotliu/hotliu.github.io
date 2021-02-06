@@ -174,16 +174,17 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-direcotries"><span class="toc-number">1.</span> <span class="toc-text">Working direcotries</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CPU-of-mobile-device"><span class="toc-number">2.</span> <span class="toc-text">CPU of mobile device</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-RNA-Seq-from-Wang-Jiao"><span class="toc-number">3.</span> <span class="toc-text">Check RNA-Seq from Wang Jiao</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-information-of-sequencing-package"><span class="toc-number">3.1.</span> <span class="toc-text">Basic information of sequencing package</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories-in-zip-file"><span class="toc-number">3.1.1.</span> <span class="toc-text">Directories in .zip file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Document-list"><span class="toc-number">3.1.2.</span> <span class="toc-text">Document list</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RNA-Seq-pipeline"><span class="toc-number">4.</span> <span class="toc-text">RNA-Seq pipeline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HEV-sequence-downloading"><span class="toc-number">5.</span> <span class="toc-text">HEV sequence downloading</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Database-selection"><span class="toc-number">5.1.</span> <span class="toc-text">Database selection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nucleotide-database-access"><span class="toc-number">5.2.</span> <span class="toc-text">Nucleotide database access</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SRA"><span class="toc-number">5.3.</span> <span class="toc-text">SRA</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-direcotries"><span class="toc-number">1.</span> <span class="toc-text">Working direcotries</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CPU-of-mobile-device"><span class="toc-number">2.</span> <span class="toc-text">CPU of mobile device</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-RNA-Seq-from-Wang-Jiao"><span class="toc-number">3.</span> <span class="toc-text">Check RNA-Seq from Wang Jiao</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-information-of-sequencing-package"><span class="toc-number">3.1.</span> <span class="toc-text">Basic information of sequencing package</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Directories-in-zip-file"><span class="toc-number">3.1.1.</span> <span class="toc-text">Directories in .zip file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Document-list"><span class="toc-number">3.1.2.</span> <span class="toc-text">Document list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FPKM-documents"><span class="toc-number">3.1.3.</span> <span class="toc-text">FPKM documents</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RNA-Seq-pipeline"><span class="toc-number">4.</span> <span class="toc-text">RNA-Seq pipeline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HEV-sequence-downloading-Yin-Wenjiao"><span class="toc-number">5.</span> <span class="toc-text">HEV sequence downloading&#x2F;Yin Wenjiao</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Database-selection"><span class="toc-number">5.1.</span> <span class="toc-text">Database selection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nucleotide-database-access"><span class="toc-number">5.2.</span> <span class="toc-text">Nucleotide database access</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SRA"><span class="toc-number">5.3.</span> <span class="toc-text">SRA</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-direcotries"><a href="#Working-direcotries" class="headerlink" title="Working direcotries"></a>Working direcotries</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Ab&#x2F;Selected_Ab.pdf # Ab list for Nrf2 related work</span><br><span class="line">#</span><br><span class="line">####################################################################</span><br><span class="line"># HGNC added</span><br><span class="line">####################################################################</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Database&#x2F;Management&#x2F;Database.Rmd; setsid chromium-browser $&#123;i%.Rmd&#125;.html</span><br><span class="line">subl $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Check RNA-Seq from Wang Jiao</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;GZ</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # &quot;Truncated_Rev&quot; analysis in progress</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="Working-direcotries"><a href="#Working-direcotries" class="headerlink" title="Working direcotries"></a>Working direcotries</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Ab&#x2F;Selected_Ab.pdf # Ab list for Nrf2 related work</span><br><span class="line">#</span><br><span class="line">####################################################################</span><br><span class="line"># HGNC added</span><br><span class="line">####################################################################</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Database&#x2F;Management&#x2F;Database.Rmd; setsid chromium-browser $&#123;i%.Rmd&#125;.html</span><br><span class="line">subl $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Check RNA-Seq from Wang Jiao</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;GZ</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # &quot;Truncated_Rev&quot; analysis in progress&#x2F;Dell</span><br></pre></td></tr></table></figure>
 <h1 id="CPU-of-mobile-device"><a href="#CPU-of-mobile-device" class="headerlink" title="CPU of mobile device"></a>CPU of mobile device</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/266077535">现在手机 SoC 性能大概相当于哪个时代的 PC？ - 知乎</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.lotpc.com/sjzs/5246.html">为什么相同的CPU在不同手机上体验和跑分差距很大？_手机知识-装机之家</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/38288890">为啥不用手机的系统开发嵌入式系统？ - 知乎</a></li>
 </ul>
-<h1 id="Check-RNA-Seq-from-Wang-Jiao"><a href="#Check-RNA-Seq-from-Wang-Jiao" class="headerlink" title="Check RNA-Seq from Wang Jiao"></a>Check RNA-Seq from Wang Jiao</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Check-RNA-Seq-from-Wang-Jiao"><a href="#Check-RNA-Seq-from-Wang-Jiao" class="headerlink" title="Check RNA-Seq from Wang Jiao"></a>Check RNA-Seq from Wang Jiao</h1><p><strong>To be deleted</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Basic-information-of-sequencing-package"><a href="#Basic-information-of-sequencing-package" class="headerlink" title="Basic information of sequencing package"></a>Basic information of sequencing package</h2><h3 id="Directories-in-zip-file"><a href="#Directories-in-zip-file" class="headerlink" title="Directories in .zip file"></a>Directories in <code>.zip</code> file</h3><ul>
 <li>differential<ul>
 <li>Caski-VS-Caski_FL2/, <font color = blue>Demo</font><ul>
@@ -337,7 +338,7 @@ File extension description
 </ul>
 </details>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39; | sed &quot;s|^|setsid et |&quot;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39; | sed &quot;s|^|setsid wps |&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="FPKM-documents"><a href="#FPKM-documents" class="headerlink" title="FPKM documents"></a>FPKM documents</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39; | sed &quot;s|^|setsid et |&quot;</span><br><span class="line">find $&#123;i&#125; -type f | ag &#39;.fpkm.xls&#39; | sed &quot;s|^|setsid wps |&quot;</span><br></pre></td></tr></table></figure>
 <details markdown='1'><summary>
 <font color = red size = 5>
 <center>
@@ -350,38 +351,9 @@ FPKM Tables
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;Caski.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;Caski_FL2.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;HeLa.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;HeLa_FL2.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;HeLa_tBHQ.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;SiHa.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;SiHa_FL2.fpkm.xls</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;RNA-Seq_20201106&#x2F;expression&#x2F;SiHa_tBHQ.fpkm.xls</span><br></pre></td></tr></table></figure>
 </details>
 
+<h1 id="RNA-Seq-pipeline"><a href="#RNA-Seq-pipeline" class="headerlink" title="RNA-Seq pipeline"></a>RNA-Seq pipeline</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NGS_Softs&#x2F;RNA-Seq&#x2F;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # new directory created</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NGS_Softs&#x2F;RNA-Seq&#x2F;RNA-Seq_Learning.md</span><br><span class="line">subl $&#123;i&#125; # collection of selected publication</span><br></pre></td></tr></table></figure>
 
-
-<h1 id="RNA-Seq-pipeline"><a href="#RNA-Seq-pipeline" class="headerlink" title="RNA-Seq pipeline"></a>RNA-Seq pipeline</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NGS_Softs&#x2F;RNA-Seq&#x2F;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # new directory created</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a target="_blank" rel="noopener" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2139-9">VIPER: Visualization Pipeline for RNA-seq, a Snakemake workflow for efficient and complete RNA-seq analysis | BMC Bioinformatics | Full Text</a><ul>
-<li>Additional file 1: Config Example (YAML 6 kb)</li>
-<li>Additional file 2: Metasheet Example (CSV 600 bytes)</li>
-<li>Additional file 3: Figure S2. (a) Example of the VIPER project folder. The main components are VIPER, DATA, and ANALYSIS with the input files config.yaml and metasheet.csv. (b) Expanded ANALYSIS folder illustrating the output of VIPER. The plots folder here is expanded to illustrate how the output assumes a simple hierarchical structure, and that each of the clustering figures are associated with a text file containing the underlying information. (PDF 212 kb)</li>
-<li>Additional file 4: Figure S1. Graphical overview of the computational steps performed by VIPER processing a single fastq file. The nodes of the graph represent the execution of a rule and a directed edge between node A and B means that the rule underlying node B needs the output of node A as an input. A path in the graph represents a sequence of jobs that have to be executed serially, but disjoint paths can be run in parallel. This specific directed acyclic graph (DAG) was automatically generated by VIPER based on the directive to run the rule named ‘target’, using a single fastq file as input. (PDF 436 kb)</li>
-<li>Additional file 5: Complete VIPER report in html format (HTML 10310 kb)</li>
-<li>Additional file 6: Figure S4. (a) Code snippet from the config.yaml file demonstrating the addition of a boolean flag indicating whether or not to run the genome wide SNP scan. (b) Code snippet from the snp.snakefile demonstrating the addition of rules built off of existing output (aligned STAR BAM files) and yielding additional output (genome-wide SNP scans). (PDF 104 kb)</li>
-<li>Additional file 7: Implementation and Installation [43,44,45] (Additional file 8: Figure S3). (DOCX 15 kb)</li>
-<li>Additional file 8: Figure S3. VIPER was run on a dataset (12 samples; single end data; 36.7 M reads on average) and finished in 24 h. VIPER performance during this run is captured using Ganglia on a 96GB RAM 6 processor Intel Xeon machine. (a) System usage and (b) CPU load captured showing how VIPER is parallelized across 6 processors with (c) ~35G memory utilized for the alignment part of the pipeline. (PDF 79 kb)</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6373869/">Data analysis pipeline for RNA-seq experiments: From differential expression to cryptic splicing</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/">Home | NCI Genomic Data Commons</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.bioconductor.org/packages/devel/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html">RNA-seq workflow: gene-level exploratory analysis and differential expression</a></li>
-<li><a target="_blank" rel="noopener" href="https://rna-seqblog.com/tag/pipeline/">pipeline | RNA-Seq Blog</a>, collection</li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41598-020-74567-y">Impact of RNA-seq data analysis algorithms on gene expression estimation and downstream prediction | Scientific Reports</a><ul>
-<li>Supplementary Information 1.</li>
-<li>Supplementary Table 8</li>
-<li>Supplementary Table 11</li>
-<li>Supplementary Table 12</li>
-<li>Supplementary Table 13</li>
-<li>Supplementary Table 14</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/nf-core/rnaseq">GitHub - nf-core/rnaseq: RNA sequencing analysis pipeline using STAR, RSEM, HISAT2 or Salmon with gene/isoform counts and extensive quality control.</a>, <font color = red>Good guidance</font></li>
-</ul>
-<h1 id="HEV-sequence-downloading"><a href="#HEV-sequence-downloading" class="headerlink" title="HEV sequence downloading"></a>HEV sequence downloading</h1><p><strong>Keyword of “txid12461[Organism:exp] “ was worked in web searching in NCBI database.</strong></p>
+<h1 id="HEV-sequence-downloading-Yin-Wenjiao"><a href="#HEV-sequence-downloading-Yin-Wenjiao" class="headerlink" title="HEV sequence downloading/Yin Wenjiao"></a>HEV sequence downloading/Yin Wenjiao</h1><p><strong>Keyword of “txid12461[Organism:exp] “ was worked in web searching in NCBI database.</strong></p>
 <h2 id="Database-selection"><a href="#Database-selection" class="headerlink" title="Database selection"></a>Database selection</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://ftp.ncbi.nih.gov/genomes/Viruses/">Index of /genomes/Viruses</a>，根据目录名称，确定需要下载的序列目录。</li>
 <li><a target="_blank" rel="noopener" href="http://hev.glue.cvr.ac.uk/#/home">hev.glue.cvr.ac.uk/#/home</a>，根据clades树形结构，确认HEV所属的所有学名，并确定TaxID。</li>
@@ -409,6 +381,14 @@ FPKM Tables
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Yin Wenjiao</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Wang Jiao</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HGNC</a>
         		</li>
@@ -2423,7 +2403,7 @@ sudo apt-get install sublime-text-installer</code></pre>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:lainme&#x2F;pidgin-lwqq</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
 <p>安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install pidgin-lwqq</span><br></pre></td></tr></table></figure>
-<p>PPA 也可以用于 Debian，但不保证一定能工作。另外，pidgin-lwqq-unstable 已经不再支持和更新。如果你遇到任何问题，请联系 lainme [<a href="mailto:&#108;&#97;&#x69;&#x6e;&#x6d;&#101;&#57;&#x39;&#x33;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#108;&#97;&#x69;&#x6e;&#x6d;&#101;&#57;&#x39;&#x33;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a>][15]</p>
+<p>PPA 也可以用于 Debian，但不保证一定能工作。另外，pidgin-lwqq-unstable 已经不再支持和更新。如果你遇到任何问题，请联系 lainme [<a href="mailto:&#x6c;&#x61;&#105;&#x6e;&#x6d;&#101;&#x39;&#57;&#x33;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x6c;&#x61;&#105;&#x6e;&#x6d;&#101;&#x39;&#57;&#x33;&#64;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>][15]</p>
 <h2 id="fcitx"><a href="#fcitx" class="headerlink" title="fcitx"></a>fcitx</h2><ol>
 <li>先卸载IBUS输入法</li>
 </ol>
@@ -2609,10 +2589,6 @@ sudo apt-get install sublime-text-installer</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Guo Yifan</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">BaiduNetDisk</a>
         		</li>
       		 
@@ -2630,6 +2606,10 @@ sudo apt-get install sublime-text-installer</code></pre>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Yin Wenjiao</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Guo Yifan</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -2786,22 +2766,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
               </li>
              
@@ -2826,7 +2790,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2859,18 +2851,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2918,7 +2898,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Guo Yifan</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2951,34 +2959,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3022,22 +3002,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">p62</a>
               </li>
              
@@ -3051,6 +3015,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
