@@ -8,16 +8,18 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>20210301 | Hongtu Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Working directories">
+  <meta name="description" content="Working directories1 Tree structure 使用Markdown绘制树形图 - heylypp的博客 | heylypp Blog  Codes    123456789graph TD	subgraph SVN Architecture	client1--&gt;|read &#x2F; write|SVN((SVN server))	client2--&gt;|re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20210301">
 <meta property="og:url" content="http://example.com/2021/03/01/20210301/index.html">
 <meta property="og:site_name" content="Hongtu Liu">
-<meta property="og:description" content="Working directories">
+<meta property="og:description" content="Working directories1 Tree structure 使用Markdown绘制树形图 - heylypp的博客 | heylypp Blog  Codes    123456789graph TD	subgraph SVN Architecture	client1--&gt;|read &#x2F; write|SVN((SVN server))	client2--&gt;|re">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-01T08:31:07.596Z">
+<meta property="article:modified_time" content="2021-03-01T08:56:04.647Z">
 <meta property="article:author" content="Hongtu Liu">
+<meta property="article:tag" content="Tree structure">
+<meta property="article:tag" content="Markdown syntax">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hongtu Liu" type="application/atom+xml">
@@ -184,10 +186,19 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure"><span class="toc-number">2.</span> <span class="toc-text">Tree structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">2.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">2.2.</span> <span class="toc-text">Visualization</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Tree-structure"><a href="#Tree-structure" class="headerlink" title="Tree structure"></a>Tree structure</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://150328.xyz/2020/01/22/markdown%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">使用Markdown绘制树形图 - heylypp的博客 | heylypp Blog</a></li>
+</ul>
+<h2 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h2><pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">	subgraph SVN Architecture</span><br><span class="line">	client1--&gt;|read &#x2F; write|SVN((SVN server))</span><br><span class="line">	client2--&gt;|read only|SVN</span><br><span class="line">	client3--&gt;|read &#x2F; write|SVN</span><br><span class="line">	client4--&gt;|read only|SVN</span><br><span class="line">	client5(...)--&gt;SVN</span><br><span class="line">	SVN---|store the data|sharedrive</span><br><span class="line">	end</span><br></pre></td></tr></table></figure>
+
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[工具推荐] --&gt;B(文献下载)</span><br><span class="line">A --&gt;C(文献管理)</span><br><span class="line">A --&gt;D(文件同步和存储)</span><br><span class="line">A --&gt;E(翻译辅助)</span><br><span class="line">A --&gt;F(公式书写)</span><br></pre></td></tr></table></figure></code></pre>
+<h2 id="Visualization"><a href="#Visualization" class="headerlink" title="Visualization"></a>Visualization</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    subgraph SVN Architecture</span><br><span class="line">    client1--&gt;|read &#x2F; write|SVN((SVN server))</span><br><span class="line">    client2--&gt;|read only|SVN</span><br><span class="line">    client3--&gt;|read &#x2F; write|SVN</span><br><span class="line">    client4--&gt;|read only|SVN</span><br><span class="line">    client5(...)--&gt;SVN</span><br><span class="line">    SVN---|store the data|sharedrive</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[工具推荐] --&gt;B(文献下载)</span><br><span class="line">A --&gt;C(文献管理)</span><br><span class="line">A --&gt;D(文件同步和存储)</span><br><span class="line">A --&gt;E(翻译辅助)</span><br><span class="line">A --&gt;F(公式书写)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -216,6 +227,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tree structure</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Markdown syntax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -320,7 +346,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure"><span class="toc-number">2.</span> <span class="toc-text">Tree structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">2.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">2.2.</span> <span class="toc-text">Visualization</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -752,14 +778,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
               </li>
              
@@ -792,7 +810,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -809,6 +831,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -893,6 +919,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Tree structure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Markdown syntax</a>
               </li>
              
               <li class="article-tag-list-item">
