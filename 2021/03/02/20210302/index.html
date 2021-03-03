@@ -16,7 +16,7 @@
 <meta property="og:description" content="Working directories123456789# Remove sogoupinyindpkg -l | ag sogoui&#x3D;&#39;sogoupinyin&#39;sudo dpkg -r $&amp;#123;i&amp;#125;sudo dpkg --purge $&amp;#123;i&amp;#125;#i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&amp;#x2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-03T00:20:22.422Z">
+<meta property="article:modified_time" content="2021-03-03T00:28:09.350Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta name="twitter:card" content="summary">
   
@@ -184,16 +184,18 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">搜狗输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-SogouPY"><span class="toc-number">1.1.1.</span> <span class="toc-text">~&#x2F;.config&#x2F;SogouPY</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">搜狗输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-SogouPY"><span class="toc-number">2.0.1.</span> <span class="toc-text">~&#x2F;.config&#x2F;SogouPY</span></a></li></ol></li></ol></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Remove sogoupinyin</span><br><span class="line">dpkg -l | ag sogou</span><br><span class="line">i&#x3D;&#39;sogoupinyin&#39;</span><br><span class="line">sudo dpkg -r $&#123;i&#125;</span><br><span class="line">sudo dpkg --purge $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Ref&#x2F;Nano_Iomis&#x2F;&#39;; pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Ref&#x2F;Nano_Iomis&#x2F;Nano_Iomis.docx&#39;; setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h2><ul>
+<h1 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h1><ul>
 <li><a href="file:///media/ht/ht_5T/Work/References/Computer_Tips/Linux_Tips/My_Linux/My_Linux.html#5_tips">My Linux</a></li>
 </ul>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/jilijelon/article/details/77962793">搜狗输入法Linux版配置文件详解_jilijelon-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/6142.html">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</a></li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;fcitx-frontend-qt4&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;sogoupinyin&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;fcitx-sogoupinyin-uk&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.config&#x2F;sogou-qimpanel</span><br><span class="line">~&#x2F;.config&#x2F;SogouPY.users</span><br><span class="line">~&#x2F;.config&#x2F;SogouPY</span><br></pre></td></tr></table></figure>
 <h3 id="config-SogouPY"><a href="#config-SogouPY" class="headerlink" title="~/.config/SogouPY"></a>~/.config/SogouPY</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;home&#x2F;ht&#x2F;.config&#x2F;SogouPY&#39;</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scdlist.ini</span><br><span class="line">Correction.ini</span><br><span class="line">sogouEnv.ini</span><br><span class="line">env.ini</span><br><span class="line">sogou.version</span><br><span class="line">useSkin.txt</span><br><span class="line">pingback.time</span><br><span class="line">scd</span><br></pre></td></tr></table></figure>
@@ -318,6 +320,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/03/03/20210303/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20210303
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/03/01/20210301/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">20210301</div>
@@ -347,7 +358,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">搜狗输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-SogouPY"><span class="toc-number">1.1.1.</span> <span class="toc-text">~&#x2F;.config&#x2F;SogouPY</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">搜狗输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-SogouPY"><span class="toc-number">2.0.1.</span> <span class="toc-text">~&#x2F;.config&#x2F;SogouPY</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -536,6 +547,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -775,19 +798,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -807,10 +818,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Watch charging</a>
               </li>
              
@@ -824,6 +831,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -903,18 +926,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
               </li>
              
@@ -936,6 +947,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">IME in Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Markdown Mermaid examples</a>
               </li>
              
               <li class="article-tag-list-item">
