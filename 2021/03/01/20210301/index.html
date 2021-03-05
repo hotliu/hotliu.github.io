@@ -16,13 +16,15 @@
 <meta property="og:description" content="Working directories1234i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#39;pcmanfm -n $&amp;#123;i&amp;#125;; cd $&amp;#123;i&amp;#125; # Ubuntu Chinese IME#   IME in Ubuntu1234">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-03T10:16:20.175Z">
+<meta property="article:modified_time" content="2021-03-05T09:07:41.461Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta property="article:tag" content="Tree structure">
 <meta property="article:tag" content="Markdown syntax">
 <meta property="article:tag" content="西部世界">
 <meta property="article:tag" content="IME in Ubuntu">
 <meta property="article:tag" content="Markdown Mermaid examples">
+<meta property="article:tag" content="Markdown mermaid">
+<meta property="article:tag" content="flowchart">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hongtu Liu" type="application/atom+xml">
@@ -189,7 +191,7 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IME-in-Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">IME in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95linux%E7%89%88%E4%BB%A5%E5%8F%8A%E5%8D%B8%E8%BD%BD%E6%96%B9%E6%B3%95-Yoki%E7%9A%84%E5%B0%8F%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-for-linux"><span class="toc-number">2.2.</span> <span class="toc-text">搜狗输入法 for linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95Linux%E7%89%88-deb%E5%8C%85%E5%92%8C%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AD%98%E5%9C%A8%E5%86%B2%E7%AA%81%EF%BC%8C%E9%99%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Linux%E6%95%99%E7%A8%8B-%E4%BA%91%E7%BD%91%E7%89%9B%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure"><span class="toc-number">3.</span> <span class="toc-text">Tree structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">3.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">3.2.</span> <span class="toc-text">Visualization</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C"><span class="toc-number">4.</span> <span class="toc-text">西部世界</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Index-of-Calibre"><span class="toc-number">5.</span> <span class="toc-text">Index of Calibre</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IME-in-Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">IME in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95linux%E7%89%88%E4%BB%A5%E5%8F%8A%E5%8D%B8%E8%BD%BD%E6%96%B9%E6%B3%95-Yoki%E7%9A%84%E5%B0%8F%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-for-linux"><span class="toc-number">2.2.</span> <span class="toc-text">搜狗输入法 for linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95Linux%E7%89%88-deb%E5%8C%85%E5%92%8C%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AD%98%E5%9C%A8%E5%86%B2%E7%AA%81%EF%BC%8C%E9%99%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Linux%E6%95%99%E7%A8%8B-%E4%BA%91%E7%BD%91%E7%89%9B%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure-by-markdown-mermaid"><span class="toc-number">3.</span> <span class="toc-text">Tree structure by markdown mermaid</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">3.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">3.2.</span> <span class="toc-text">Visualization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pie-graph"><span class="toc-number">3.3.</span> <span class="toc-text">Pie graph</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C"><span class="toc-number">4.</span> <span class="toc-text">西部世界</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Index-of-Calibre"><span class="toc-number">5.</span> <span class="toc-text">Index of Calibre</span></a></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#39;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Ubuntu Chinese IME</span><br><span class="line"># </span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -200,7 +202,8 @@
 <h2 id="讯飞输入法Linux版-deb包和搜狗输入法存在冲突，附解决方案-Linux教程-云网牛站"><a href="#讯飞输入法Linux版-deb包和搜狗输入法存在冲突，附解决方案-Linux教程-云网牛站" class="headerlink" title="讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站"></a><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/6142.html">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</a></h2><ul>
 <li><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/2915.html">在Deepin Linux系统中搜狗输入法占用内存很高的解决方法_Linux教程_云网牛站</a></li>
 </ul>
-<h1 id="Tree-structure"><a href="#Tree-structure" class="headerlink" title="Tree structure"></a>Tree structure</h1><ul>
+<h1 id="Tree-structure-by-markdown-mermaid"><a href="#Tree-structure-by-markdown-mermaid" class="headerlink" title="Tree structure by markdown mermaid"></a>Tree structure by markdown <code>mermaid</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Computer_Tips&#x2F;ePub&#x2F;Markdown&#x2F;mermaid_Learning.docx</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://150328.xyz/2020/01/22/markdown%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">使用Markdown绘制树形图 - heylypp的博客 | heylypp Blog</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/aizhaoyu/article/details/44350821?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=8ee321bd-01dd-4d89-ac4e-e886d4fd8166&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control">markdown流程图语法_aizhaoyu的专栏-CSDN博客_markdown 泳道图</a></li>
 </ul>
@@ -211,6 +214,9 @@
 <h2 id="Visualization"><a href="#Visualization" class="headerlink" title="Visualization"></a>Visualization</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    subgraph SVN Architecture</span><br><span class="line">    client1--&gt;|read &#x2F; write|SVN((SVN server))</span><br><span class="line">    client2--&gt;|read only|SVN</span><br><span class="line">    client3--&gt;|read &#x2F; write|SVN</span><br><span class="line">    client4--&gt;|read only|SVN</span><br><span class="line">    client5(...)--&gt;SVN</span><br><span class="line">    SVN---|store the data|sharedrive</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
 <p><br></br><br><br></br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[工具推荐] --&gt;B(文献下载)</span><br><span class="line">A --&gt;C(文献管理)</span><br><span class="line">A --&gt;D(文件同步和存储)</span><br><span class="line">A --&gt;E(翻译辅助)</span><br><span class="line">A --&gt;F(公式书写)</span><br></pre></td></tr></table></figure>
+<h2 id="Pie-graph"><a href="#Pie-graph" class="headerlink" title="Pie graph"></a>Pie graph</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pie title Pets adopted by volunteers</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br></pre></td></tr></table></figure>
+<hr>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pie title Pets adopted by volunteers</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br></pre></td></tr></table></figure></code></pre>
 <h1 id="西部世界"><a href="#西部世界" class="headerlink" title="西部世界"></a>西部世界</h1><ul>
 <li><p><a target="_blank" rel="noopener" href="https://22v.net/v/759/">西部世界第一季(Westworld Season 1)迅雷下载|爱美剧</a></p>
 </li>
@@ -351,6 +357,14 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Markdown Mermaid examples</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Markdown mermaid</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">flowchart</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -472,7 +486,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IME-in-Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">IME in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95linux%E7%89%88%E4%BB%A5%E5%8F%8A%E5%8D%B8%E8%BD%BD%E6%96%B9%E6%B3%95-Yoki%E7%9A%84%E5%B0%8F%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-for-linux"><span class="toc-number">2.2.</span> <span class="toc-text">搜狗输入法 for linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95Linux%E7%89%88-deb%E5%8C%85%E5%92%8C%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AD%98%E5%9C%A8%E5%86%B2%E7%AA%81%EF%BC%8C%E9%99%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Linux%E6%95%99%E7%A8%8B-%E4%BA%91%E7%BD%91%E7%89%9B%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure"><span class="toc-number">3.</span> <span class="toc-text">Tree structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">3.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">3.2.</span> <span class="toc-text">Visualization</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C"><span class="toc-number">4.</span> <span class="toc-text">西部世界</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Index-of-Calibre"><span class="toc-number">5.</span> <span class="toc-text">Index of Calibre</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IME-in-Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">IME in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95linux%E7%89%88%E4%BB%A5%E5%8F%8A%E5%8D%B8%E8%BD%BD%E6%96%B9%E6%B3%95-Yoki%E7%9A%84%E5%B0%8F%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-for-linux"><span class="toc-number">2.2.</span> <span class="toc-text">搜狗输入法 for linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95Linux%E7%89%88-deb%E5%8C%85%E5%92%8C%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AD%98%E5%9C%A8%E5%86%B2%E7%AA%81%EF%BC%8C%E9%99%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Linux%E6%95%99%E7%A8%8B-%E4%BA%91%E7%BD%91%E7%89%9B%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure-by-markdown-mermaid"><span class="toc-number">3.</span> <span class="toc-text">Tree structure by markdown mermaid</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">3.1.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualization"><span class="toc-number">3.2.</span> <span class="toc-text">Visualization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pie-graph"><span class="toc-number">3.3.</span> <span class="toc-text">Pie graph</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C"><span class="toc-number">4.</span> <span class="toc-text">西部世界</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Index-of-Calibre"><span class="toc-number">5.</span> <span class="toc-text">Index of Calibre</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -608,6 +622,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -621,18 +647,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -784,38 +798,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -872,11 +854,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -885,10 +891,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -901,6 +903,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1084,6 +1098,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HGNC</a>
               </li>
              
@@ -1113,10 +1131,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Sheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1153,6 +1167,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Zettlr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
               </li>
              
               <li class="article-tag-list-item">
