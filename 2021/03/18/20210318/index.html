@@ -8,18 +8,17 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>20210318 | Hongtu Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Working directoriespdftk installation How to install PDFtk on Ubuntu 18.04 — it’s easy! Install PDFtk on Ubuntu – Linux Hint software installation - How can I install pdftk in Ubuntu 18.04 and later?">
+  <meta name="description" content="Working directoriessnap1sudo systemctl edit snapd Remove the text as below 123[Service]Environment&#x3D;&quot;http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:port&quot;Environment&#x3D;&quot;https_proxy&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20210318">
 <meta property="og:url" content="http://example.com/2021/03/18/20210318/index.html">
 <meta property="og:site_name" content="Hongtu Liu">
-<meta property="og:description" content="Working directoriespdftk installation How to install PDFtk on Ubuntu 18.04 — it’s easy! Install PDFtk on Ubuntu – Linux Hint software installation - How can I install pdftk in Ubuntu 18.04 and later?">
+<meta property="og:description" content="Working directoriessnap1sudo systemctl edit snapd Remove the text as below 123[Service]Environment&#x3D;&quot;http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:port&quot;Environment&#x3D;&quot;https_proxy&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-18T05:14:51.398Z">
+<meta property="article:modified_time" content="2021-03-20T01:24:56.414Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta property="article:tag" content="Hexo Note">
-<meta property="article:tag" content="Bacteriophage">
 <meta property="article:tag" content="Virus proliferation cell free system">
 <meta property="article:tag" content="CEB">
 <meta name="twitter:card" content="summary">
@@ -188,17 +187,14 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pdftk-installation"><span class="toc-number">1.1.</span> <span class="toc-text">pdftk installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#snap"><span class="toc-number">1.2.</span> <span class="toc-text">snap</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#snap"><span class="toc-number">1.1.</span> <span class="toc-text">snap</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="pdftk-installation"><a href="#pdftk-installation" class="headerlink" title="pdftk installation"></a><code>pdftk</code> installation</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://wilransz.com/pdftk-on-ubuntu-18-04/">How to install PDFtk on Ubuntu 18.04 — it’s easy!</a></li>
-<li><a target="_blank" rel="noopener" href="https://linuxhint.com/install_pdftk_ubuntu/">Install PDFtk on Ubuntu – Linux Hint</a></li>
-<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/1028522/how-can-i-install-pdftk-in-ubuntu-18-04-and-later">software installation - How can I install pdftk in Ubuntu 18.04 and later? - Ask Ubuntu</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install pdftk</span><br></pre></td></tr></table></figure>
-<h2 id="snap"><a href="#snap" class="headerlink" title="snap"></a>snap</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cmt/p/14553189.html">网站整改公告 - 博客园团队 - 博客园</a></li>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="snap"><a href="#snap" class="headerlink" title="snap"></a>snap</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl edit snapd</span><br></pre></td></tr></table></figure>
+<p>Remove the text as below</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment&#x3D;&quot;http_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:port&quot;</span><br><span class="line">Environment&#x3D;&quot;https_proxy&#x3D;http:&#x2F;&#x2F;127.0.0.1:port&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><a target="_blank" rel="noopener" href="https://cyfeng.science/2020/06/15/speed-up-ubuntu-snap/">解决Ubuntu Snap下载速度慢的问题 | CO + 2Fe = COFFee</a></li>
 </ul>
 
@@ -236,10 +232,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo Note</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bacteriophage</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -328,6 +320,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/03/19/20210320/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20210319
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/03/17/20210317/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">20210317</div>
@@ -357,7 +358,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pdftk-installation"><span class="toc-number">1.1.</span> <span class="toc-text">pdftk installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#snap"><span class="toc-number">1.2.</span> <span class="toc-text">snap</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#snap"><span class="toc-number">1.1.</span> <span class="toc-text">snap</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -490,18 +491,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,6 +655,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -849,6 +850,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
               </li>
              
@@ -877,15 +890,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -941,11 +946,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -985,7 +990,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -994,6 +999,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
               </li>
              
               <li class="article-tag-list-item">

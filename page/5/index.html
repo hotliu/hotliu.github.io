@@ -158,6 +158,389 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210201" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/01/20210201/">20210201</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/01/20210201/" class="archive-article-date">
+  	<time datetime="2021-02-01T00:22:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210201</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Downloading"><span class="toc-number">2.</span> <span class="toc-text">Downloading</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#p62-Draft"><span class="toc-number">3.</span> <span class="toc-text">p62 Draft</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Additional-references"><span class="toc-number">3.1.</span> <span class="toc-text">Additional references</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chemicals-activators-of-Nrf2"><span class="toc-number">3.2.</span> <span class="toc-text">Chemicals, activators of Nrf2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ensembl-Ids-vs-Entrez-Ids"><span class="toc-number">4.</span> <span class="toc-text">Ensembl-Ids vs Entrez-Ids</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Human-Protein-Atlas"><span class="toc-number">5.</span> <span class="toc-text">Human Protein Atlas</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gene-ID"><span class="toc-number">6.</span> <span class="toc-text">Gene ID</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Database-download"><span class="toc-number">7.</span> <span class="toc-text">Database download</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FASTQ-Analysis"><span class="toc-number">8.</span> <span class="toc-text">FASTQ Analysis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#App-recommended-to-GYF"><span class="toc-number">9.</span> <span class="toc-text">App recommended to GYF</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gender-determination-from-RAN-Seq"><span class="toc-number">10.</span> <span class="toc-text">Gender determination from RAN-Seq</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;Summary&#x2F;Genetic_Mechanisms_of_Sex_Determination.docx</span><br><span class="line">setsid wps $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Ensembl</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Human from Ensembl, downloading</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;Summary&#x2F;E-MTAB-1733.xlsx</span><br><span class="line">setsid wps $&#123;i&#125; # Summary of E-MTAB-1733</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;GZ</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # FASTQ Magicblast</span><br></pre></td></tr></table></figure>
+<h1 id="Downloading"><a href="#Downloading" class="headerlink" title="Downloading"></a>Downloading</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -rnp ftp:&#x2F;&#x2F;ftp.ensembl.org&#x2F;pub&#x2F;release-102&#x2F;mysql&#x2F;homo_sapiens_variation_102_38&#x2F;</span><br><span class="line">#</span><br><span class="line">i&#x3D;wget -rnp ftp:&#x2F;&#x2F;ftp.ensembl.org&#x2F;pub&#x2F;release-102&#x2F;mysql&#x2F;homo_sapiens_variation_102_38&#x2F;</span><br><span class="line">wget -rnp $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="p62-Draft"><a href="#p62-Draft" class="headerlink" title="p62 Draft"></a>p62 Draft</h1><h2 id="Additional-references"><a href="#Additional-references" class="headerlink" title="Additional references"></a>Additional references</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Rev_2&#x2F;Ref2</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Additional references</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Ref_201_Molecular_mechanisms_of_HPV_mediated_neoplastic_progression.pdf</span><br><span class="line">Ref_203_New_Insights_in_the_Pathogenesis_of_HPV_Infection_and_the_Associated_Carcinogenic_Processes_The_Role_of_Chronic_Inflammation_and_Oxidative_Stress.pdf</span><br><span class="line">Ref_208_Cancer__Oxidative_Stress_and_Metastasis.pdf</span><br><span class="line">Ref_209_Stress-sensing_mechanisms_and_the_physiological_roles_of_the_Keap1–Nrf2_system_during_cellular_stress.pdf</span><br><span class="line">Ref_210_Anti-Viral_Potential_and_Modulation_of_Nrf2_by_Curcumin-_Pharmacological_Implications.pdf</span><br><span class="line">Ref_211_CDDO-Me_Sulforaphane_and_tBHQ_attenuate_the_RANKLinduced_osteoclast_differentiation_via_activating_the_NRF2-_mediated_antioxidant_response.pdf</span><br><span class="line">Ref_213_Human_papillomavirus_type_18_E5_oncoprotein_cooperates_with_E6_and_E7_in_promoting_cell_viability_and_invasion_and_in_modulating_the_cellular_redox_state.pdf</span><br><span class="line">Ref_214_NRF2_promotes_tumor_maintenance_by_modulating_mRNA_translation_in_pancreatic_cancer.pdf</span><br><span class="line">Ref_215_Nrf2_in_cancers-_A_double‐edged_sword.pdf</span><br><span class="line">Ref_216_Nuclear_lactate_dehydrogenase_A_senses_ROS_to_produce_α-hydroxybutyrate_for_HPV-induced_cervical_tumor_growth.pdf</span><br><span class="line">Ref_217_Regulation_of_Nrf2_–_An_update.pdf</span><br></pre></td></tr></table></figure>
+<h2 id="Chemicals-activators-of-Nrf2"><a href="#Chemicals-activators-of-Nrf2" class="headerlink" title="Chemicals, activators of Nrf2"></a>Chemicals, activators of Nrf2</h2><ul>
+<li>N,N‐dimethylformamide/Dimethylformamide (DMF)</li>
+<li>sulforaphane (SFN)</li>
+<li>Tert-butylhydroquinone (tBHQ)</li>
+<li>CDDO-Im/CDDO-imidazolide</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Dimethylformamide">Dimethylformamide - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://accounts.public.ce.basespace.illumina.com/b/search/ov/XM_008768584">XM_008768584 QuickView - Correlation Engine</a></li>
+<li><a target="_blank" rel="noopener" href="https://adisinsight.springer.com/drugs/800048313">TFM 735 - AdisInsight</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5282962/">The Nrf2 triterpenoid activator, CDDO-imidazolide, protects kidneys from ischemia reperfusion injury in mice</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Triterpene">Triterpene - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.selleckchem.com/datasheet/tbhq-S499000-DataSheet.html">TBHQ Datasheet</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/srep13005">The antioxidant compound tert-butylhydroquinone activates Akt in myocardium, suppresses apoptosis and ameliorates pressure overload-induced cardiac dysfunction | Scientific Reports</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S1388198113001959?via=ihub">tert-Butylhydroquinone (tBHQ) protects hepatocytes against lipotoxicity via inducing autophagy independently of Nrf2 activation - ScienceDirect</a></li>
+</ul>
+<h1 id="Ensembl-Ids-vs-Entrez-Ids"><a href="#Ensembl-Ids-vs-Entrez-Ids" class="headerlink" title="Ensembl-Ids vs Entrez-Ids"></a>Ensembl-Ids vs Entrez-Ids</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.biostars.org/p/16505/">Ensembl-Ids Vs. Entrez-Ids</a></li>
+</ul>
+<h1 id="Human-Protein-Atlas"><a href="#Human-Protein-Atlas" class="headerlink" title="Human Protein Atlas"></a>Human Protein Atlas</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.proteinatlas.org/ENSG00000165240-ATP7A">ATP7A protein expression summary - The Human Protein Atlas</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.proteinatlas.org/about/download">Downloadable data - The Human Protein Atlas</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.proteinatlas.org/about/publications">Publications - The Human Protein Atlas</a></li>
+<li><a target="_blank" rel="noopener" href="https://science.sciencemag.org/content/347/6220/1260419">Tissue-based map of the human proteome | Science</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.proteinatlas.org/humanproteome/tissue">The human proteome - The Human Protein Atlas</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ensembl.org/info/docs/tools/index.html">Ensembl Tools</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub">ftp://ftp.ensembl.org/pub</a></li>
+<li><a href="file:///media/ht/ht_5T/Work/Projects/HLA-G/HLA-G_Project.html#95_Exon">HLA-G Project</a></li>
+</ul>
+<h1 id="Gene-ID"><a href="#Gene-ID" class="headerlink" title="Gene ID"></a>Gene ID</h1><ul>
+<li>Solution in <a target="_blank" rel="noopener" href="https://www.biostars.org/p/430015/#:~:text=3.,NCBI%20gene%20ID%20%2D%2D%3E%20Results.">Conversion of Gene Name to Ensembl ID</a></li>
+</ul>
+<p>How to get Gene ID from Ensembl?<br>3. You can download gene ID data from BioMart. Select Ensembl Genes 99 –&gt; Human genes –&gt; Attributes –&gt; GENE –&gt; External References –&gt; select HGNC symbol and NCBI gene ID –&gt; Results.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://m.ensembl.org/Help/View?id=143">Help - Homo_sapiens - Ensembl genome browser 102</a><ul>
+<li>Name - from official gene nomenclature commitees such as HGNC (for human) and MGI (for mouse)</li>
+<li>CCDS - coding sequence IDs from the Consensus Coding Sequence Set</li>
+<li>UniProtKB - protein IDs from UniProtKB that match one of the translations of this gene</li>
+<li>RefSeq - Indicates if the gene has transcript(s) identified as MANE.</li>
+<li>LRG - IDs from the Locus Reference Genomic (LRG) project matching the Ensembl gene</li>
+<li>Ensembl version - versioning of the Ensembl gene ID</li>
+<li>GRCh37 assembly - (for human only) with genomic coordinates and links to the Location and Gene views of the gene on the previous human assembly</li>
+<li>Gene type - The gene type includes both status (e.g. known) and biotype (e.g. protein coding) </li>
+<li>Annotation method - It can be the Ensembl automatic, Havana manual or a merge between automatic and manual (for human, mouse, zebrafish, pig, and rat)</li>
+<li>Alternative genes - IDs from the HAVANA project that match the Ensembl gene</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>See <a href="file:///media/ht/ht_5T/Database/Management/Database.html#216_Home_|_HUGO_Gene_Nomenclature_Committee">HGNC</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.genenames.org/">Home | HUGO Gene Nomenclature Committee</a></p>
+<h1 id="Database-download"><a href="#Database-download" class="headerlink" title="Database download"></a>Database download</h1></li>
+<li><p><code>Homo_sapiens.GRCh38.102.uniprot.tsv.gz</code>, Ensenbl Gene ID with Accession Number</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://asia.ensembl.org/info/data/ftp/index.html">FTP Download</a></p>
+<ul>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/embl/homo_sapiens/">Index of ftp://ftp.ensembl.org/pub/release-102/embl/homo_sapiens/</a></li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://asia.ensembl.org/info/data/ftp/index.html">FTP Download</a></p>
+<ul>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/tsv/homo_sapiens">Index of ftp://ftp.ensembl.org/pub/release-102/tsv/homo_sapiens/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_core_102_38/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_core_102_38/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_funcgen_102_38/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_funcgen_102_38/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_otherfeatures_102_38/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_otherfeatures_102_38/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_rnaseq_102_38/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_rnaseq_102_38/</a></li>
+<li><a href="ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_variation_102_38/">Index of ftp://ftp.ensembl.org/pub/release-102/mysql/homo_sapiens_variation_102_38/</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="FASTQ-Analysis"><a href="#FASTQ-Analysis" class="headerlink" title="FASTQ Analysis"></a>FASTQ Analysis</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;GZ&#x2F;1</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # </span><br><span class="line">#</span><br><span class="line">function MG &#123; # FASTQ.GZ</span><br><span class="line">	for FQ in ..&#x2F;*_1.fastq.gz; do Read1&#x3D;&quot;$&#123;FQ&#125;&quot;; Read2&#x3D;&quot;$&#123;FQ%_*&#125;_2.fastq.gz&quot;; Filename&#x3D;&#96;basename $&#123;FQ&#125;&#96;; BAM&#x3D;&quot;$&#123;Filename%_*&#125;_vs_&#96;basename $&#123;DB&#125;&#96;.bam&quot;; magicblast -num_threads 2 -db $&#123;DB&#125; -infmt fastq -query $&#123;Read1&#125; -query_mate $&#123;Read2&#125; | samtools view -bS -&gt; &quot;$&#123;BAM&#125;&quot;; samtools sort $&#123;BAM&#125; &gt; &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;; samtools index &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;; bedtools bamtofastq -i $&#123;BAM&#125; -fq &quot;$&#123;Read1%.fastq.gz&#125;.fq&quot; -fq2 &quot;$&#123;Read2%.fastq.gz&#125;.fq&quot;; pigz &quot;$&#123;Read1%.fastq.gz&#125;.fq&quot; &quot;$&#123;Read2%.fastq.gz&#125;.fq&quot;; done</span><br><span class="line">&#125;</span><br><span class="line">#############################################</span><br><span class="line">SRA_Path&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;GZ&#x2F;1</span><br><span class="line">i&#x3D;Essential</span><br><span class="line">mkdir $&#123;i&#125;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">DB&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;DB&#x2F;Essential&#x2F;Human_Essential&quot;</span><br><span class="line">MG</span><br></pre></td></tr></table></figure>
+<h1 id="App-recommended-to-GYF"><a href="#App-recommended-to-GYF" class="headerlink" title="App recommended to GYF"></a>App recommended to GYF</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://anydesk.com/en">The Fast Remote Desktop Application – AnyDesk</a></li>
+<li><a target="_blank" rel="noopener" href="https://ics.hutton.ac.uk/tablet/">Tablet : Information &amp; Computational Sciences</a></li>
+</ul>
+<h1 id="Gender-determination-from-RAN-Seq"><a href="#Gender-determination-from-RAN-Seq" class="headerlink" title="Gender determination from RAN-Seq"></a>Gender determination from RAN-Seq</h1><ul>
+<li>XIST</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i &lt;- &quot;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;Summary&#x2F;E-MTAB-1733.xlsx&quot;</span><br><span class="line">x &lt;- data.frame(read_excel(i, sheet &#x3D; &quot;FRKM_All&quot;))</span><br><span class="line">names(x)[1] &lt;- &quot;Ensembl.gene.ID&quot;</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;Summary&#x2F;Supp_Info&#x2F;FPKM_allsamples.txt&quot;</span><br><span class="line">x &lt;- read.csv(i, sep &#x3D; &quot;\t&quot;)</span><br><span class="line">i &lt;- &quot;&#x2F;home&#x2F;ht&#x2F;Downloads&#x2F;Gender_Gene.list&quot;</span><br><span class="line">y &lt;-  read.csv(i, header &#x3D; TRUE, sep &#x3D; &quot;\t&quot;)</span><br><span class="line">Gene &lt;- data.frame(y[, c(12,7)])</span><br><span class="line">y &lt;- merge(Gene, x, by &#x3D; &quot;Ensembl.gene.ID&quot;, all.x &#x3D; TRUE)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">p62 Draft</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Nrf2</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HPV</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">p62</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">E6</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">E7</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">wget</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/01/20210201/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210131" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/31/20210131/">20210131</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/31/20210131/" class="archive-article-date">
+  	<time datetime="2021-01-31T02:24:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210131</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Usage-of-Taxonomy-ID-in-ETE-ETE3"><span class="toc-number">2.</span> <span class="toc-text">Usage of Taxonomy ID in ETE&#x2F;ETE3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Build-Github-Pages-With-Jekyll"><span class="toc-number">3.</span> <span class="toc-text">Build Github Pages With Jekyll</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tips-of-Hexo-GitHub-Pages"><span class="toc-number">4.</span> <span class="toc-text">Tips of Hexo GitHub Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Usage-of-my-mobile-device"><span class="toc-number">5.</span> <span class="toc-text">Usage of my mobile device</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-Docker-Machine"><span class="toc-number">6.</span> <span class="toc-text">Windows Docker Machine</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown-editing-in-Sublime-Text-3"><span class="toc-number">7.</span> <span class="toc-text">Markdown editing in Sublime Text 3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-package"><span class="toc-number">7.1.</span> <span class="toc-text">Install package</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Language-missing"><span class="toc-number">7.2.</span> <span class="toc-text">Language missing</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Good-examples-of-protein-markers"><span class="toc-number">8.</span> <span class="toc-text">Good examples of protein markers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Selection-from-Protein-Gel-Migration-Charts-Life-Science-Research-Bio-Rad"><span class="toc-number">8.1.</span> <span class="toc-text">Selection from Protein Gel Migration Charts | Life Science Research | Bio-Rad</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#r-In-RStudio-is-there-a-way-to-specify-a-fig-path-for-all-figures-for-this-file-Stack-Overflow"><span class="toc-number">9.</span> <span class="toc-text">r - In RStudio, is there a way to specify a fig.path for all figures for this file? - Stack Overflow</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;Chemicals</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Minoxidil added</span><br><span class="line">#</span><br><span class="line">######################################################</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;E-MTAB-1733_Note.Rmd</span><br><span class="line">subl $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733&#x2F;E-MTAB-1733_Note.html</span><br><span class="line">setsid chromium-browser $&#123;i&#125; # Summary of E-MTAB-1733 # well-done in Data Prep</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;E-MTAB-1733</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # E-MTAB-1733</span><br></pre></td></tr></table></figure>
+<h1 id="Usage-of-Taxonomy-ID-in-ETE-ETE3"><a href="#Usage-of-Taxonomy-ID-in-ETE-ETE3" class="headerlink" title="Usage of Taxonomy ID in ETE/ETE3"></a>Usage of Taxonomy ID in ETE/ETE3</h1><ul>
+<li><a href="/media/ht/ht_5T/Bioinformatics/Bioinfo-Softs/ETE3/Manuals/ETE3_Learning.html">ETE3_Learning</a></li>
+</ul>
+<h1 id="Build-Github-Pages-With-Jekyll"><a href="#Build-Github-Pages-With-Jekyll" class="headerlink" title="Build Github Pages With Jekyll"></a><a target="_blank" rel="noopener" href="https://www.baidufe.com/item/63146a8b8492cba84845.html">Build Github Pages With Jekyll</a></h1><h1 id="Tips-of-Hexo-GitHub-Pages"><a href="#Tips-of-Hexo-GitHub-Pages" class="headerlink" title="Tips of Hexo GitHub Pages"></a>Tips of Hexo GitHub Pages</h1><ul>
+<li>Good collection, <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1084147">GitHub Page + Hexo + yilia 搭建博客可能会遇到的所有疑问 - 云+社区 - 腾讯云</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/compassblog/category/1184095.html">Github - 随笔分类 - compassblog - 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://cczeng.github.io/2017/05/03/git/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Github-Pages%E6%90%AD%E5%BB%BA%E8%B5%B7%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E2%80%94%E2%80%94%E7%BB%86%E6%95%B0%E4%B8%80%E8%B7%AF%E7%9A%84%E5%9D%91/">我是如何利用Github Pages搭建起我的博客，细数一路的坑 | 远方</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/StefanScherer/windows-docker-machine">GitHub - StefanScherer/windows-docker-machine: Work with Windows containers and LCOW on Mac/Linux/Windows</a></li>
+</ul>
+<h1 id="Usage-of-my-mobile-device"><a href="#Usage-of-my-mobile-device" class="headerlink" title="Usage of my mobile device"></a>Usage of my mobile device</h1><ul>
+<li>iPhone, Backup</li>
+<li>iPad Pro, Outlook Calendar reading, Microsoft ToDo reading, QQ reading</li>
+<li>Samsung, Backup, Legado</li>
+<li>Mate, Map, QQ download, Outlook Calendar reading, Microsoft ToDo reading</li>
+<li>RS, main. Outlook Calendar input, WeChat download, Microsoft ToDo input, QQ</li>
+</ul>
+<h1 id="Windows-Docker-Machine"><a href="#Windows-Docker-Machine" class="headerlink" title="Windows Docker Machine"></a>Windows Docker Machine</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/StefanScherer/windows-docker-machine">GitHub - StefanScherer/windows-docker-machine: Work with Windows containers and LCOW on Mac/Linux/Windows</a></li>
+</ul>
+<h1 id="Markdown-editing-in-Sublime-Text-3"><a href="#Markdown-editing-in-Sublime-Text-3" class="headerlink" title="Markdown editing in Sublime Text 3"></a>Markdown editing in Sublime Text 3</h1><p>Not solved.</p>
+<h2 id="Install-package"><a href="#Install-package" class="headerlink" title="Install package"></a>Install package</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://plaintext-productivity.net/2-04-how-to-set-up-sublime-text-for-markdown-editing.html">How To Set Up Sublime Text for Markdown Editing | Plaintext Productivity</a></li>
+</ul>
+<h2 id="Language-missing"><a href="#Language-missing" class="headerlink" title="Language missing"></a>Language missing</h2><p>Not solved.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zam1024t/LocalizedMenu/blob/master/readme/README.zh_CN.md">LocalizedMenu/README.zh_CN.md at master · zam1024t/LocalizedMenu · GitHub</a></li>
+</ul>
+<h1 id="Good-examples-of-protein-markers"><a href="#Good-examples-of-protein-markers" class="headerlink" title="Good examples of protein markers"></a>Good examples of protein markers</h1><h2 id="Selection-from-Protein-Gel-Migration-Charts-Life-Science-Research-Bio-Rad"><a href="#Selection-from-Protein-Gel-Migration-Charts-Life-Science-Research-Bio-Rad" class="headerlink" title="Selection from Protein Gel Migration Charts | Life Science Research | Bio-Rad"></a>Selection from <a target="_blank" rel="noopener" href="https://www.bio-rad.com/en-us/category/protein-gel-migration-charts?ID=N3F3TIDN">Protein Gel Migration Charts | Life Science Research | Bio-Rad</a></h2><ul>
+<li>Good Guidance from <a target="_blank" rel="noopener" href="https://www.bio-rad.com/en-us/category/protein-gel-migration-charts?ID=N3F3TIDN">Protein Gel Migration Charts | Life Science Research | Bio-Rad</a></li>
+</ul>
+<p><img src="https://www.bio-rad.com/evportal/framework/skins/evolution/images/TGP/tgx-precision-plus-unstained-standards.png" alt="Example 1"></p>
+<p><img src="https://www.bio-rad.com/webroot/web/images/lsr/products/electrophoresis/product_detail/global/criterion-precision-plus-unstained-standards.png" alt="Example 2"></p>
+<p><img src="https://www.bio-rad.com/evportal/framework/skins/evolution/images/TGP/tgx-nupage-precast-mini-gels.png" alt="Example 3"></p>
+<hr>
+<p>From Sigma-Aldrich</p>
+<p><img src="https://www.sigmaaldrich.com/content/dam/sigma-aldrich/life-science/proteomics-and-protein/molecular-weight-markers/mpstd4-gel-image.jpg" alt="Protein Molecular Weight Markers from Merck (Sigma Aldrich)"></p>
+<p>From NEB</p>
+<p><img src="https://www.neb-online.de/wp-content/uploads/2019/05/NEB_Protein_Marker_2019-1024x923.png" alt="NEB"></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.thermofisher.com/order/catalog/product/26617#/26617">PageRuler™ Prestained Protein Ladder, 10 to 180 kDa</a>, from ThermoFisher</li>
+<li><a target="_blank" rel="noopener" href="https://www.smobio.com/shop/product/pm2610-pm2610-excelbandtm-enhanced-3-color-high-range-protein-marker-9-245-kda-250-l-x-2-254?category=10">https://www.smobio.com/shop/product/pm2610-pm2610-excelbandtm-enhanced-3-color-high-range-protein-marker-9-245-kda-250-l-x-2-254?category=10</a>, from SmoBio</li>
+</ul>
+<h1 id="r-In-RStudio-is-there-a-way-to-specify-a-fig-path-for-all-figures-for-this-file-Stack-Overflow"><a href="#r-In-RStudio-is-there-a-way-to-specify-a-fig-path-for-all-figures-for-this-file-Stack-Overflow" class="headerlink" title="r - In RStudio, is there a way to specify a fig.path for all figures for this file? - Stack Overflow"></a><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/20060370/in-rstudio-is-there-a-way-to-specify-a-fig-path-for-all-figures-for-this-file">r - In RStudio, is there a way to specify a fig.path for <em>all</em> figures for this file? - Stack Overflow</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;r setup&#125;</span><br><span class="line">knitr::opts_chunk$set(fig.path&#x3D;&quot;figures&#x2F;somedir&#x2F;&quot;)</span><br></pre></td></tr></table></figure>
+<pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opt_chunk$set(fig.path&#x3D;&quot;figures&#x2F;foo&#x2F;&quot;)</span><br></pre></td></tr></table></figure>
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opt_chunk$set(fig.path&#x3D;&quot;figures&#x2F;bar&#x2F;&quot;)</span><br></pre></td></tr></table></figure></code></pre>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://rdrr.io/cran/knitr/man/fig_path.html">fig_path: Path for figure files in knitr: A General-Purpose Package for Dynamic Report Generation in R</a></li>
+<li><a target="_blank" rel="noopener" href="http://zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/">Tips and tricks for working with images and figures in R Markdown documents | Technical Tidbits From Spatial Analysis &amp; Data Science</a></li>
+<li><a target="_blank" rel="noopener" href="https://yihui.org/knitr/options/">Options - Chunk options and package options - Yihui Xie | 谢益辉</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/20060370/in-rstudio-is-there-a-way-to-specify-a-fig-path-for-all-figures-for-this-file">r - In RStudio, is there a way to specify a fig.path for <em>all</em> figures for this file? - Stack Overflow</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">E-MTAB-1733</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Usage of my mobile device</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Windows Docker Machine</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">container</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Tips of Hexo GitHub Pages</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Build Github Pages With Jekyll</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SDS-PAGE</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Protein Marker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">txid</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ETE/ETE3</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Minoxidil</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/31/20210131/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210130" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1288,196 +1671,9 @@
 
 
   
-    <article id="post-20210120" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/20/20210120/">20210120</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/20/20210120/" class="archive-article-date">
-  	<time datetime="2021-01-20T10:39:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210120</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Music-storage-online"><span class="toc-number">2.</span> <span class="toc-text">Music storage online</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line"># Copy &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;Vaccine_20210117.pdf to Margin Note 3</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Music-storage-online"><a href="#Music-storage-online" class="headerlink" title="Music storage online"></a>Music storage online</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/hersche/YouPHPTube/tree/unstable">GitHub - hersche/YouPHPTube: This fork is massive deprecated because i push to the official branch directly now.</a></li>
-<li><a target="_blank" rel="noopener" href="https://laike9m.com/blog/ge-ren-yin-le-cun-chu-zhong-ji-jie-jue-fang-an,123/">个人音乐存储，终极解决方案 - laike9m’s blog</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cloudwards.net/best-cloud-storage-for-music/">Best Cloud Storage for Music in 2021: Save Your Songs Online</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/20/20210120/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210119" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/19/20210119/">20210119</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/19/20210119/" class="archive-article-date">
-  	<time datetime="2021-01-19T05:58:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210119</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OneDrive"><span class="toc-number">2.</span> <span class="toc-text">OneDrive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FTP-access"><span class="toc-number">3.</span> <span class="toc-text">FTP access</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Calendar-from-Microsoft-Outlook"><span class="toc-number">4.</span> <span class="toc-text">Calendar from Microsoft Outlook</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># Download debian pack of WPS 2019</span><br><span class="line">#</span><br><span class="line">rm wps-office.deb</span><br><span class="line">ln -s wps-office_11.1.0.9604.XA_amd64.deb wps-office.deb</span><br><span class="line">7z l DEB.7z | awk &#39;&#123;print $5&#125;&#39;</span><br><span class="line">7z a DEB.7z wps-office_11.1.0.9505.XA_amd64.deb wps-office_11.1.0.9604.XA_amd64.deb</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2021_国家自然科学基金&#39;</span><br><span class="line">cd $&#123;i&#125; # Classify documents</span><br></pre></td></tr></table></figure>
-<h1 id="OneDrive"><a href="#OneDrive" class="headerlink" title="OneDrive"></a>OneDrive</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hotliu@msn.com</span><br></pre></td></tr></table></figure>
-<h1 id="FTP-access"><a href="#FTP-access" class="headerlink" title="FTP access"></a>FTP access</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands">List of FTP Commands for Linux and UNIX | Serv-U</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ftp</span><br><span class="line">&gt;open IP 2121</span><br><span class="line">#</span><br><span class="line">ftp 192.168.1.6 2121</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://superuser.com/questions/368084/connecting-to-ftp-via-the-linux-command-line">unix - Connecting to FTP via the Linux command line - Super User</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40954428/article/details/81181800">命令行连接FTP服务器_qq_40954428的博客-CSDN博客_ftp 命令行</a></li>
-</ul>
-<p><strong>To be solved</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Error message</span><br><span class="line">227 Entering Active Mode.</span><br></pre></td></tr></table></figure>
-
-<details markdown='1'><summary>Expand/Collapse</summary>
-
-<h1 id="Calendar-from-Microsoft-Outlook"><a href="#Calendar-from-Microsoft-Outlook" class="headerlink" title="Calendar from Microsoft Outlook"></a>Calendar from Microsoft Outlook</h1><ul>
-<li>Edit text with Markor in Android platform</li>
-<li>Switch between Markor and Calendar</li>
-</ul>
-</details>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/19/20210119/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1593,18 +1789,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1769,6 +1953,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1952,6 +2148,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
               </li>
              
@@ -1980,15 +2188,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2044,11 +2244,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2088,7 +2288,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2097,6 +2297,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
               </li>
              
               <li class="article-tag-list-item">
