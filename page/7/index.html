@@ -158,6 +158,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210108" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/08/20210108/">20210108</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/08/20210108/" class="archive-article-date">
+  	<time datetime="2021-01-08T14:49:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210108</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Backup-of-Dairy-of-2020"><span class="toc-number">1.</span> <span class="toc-text">Backup of Dairy of 2020</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Note"><span class="toc-number">1.1.</span> <span class="toc-text">Note</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PDF"><span class="toc-number">1.2.</span> <span class="toc-text">PDF</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exiftool-for-m4a"><span class="toc-number">2.</span> <span class="toc-text">Exiftool for m4a</span></a></li></ol>
+</div>
+
+        <h1 id="Backup-of-Dairy-of-2020"><a href="#Backup-of-Dairy-of-2020" class="headerlink" title="Backup of Dairy of 2020"></a>Backup of Dairy of 2020</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Backup&#x2F;Notability</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Backup&#x2F;Notability&#x2F;email</span><br><span class="line">#</span><br><span class="line">ls *.note | wc -l</span><br><span class="line">#</span><br><span class="line">ls *.note | sed &quot;s&#x2F;.note&#x2F;&#x2F;&quot; | sed &quot;s&#x2F;20W&#x2F;&#x2F;&quot; | xargs echo</span><br></pre></td></tr></table></figure>
+<p>01 02 03 06 08-10<br>12 13 14 15 16 17 18 19 20<br>21 22 23 24 25 26 27 28 29 30<br>31 32 33 34 35 36 37 38 39 40<br>41 42 43 44 45 46 47 48 49 50<br>51 52 53</p>
+<h2 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Backup&#x2F;Notability&#x2F;email</span><br><span class="line">#</span><br><span class="line">ls *.pdf | wc -l</span><br><span class="line">#</span><br><span class="line">ls 2*.pdf | sed &quot;s&#x2F;.pdf&#x2F;&#x2F;&quot; | sed &quot;s&#x2F;20W&#x2F;&#x2F;&quot; | xargs echo</span><br></pre></td></tr></table></figure>
+<p>01 02 03 06 08-10<br>12 13 14 15 16 17 18 19 20<br>21 22 23 24 25 26 27 28 29 30<br>31 32 33 34 35 36 37 38 39 40<br>41 42 43 44 45 46 47 48 49 50<br>51 52 53</p>
+<h1 id="Exiftool-for-m4a"><a href="#Exiftool-for-m4a" class="headerlink" title="Exiftool for m4a"></a>Exiftool for m4a</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=8552.0">Renaming of an MP4 Qicktime with “Create Date/Time or “Track Create Date/Time”</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">exiftool -r &quot;-FileName&lt;CreateDate&quot; -d &quot;%Y-%m-%d_%H-%M-%S - %%f.%%e&quot; 1504802408055.mp4</span><br><span class="line">#</span><br><span class="line">exiftool -r &#39;-FileName&lt;CreateDate&#39; -d &#39;%Y-%m-%d_%H-%M-%S - %%f.%%e&#39; &#39;DIR&#39;</span><br><span class="line">#</span><br><span class="line">exiftool -r &quot;-FileName&lt;CreateDate&quot; -d &quot;%Y%m%d_%H%M.%%e&quot; *.m4a</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/08/20210108/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210106" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1238,13 +1326,9 @@ categories: Scala
 <h3 id="grep-in-compressed-gz-file"><a href="#grep-in-compressed-gz-file" class="headerlink" title="grep in compressed gz file"></a>grep in compressed gz file</h3><figure class="highlight plain"><figcaption><span>eval </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zgrep &quot;something&quot; gz_file</span><br></pre></td></tr></table></figure>
 <h3 id="sed-in-compressed-gz-file"><a href="#sed-in-compressed-gz-file" class="headerlink" title="sed in compressed gz file"></a>sed in compressed gz file</h3><figure class="highlight plain"><figcaption><span>eval </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunzip -c 20110203.1104.gz | sed -n &#39;1p;$p&#39;</span><br></pre></td></tr></table></figure>
 <h2 id="Keyboard-shortcut-in-Ubuntu"><a href="#Keyboard-shortcut-in-Ubuntu" class="headerlink" title="Keyboard shortcut in Ubuntu"></a>Keyboard shortcut in Ubuntu</h2><p><a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/KeyboardShortcuts">KeyboardShortcuts - Community Help Wiki</a></p>
-<h2 id="Getting-“System-program-problem-detected”-pops-up-regularly-after-upgrade"><a href="#Getting-“System-program-problem-detected”-pops-up-regularly-after-upgrade" class="headerlink" title="Getting “System program problem detected” pops up regularly after upgrade"></a>Getting “System program problem detected” pops up regularly after upgrade</h2><pre><code>gksudo gedit /etc/default/apport
-sudo subl /etc/default/apport
-sb /etc/default/apport
-vi /etc/default/apport
-Change enabled=1 to enabled=0, then save and exit.</code></pre>
-<h2 id="add-apt-repository"><a href="#add-apt-repository" class="headerlink" title="add-apt-repository"></a>add-apt-repository</h2><pre><code>sudo add-apt-repository ppa:bill-zt/gtkqq
-sudo add-apt-repository -r ppa:&lt;ppa to remove&gt;</code></pre>
+<h2 id="Getting-“System-program-problem-detected”-pops-up-regularly-after-upgrade"><a href="#Getting-“System-program-problem-detected”-pops-up-regularly-after-upgrade" class="headerlink" title="Getting “System program problem detected” pops up regularly after upgrade"></a>Getting “System program problem detected” pops up regularly after upgrade</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gksudo gedit &#x2F;etc&#x2F;default&#x2F;apport</span><br><span class="line">sudo subl &#x2F;etc&#x2F;default&#x2F;apport</span><br><span class="line">sb &#x2F;etc&#x2F;default&#x2F;apport</span><br><span class="line">vi &#x2F;etc&#x2F;default&#x2F;apport</span><br><span class="line">Change enabled&#x3D;1 to enabled&#x3D;0, then save and exit.</span><br></pre></td></tr></table></figure>
+<h2 id="add-apt-repository"><a href="#add-apt-repository" class="headerlink" title="add-apt-repository"></a>add-apt-repository</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:bill-zt&#x2F;gtkqq</span><br><span class="line">sudo add-apt-repository -r ppa:&lt;ppa to remove&gt;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Ign-meaning-in-apt-get-update"><a href="#Ign-meaning-in-apt-get-update" class="headerlink" title="Ign meaning in apt-get update"></a>Ign meaning in <code>apt-get update</code></h3><p><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/294525/what-does-ign-mean-when-running-an-apt-get-update">What does ‘Ign’ mean when running an apt-get update? - Ask Ubuntu</a></p>
 <ul>
 <li><code>Hit</code> means apt checked the timestamps on package list, those match and there are no changes.</li>
@@ -1261,10 +1345,9 @@ sudo add-apt-repository -r ppa:&lt;ppa to remove&gt;</code></pre>
 </ol>
 <h4 id="为Chromium安装Flash-player"><a href="#为Chromium安装Flash-player" class="headerlink" title="为Chromium安装Flash player"></a>为Chromium安装Flash player</h4><p>下载<a target="_blank" rel="noopener" href="https://get.adobe.com/cn/flashplayer%E4%B8%8A%E7%9A%84Tar%E5%8C%85">https://get.adobe.com/cn/flashplayer上的Tar包</a></p>
 <p>1.解压下载的tar包解压到需要的位置</p>
-<pre><code>tar xzvf flash_player_ppapi_linux.x86_64.tar.gz -C flash_chrome
-tar xzvf  *.gz -C flash_chrome</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf flash_player_ppapi_linux.x86_64.tar.gz -C flash_chrome</span><br><span class="line">tar xzvf  *.gz -C flash_chrome</span><br></pre></td></tr></table></figure>
 <p>2.把libpepflashplayer.so复制到chromium的插件目录:</p>
-<pre><code>sudo cp libpepflashplayer.so /usr/lib/chromium-browser/plugins/libpepflashplayer.so</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp libpepflashplayer.so &#x2F;usr&#x2F;lib&#x2F;chromium-browser&#x2F;plugins&#x2F;libpepflashplayer.so</span><br></pre></td></tr></table></figure>
 <p>3.修改chromium的配置文件:</p>
 <p>修改/etc/chromium-browser/default,修改CHROMIUM_FLAGS,修改后大致如下:</p>
 <pre><code># Options to pass to chromium-browser
@@ -1274,29 +1357,28 @@ CHROMIUM_FLAGS=&quot;--ppapi-flash-path=/usr/lib/chromium-browser/plugins/libpep
 <p>4.重启Chromium即可生效</p>
 <h4 id="为Firefox安装Flash-player"><a href="#为Firefox安装Flash-player" class="headerlink" title="为Firefox安装Flash player"></a>为Firefox安装Flash player</h4><p><strong>Fast way</strong></p>
 <p><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/771988/flash-plugin-for-firefox-on-ubuntu-16-04">Flash plugin for Firefox on Ubuntu 16.04 - Ask Ubuntu</a></p>
-<pre><code>sudo apt-get install browser-plugin-freshplayer-pepperflash</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install browser-plugin-freshplayer-pepperflash</span><br></pre></td></tr></table></figure>
 <ol>
-<li><p>解压下载的tar包解压到需要的位置</p>
-<pre><code> tar xzvf flash_player_ppapi_linux.x86_64.tar.gz -C flash_chrome</code></pre>
-</li>
-<li><p>libflashplayer.so复制到firefox的插件目录:</p>
-<pre><code> sudo cp libflashplayer.so /usr/lib/mozilla/plugins/libflashplayer.so</code></pre>
-</li>
-<li><p>复制flash的配置文件:</p>
-<pre><code> sudo cp -r usr/* /usr</code></pre>
-</li>
-<li><p>重启firefox即可。</p>
-</li>
+<li>解压下载的tar包解压到需要的位置</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf flash_player_ppapi_linux.x86_64.tar.gz -C flash_chrome</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>libflashplayer.so复制到firefox的插件目录:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp libflashplayer.so &#x2F;usr&#x2F;lib&#x2F;mozilla&#x2F;plugins&#x2F;libflashplayer.so</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>复制flash的配置文件:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp -r usr&#x2F;* &#x2F;usr</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>重启firefox即可。</li>
 </ol>
 <p>结语:就这么多,挺简单吧.</p>
 <h2 id="Upgrade"><a href="#Upgrade" class="headerlink" title="Upgrade"></a>Upgrade</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/5763/upgrading-from-the-command-line">upgrade - Upgrading from the command line? - Ask Ubuntu</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.linuxidc.com/Linux/2017-10/147856.htm">如何从以前的版本升级到Ubuntu 17.10_Linux教程_Linux公社-Linux系统门户网站</a></p>
-<pre><code>  sudo apt-get install update-manager-core
-  sudo do-release-upgrade</code></pre>
-</li>
+<li><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/5763/upgrading-from-the-command-line">upgrade - Upgrading from the command line? - Ask Ubuntu</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.linuxidc.com/Linux/2017-10/147856.htm">如何从以前的版本升级到Ubuntu 17.10_Linux教程_Linux公社-Linux系统门户网站</a></li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install update-manager-core</span><br><span class="line">sudo do-release-upgrade</span><br></pre></td></tr></table></figure>
 <p>You may need to check /etc/update-manager/release-upgrades and change the line:</p>
 <p>Prompt=lts<br>to:</p>
 <p>Prompt=normal</p>
@@ -2081,7 +2163,7 @@ sudo apt-get install sublime-text-installer</code></pre>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:lainme&#x2F;pidgin-lwqq</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
 <p>安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install pidgin-lwqq</span><br></pre></td></tr></table></figure>
-<p>PPA 也可以用于 Debian，但不保证一定能工作。另外，pidgin-lwqq-unstable 已经不再支持和更新。如果你遇到任何问题，请联系 lainme [<a href="mailto:&#108;&#97;&#105;&#110;&#109;&#101;&#x39;&#57;&#51;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#97;&#105;&#110;&#109;&#101;&#x39;&#57;&#51;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a>][15]</p>
+<p>PPA 也可以用于 Debian，但不保证一定能工作。另外，pidgin-lwqq-unstable 已经不再支持和更新。如果你遇到任何问题，请联系 lainme [<a href="mailto:&#108;&#97;&#105;&#110;&#x6d;&#101;&#57;&#x39;&#x33;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#108;&#97;&#105;&#110;&#x6d;&#101;&#57;&#x39;&#x33;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a>][15]</p>
 <h2 id="fcitx"><a href="#fcitx" class="headerlink" title="fcitx"></a>fcitx</h2><ol>
 <li>先卸载IBUS输入法</li>
 </ol>
@@ -2449,93 +2531,6 @@ sudo apt-get install sublime-text-installer</code></pre>
 
 
   
-    <article id="post-20201227" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/27/20201227/">20201227</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/27/20201227/" class="archive-article-date">
-  	<time datetime="2020-12-26T16:07:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20201227</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ToDo-List"><span class="toc-number">1.</span> <span class="toc-text">ToDo List</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%94%B1-Hexo-%E8%BF%81%E7%A7%BB%E8%87%B3-Hugo-Blind-with-Science"><span class="toc-number">2.</span> <span class="toc-text">博客由 Hexo 迁移至 Hugo - Blind with Science</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Termux-%E8%AF%A6%E8%A7%A3-Android-%E5%B9%B3%E5%8F%B0%E4%B8%8A%E5%AE%8C%E7%BE%8E%E7%A7%BB%E6%A4%8D%E7%9A%84-Linux-%E5%B7%A5%E5%85%B7%E9%9B%86"><span class="toc-number">3.</span> <span class="toc-text">Termux 详解-Android 平台上完美移植的 Linux 工具集</span></a></li></ol>
-</div>
-
-        <h1 id="ToDo-List"><a href="#ToDo-List" class="headerlink" title="ToDo List"></a>ToDo List</h1><ul>
-<li>时间戳依然没有解决。已经完成。</li>
-</ul>
-<h1 id="博客由-Hexo-迁移至-Hugo-Blind-with-Science"><a href="#博客由-Hexo-迁移至-Hugo-Blind-with-Science" class="headerlink" title="博客由 Hexo 迁移至 Hugo - Blind with Science"></a><a target="_blank" rel="noopener" href="https://blindwith.science/2019/08/447.html/">博客由 Hexo 迁移至 Hugo - Blind with Science</a></h1><p>以下为博客的前言</p>
-<p>从 2016 将博客迁移至 Hexo+Github 的方案后，我便一直采用此方案写博客。大体来说感受挺不错的，然而由于我有数百篇博客，build 速度永远很让我头大。尤其是有时 markdown 显示出问题了，我又得等上数分钟才能看到结果，体验很不好。所以一听说 Hugo 能一秒生成博客，哪怕要舍弃我花大功夫美化的 NeXT 主题，我依然心生向往，今天便将 Hexo 迁移至 Hugo，顺便达成了 Emacs 写博客的小目标。</p>
-<h1 id="Termux-详解-Android-平台上完美移植的-Linux-工具集"><a href="#Termux-详解-Android-平台上完美移植的-Linux-工具集" class="headerlink" title="Termux 详解-Android 平台上完美移植的 Linux 工具集"></a><a target="_blank" rel="noopener" href="https://rollingstarky.github.io/2019/05/15/Termux-app-details/">Termux 详解-Android 平台上完美移植的 Linux 工具集</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt install termux-api</span><br><span class="line">#</span><br><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/27/20201227/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
@@ -2633,6 +2628,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">周易大师</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
@@ -2657,34 +2664,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">周易大师</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
               </li>
              
@@ -2694,22 +2673,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2725,31 +2688,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">zcat</a>
+                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ICTV</a>
+                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">virus</a>
+                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">International Committee on Taxonomy of Viruses (ICTV)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hexo index</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo content</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
+                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2782,6 +2733,50 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">zcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ICTV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">International Committee on Taxonomy of Viruses (ICTV)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hexo index</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo content</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2833,34 +2828,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -2901,19 +2868,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2933,14 +2920,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
               </li>
              
@@ -2950,6 +2929,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2977,22 +2972,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
@@ -3010,18 +2989,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3053,6 +3020,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
@@ -3073,6 +3052,50 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -3089,71 +3112,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">File manager</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Reactive Oxygen Species</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Herpesviridae sequence download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3165,11 +3128,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R update</a>
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
+                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3185,11 +3152,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+                <a href="javascript:void(0)" class="js-tag color4">R update</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">File manager</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Reactive Oxygen Species</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Herpesviridae sequence download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3253,6 +3248,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
@@ -3289,7 +3288,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
+                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
               </li>
              
               <li class="article-tag-list-item">
