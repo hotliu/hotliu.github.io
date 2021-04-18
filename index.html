@@ -185,7 +185,7 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">2.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TOC"><span class="toc-number">2.1.</span> <span class="toc-text">TOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8D%E5%AF%86%E4%B8%8A%E4%BC%A0"><span class="toc-number">2.2.</span> <span class="toc-text">免密上传</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Proteomics"><span class="toc-number">3.</span> <span class="toc-text">Proteomics</span></a></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># ganttproject installation</span><br><span class="line"># &#x2F;usr&#x2F;bin&#x2F;ganttproject %U</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;GanttProject&#x2F;ganttproject_3.0.3000-1_all.deb</span><br><span class="line">#</span><br><span class="line">sudo apt install img2pdf</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s003.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s002.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif  https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;006_LMP1_and_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells</span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># ganttproject installation</span><br><span class="line"># &#x2F;usr&#x2F;bin&#x2F;ganttproject %U</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;GanttProject&#x2F;ganttproject_3.0.3000-1_all.deb</span><br><span class="line">#</span><br><span class="line">sudo apt install img2pdf</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells&#39;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s003.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s002.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif  https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;006_LMP1_and_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;006_LMP1_and_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells&#39;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
 <p>It took me four hours for update in X1.</p>
 <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/bubkoo/hexo-toc">bubkoo/hexo-toc: 📖 Insert a markdown TOC before posts be rendered.</a></li>
@@ -1556,6 +1556,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1565,30 +1569,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1617,6 +1597,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1753,6 +1741,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1964,18 +1964,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
@@ -2009,6 +1997,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2080,19 +2080,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CEB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CEB</a>
               </li>
              
               <li class="article-tag-list-item">
