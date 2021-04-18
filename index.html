@@ -182,12 +182,15 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">2.</span> <span class="toc-text">Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Proteomics"><span class="toc-number">3.</span> <span class="toc-text">Proteomics</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">2.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TOC"><span class="toc-number">2.1.</span> <span class="toc-text">TOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8D%E5%AF%86%E4%B8%8A%E4%BC%A0"><span class="toc-number">2.2.</span> <span class="toc-text">免密上传</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Proteomics"><span class="toc-number">3.</span> <span class="toc-text">Proteomics</span></a></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># ganttproject installation</span><br><span class="line"># &#x2F;usr&#x2F;bin&#x2F;ganttproject %U</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;GanttProject&#x2F;ganttproject_3.0.3000-1_all.deb</span><br></pre></td></tr></table></figure>
 <p>It took me four hours for update in X1.</p>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>[[Hexo#Password free upload|免密上传]]</p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/bubkoo/hexo-toc">bubkoo/hexo-toc: 📖 Insert a markdown TOC before posts be rendered.</a></li>
+</ul>
+<h2 id="免密上传"><a href="#免密上传" class="headerlink" title="免密上传"></a>免密上传</h2><p>[[Hexo#Password free upload|免密上传]]</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo init</span><br><span class="line">hexo s # INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.</span><br><span class="line">#</span><br><span class="line"># hexo n &quot;My Blog Name&quot;</span><br><span class="line">hexo n &#96;Date&#96; # add a new blog</span><br><span class="line">hexo s # check the new blog</span><br><span class="line">#</span><br><span class="line">hexo clean; hexo g</span><br><span class="line">#</span><br><span class="line">nickname.github.io</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;hotliu&#x2F;hotliu.github.io.git</span><br><span class="line">#</span><br><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line">#</span><br><span class="line">vi _config.yml</span><br><span class="line">hexo d</span><br><span class="line">#######################################</span><br><span class="line"># Theme selection</span><br><span class="line">#######################################</span><br><span class="line">#</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia</span><br><span class="line">#</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia # Time, 24&#39;00&quot;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></li>
@@ -1629,10 +1632,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Legado</a>
               </li>
              
@@ -1642,6 +1641,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1781,22 +1784,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -1837,6 +1824,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">rsync</a>
               </li>
              
@@ -1873,6 +1876,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
               </li>
              
@@ -1886,14 +1897,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1933,18 +1936,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
               </li>
              
@@ -1970,6 +1961,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2001,11 +2024,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+                <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2018,10 +2045,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2093,11 +2116,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2110,26 +2133,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
               </li>
              
               <li class="article-tag-list-item">
