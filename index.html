@@ -185,7 +185,7 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CRAN"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-Step-PCR-To-Distinguish-B-Virus-from-Related-Primate-Alphaherpesviruses"><span class="toc-number">1.2.</span> <span class="toc-text">One-Step PCR To Distinguish B Virus from Related Primate Alphaherpesviruses</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br><span class="line">#</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
 <h2 id="CRAN"><a href="#CRAN" class="headerlink" title="CRAN"></a>CRAN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;bitops&quot;, &quot;brglm&quot;, &quot;DT&quot;, &quot;haven&quot;, &quot;highr&quot;, &quot;knitr&quot;, &quot;RcppArmadillo&quot;, &quot;recipes&quot;))</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i)</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i, dependencies &#x3D; TRUE)</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <pre><code>```&#123;r diagram-mermaid, echo = FALSE, warning = FALSE, message = FALSE&#125;</code></pre>
 <ul>
@@ -206,6 +206,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HSV</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CRAN</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Monkey B virus</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -1781,6 +1800,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -1818,18 +1849,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2325,11 +2344,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">凉山</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">凉山</a>
+                <a href="javascript:void(0)" class="js-tag color4">HSV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CRAN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2441,15 +2472,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
               </li>
              
               <li class="article-tag-list-item">
