@@ -158,6 +158,97 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210501" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/20210501/">20210501</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/01/20210501/" class="archive-article-date">
+  	<time datetime="2021-04-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210501</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Analysis-of-HSV"><span class="toc-number">2.</span> <span class="toc-text">Analysis of HSV</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="Analysis-of-HSV"><a href="#Analysis-of-HSV" class="headerlink" title="Analysis of HSV"></a>Analysis of HSV</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">Seq --- Goal</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HSV</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/01/20210501/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210430" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,7 +276,12 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CRAN"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-Step-PCR-To-Distinguish-B-Virus-from-Related-Primate-Alphaherpesviruses"><span class="toc-number">1.2.</span> <span class="toc-text">One-Step PCR To Distinguish B Virus from Related Primate Alphaherpesviruses</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br><span class="line">#</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br><span class="line">#</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="/media/ht/ht_5T/Bioinformatics/Bioinfo-Softs/bioawk/bioawk_Learning.md">bioawk_Learning.md</a></li>
+</ul>
 <h2 id="CRAN"><a href="#CRAN" class="headerlink" title="CRAN"></a>CRAN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;bitops&quot;, &quot;brglm&quot;, &quot;DT&quot;, &quot;haven&quot;, &quot;highr&quot;, &quot;knitr&quot;, &quot;RcppArmadillo&quot;, &quot;recipes&quot;))</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i)</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i, dependencies &#x3D; TRUE)</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <pre><code>```&#123;r diagram-mermaid, echo = FALSE, warning = FALSE, message = FALSE&#125;</code></pre>
 <ul>
@@ -1539,146 +1635,6 @@ cd $&#123;i&#125;
 
 
   
-    <article id="post-20210408" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/08/20210408/">20210408</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/08/20210408/" class="archive-article-date">
-  	<time datetime="2021-04-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210408</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Error-calculation-in-R-CRAN"><span class="toc-number">2.</span> <span class="toc-text">Error calculation in R&#x2F;CRAN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MAE-MSE-RMSE-Coefficient-of-Determination-Adjusted-R-Squared-%E2%80%94-Which-Metric-is-Better"><span class="toc-number">2.1.</span> <span class="toc-text">MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Differences-among-these-evaluation-metrics"><span class="toc-number">2.1.1.</span> <span class="toc-text">Differences among these evaluation metrics</span></a></li></ol></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;HIV&#x2F;Figures&#x2F;凉山 # 凉山地图下载</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Summary</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Summary</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;ATCC&#x2F;Guidebooks</span><br><span class="line">wget https:&#x2F;&#x2F;www.atcc.org&#x2F;~&#x2F;media&#x2F;PDFs&#x2F;Culture%20Guides&#x2F;Virology_Guide.ashx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>记录的原则是</p>
-<ol>
-<li>可以是手写记录，但一定是在iPad Pro上。</li>
-<li>其他的尽可能是文本记录。</li>
-</ol>
-<h1 id="Error-calculation-in-R-CRAN"><a href="#Error-calculation-in-R-CRAN" class="headerlink" title="Error calculation in R/CRAN"></a>Error calculation in R/CRAN</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;05_00_HFMD&#x2F;Publication&#x2F;Raw_Data&#39;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;05_00_HFMD&#x2F;Publication&#x2F;README.md&#39;; subl $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;05_00_HFMD&#x2F;Publication&#x2F;README.md&#39;; atom $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line"># R</span><br><span class="line">i &lt;- &#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;05_00_HFMD&#x2F;MAE_Diff_20210408.xlsx&#39;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a target="_blank" rel="noopener" href="https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e">MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better? | by Akshita Chugh | Analytics Vidhya | Medium</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.rdocumentation.org/packages/DescTools/versions/0.99.40/topics/Measures%20of%20Accuracy">Measures of Accuracy function - RDocumentation</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.datatechnotes.com/2019/02/regression-model-accuracy-mae-mse-rmse.html">DataTechNotes: Regression Model Accuracy (MAE, MSE, RMSE, R-squared) Check in R</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.r-bloggers.com/2013/07/calculate-rmse-and-mae-in-r-and-sas/#:~:text=RMSE%20(root%20mean%20squared%20error,extra%20weight%20to%20large%20errors.">Calculate RMSE and MAE in R and SAS | R-bloggers</a></li>
-</ul>
-<h2 id="MAE-MSE-RMSE-Coefficient-of-Determination-Adjusted-R-Squared-—-Which-Metric-is-Better"><a href="#MAE-MSE-RMSE-Coefficient-of-Determination-Adjusted-R-Squared-—-Which-Metric-is-Better" class="headerlink" title="MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?"></a>MAE, MSE, RMSE, Coefficient of Determination, Adjusted R Squared — Which Metric is Better?</h2><p><a target="_blank" rel="noopener" href="https://akshita-chugh024.medium.com/?source=post_page-----cd0326a5697e--------------------------------"><img src="https://miro.medium.com/fit/c/96/96/0*OmO3vZuubJAt95Gh.jpg" alt="Akshita Chugh"></a></p>
-<p><a target="_blank" rel="noopener" href="https://akshita-chugh024.medium.com/?source=post_page-----cd0326a5697e--------------------------------">Akshita Chugh</a></p>
-<p>Follow</p>
-<p><a target="_blank" rel="noopener" href="https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e?source=post_page-----cd0326a5697e--------------------------------">Dec 8, 2020</a> · 4 min read</p>
-<p><a target="_blank" rel="noopener" href="https://medium.com/m/signin?actionUrl=https://medium.com/_/bookmark/p/cd0326a5697e&operation=register&redirect=https://medium.com/analytics-vidhya/mae-mse-rmse-coefficient-of-determination-adjusted-r-squared-which-metric-is-better-cd0326a5697e&source=post_actions_header--------------------------bookmark_preview-----------"></a></p>
-<p>The objective of Linear Regression is to find a line that minimizes the prediction error of all the data points.</p>
-<p><img src="https://miro.medium.com/max/0/0*s6YGm5hBneEVNc7U.jpg"></p>
-<p>The essential step in any machine learning model is to evaluate the accuracy of the model. The Mean Squared Error, Mean absolute error, Root Mean Squared Error, and R-Squared or Coefficient of determination metrics are used to evaluate the performance of the model in regression analysis.</p>
-<ul>
-<li>  The Mean absolute error represents the average of the absolute difference between the actual and predicted values in the dataset. It measures the average of the residuals in the dataset.</li>
-</ul>
-<p><img src="https://miro.medium.com/max/60/1*_mx6zD6Qw_1sYEvWszK5Nw.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/289/1*_mx6zD6Qw_1sYEvWszK5Nw.png"></p>
-<p><img src="https://miro.medium.com/max/60/1*3DI_3QdQgyBWixpRxTgCHQ.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/374/1*3DI_3QdQgyBWixpRxTgCHQ.png"></p>
-<ul>
-<li>  Mean Squared Error represents the average of the squared difference between the original and predicted values in the data set. It measures the variance of the residuals.</li>
-</ul>
-<p><img src="https://miro.medium.com/max/60/1*1TV6T6hNP-iwJrtvfsvCRQ.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/266/1*1TV6T6hNP-iwJrtvfsvCRQ.png"></p>
-<ul>
-<li>  Root Mean Squared Error is the square root of Mean Squared error. It measures the standard deviation of residuals.</li>
-</ul>
-<p><img src="https://miro.medium.com/max/60/1*usaMSyi6jUT3f2bOMyiYdA.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/425/1*usaMSyi6jUT3f2bOMyiYdA.png"></p>
-<ul>
-<li>  The coefficient of determination or R-squared represents the proportion of the variance in the dependent variable which is explained by the linear regression model. It is a scale-free score i.e. irrespective of the values being small or large, the value of R square will be less than one.</li>
-</ul>
-<p><img src="https://miro.medium.com/max/60/1*X0_3mtDXwuhd3dl88xR4yA.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/274/1*X0_3mtDXwuhd3dl88xR4yA.png"></p>
-<ul>
-<li>  Adjusted R squared is a modified version of R square, and it is adjusted for the number of independent variables in the model, and it will always be less than or equal to R².In the formula below <strong>n</strong> is the number of observations in the data and <strong>k</strong> is the number of the independent variables in the data.</li>
-</ul>
-<p><img src="https://miro.medium.com/max/60/1*bBrMI54b85FGilV_ciAL-Q.png?q=20"></p>
-<p><img src="https://miro.medium.com/max/262/1*bBrMI54b85FGilV_ciAL-Q.png"></p>
-<h3 id="Differences-among-these-evaluation-metrics"><a href="#Differences-among-these-evaluation-metrics" class="headerlink" title="Differences among these evaluation metrics"></a>Differences among these evaluation metrics</h3><ul>
-<li>  Mean Squared Error(MSE) and Root Mean Square Error penalizes the large prediction errors vi-a-vis Mean Absolute Error (MAE). However, RMSE is widely used than MSE to evaluate the performance of the regression model with other random models as it has the same units as the dependent variable (Y-axis).</li>
-<li>  MSE is a differentiable function that makes it easy to perform mathematical operations in comparison to a non-differentiable function like MAE. Therefore, in many models, RMSE is used as a default metric for calculating Loss Function despite being harder to interpret than MAE.</li>
-<li>  MAE is more robust to data with outliers.</li>
-<li>  The lower value of MAE, MSE, and RMSE implies higher accuracy of a regression model. However, a higher value of R square is considered desirable.</li>
-<li>  R Squared &amp; Adjusted R Squared are used for explaining how well the independent variables in the linear regression model explains the variability in the dependent variable. R Squared value always increases with the addition of the independent variables which might lead to the addition of the redundant variables in our model. However, the adjusted R-squared solves this problem.</li>
-<li>  Adjusted R squared takes into account the number of predictor variables, and it is used to determine the number of independent variables in our model. The value of Adjusted R squared decreases if the increase in the R square by the additional variable isn’t significant enough.</li>
-<li>  For comparing the accuracy among different linear regression models, RMSE is a better choice than R Squared.</li>
-</ul>
-<p><strong>Conclusion</strong><br>Therefore, if comparing the prediction accuracy among different linear regression (LR)models then RMSE is a better option as it is simple to calculate and differentiable. However, if your dataset has outliers then choose MAE over RMSE.</p>
-<p>Besides, the number of predictor variables in a linear regression model is determined by adjusted R squared, and choose RMSE over adjusted R squared if you care about evaluating prediction accuracy among different LR models.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">original &#x3D; c( -2,  1, -3, 2, 3, 5, 4, 6, 5, 6, 7)</span><br><span class="line">predicted &#x3D; c(-1, -1, -2, 2, 3, 4, 4, 5, 5, 7, 7)</span><br><span class="line">#</span><br><span class="line">x&#x3D;1:length(original)</span><br><span class="line">plot(x, original,pch&#x3D;19, col&#x3D;&quot;blue&quot;)</span><br><span class="line">lines(x, predicted, col&#x3D;&quot;red&quot;)</span><br><span class="line">legend(&quot;topleft&quot;, legend &#x3D; c(&quot;y-original&quot;, &quot;y-predicted&quot;),</span><br><span class="line">       col &#x3D; c(&quot;blue&quot;, &quot;red&quot;), pch &#x3D; c(19,NA), lty &#x3D; c(NA,1),  cex &#x3D; 0.7)</span><br><span class="line">#</span><br><span class="line">d &#x3D; original-predicted</span><br><span class="line">mse &#x3D; mean((d)^2)</span><br><span class="line">mae &#x3D; mean(abs(d))</span><br><span class="line">rmse &#x3D; sqrt(mse)</span><br><span class="line">R2 &#x3D; 1-(sum((d)^2)&#x2F;sum((original-mean(original))^2))</span><br><span class="line"></span><br><span class="line">cat(&quot; MAE:&quot;, mae, &quot;\n&quot;, &quot;MSE:&quot;, mse, &quot;\n&quot;, </span><br><span class="line">    &quot;RMSE:&quot;, rmse, &quot;\n&quot;, &quot;R-squared:&quot;, R2)</span><br><span class="line">#</span><br><span class="line">#######################################################</span><br><span class="line">#</span><br><span class="line">library(caret)</span><br><span class="line"># R native funcitons</span><br><span class="line">MAE(predicted, original)</span><br><span class="line">MSE(predicted, original) </span><br><span class="line"># caret package functions </span><br><span class="line">RMSE(predicted, original)</span><br><span class="line">R2(predicted, original, form &#x3D; &quot;traditional&quot;)</span><br><span class="line">#</span><br><span class="line">#######################################################</span><br><span class="line">#</span><br><span class="line">library(caret)</span><br><span class="line">#</span><br><span class="line">original &#x3D; c( -2,  1, -3, 2, 3, 5, 4, 6, 5, 6, 7)</span><br><span class="line">predicted &#x3D; c(-1, -1, -2, 2, 3, 4, 4, 5, 5, 7, 7)</span><br><span class="line">x &#x3D; 1:length(original)</span><br><span class="line">#</span><br><span class="line">plot(x, original,pch&#x3D;19, col&#x3D;&quot;blue&quot;)</span><br><span class="line">lines(x, predicted,col&#x3D;&quot;red&quot;)</span><br><span class="line">legend(&quot;topleft&quot;, legend &#x3D; c(&quot;y-original&quot;, &quot;y-predicted&quot;),</span><br><span class="line">       col&#x3D;c(&quot;blue&quot;, &quot;red&quot;), pch&#x3D;c(19,NA), lty&#x3D;c(NA,1), cex &#x3D; 0.7)</span><br><span class="line">d &#x3D; original-predicted</span><br><span class="line">mse &#x3D; mean((d)^2)</span><br><span class="line">mae &#x3D; mean(abs(d))</span><br><span class="line">rmse &#x3D; sqrt(mse)</span><br><span class="line">R2 &#x3D; 1-(sum((d)^2)&#x2F;sum((original-mean(original))^2)</span><br><span class="line"></span><br><span class="line">cat(&quot; MAE:&quot;, mae, &quot;\n&quot;, &quot;MSE:&quot;, mse, &quot;\n&quot;, </span><br><span class="line">    &quot;RMSE:&quot;, rmse, &quot;\n&quot;, &quot;R-squared:&quot;, R2)</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"># R native funcitons</span><br><span class="line">fmse &#x3D; MSE(predicted, original)</span><br><span class="line">fmae &#x3D; MAE(predicted, original)</span><br><span class="line"> </span><br><span class="line"># caret package functions </span><br><span class="line">frmse &#x3D; RMSE(predicted, original)</span><br><span class="line">fr2 &#x3D; R2(predicted, original, form &#x3D; &quot;traditional&quot;)</span><br><span class="line"> </span><br><span class="line">cat(&quot; MAE:&quot;, fmae, &quot;\n&quot;, &quot;MSE:&quot;, fmse, &quot;\n&quot;, </span><br><span class="line">     &quot;RMSE:&quot;, frmse, &quot;\n&quot;, &quot;R-squared:&quot;, fr2)</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/08/20210408/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -2068,19 +2024,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2308,11 +2264,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2324,15 +2284,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
+                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
               </li>
              
               <li class="article-tag-list-item">

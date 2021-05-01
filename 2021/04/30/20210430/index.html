@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>20210430 | Hongtu Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Working directories123456789sudo apt-get install cryptsetup#bioawk -c fastx &#39;length($seq) &gt; 100&amp;#123; print &quot;&gt;&quot;$name; print $seq &amp;#125;&#39;  input.fasta#cd &#x2F;media&#x2F;ht&amp;#x2">
+  <meta name="description" content="Working directories123sudo apt-get install cryptsetup#bioawk -c fastx &#39;length($seq) &gt; 100&amp;#123; print &quot;&gt;&quot;$name; print $seq &amp;#125;&#39;  input.fasta  12345cd &#x2F;media&#x2F;ht&amp;#x2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20210430">
 <meta property="og:url" content="http://example.com/2021/04/30/20210430/index.html">
 <meta property="og:site_name" content="Hongtu Liu">
-<meta property="og:description" content="Working directories123456789sudo apt-get install cryptsetup#bioawk -c fastx &#39;length($seq) &gt; 100&amp;#123; print &quot;&gt;&quot;$name; print $seq &amp;#125;&#39;  input.fasta#cd &#x2F;media&#x2F;ht&amp;#x2">
+<meta property="og:description" content="Working directories123sudo apt-get install cryptsetup#bioawk -c fastx &#39;length($seq) &gt; 100&amp;#123; print &quot;&gt;&quot;$name; print $seq &amp;#125;&#39;  input.fasta  12345cd &#x2F;media&#x2F;ht&amp;#x2">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-30T17:28:15.266Z">
+<meta property="article:modified_time" content="2021-05-01T00:59:12.689Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta property="article:tag" content="HSV">
 <meta property="article:tag" content="CRAN">
@@ -190,7 +190,12 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CRAN"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-Step-PCR-To-Distinguish-B-Virus-from-Related-Primate-Alphaherpesviruses"><span class="toc-number">1.2.</span> <span class="toc-text">One-Step PCR To Distinguish B Virus from Related Primate Alphaherpesviruses</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br><span class="line">#</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install cryptsetup</span><br><span class="line">#</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="/media/ht/ht_5T/Bioinformatics/Bioinfo-Softs/bioawk/bioawk_Learning.md">bioawk_Learning.md</a></li>
+</ul>
 <h2 id="CRAN"><a href="#CRAN" class="headerlink" title="CRAN"></a>CRAN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;bitops&quot;, &quot;brglm&quot;, &quot;DT&quot;, &quot;haven&quot;, &quot;highr&quot;, &quot;knitr&quot;, &quot;RcppArmadillo&quot;, &quot;recipes&quot;))</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i)</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i, dependencies &#x3D; TRUE)</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <pre><code>```&#123;r diagram-mermaid, echo = FALSE, warning = FALSE, message = FALSE&#125;</code></pre>
 <ul>
@@ -325,6 +330,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/05/01/20210501/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20210501
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/27/20210427/" id="article-nav-older" class="article-nav-link-wrap">
@@ -759,19 +773,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -999,11 +1013,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
+                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1015,15 +1033,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
+                <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+                <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
               </li>
              
               <li class="article-tag-list-item">
