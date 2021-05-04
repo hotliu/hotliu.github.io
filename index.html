@@ -182,13 +182,82 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">2.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hyperlink-testing"><span class="toc-number">3.</span> <span class="toc-text">Hyperlink testing</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">2.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Encrypting-a-USB-flash-drive-on-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">Encrypting a USB flash drive on Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-cryptsetup"><span class="toc-number">3.1.</span> <span class="toc-text">Install cryptsetup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-the-USB-device-node"><span class="toc-number">3.2.</span> <span class="toc-text">Find the USB device node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-the-drive-with-noise"><span class="toc-number">3.3.</span> <span class="toc-text">Fill the drive with noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partition-the-drive"><span class="toc-number">3.4.</span> <span class="toc-text">Partition the drive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-LUKS"><span class="toc-number">3.5.</span> <span class="toc-text">Setup LUKS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Putting-a-filesystem-on-the-device"><span class="toc-number">3.6.</span> <span class="toc-text">Putting a filesystem on the device</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mounting-and-using-the-encrypted-drive"><span class="toc-number">3.7.</span> <span class="toc-text">Mounting and using the encrypted drive</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hyperlink-testing"><span class="toc-number">4.</span> <span class="toc-text">Hyperlink testing</span></a></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://nodejs.dev/learn/uninstalling-npm-packages/">Uninstalling npm packages</a></li>
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/en/docs/guides/">Guides | Node.js</a></li>
 </ul>
+<h1 id="Encrypting-a-USB-flash-drive-on-Ubuntu"><a href="#Encrypting-a-USB-flash-drive-on-Ubuntu" class="headerlink" title="Encrypting a USB flash drive on Ubuntu"></a><a target="_blank" rel="noopener" href="https://sorenpoulsen.com/encrypting-a-usb-flash-drive-on-ubuntu">Encrypting a USB flash drive on Ubuntu</a></h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.howtoforge.com/tutorial/encrypt-usb-drive-on-ubuntu/">How to Encrypt USB Drive on Ubuntu 18.04 LTS</a></li>
+</ul>
+<p>Using an encrypted USB flash drive is more or less transparent on Ubuntu. In the Nautilus file manager the drive mounts automatically and looks and works the same as any other drive. The only noticeable difference is that you will be prompted for a passphrase when the drive mounts.</p>
+<p><img src="https://sorenpoulsen.com/resources/img/encrypting-a-usb-flash-drive-on-ubuntu.jpg" title="Nautilus file manager prompts for passphrase of encrypted USB flash drive"></p>
+<h2 id="Install-cryptsetup"><a href="#Install-cryptsetup" class="headerlink" title="Install cryptsetup"></a>Install cryptsetup</h2><p>This is the only extra package we need:</p>
+<pre><code>sudo apt-get install cryptsetup</code></pre>
+<h2 id="Find-the-USB-device-node"><a href="#Find-the-USB-device-node" class="headerlink" title="Find the USB device node"></a>Find the USB device node</h2><p>Applications usually work with disks through the Virtual File System that abstracts away the actual filesystem (of which Linux has plenty ext3, ext4, xfs etc.) and the physical media. However to encrypt and format a USB flash drive we need to work directly with the raw device. We do so through the device node. Disk devices have device nodes such as /dev/sda and /dev/sdb. It’s important we find the correct one as the changes we will be doing are destructive to the content of the drive.</p>
+<p>Insert the USB flash drive and run the command <em>lsblk</em>:</p>
+<pre><code>bob@home:~$ sudo lsblk  
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT  
+sda      8:0    0 238.5G  0 disk   
+\--sda1   8:1    0   350M  0 part   
+\--sda2   8:2    0     3G  0 part   
+\--sda3   8:3    0 220.1G  0 part /  
+\--sda4   8:4    0     1K  0 part   
+\--sda5   8:5    0  15.1G  0 part \[SWAP\]  
+sdb      8:16   1   500M  0 disk /media/1173-7DA0  </code></pre>
+<p>USB flash drives usually come formatted with a FAT filesystem from the factory and Ubuntu will mount it somewhere under the /media folder. From the output above we find the USB flash drive device node to be <em>sdb</em>. The full device node name is therefore <em>/dev/sdb</em>.</p>
+<h2 id="Fill-the-drive-with-noise"><a href="#Fill-the-drive-with-noise" class="headerlink" title="Fill the drive with noise"></a>Fill the drive with noise</h2><p> This is your last chance to backup any existing files on the USB flash drive. You can copy the files from the /media folder to your harddisk. The next step wipes all data on the USB flash drive.</p>
+<p>Now we are going to put random data on the entire USB disk to increase encryption strength. An attacker will have less information to work with when he can’t distinguish the part of the disk that is empty from the part that has actual files.</p>
+<p>First unmount the USB from the file hierarchy. The argument to <em>umount</em> is the USB folder name under /media as listed in the output of the <em>lsblk</em> command.</p>
+<pre><code>umount /media/3173-7DA0</code></pre>
+<p>Ideally we would put random data on the USB flash drive using this command:</p>
+<pre><code>sudo dd if=/dev/urandom of=/dev/sdb bs=4K</code></pre>
+<p>But <em>/dev/urandom</em> is rather slow in generating random data (by design) and there is no progress indicator. To get an idea how long it would take to fill the whole disk we can measure the performance of <em>urandom</em> on a small block of data and compare that with the size of the USB flash drive. Here we measure the performance over 100 MB of random data.</p>
+<pre><code>bob@home:~$ dd if=/dev/urandom of=/dev/null bs=1M count=100  
+100+0 records in  
+100+0 records out  
+104857600 bytes (105 MB) copied, 15.1391 s, 6.9 MB/s  </code></pre>
+<p>6.9 MB/s is OK for a small 500 MB drive but if the capacity of your drive is in the gigabytes then you probably want this alternative method which is fast, and even has a progress indicator, but is not as random:</p>
+<p>sudo badblocks -c 10240 -s -w -t random -v /dev/sdb</p>
+<h2 id="Partition-the-drive"><a href="#Partition-the-drive" class="headerlink" title="Partition the drive"></a>Partition the drive</h2><p>Create a new primary partition:</p>
+<pre><code>bob@home:~$ sudo fdisk /dev/sdb  </code></pre>
+<p>Command (m for help): <em>n</em><br>Partition type:<br>   p   primary (0 primary, 0 extended, 4 free)<br>   e   extended<br>Select (default p): <em>p</em><br>Partition number (1-4, default 1): <em>1</em><br>First sector (2048-1023999, default 2048):<br>Command (m for help): <em>w</em>   </p>
+<p>If we run <em>lsblk</em> again we can now see the new partition is on the device node <em>/dev/sdb1</em>. This is the node we want to encrypt.</p>
+<pre><code>bob@home:~$ sudo lsblk  
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT  
+sda      8:0    0 238.5G  0 disk  
+\--sda1   8:1    0   350M  0 part  
+\--sda2   8:2    0     3G  0 part  
+\--sda3   8:3    0 220.1G  0 part /  
+\--sda4   8:4    0     1K  0 part  
+\--sda5   8:5    0  15.1G  0 part \[SWAP\]  
+sdb      8:16   1   500M  0 disk   
+\--_sdb1   8:17   1   499M  0 part_  </code></pre>
+<h2 id="Setup-LUKS"><a href="#Setup-LUKS" class="headerlink" title="Setup LUKS"></a>Setup LUKS</h2><p>Using the <em>cryptsetup</em> command we will format the drive with Linux Unified Key Setup (LUKS). LUKS stores some metadata at the beginning of the partition regarding the type of encryption used and the encryption key. The key is randomly generated but is itself encrypted using a passphrase that you provide. The passphrase should be at least 3 random words.</p>
+<pre><code>bob@home:~$ sudo cryptsetup luksFormat /dev/sdb1</code></pre>
+<p>Now create a virtual device using <em>cryptsetup</em> that encrypts and decrypts all data going to and from the physical device.</p>
+<pre><code>bob@home:~$ sudo cryptsetup luksOpen /dev/sdb1 myusb</code></pre>
+<p><img src="https://sorenpoulsen.com/resources/img/linux-device-mapper.jpg" title="Linux Device Mapper"></p>
+<p>The virtual device is created using a feature built into the Linux Kernel called the Device Mapper. The virtual device is made available under the device node <em>/dev/mapper/myusb</em>. This is the device that eventually will be mounted into the file hierarchy, but before we can mount it we need a filesystem on the device.</p>
+<h2 id="Putting-a-filesystem-on-the-device"><a href="#Putting-a-filesystem-on-the-device" class="headerlink" title="Putting a filesystem on the device"></a>Putting a filesystem on the device</h2><p>So let’s put a EXT4 filesystem on the device. Using the -L option we can freely choose a label although it cannot be longer than 16 characters. The label is how the USB flash drive will later appear in the Nautilus file manager.</p>
+<p>Because we do this work through the virtual device node <em>/dev/mapper/myusb</em> the whole EXT4 filesystem will be encrypted!</p>
+<pre><code>bob@home:~$ sudo mkfs.ext4 /dev/mapper/myusb -L myusb</code></pre>
+<p>Now close the virtual device.</p>
+<pre><code>sudo cryptsetup luksClose myusb</code></pre>
+<p>And remove the drive from the USB port.</p>
+<p>Don’t worry, as we shall see next, you don’t have to create a virtual device yourself in your daily work with encrypted drives.</p>
+<h2 id="Mounting-and-using-the-encrypted-drive"><a href="#Mounting-and-using-the-encrypted-drive" class="headerlink" title="Mounting and using the encrypted drive"></a>Mounting and using the encrypted drive</h2><p><img src="https://sorenpoulsen.com/resources/img/nautilus-usb-flash-drive.jpg" title="Nautilus file manager opening an encrypted USB flash drive"></p>
+<p>Insert the USB flash drive again. The Nautilus file manager detects the LUKS partition and prompts you for the passphrase. Enter the passphrase and the drive is now mounted and ready to use.</p>
+<p>Should you find yourself without a graphical user interface then you can create the virtual device and mount it from commandline.</p>
+<pre><code>sudo cryptsetup luksOpen /dev/sdb1 myusb  
+sudo mkdir -p /media/myusb  
+sudo mount /dev/mapper/myusb /media/myusb  </code></pre>
+<p>And to unmount the USB flash drive:</p>
+<pre><code>sudo umount /media/myusb  
+sudo cryptsetup luksClose myusb  </code></pre>
+<p><a target="_blank" rel="noopener" href="https://sorenpoulsen.com/encryption-with-gnupg-on-ubuntu"></a></p>
 <h1 id="Hyperlink-testing"><a href="#Hyperlink-testing" class="headerlink" title="Hyperlink testing"></a>Hyperlink testing</h1><p>The announcement raises questions about the fate of their fortune. The couple helped create the Giving Pledge, but much of his Microsoft money has not yet been donated.</p>
 <ul>
 <li>  <a target="_blank" rel="noopener" href="https://www.facebook.com/dialog/feed?app_id=9869919170&link=https://www.nytimes.com/2021/05/03/business/bill-melinda-gates-divorce.html?smid=fb-share&name=Bill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage&redirect_uri=https://www.facebook.com/"></a></li>
@@ -4426,6 +4495,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
@@ -4650,6 +4731,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
               </li>
              
@@ -4746,10 +4835,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
               </li>
              
@@ -4810,14 +4895,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -4874,15 +4951,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4914,11 +4991,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4939,14 +5016,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
               </li>
              
               <li class="article-tag-list-item">
