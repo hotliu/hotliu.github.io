@@ -187,16 +187,16 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CRAN"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li></ol></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39;  input.fasta</span><br></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;Virus&#x2F;Herpesvirus&#x2F;HSV</span><br><span class="line">i&#x3D;&#39;HSV-1.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br><span class="line">i&#x3D;&#39;HSV-2.fasta&#39;</span><br><span class="line">bioawk -c fastx &#39;length($seq) &gt; 100000&#123; print &quot;&gt;&quot;$name; print $seq &#125;&#39; $&#123;i&#125; &gt; &#96;TS&#96;.fas</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a href="/media/ht/ht_5T/Bioinformatics/Bioinfo-Softs/bioawk/bioawk_Learning.md">bioawk_Learning.md</a></li>
 </ul>
-<h2><span id="cran">CRAN</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;bitops&quot;, &quot;brglm&quot;, &quot;DT&quot;, &quot;haven&quot;, &quot;highr&quot;, &quot;knitr&quot;, &quot;RcppArmadillo&quot;, &quot;recipes&quot;))</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i)</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i, dependencies &#x3D; TRUE)</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+<h2 id="CRAN"><a href="#CRAN" class="headerlink" title="CRAN"></a>CRAN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;bitops&quot;, &quot;brglm&quot;, &quot;DT&quot;, &quot;haven&quot;, &quot;highr&quot;, &quot;knitr&quot;, &quot;RcppArmadillo&quot;, &quot;recipes&quot;))</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i)</span><br><span class="line">#</span><br><span class="line">i &lt;- &quot;DiagrammeR&quot;</span><br><span class="line">install.packages(i, dependencies &#x3D; TRUE)</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <pre><code><figure class="highlight plain"><figcaption><span>diagram-mermaid, echo </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- [DiagrammeR - Documentation](https:&#x2F;&#x2F;rich-iannone.github.io&#x2F;DiagrammeR&#x2F;mermaid.html)</span><br><span class="line"></span><br><span class="line">also installing the dependencies ‘curl’, ‘httr’, ‘V8’, ‘igraph’, ‘influenceR’, ‘viridis’, ‘covr’, ‘DiagrammeRsvg’, ‘rsvg’</span><br><span class="line"></span><br><span class="line">also installing the dependencies </span><br><span class="line">&quot;clipr&quot;, &quot;viridisLite&quot;, &quot;ggplot2&quot;, &quot;gridExtra&quot;, &quot;downloader&quot;, &quot;igraph&quot;, &quot;influenceR&quot;, &quot;readr&quot;, &quot;tidyr&quot;, &quot;viridis&quot;, &quot;visNetwork&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## [One-Step PCR To Distinguish B Virus from Related Primate Alphaherpesviruses](https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC119990&#x2F;)</span><br><span class="line"></span><br><span class="line">&gt;gGS4_F</span><br><span class="line">CCGCGTACGACTACGAGATCC</span><br><span class="line">&gt;gGAS4_R</span><br><span class="line">GTTCGCGGCCACGATCCA</span><br><span class="line"></span><br><span class="line">From</span><br><span class="line">[One-Step PCR To Distinguish B Virus from Related Primate Alphaherpesviruses](https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC119990&#x2F;)</span><br><span class="line"></span><br><span class="line">Detection of BV and other alphaherpesviruses by PCR. (A) PCR with primers gGS4 (forward, 5′-CCGCGTACGACTACGAGATCC-3′) and gGAS4 (reverse, 5′-GTTCGCGGCCACGATCCA-3′) in the presence of 1.5 M betaine. After an initial denaturation step (94°C, 5 min), PCR was conducted for 35 cycles (94°C, 1 min; 55°C, 1 min; 72°C, 2 min), followed by a final extension (72°C, 7 min). PCR products were subjected to electrophoresis on a 5% polyacrylamide gel, and DNA bands were visualized under illumination at 254 nm after being stained with SYBR Green I ([9](https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC119990&#x2F;#r9)). The arrow at the right indicates the position of the 209-bp fragment in lanes 1 and 3. (B) PCR with primers BV1 and BV2 tested according to the method of Scinicariello et al. ([16](https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC119990&#x2F;#r16), [17](https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC119990&#x2F;#r17)). The arrow indicates the 128-bp fragment. Lane M, _Hae_III-digested φX174 replicative form (RF) DNA. Lanes 1 to 4, BV DNA as the PCR template. Lane 1, strain E2490 (rhesus macaque); lane 2, strain E90-136 (cynomolgus macaque); lane 3, strain 8100812 (lion-tailed macaque); lane 4, strain Kumquat (pigtail macaque); lanes 5 to 8, DNA of primate alphaherpesviruses other than BV as the PCR template; lane 5, human HSV-1 (strain KOS); lane 6, human HSV-2 (strain 186); lane 7, SA8 (strain B264) of green monkeys; lane 8, HVP2 (strain OU1-76) of baboons.</span><br><span class="line"></span><br><span class="line"># Encrypting a USB flash drive on Ubuntu</span><br><span class="line"></span><br></pre></td></tr></table></figure></code></pre>
 <p>sudo apt-get install cryptsetup</p>
 <pre><code>
@@ -491,7 +491,7 @@ sudo cryptsetup luksClose myusb
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CRAN"><span class="toc-number">1.1.</span> <span class="toc-text">CRAN</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -649,18 +649,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -674,6 +662,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -714,6 +714,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -877,23 +909,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -917,55 +937,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -982,6 +958,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1093,15 +1077,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1210,6 +1194,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">

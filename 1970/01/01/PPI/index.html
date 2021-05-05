@@ -169,10 +169,10 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Help for using HDOCK server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">1 How to provide input for docked molecules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">2 How to specify the binding site [optional]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.</span> <span class="toc-text">3 SAXS experimental data curve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.4.</span> <span class="toc-text">4 Post-docking process (optional)</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Help-for-using-HDOCK-server"><span class="toc-number">1.</span> <span class="toc-text">Help for using HDOCK server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-How-to-provide-input-for-docked-molecules"><span class="toc-number">1.1.</span> <span class="toc-text">1 How to provide input for docked molecules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-How-to-specify-the-binding-site-optional"><span class="toc-number">1.2.</span> <span class="toc-text">2 How to specify the binding site [optional]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-SAXS-experimental-data-curve"><span class="toc-number">1.3.</span> <span class="toc-text">3 SAXS experimental data curve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Post-docking-process-optional"><span class="toc-number">1.4.</span> <span class="toc-text">4 Post-docking process (optional)</span></a></li></ol></li></ol>
 </div>
 
-        <h2><span id="help-for-using-hdock-server">Help for using HDOCK server</span></h2><h3><span id="1-how-to-provide-input-for-docked-molecules">1 How to provide input for docked molecules</span></h3><p>The HDOCK server is to predict the binding complexes between two molecules like proteins and nucleic acids by using a hybrid docking strategy. Therefore, users need to provide input for the two molecule to be docked. The HDOCK server can accept four types of input for molecules:</p>
+        <h2 id="Help-for-using-HDOCK-server"><a href="#Help-for-using-HDOCK-server" class="headerlink" title="Help for using HDOCK server"></a>Help for using HDOCK server</h2><h3 id="1-How-to-provide-input-for-docked-molecules"><a href="#1-How-to-provide-input-for-docked-molecules" class="headerlink" title="1 How to provide input for docked molecules"></a>1 How to provide input for docked molecules</h3><p>The HDOCK server is to predict the binding complexes between two molecules like proteins and nucleic acids by using a hybrid docking strategy. Therefore, users need to provide input for the two molecule to be docked. The HDOCK server can accept four types of input for molecules:</p>
 <ul>
 <li>Upload your pdb file in<a target="_blank" rel="noopener" href="http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html">PDB format</a>.</li>
 <li>Provide your pdb file in PDB ID:ChainID (e.g. 1CGI:E).</li>
@@ -182,7 +182,7 @@
 <p><strong>Only ONE type of input is needed for each molecule.</strong></p>
 <p>If more than one types of input are provided, the first one will be used. For the “PDB ID:ChainID” input, the user can provide one single chain ID or multiple chain IDs. For example, “1CGI:E” stands for the chain E of the pdb file of 1CGI; “1AHW:AB” stands for the chains A and B of the pdb file of 1AHW. If only a sequence is provided, the server will automatically constuct a model structure from a<strong>homologous</strong>template in the<a target="_blank" rel="noopener" href="http://www.rcsb.org/pdb/home/home.do">Protein Data Bank</a>using a in-house modeling pipeline of<a target="_blank" rel="noopener" href="https://github.com/soedinglab/hh-suite">HH Suite</a>,<a target="_blank" rel="noopener" href="http://www.ebi.ac.uk/Tools/msa/clustalw2/">Clustalw2</a>, and<a target="_blank" rel="noopener" href="http://salilab.org/modeller/">MODELLER</a>. In addition, users are also recommended to submit their own pdb file if the protein contains multiple chains, as our pipeline is currently designed to model single-chain proteins.</p>
 <p>**NOTE:**For docking efficiency, it is recommended that the larger one of two molecules is input as receptor if one molecule is much larger than the other one.</p>
-<h3><span id="2-how-to-specify-the-binding-site-optional">2 How to specify the binding site [optional]</span></h3><p>The HDOCK performs global docking to predict the binding complexes between two molecules. Therefore, no information about the binding site is necessary for the docking job. However, the server also gives users the option to specify the binding site residues if such information is available, such that the predicted models will have a higher accuracy. Two types of binding site information can be provided.</p>
+<h3 id="2-How-to-specify-the-binding-site-optional"><a href="#2-How-to-specify-the-binding-site-optional" class="headerlink" title="2 How to specify the binding site [optional]"></a>2 How to specify the binding site [optional]</h3><p>The HDOCK performs global docking to predict the binding complexes between two molecules. Therefore, no information about the binding site is necessary for the docking job. However, the server also gives users the option to specify the binding site residues if such information is available, such that the predicted models will have a higher accuracy. Two types of binding site information can be provided.</p>
 <ul>
 <li><p>Binding site resdiues on the receptor or ligand.<br>The binding site residues are provided like this in the text box</p>
 <p>  195:A, 203-206:A, 108:B</p>
@@ -204,7 +204,7 @@
 215-218:A 306:B 6</code></pre>
 <p><strong>NOTE</strong>For each restraint, the first field is for receptor, the second field is for ligand, and the third field is for the constrained distance. The residue representation must be in num:chainID or num1-num2:chainID format, where the residue number and chain ID refer to the input structure if the input is a structure, or the modeled structure if the input is a sequence.</p>
 <p><strong>CAUTION</strong>For the 3D structure modeled by the server, the chain ID is set to “A” for single-chain molecule. The numbering of residues is consistent with that in the input sequence.</p>
-<h3><span id="3-saxs-experimental-data-curve">3 SAXS experimental data curve</span></h3><p>The small-angle X-ray scattering (SAXS) experimental data can be provided as a post-docking filter for ranking the binding modes predicted by the HDOCK docking. The SAXS data file contains three columns, q, I(q), and error, like this</p>
+<h3 id="3-SAXS-experimental-data-curve"><a href="#3-SAXS-experimental-data-curve" class="headerlink" title="3 SAXS experimental data curve"></a>3 SAXS experimental data curve</h3><p>The small-angle X-ray scattering (SAXS) experimental data can be provided as a post-docking filter for ranking the binding modes predicted by the HDOCK docking. The SAXS data file contains three columns, q, I(q), and error, like this</p>
 <pre><code>    0.0000E+00  1.4612E+07  3.0685E+03
     1.0000E-03  1.4743E+07  4.8653E+03
     2.0000E-03  1.4827E+07  7.3394E+03
@@ -216,7 +216,7 @@
     8.0000E-03  1.4594E+07  2.3642E+04
     9.0000E-03  1.4787E+07  2.8835E+04</code></pre>
 <p>With the SAXS experimental curve, the binding models will be ranked according to a weighted score of the docking energy score calculated by our scoring function and the CHI value that measure the goodness of the predicted binding modes fitting to the SAXS experimental data.</p>
-<h3><span id="4-post-docking-process-optional">4 Post-docking process (optional)</span></h3><p>This step is for advanced users if they want to obtain more than 100 predicted complex models or filter the docked complex models with their own experimental information. The downloaded package contains an HDOCK output file, named like_hdock_5c984053e4b83.out_, that includes all 4392 docking solutions like this</p>
+<h3 id="4-Post-docking-process-optional"><a href="#4-Post-docking-process-optional" class="headerlink" title="4 Post-docking process (optional)"></a>4 Post-docking process (optional)</h3><p>This step is for advanced users if they want to obtain more than 100 predicted complex models or filter the docked complex models with their own experimental information. The downloaded package contains an HDOCK output file, named like_hdock_5c984053e4b83.out_, that includes all 4392 docking solutions like this</p>
 <p>Grid spacing:     1.200<br>Angle step:    15.000<br>Initial rotation:     0.00000   0.00000   0.00000<br>1CGI_r_b.pdb      23.562    26.523    22.675<br>1CGI_l_b.pdb      47.776    34.961    33.826<br>   1.27246   0.01055   5.02167    -0.328    -0.164     0.264   -445.20      0.45      1.00<br>   2.80075   0.00162   3.49381    -0.286    -0.209     0.111   -444.37      0.38      1.00<br>   0.02137   0.00051  -0.00948    -0.267    -0.212     0.104   -444.28      0.36      1.00<br>   2.98094   0.00164   3.31735    -0.237    -0.259     0.116   -444.15      0.37      1.00<br>   3.04247   0.00300   3.25767    -0.340    -0.315     0.134   -442.80      0.49      1.00<br>   …</p>
 <p>where the first 5 lines have the following definitions</p>
 <p>   The 1st line is the Grid spacing of three (x, y, z) translational degrees of freedom.<br>   The 2nd line is the Euler angle step for three rotational degrees of freedom.<br>   The 3rd line are the initial rotation of the ligand before docking (optional).<br>   The 4th line stands for the receptor file and its center of geometry.<br>   The 5th line is the ligand file and its center of geometry.</p>
@@ -227,7 +227,7 @@
 <pre><code>createpl_linux</code></pre>
 <p>for the detailed usage about the program.</p>
 <p>After generating the complex models, users may also use a third-party program like<a target="_blank" rel="noopener" href="https://modbase.compbio.ucsf.edu/foxs/">FoXS</a>to calculate the SAXS CHI values of the models based on their small-angle X-ray scattering (SAXS) profile file.</p>
-<p>© Lab of Biophysics and Molecular Modeling, <a href="mailto:&#104;&#x75;&#x61;&#110;&#103;&#x6c;&#97;&#98;&#x40;&#x68;&#117;&#x73;&#x74;&#46;&#101;&#x64;&#x75;&#46;&#99;&#x6e;">&#104;&#x75;&#x61;&#110;&#103;&#x6c;&#97;&#98;&#x40;&#x68;&#117;&#x73;&#x74;&#46;&#101;&#x64;&#x75;&#46;&#99;&#x6e;</a></p>
+<p>© Lab of Biophysics and Molecular Modeling, <a href="mailto:&#x68;&#x75;&#x61;&#x6e;&#103;&#108;&#x61;&#98;&#64;&#104;&#x75;&#x73;&#116;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;">&#x68;&#x75;&#x61;&#x6e;&#103;&#108;&#x61;&#98;&#64;&#104;&#x75;&#x73;&#116;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;</a></p>
 
       
 
@@ -321,7 +321,7 @@
   
 <nav id="article-nav">
   
-    <a href="/1970/01/01/Note_Taking/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/1970/01/01/media/ht/ht_5T/Database/Virus/Bacteriophage/PhagesDB/Figures/Institutions/14169_mc_centered_rgb.png/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -331,7 +331,7 @@
     </a>
   
   
-    <a href="/1970/01/01/obsidian-base-v0.5.3/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/1970/01/01/Note_Taking/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
@@ -504,18 +504,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -529,6 +517,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,6 +569,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -732,23 +764,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -772,55 +792,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -837,6 +813,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -948,15 +932,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1065,6 +1049,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
