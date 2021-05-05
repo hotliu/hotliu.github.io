@@ -185,8 +185,8 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">SRA Integrity check</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">基于神经网络构建的戊型肝炎病毒时空分布模型的研究</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Reading</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Macro usage in Linux Office Suite (WPS or LibreOffice)</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBI</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # SRA command&#x2F;integrity check # ref to text as below</span><br><span class="line">#</span><br><span class="line">setsid wpp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Summary&#x2F;NFE2_Sum_Large.pptx # add result of B95-8 treated with tBHQ</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;DL&#x2F;20210125</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # organize&#x2F;clean-up documents  # 38 items left</span><br><span class="line">#</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety&#x2F;Flu-Biosafety_20210125_Add.docx # Experiment summary from Wang Hui # filename changed # simply revised</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Drug_Test&#x2F;20210125</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # revised report and contract for DD</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;甘肃项目&#x2F;BigData_Project.pptx</span><br><span class="line">setsid wpp $&#123;i&#125; # reviewer&#39;s comment added in first page (title page)</span><br></pre></td></tr></table></figure>
-<h1><span id="sra-integrity-check">SRA Integrity check</span><a href="#sra-integrity-check" class="header-anchor">#</a></h1><p>You can run our <code>vdb-validate</code> tool. For example:</p>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBI</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # SRA command&#x2F;integrity check # ref to text as below</span><br><span class="line">#</span><br><span class="line">setsid wpp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Summary&#x2F;NFE2_Sum_Large.pptx # add result of B95-8 treated with tBHQ</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;DL&#x2F;20210125</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # organize&#x2F;clean-up documents  # 38 items left</span><br><span class="line">#</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety&#x2F;Flu-Biosafety_20210125_Add.docx # Experiment summary from Wang Hui # filename changed # simply revised</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Drug_Test&#x2F;20210125</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # revised report and contract for DD</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;甘肃项目&#x2F;BigData_Project.pptx</span><br><span class="line">setsid wpp $&#123;i&#125; # reviewer&#39;s comment added in first page (title page)</span><br></pre></td></tr></table></figure>
+<h1><span id="sra-integrity-check">SRA Integrity check</span></h1><p>You can run our <code>vdb-validate</code> tool. For example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vdb-validate --option-file PRJNA_ID_SRR_Acc_List.txt</span><br></pre></td></tr></table></figure>
 <p>This will verify the internal checksums for all of the accessions in your accession list file.</p>
 <p>You can also validate one at a time. For example:</p>
@@ -198,10 +198,10 @@
 <li><a target="_blank" rel="noopener" href="https://www.biostars.org/p/111040/">How to download raw sequence data from GEO/SRA</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/#download-sequence-data-files-usi">Download SRA sequences from Entrez search results</a></li>
 </ul>
-<h1><span id="ji-yu-shen-jing-wang-luo-gou-jian-de-wu-xing-gan-yan-bing-du-shi-kong-fen-bu-mo-xing-de-yan-jiu">基于神经网络构建的戊型肝炎病毒时空分布模型的研究</span><a href="#ji-yu-shen-jing-wang-luo-gou-jian-de-wu-xing-gan-yan-bing-du-shi-kong-fen-bu-mo-xing-de-yan-jiu" class="header-anchor">#</a></h1><h1><span id="reading">Reading</span><a href="#reading" class="header-anchor">#</a></h1><ul>
+<h1><span id="基于神经网络构建的戊型肝炎病毒时空分布模型的研究">基于神经网络构建的戊型肝炎病毒时空分布模型的研究</span></h1><h1><span id="reading">Reading</span></h1><ul>
 <li><a href="/media/ht/ht_5T/Work/Funding/2017_%E9%87%8D%E5%A4%A7%E4%B8%93%E9%A1%B9/Management/Administration/09_02_63_HEV/Ref/Hantavirus_Coevolution_with_Their_Rodent_Hosts.pdf">Hantavirus_Coevolution_with_Their_Rodent_Hosts.pdf</a></li>
 </ul>
-<h1><span id="macro-usage-in-linux-office-suite-wps-or-libreoffice">Macro usage in Linux Office Suite (WPS or LibreOffice)</span><a href="#macro-usage-in-linux-office-suite-wps-or-libreoffice" class="header-anchor">#</a></h1><ul>
+<h1><span id="macro-usage-in-linux-office-suite-wps-or-libreoffice">Macro usage in Linux Office Suite (WPS or LibreOffice)</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://malwaremusings.com/2016/02/21/an-exercise-in-deobfuscating-ms-word-macros-using-linux/">An Exercise in Deobfuscating MS Word Macros Using Linux | Malware Musings</a></li>
 <li><a target="_blank" rel="noopener" href="https://forum.ubuntu.org.cn/viewtopic.php?t=489356">LibreOffice 宏：内嵌代码架构（Libre Basic）一览图（4页） - Ubuntu中文论坛</a></li>
 </ul>
@@ -321,16 +321,16 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">Backup</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">#</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">Backup</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text"></span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><h2><span id="backup">Backup</span><a href="#backup" class="header-anchor">#</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Backup</span><br><span class="line">Source&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;</span><br><span class="line">Destination&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_7&#x2F;Work&#x2F;</span><br><span class="line">rsync -auP --update $&#123;Source&#125; $&#123;Destination&#125; # 显示过程</span><br></pre></td></tr></table></figure>
+        <h1><span id="working-directories">Working directories</span></h1><h2><span id="backup">Backup</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Backup</span><br><span class="line">Source&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;</span><br><span class="line">Destination&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_7&#x2F;Work&#x2F;</span><br><span class="line">rsync -auP --update $&#123;Source&#125; $&#123;Destination&#125; # 显示过程</span><br></pre></td></tr></table></figure>
 <p><strong>Original size</strong></p>
 <ul>
 <li>1.2 TiB (1,342,862,000,128 bytes)</li>
 <li>1.2 TiB (1,341,994,985,379 bytes)</li>
 </ul>
-<h1><span id="joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities"></span><a href="#joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities" class="header-anchor">#</a></h1><ul>
+<h1><span id="joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities"></span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://clickup.com/blog/notion-app-review/">Notion Review + 5 Great Alternatives | ClickUp Blog</a></li>
 <li><a target="_blank" rel="noopener" href="https://beebom.com/best-notion-alternatives/">12 Best Notion Alternatives You Should Use in 2020 | Beebom</a></li>
 </ul>
@@ -411,18 +411,18 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Legado</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">#</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Legado</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text"></span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;DL&#x2F;20201210</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # organize&#x2F;clean-up documents  # 45 items left</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;09_02_63_HEV&#x2F;CNN&#x2F;20201209.pptx</span><br><span class="line">setsid wpp $&#123;i&#125; # HEV analysis current status</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;肿瘤室工作&#x2F;0_学生指导&#x2F;王娇&#x2F;Thesis</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # 论文撰写开始</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Ref&#x2F;Deletion</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # well done</span><br></pre></td></tr></table></figure>
-<h1><span id="legado">Legado</span><a href="#legado" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;Legado</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Description and instruction of Legado</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;lHT_Media&#x2F;Legado.md</span><br><span class="line">subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;DL&#x2F;20201210</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # organize&#x2F;clean-up documents  # 45 items left</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;09_02_63_HEV&#x2F;CNN&#x2F;20201209.pptx</span><br><span class="line">setsid wpp $&#123;i&#125; # HEV analysis current status</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;肿瘤室工作&#x2F;0_学生指导&#x2F;王娇&#x2F;Thesis</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # 论文撰写开始</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Ref&#x2F;Deletion</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # well done</span><br></pre></td></tr></table></figure>
+<h1><span id="legado">Legado</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;Legado</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Description and instruction of Legado</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;lHT_Media&#x2F;Legado.md</span><br><span class="line">subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a href="/media/ht/ht_5T/Management/lHT_Media/Legado.md">Legado.md</a>, necessarily synchronize with this document</li>
 <li><a target="_blank" rel="noopener" href="https://www.nuomiphp.com/github/zh/5fc77d42f559693625776275.html">开源- 阅读-规则备份(com.gedoor.monkeybook，io.legado.app.release)-糯米PHP</a></li>
 <li><a target="_blank" rel="noopener" href="http://nylmj.cn/post/108.html">阅读3.0，一直很火的看书软件，满足你对小说的一切幻想 - 小说 - 云淡风轻Mr.Liu</a></li>
 </ul>
 <p>使用备份功能，手机A的备份可以被手机B的恢复功能输入手机A的书目，同时保留原来手机B的原有书目。</p>
-<h1><span id="yin-shua-zhuan-ye-ci-hui-ji-he-tie-md"></span><a href="#yin-shua-zhuan-ye-ci-hui-ji-he-tie-md" class="header-anchor">#</a></h1><h1><span id="joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities"></span><a href="#joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities" class="header-anchor">#</a></h1>
+<h1><span id="印刷专业词汇集合帖md"></span></h1><h1><span id="joplin-an-open-source-note-taking-and-to-do-application-with-synchronisation-capabilities"></span></h1>
       
 
       
@@ -518,13 +518,13 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">#</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text"></span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#96;date +%Y%m%d&#96;</span><br><span class="line">printf &quot;\n\n# Working direcotries\n\n&quot; &gt;&gt; &#96;Date&#96;.md</span><br><span class="line">subl &#96;date +%Y%m%d&#96;.md</span><br></pre></td></tr></table></figure>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#96;date +%Y%m%d&#96;</span><br><span class="line">printf &quot;\n\n# Working direcotries\n\n&quot; &gt;&gt; &#96;Date&#96;.md</span><br><span class="line">subl &#96;date +%Y%m%d&#96;.md</span><br></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125; # moving &#96;.xmind&#96; to there</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125; # organize documents in schedule</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1; pcmanfm -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety; pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1><span id="how-to-set-date-modified-by-date-taken-with-exiftool-photography-stack-exchange"></span><a href="#how-to-set-date-modified-by-date-taken-with-exiftool-photography-stack-exchange" class="header-anchor">#</a></h1><p><strong>to be solved</strong></p>
+<h1><span id="how-to-set-date-modified-by-date-taken-with-exiftool-photography-stack-exchange"></span></h1><p><strong>to be solved</strong></p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/103767/how-can-i-rename-files-to-match-their-exif-created-date">metadata - How can I rename files to match their EXIF “created date”? - Photography Stack Exchange</a></li>
 <li><a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">FileName and Directory tags</a></li>
@@ -626,8 +626,8 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Music storage online</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line"># Copy &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;Vaccine_20210117.pdf to Margin Note 3</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1><span id="music-storage-online">Music storage online</span><a href="#music-storage-online" class="header-anchor">#</a></h1><ul>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line"># Copy &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;Vaccine_20210117.pdf to Margin Note 3</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="music-storage-online">Music storage online</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/hersche/YouPHPTube/tree/unstable">GitHub - hersche/YouPHPTube: This fork is massive deprecated because i push to the official branch directly now.</a></li>
 <li><a target="_blank" rel="noopener" href="https://laike9m.com/blog/ge-ren-yin-le-cun-chu-zhong-ji-jie-jue-fang-an,123/">个人音乐存储，终极解决方案 - laike9m’s blog</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.cloudwards.net/best-cloud-storage-for-music/">Best Cloud Storage for Music in 2021: Save Your Songs Online</a></li>
@@ -712,9 +712,9 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">OneDrive</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">FTP access</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Calendar from Microsoft Outlook</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># Download debian pack of WPS 2019</span><br><span class="line">#</span><br><span class="line">rm wps-office.deb</span><br><span class="line">ln -s wps-office_11.1.0.9604.XA_amd64.deb wps-office.deb</span><br><span class="line">7z l DEB.7z | awk &#39;&#123;print $5&#125;&#39;</span><br><span class="line">7z a DEB.7z wps-office_11.1.0.9505.XA_amd64.deb wps-office_11.1.0.9604.XA_amd64.deb</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2021_国家自然科学基金&#39;</span><br><span class="line">cd $&#123;i&#125; # Classify documents</span><br></pre></td></tr></table></figure>
-<h1><span id="onedrive">OneDrive</span><a href="#onedrive" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hotliu@msn.com</span><br></pre></td></tr></table></figure>
-<h1><span id="ftp-access">FTP access</span><a href="#ftp-access" class="header-anchor">#</a></h1><ul>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># Download debian pack of WPS 2019</span><br><span class="line">#</span><br><span class="line">rm wps-office.deb</span><br><span class="line">ln -s wps-office_11.1.0.9604.XA_amd64.deb wps-office.deb</span><br><span class="line">7z l DEB.7z | awk &#39;&#123;print $5&#125;&#39;</span><br><span class="line">7z a DEB.7z wps-office_11.1.0.9505.XA_amd64.deb wps-office_11.1.0.9604.XA_amd64.deb</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2021_国家自然科学基金&#39;</span><br><span class="line">cd $&#123;i&#125; # Classify documents</span><br></pre></td></tr></table></figure>
+<h1><span id="onedrive">OneDrive</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hotliu@msn.com</span><br></pre></td></tr></table></figure>
+<h1><span id="ftp-access">FTP access</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands">List of FTP Commands for Linux and UNIX | Serv-U</a></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ftp</span><br><span class="line">&gt;open IP 2121</span><br><span class="line">#</span><br><span class="line">ftp 192.168.1.6 2121</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
@@ -727,7 +727,7 @@
 
 <details markdown="1"><summary>Expand/Collapse</summary>
 
-<h1><span id="calendar-from-microsoft-outlook">Calendar from Microsoft Outlook</span><a href="#calendar-from-microsoft-outlook" class="header-anchor">#</a></h1><ul>
+<h1><span id="calendar-from-microsoft-outlook">Calendar from Microsoft Outlook</span></h1><ul>
 <li>Edit text with Markor in Android platform</li>
 <li>Switch between Markor and Calendar</li>
 </ul>
@@ -813,8 +813,8 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Image testing</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets&#x2F;Ad-LMP2-CSR-20130806.doc</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1><span id="image-testing">Image testing</span><a href="#image-testing" class="header-anchor">#</a></h1><p>GIF displayed well.</p>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets&#x2F;Ad-LMP2-CSR-20130806.doc</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="image-testing">Image testing</span></h1><p>GIF displayed well.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](Test.gif)</span><br></pre></td></tr></table></figure>
 <p><img src="Test.gif"></p>
 <hr>
@@ -898,25 +898,25 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">#</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.1.</span> <span class="toc-text">Via file manager</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">English Correction Online</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Picture testing</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">2.1.</span> <span class="toc-text">Via file manager</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">English Correction Online</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">Picture testing</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;20210114&#x2F;*.* ftp:&#x2F;&#x2F;192.168.1.3:2121&#x2F;</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;莪术油Project</span><br></pre></td></tr></table></figure>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;20210114&#x2F;*.* ftp:&#x2F;&#x2F;192.168.1.3:2121&#x2F;</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;莪术油Project</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Merged the pdf documents in <code>/media/ht/ht_5T/Work/Projects/Other_Projects/Coronavirus_Project/Ref/Vaccine/20210114</code></li>
 </ul>
-<h1><span id="command-line-login-with-linux-ftp-username-and-password-super-user"></span><a href="#command-line-login-with-linux-ftp-username-and-password-super-user" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp username:password@my.domain.com</span><br></pre></td></tr></table></figure>
+<h1><span id="command-line-login-with-linux-ftp-username-and-password-super-user"></span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp username:password@my.domain.com</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://linuxconfig.org/how-to-setup-and-use-ftp-server-in-ubuntu-linux">How to setup and use FTP Server in Ubuntu Linux - LinuxConfig.org</a></li>
 </ul>
-<h2><span id="via-file-manager">Via file manager</span><a href="#via-file-manager" class="header-anchor">#</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ftp:&#x2F;&#x2F;ht@192.168.1.6:2121&#x2F;Documents&#x2F;Study&#x2F;COVID-19</span><br><span class="line">&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;20210114</span><br></pre></td></tr></table></figure>
-<h1><span id="how-to-download-and-upload-files-using-ftp-command-line"></span><a href="#how-to-download-and-upload-files-using-ftp-command-line" class="header-anchor">#</a></h1><h1><span id="english-correction-online">English Correction Online</span><a href="#english-correction-online" class="header-anchor">#</a></h1><ul>
+<h2><span id="via-file-manager">Via file manager</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ftp:&#x2F;&#x2F;ht@192.168.1.6:2121&#x2F;Documents&#x2F;Study&#x2F;COVID-19</span><br><span class="line">&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;20210114</span><br></pre></td></tr></table></figure>
+<h1><span id="how-to-download-and-upload-files-using-ftp-command-line"></span></h1><h1><span id="english-correction-online">English Correction Online</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.onlinecorrection.com/">Online Text Correction</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.scribens.com/">Free, Powerful English Grammar Checker | SCRIBENS</a></li>
 <li><a target="_blank" rel="noopener" href="https://languagetool.org/">LanguageTool - Online Grammar, Style &amp; Spell Checker</a></li>
 <li><a target="_blank" rel="noopener" href="https://textranch.com/90417/should-be-correct/or/should-be-corrected/">should be correct or should be corrected?</a></li>
 </ul>
-<h1><span id="picture-testing">Picture testing</span><a href="#picture-testing" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Testing](&#x2F;Figures&#x2F;Sample.jpg)</span><br></pre></td></tr></table></figure>
+<h1><span id="picture-testing">Picture testing</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Testing](&#x2F;Figures&#x2F;Sample.jpg)</span><br></pre></td></tr></table></figure>
 
 <p><img src="/Figures/Sample.jpg" alt="Testing"></p>
 <hr>
@@ -1033,7 +1033,7 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Two file managers in Android</span></a></li></ol>
 </div>
 
-        <h1><span id="two-file-managers-in-android">Two file managers in Android</span><a href="#two-file-managers-in-android" class="header-anchor">#</a></h1><ul>
+        <h1><span id="two-file-managers-in-android">Two file managers in Android</span></h1><ul>
 <li>Root Exporer, Simple and useful. Mutiple viewer included</li>
 <li>ES File Explorer, Function and function<ul>
 <li>Batch Rename Files or Folders</li>
@@ -1152,26 +1152,26 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">Tags in Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">printf替代echo的活用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">离线语音助手</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">FTP connection from Lubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">印刷术语等</span></a></li></ol>
 </div>
 
-        <h1><span id="working-directories">Working directories</span><a href="#working-directories" class="header-anchor">#</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets&#x2F;Ad-LMP2-CSR-20130806.doc</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1><span id="tags-in-hexo">Tags in Hexo</span><a href="#tags-in-hexo" class="header-anchor">#</a></h1><ul>
+        <h1><span id="working-directories">Working directories</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;EBV_Clinic&#x2F;Budgets&#x2F;Ad-LMP2-CSR-20130806.doc</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="tags-in-hexo">Tags in Hexo</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://ztygcs.github.io/posts/%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E5%8F%8A%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99/">Hexo写博客及语法规则 | 天涯共此时</a>, 有比较详细的语法介绍</li>
 </ul>
 <p>tags: [A, B, C]<br>以上的中括号是必须的，逗号用于分割多个Tag。</p>
-<h1><span id="printf-ti-dai-echo-de-huo-yong"><code>printf</code>替代<code>echo</code>的活用</span><a href="#printf-ti-dai-echo-de-huo-yong" class="header-anchor">#</a></h1><ul>
+<h1><span id="printf替代echo的活用"><code>printf</code>替代<code>echo</code>的活用</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n">Echo newline in Bash prints literal \n - Stack Overflow</a></li>
 </ul>
 <p>Solve the problem of line breaks.</p>
-<h1><span id="chi-xian-yu-yin-zhu-shou">离线语音助手</span><a href="#chi-xian-yu-yin-zhu-shou" class="header-anchor">#</a></h1><ul>
+<h1><span id="离线语音助手">离线语音助手</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.ruan8.com/news_4637.html">手机用什么语音助手最好 最好的手机语音助手app推荐_资讯_手机软件下载_软吧</a></li>
 </ul>
 <p><strong>变音魔术师</strong> from Google Play</p>
-<h1><span id="ftp-connection-from-lubuntu">FTP connection from Lubuntu</span><a href="#ftp-connection-from-lubuntu" class="header-anchor">#</a></h1><ol>
+<h1><span id="ftp-connection-from-lubuntu">FTP connection from Lubuntu</span></h1><ol>
 <li>PCManFM, select “Connect to Server” from “Go” menu</li>
 <li>In the pop-up menu, select “FTP” in the first line and fill in host information</li>
 <li>After click “Connect”, password needed.</li>
 <li>Bookmark is recommended for frequent using</li>
 </ol>
-<h1><span id="yin-shua-zhu-yu-deng">印刷术语等</span><a href="#yin-shua-zhu-yu-deng" class="header-anchor">#</a></h1><ul>
+<h1><span id="印刷术语等">印刷术语等</span></h1><ul>
 <li><a target="_blank" rel="noopener" href="https://www.fon.hum.uva.nl/praat/manual/Special_symbols.html">Special symbols</a>, Very useful</li>
 </ul>
 <ul>
@@ -1468,38 +1468,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">zcat</a>
               </li>
              
@@ -1525,38 +1493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Guo Yifan</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1596,6 +1532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Guo Yifan</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
               </li>
              
@@ -1604,99 +1544,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">endometrial cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Watch charging</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">代码的魅力</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flatpak</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1740,6 +1612,114 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">endometrial cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
               </li>
              
@@ -1753,6 +1733,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Watch charging</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">代码的魅力</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1844,15 +1844,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1924,10 +1924,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
               </li>
              
@@ -1937,6 +1933,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
