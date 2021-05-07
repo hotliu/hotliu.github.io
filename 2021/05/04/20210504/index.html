@@ -18,14 +18,11 @@
 <meta property="og:image" content="https://sorenpoulsen.com/resources/img/encrypting-a-usb-flash-drive-on-ubuntu.jpg">
 <meta property="og:image" content="https://sorenpoulsen.com/resources/img/linux-device-mapper.jpg">
 <meta property="og:image" content="https://sorenpoulsen.com/resources/img/nautilus-usb-flash-drive.jpg">
-<meta property="og:image" content="https://static01.nyt.com/images/2021/05/03/business/03gates-02/03gates-02-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
-<meta property="og:image" content="https://static01.nyt.com/images/2021/05/03/business/03gates-02/03gates-02-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
-<meta property="og:image" content="https://static01.nyt.com/images/2018/07/24/multimedia/author-david-gelles/author-david-gelles-thumbLarge.png">
-<meta property="og:image" content="https://static01.nyt.com/images/2018/07/16/multimedia/author-andrew-ross-sorkin/author-andrew-ross-sorkin-thumbLarge.png">
-<meta property="og:image" content="https://static01.nyt.com/images/2018/10/22/multimedia/author-nicholas-kulish/author-nicholas-kulish-thumbLarge-v2.png">
 <meta property="article:published_time" content="2021-05-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-05T15:23:43.392Z">
+<meta property="article:modified_time" content="2021-05-07T00:10:15.195Z">
 <meta property="article:author" content="Hongtu Liu">
+<meta property="article:tag" content="恢复真实容量">
+<meta property="article:tag" content="Pen drive Encrypting">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://sorenpoulsen.com/resources/img/encrypting-a-usb-flash-drive-on-ubuntu.jpg">
   
@@ -193,7 +190,7 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9%E7%9B%98%E6%98%AF%E4%BB%80%E4%B9%88-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E7%9C%9F%E5%AE%9E%E5%AE%B9%E9%87%8F%E3%80%90%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">扩容盘是什么 如何恢复真实容量【方法详解】</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Encrypting-a-USB-flash-drive-on-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">Encrypting a USB flash drive on Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-cryptsetup"><span class="toc-number">3.1.</span> <span class="toc-text">Install cryptsetup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-the-USB-device-node"><span class="toc-number">3.2.</span> <span class="toc-text">Find the USB device node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-the-drive-with-noise"><span class="toc-number">3.3.</span> <span class="toc-text">Fill the drive with noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partition-the-drive"><span class="toc-number">3.4.</span> <span class="toc-text">Partition the drive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-LUKS"><span class="toc-number">3.5.</span> <span class="toc-text">Setup LUKS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Putting-a-filesystem-on-the-device"><span class="toc-number">3.6.</span> <span class="toc-text">Putting a filesystem on the device</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mounting-and-using-the-encrypted-drive"><span class="toc-number">3.7.</span> <span class="toc-text">Mounting and using the encrypted drive</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hyperlink-testing"><span class="toc-number">4.</span> <span class="toc-text">Hyperlink testing</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9%E7%9B%98%E6%98%AF%E4%BB%80%E4%B9%88-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E7%9C%9F%E5%AE%9E%E5%AE%B9%E9%87%8F%E3%80%90%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">扩容盘是什么 如何恢复真实容量【方法详解】</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Encrypting-a-USB-flash-drive-on-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">Encrypting a USB flash drive on Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-cryptsetup"><span class="toc-number">3.1.</span> <span class="toc-text">Install cryptsetup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-the-USB-device-node"><span class="toc-number">3.2.</span> <span class="toc-text">Find the USB device node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-the-drive-with-noise"><span class="toc-number">3.3.</span> <span class="toc-text">Fill the drive with noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partition-the-drive"><span class="toc-number">3.4.</span> <span class="toc-text">Partition the drive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-LUKS"><span class="toc-number">3.5.</span> <span class="toc-text">Setup LUKS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Putting-a-filesystem-on-the-device"><span class="toc-number">3.6.</span> <span class="toc-text">Putting a filesystem on the device</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mounting-and-using-the-encrypted-drive"><span class="toc-number">3.7.</span> <span class="toc-text">Mounting and using the encrypted drive</span></a></li></ol></li></ol>
 </div>
 
         <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><ul>
@@ -274,20 +271,6 @@ sudo mount /dev/mapper/myusb /media/myusb  </code></pre>
 <pre><code>sudo umount /media/myusb  
 sudo cryptsetup luksClose myusb  </code></pre>
 <p><a target="_blank" rel="noopener" href="https://sorenpoulsen.com/encryption-with-gnupg-on-ubuntu"></a></p>
-<h1 id="Hyperlink-testing"><a href="#Hyperlink-testing" class="headerlink" title="Hyperlink testing"></a>Hyperlink testing</h1><p>The announcement raises questions about the fate of their fortune. The couple helped create the Giving Pledge, but much of his Microsoft money has not yet been donated.</p>
-<ul>
-<li>  <a target="_blank" rel="noopener" href="https://www.facebook.com/dialog/feed?app_id=9869919170&link=https://www.nytimes.com/2021/05/03/business/bill-melinda-gates-divorce.html?smid=fb-share&name=Bill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage&redirect_uri=https://www.facebook.com/"></a></li>
-<li>  <a target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=Bill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage%20https://www.nytimes.com/2021/05/03/business/bill-melinda-gates-divorce.html?smid=wa-share"></a></li>
-<li>  <a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=https://www.nytimes.com/2021/05/03/business/bill-melinda-gates-divorce.html?smid=tw-share&text=Bill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage"></a></li>
-<li>  <a href="mailto:?subject=NYTimes.com%3A%20Bill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage&body=From%20The%20New%20York%20Times%3A%0A%0ABill%20and%20Melinda%20Gates%20Are%20Divorcing%20After%2027%20Years%20of%20Marriage%0A%0AThe%20announcement%20raises%20questions%20about%20the%20fate%20of%20their%20fortune.%20The%20couple%20helped%20create%20the%20Giving%20Pledge%2C%20but%20much%20of%20his%20Microsoft%20money%20has%20not%20yet%20been%20donated.%0A%0Ahttps%3A%2F%2Fwww.nytimes.com%2F2021%2F05%2F03%2Fbusiness%2Fbill-melinda-gates-divorce.html%3Fsmid%3Dem-share"></a></li>
-</ul>
-<p><img src="https://static01.nyt.com/images/2021/05/03/business/03gates-02/03gates-02-articleLarge.jpg?quality=75&auto=webp&disable=upscale"></p>
-<p><img src="https://static01.nyt.com/images/2021/05/03/business/03gates-02/03gates-02-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Bill and Melinda Gates in 2018. They “no longer believe we can grow together as a couple in this next phase of our lives,” they said in a statement."></p>
-<p>Bill and Melinda Gates in 2018. They “no longer believe we can grow together as a couple in this next phase of our lives,” they said in a statement.Credit…Ludovic Marin/Agence France-Presse — Getty Images</p>
-<p><a target="_blank" rel="noopener" href="https://www.nytimes.com/by/david-gelles"><img src="https://static01.nyt.com/images/2018/07/24/multimedia/author-david-gelles/author-david-gelles-thumbLarge.png" alt="David Gelles" title="David Gelles"></a><a target="_blank" rel="noopener" href="https://www.nytimes.com/by/andrew-ross-sorkin"><img src="https://static01.nyt.com/images/2018/07/16/multimedia/author-andrew-ross-sorkin/author-andrew-ross-sorkin-thumbLarge.png" alt="Andrew Ross Sorkin" title="Andrew Ross Sorkin"></a><a target="_blank" rel="noopener" href="https://www.nytimes.com/by/nicholas-kulish"><img src="https://static01.nyt.com/images/2018/10/22/multimedia/author-nicholas-kulish/author-nicholas-kulish-thumbLarge-v2.png" alt="Nicholas Kulish" title="Nicholas Kulish"></a></p>
-<p>By <a target="_blank" rel="noopener" href="https://www.nytimes.com/by/david-gelles">David Gelles</a>, <a target="_blank" rel="noopener" href="https://www.nytimes.com/by/andrew-ross-sorkin">Andrew Ross Sorkin</a> and <a target="_blank" rel="noopener" href="https://www.nytimes.com/by/nicholas-kulish">Nicholas Kulish</a></p>
-<p>May 3, 2021Updated 8:50 p.m. ET</p>
-<p>Bill and <a target="_blank" rel="noopener" href="https://www.nytimes.com/2020/12/04/business/melinda-gates-interview-corner-office.html?searchResultPosition=7">Melinda Gates</a>, two of the richest people in the world, who reshaped philanthropy and public health with the fortune Mr. Gates made as a co-founder of Microsoft, said on Monday that they were divorcing.</p>
 
       
 
@@ -317,6 +300,21 @@ sudo cryptsetup luksClose myusb  </code></pre>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">恢复真实容量</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Pen drive Encrypting</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -430,7 +428,7 @@ sudo cryptsetup luksClose myusb  </code></pre>
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9%E7%9B%98%E6%98%AF%E4%BB%80%E4%B9%88-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E7%9C%9F%E5%AE%9E%E5%AE%B9%E9%87%8F%E3%80%90%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">扩容盘是什么 如何恢复真实容量【方法详解】</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Encrypting-a-USB-flash-drive-on-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">Encrypting a USB flash drive on Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-cryptsetup"><span class="toc-number">3.1.</span> <span class="toc-text">Install cryptsetup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-the-USB-device-node"><span class="toc-number">3.2.</span> <span class="toc-text">Find the USB device node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-the-drive-with-noise"><span class="toc-number">3.3.</span> <span class="toc-text">Fill the drive with noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partition-the-drive"><span class="toc-number">3.4.</span> <span class="toc-text">Partition the drive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-LUKS"><span class="toc-number">3.5.</span> <span class="toc-text">Setup LUKS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Putting-a-filesystem-on-the-device"><span class="toc-number">3.6.</span> <span class="toc-text">Putting a filesystem on the device</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mounting-and-using-the-encrypted-drive"><span class="toc-number">3.7.</span> <span class="toc-text">Mounting and using the encrypted drive</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hyperlink-testing"><span class="toc-number">4.</span> <span class="toc-text">Hyperlink testing</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9%E7%9B%98%E6%98%AF%E4%BB%80%E4%B9%88-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E7%9C%9F%E5%AE%9E%E5%AE%B9%E9%87%8F%E3%80%90%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E3%80%91"><span class="toc-number">2.</span> <span class="toc-text">扩容盘是什么 如何恢复真实容量【方法详解】</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Encrypting-a-USB-flash-drive-on-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">Encrypting a USB flash drive on Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-cryptsetup"><span class="toc-number">3.1.</span> <span class="toc-text">Install cryptsetup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Find-the-USB-device-node"><span class="toc-number">3.2.</span> <span class="toc-text">Find the USB device node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fill-the-drive-with-noise"><span class="toc-number">3.3.</span> <span class="toc-text">Fill the drive with noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Partition-the-drive"><span class="toc-number">3.4.</span> <span class="toc-text">Partition the drive</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-LUKS"><span class="toc-number">3.5.</span> <span class="toc-text">Setup LUKS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Putting-a-filesystem-on-the-device"><span class="toc-number">3.6.</span> <span class="toc-text">Putting a filesystem on the device</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mounting-and-using-the-encrypted-drive"><span class="toc-number">3.7.</span> <span class="toc-text">Mounting and using the encrypted drive</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -588,6 +586,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -601,18 +611,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -848,6 +846,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
               </li>
              
@@ -884,6 +890,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
               </li>
              
@@ -897,14 +919,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1068,10 +1082,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
@@ -1085,6 +1095,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1136,19 +1150,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+                <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+                <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
