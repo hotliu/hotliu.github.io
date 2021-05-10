@@ -182,10 +182,29 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Faster-alternatives-to-%E2%80%9Cfind%E2%80%9D-and-%E2%80%9Clocate%E2%80%9D"><span class="toc-number">2.</span> <span class="toc-text">Faster alternatives to “find” and “locate”?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#locate-likes-using-indices"><span class="toc-number">2.1.</span> <span class="toc-text">locate-likes (using indices)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find-likes-directory-traversal"><span class="toc-number">2.2.</span> <span class="toc-text">find-likes (directory traversal)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep-likes-looking-at-content"><span class="toc-number">2.3.</span> <span class="toc-text">grep-likes (looking at content)</span></a></li></ol></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">also installing the dependencies </span><br><span class="line">&quot;clipr&quot;, &quot;viridisLite&quot;, &quot;ggplot2&quot;, &quot;gridExtra&quot;, &quot;downloader&quot;, &quot;igraph&quot;, &quot;influenceR&quot;, &quot;readr&quot;, &quot;tidyr&quot;, &quot;viridis&quot;, &quot;visNetwork&quot;</span><br><span class="line"></span><br><span class="line">尊敬的项目办领导，</span><br><span class="line"></span><br><span class="line">按照要求提交文件，请查收并批评指正。</span><br><span class="line"></span><br><span class="line">zdzx10_2016@vip.126.com</span><br><span class="line"></span><br><span class="line">刘宏图-课题进展-2018ZX10201002</span><br><span class="line"></span><br><span class="line">2021 National Trade Estimate Report on</span><br><span class="line">FOREIGN TRADE</span><br><span class="line">BARRIERS</span><br><span class="line"></span><br><span class="line">World Trade Statistical Review 2020</span><br><span class="line"></span><br><span class="line">2021 Trade Policy Agenda and 2020 Annual Report OF THE PRESIDENT OF THE UNITED STATES ON THE TRADE AGREEMENTS PROGRAM</span><br></pre></td></tr></table></figure>
+<h1 id="Faster-alternatives-to-“find”-and-“locate”"><a href="#Faster-alternatives-to-“find”-and-“locate”" class="headerlink" title="Faster alternatives to “find” and “locate”?"></a><a target="_blank" rel="noopener" href="https://superuser.com/questions/341232/faster-alternatives-to-find-and-locate">Faster alternatives to “find” and “locate”?</a></h1><ul>
+<li><a target="_blank" rel="noopener" href="https://superuser.com/questions/341232/faster-alternatives-to-find-and-locate">linux - Faster alternatives to “find” and “locate”? - Super User</a></li>
+</ul>
+<p>As of early 2021 I evaluated a few tools for similar use cases and integration with <a target="_blank" rel="noopener" href="https://github.com/junegunn/fzf">fzf</a>:</p>
+<p><strong>tl;dr:</strong> <strong><code>plocate</code></strong> is a <em>very</em> fast alternative to <code>mlocate</code> in most cases. (GNU) <strong><code>find</code></strong> often still seems to be hard to beat for tools which don’t require an index.</p>
+<h2 id="locate-likes-using-indices"><a href="#locate-likes-using-indices" class="headerlink" title="locate-likes (using indices)"></a><code>locate</code>-likes (using indices)</h2><p>I compared the commonly used <code>mlocate</code> and <a target="_blank" rel="noopener" href="https://plocate.sesse.net/"><code>plocate</code></a>. In a database of about 61 million files <code>plocate</code> answers specific queries (a couple of hundred results) in the order of 0.01 to 0.2 seconds and only becomes much slower (&gt; 100 seconds) for very unspecific queries with millions of results. <code>mlocate</code> takes an almost constant 35 to 40 seconds to query the same database in all tested cases. Most of the time <strong><code>plocate</code> is multiple orders of magnitude faster than <code>mlocate</code>.</strong></p>
+<h2 id="find-likes-directory-traversal"><a href="#find-likes-directory-traversal" class="headerlink" title="find-likes (directory traversal)"></a><code>find</code>-likes (directory traversal)</h2><p>It’s harder to - sorry - locate a good find alternative and the result very much depends on the specific queries. Here are some results for just trying to find all files in a sample directory (~200.000 files) in descending speed order:</p>
+<ul>
+<li>  GNU find (<code>find -type f</code>): Surprisingly, <strong><code>find</code> is often the fastest tool</strong> (~ 0.01 seconds)</li>
+<li>  plocate (<code>plocate --regexp &quot;^$PWD&quot;</code>) (&lt; 0.1 seconds)</li>
+<li>  mlocate (<code>mlocate --regexp &quot;^$PWD&quot;</code>): Interestingly faster than the non-regexp queries (~ 5 seconds)</li>
+<li>  ripgrep (<code>rg --files --no-ignore --hidden</code>): A good bit faster, but still very slow (~0.5 seconds)</li>
+<li>  fd (<code>fdfind --type f</code> on Debian): Not as fast as expected (~0.7 seconds)</li>
+<li>  <code>zsh</code> globs (<code>**/*</code> and extended versions): Generally very slow, but can be elegant in scripts (~3 seconds)</li>
+</ul>
+<p>With directory structures not cached in RAM, <code>plocate</code> probably beats <code>find</code>, especially on disks with high seek times (HDDs), but does of course require an up-to-date database.</p>
+<p>A parallelized <code>find</code> might give better results on systems which profit from command queuing and can request data in parallel. Depending on use case, this can be implemented in scripts, too, by running multiple instances of <code>find</code> on different subtrees, but performance characteristics depend on a lot of factors there.</p>
+<h2 id="grep-likes-looking-at-content"><a href="#grep-likes-looking-at-content" class="headerlink" title="grep-likes (looking at content)"></a><code>grep</code>-likes (looking at content)</h2><p>There’s a whole lot of recursive <code>grep</code>-like tools with different features, but most offer very limited features for finding files based on their metadata instead of their contents. Even if they are fast like <code>ag</code> (silversurfer), <code>rg</code> (ripgrep) or <code>ugrep</code>, they are not necessarily fast if just looking at file names.</p>
+
       
 
       
@@ -4049,10 +4068,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -4062,6 +4077,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4333,19 +4360,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4358,14 +4385,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4382,6 +4401,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4497,14 +4524,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
@@ -4617,11 +4636,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">凉山</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">凉山</a>
               </li>
              
               <li class="article-tag-list-item">
