@@ -158,6 +158,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210601" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/01/20210601/">20210601</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/20210601/" class="archive-article-date">
+  	<time datetime="2021-05-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210601</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Note-taking"><span class="toc-number">2.</span> <span class="toc-text">Note taking</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Code-collection"><span class="toc-number">3.</span> <span class="toc-text">Code collection</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-rename-directory-and-subdirectories-recursively"><span class="toc-number">4.</span> <span class="toc-text">How to rename directory and subdirectories recursively</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Source&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;16T&#x2F;Database&#x2F;1000genomes&#x2F;&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;4T_1&#x2F;Database&#x2F;1000genomes&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Source&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;16T&#x2F;Database&#x2F;1000genomes&#x2F;&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;4T_1&#x2F;Database&#x2F;1000genomes&#x2F;&quot;;du $&#123;Source&#125; -sh; du $&#123;Destination&#125; -sh</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;blast&#39;</span><br><span class="line">Drive&#x3D;&#39;16T&#39;</span><br><span class="line">Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;Database&#x2F;$&#123;Dir&#125;&#x2F;&quot;;</span><br><span class="line">Drive&#x3D;4T_1</span><br><span class="line">Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;Database&#x2F;$&#123;Dir&#125;&#x2F;&quot;;</span><br><span class="line">rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Note-taking"><a href="#Note-taking" class="headerlink" title="Note taking"></a>Note taking</h1><p>When taking a note, I have to face a note moving between different directories, even different storage devices. Based on the question, a log must be established in a constant directory. Here, I prefer to the current log, i.e. GitHub Page. On the other hands, for the private use, another location of log is in <code>ht_5T</code>.</p>
+<p>After a partial note was taken, such note must be stored in the original document. With a duplication approach, a partial note can be copied to a proper document for summary, meanwhile, in the original document, leave a footprint for operation record.</p>
+<h1 id="Code-collection"><a href="#Code-collection" class="headerlink" title="Code collection"></a>Code collection</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;WH_5T&#x2F;Backup&#x2F;Scan_Sum</span><br><span class="line">find .&#x2F; -type f -name &quot;*.jpg&quot; | wc -l # 2776</span><br><span class="line">#</span><br><span class="line">find . -type f  -exec rename &#39;s&#x2F;IMG\_&#x2F;&#x2F;&#39; &#123;&#125; \;</span><br><span class="line">find . -type f  -exec rename &#39;s&#x2F;微信图片\_&#x2F;&#x2F;&#39; &#123;&#125; \;</span><br><span class="line">#</span><br><span class="line">for i in &#96;find .&#x2F; -type f -name &quot;*.jpg&quot; -size -1000k&#96;; do convert $&#123;i&#125; -font Microsoft-YaHei -fill white -box black -gravity South -pointsize 50 -annotate +0+5 $&#123;i&#125; $&#123;i&#125;.jpeg; done # Stamping</span><br><span class="line">for i in &#96;find .&#x2F; -type f -name &quot;*.jpg&quot; -size -2000k -size +1000k&#96;; do convert $&#123;i&#125; -font Microsoft-YaHei -fill white -box black -gravity South -pointsize 100 -annotate +0+5 $&#123;i&#125; $&#123;i&#125;.jpeg; done # Stamping</span><br><span class="line">for i in &#96;find .&#x2F; -type f -name &quot;*.jpg&quot; -size +2000k&#96;; do convert $&#123;i&#125; -font Microsoft-YaHei -fill white -box black -gravity South -pointsize 150 -annotate +0+5 $&#123;i&#125; $&#123;i&#125;.jpeg; done # Stamping</span><br><span class="line">#</span><br><span class="line">pdftk &#96;find . -type f -name &quot;*.jpg.jpeg.pdf&quot;&#96; cat output .&#x2F;&#96;TS&#96;.pdf</span><br></pre></td></tr></table></figure>
+<h1 id="How-to-rename-directory-and-subdirectories-recursively"><a href="#How-to-rename-directory-and-subdirectories-recursively" class="headerlink" title="How to rename directory and subdirectories recursively"></a>How to rename directory and subdirectories recursively</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=ubuntu+batch+rename+directory+and+sub-directory&newwindow=1&client=ubuntu&sxsrf=ALeKk01zgy-HwnguIl9KRH7ADPViPcQn2w:1622520521769&ei=ybK1YIXFLoOZlwTw8quoBA">ubuntu batch rename directory and sub-directory - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43134407/how-to-rename-directory-and-subdirectories-recursively-in-linux">bash - How to rename directory and subdirectories recursively in linux? - Stack Overflow</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -depth -execdir rename -v &#39;s&#x2F;([^\x00-\x7F]+)|([\[\]]+)&#x2F;\_&#x2F;g&#39; &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<p><strong>-execdir</strong> in <code>find</code> command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -depth -execdir rename -v &#39;s&#x2F;[^\x00-\x7F]+&#x2F;\_&#x2F;g&#39; &#123;&#125; \;</span><br><span class="line">find . -depth -execdir rename -v &#39;s&#x2F;[\[\]]+&#x2F;\_&#x2F;g&#39; &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<p><strong>Option 1 : Find</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while IFS&#x3D; read -r -d &#39;&#39; subd;do</span><br><span class="line">  #do your stuff here with var $subd</span><br><span class="line">done &lt; &lt;(find . -type d -print0)</span><br></pre></td></tr></table></figure>
+<p><em>Testing:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ while IFS&#x3D; read -r -d &#39;&#39; s;do echo &quot;$s&quot;;done &lt; &lt;(find . -type d -print0)</span><br><span class="line">.</span><br><span class="line">.&#x2F;dir1</span><br><span class="line">.&#x2F;dir1&#x2F;sub1</span><br><span class="line">.&#x2F;dir1&#x2F;sub1&#x2F;subsub1</span><br><span class="line">.&#x2F;dir1&#x2F;sub1&#x2F;subsub1&#x2F;subsubsub1</span><br><span class="line">.&#x2F;dir2</span><br><span class="line">.&#x2F;dir2&#x2F;sub2</span><br></pre></td></tr></table></figure>
+<p><strong>Option 2 : Using Bash globstar option</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">shopt -s globstar</span><br><span class="line">for subd in **&#x2F; ; do</span><br><span class="line">  #Do you stuff here with $subd directories</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p><em>Also</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for sub in ** ;do #your commands;done</span><br><span class="line">  if [[ -d &quot;$sub&quot; ]];then </span><br><span class="line">      #actions for folders</span><br><span class="line">  elif [[ -e &quot;$sub&quot; ]];then</span><br><span class="line">      #actions for files</span><br><span class="line">  else</span><br><span class="line">     #do something else</span><br><span class="line">  fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p><em>Folders Test:</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ shopt -s globstar</span><br><span class="line">$ for i in **&#x2F; ;do echo &quot;$i&quot;;done</span><br><span class="line">dir1&#x2F;</span><br><span class="line">dir1&#x2F;sub1&#x2F;</span><br><span class="line">dir1&#x2F;sub1&#x2F;subsub1&#x2F;</span><br><span class="line">dir1&#x2F;sub1&#x2F;subsub1&#x2F;subsubsub1&#x2F;</span><br><span class="line">dir2&#x2F;</span><br><span class="line">dir2&#x2F;sub2&#x2F;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/944763/directory-and-subdirectory-rename-command-special-characters-in-filenames">Directory and Subdirectory Rename command special characters in filenames - Ask Ubuntu</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shopt -s globstar</span><br><span class="line">rename &quot;s&#x2F;\[|\]&#x2F;_&#x2F;g&quot; **</span><br></pre></td></tr></table></figure>
+<p><strong>-execdir</strong> in <code>find</code> command</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -execdir rename -- &#39;s&#x2F;\[|\]&#x2F;_&#x2F;g&#39; &#123;&#125; +</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/20210601/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210531" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -3178,133 +3286,6 @@
 
 
   
-    <article id="post-20210505" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/05/20210505/">20210505</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/05/20210505/" class="archive-article-date">
-  	<time datetime="2021-05-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210505</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#To-be-organized"><span class="toc-number">1.1.</span> <span class="toc-text">To be organized</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB-speech-recognition"><span class="toc-number">2.</span> <span class="toc-text">中文语音识别&#x2F;speech recognition</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1-%E6%90%9C%E7%8B%97%E5%90%AC%E5%86%99"><span class="toc-number">2.1.</span> <span class="toc-text">会员服务-搜狗听写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dragonfire"><span class="toc-number">2.2.</span> <span class="toc-text">Dragonfire</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Dragonfire&#39;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="To-be-organized"><a href="#To-be-organized" class="headerlink" title="To be organized"></a>To be organized</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;YouTubes&#x2F;History&#x2F;Wuhan&#x2F;Vaccine&#x2F;2&#39;; cd $&#123;i&#125;</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;YouTubes&#x2F;History&#x2F;Wuhan&#x2F;Vaccine&#x2F;1&#39;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="中文语音识别-speech-recognition"><a href="#中文语音识别-speech-recognition" class="headerlink" title="中文语音识别/speech recognition"></a>中文语音识别/speech recognition</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=ubuntu+speech+recognition&newwindow=1&client=ubuntu&sxsrf=ALeKk039jDPCMHNlt7u3GHctCbn_2RkcmA:1620229101285&ei=7buSYPj0ELLLgwfPxJS4Bw&oq=ubuntu+speech+recognition&gs_lcp=Cgdnd3Mtd2l6EAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsAMyBwgAEEcQsANQ0pcSWNyiEmDWpRJoAXACeACAAeJBiAHiQZIBAzktMZgBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi4n6Xg77LwAhWy5eAKHU8iBXcQ4dUDCA4&uact=5">ubuntu speech recognition - Google Search</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ubuntupit.com/best-open-source-speech-recognition-tools-for-linux/">Top 10 Best Open Source Speech Recognition Tools for Linux</a></li>
-<li><a target="_blank" rel="noopener" href="https://deepspeech.readthedocs.io/en/r0.9/?badge=latest">Welcome to DeepSpeech’s documentation! — DeepSpeech 0.9.3 documentation</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.howtoforge.com/tutorial/speech-recognition-software-ubuntu/">Installing and Configuring Speech Recognition Software on Ubuntu 15.04</a></li>
-<li><a target="_blank" rel="noopener" href="https://cn.noblenaz.org/878969-is-there-any-voice-recognition-WKODRH-article">Ubuntu桌面上是否有任何语音识别软件（带有GUI）？ | 2021</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.cxyzjd.com/article/qq_38639426/103409845">linux系统（ubuntu）调用科大讯飞SDK实现语音识别及语音合成_李纳克斯的博客-程序员宅基地 - 程序员宅基地</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.pythonf.cn/read/74573">Ubuntu离线汉语语音识别,ubuntu,中文</a></li>
-<li><a target="_blank" rel="noopener" href="https://ubunlog.com/zh-CN/Linux%E4%B8%AD%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">Linux中语音识别的简便方法Ubunlog</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/eastlhu/article/details/25332269">ubuntu下语音识别（科大讯飞）_Like Linux-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ynxf/p/6285658.html">在ubuntu上利用科大讯飞的SDK实现语音识别-语义识别等功能 - 叶念西风 - 博客园</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wxkhturfun/article/details/105151232">ubuntu离线中文语音识别_wxkhturfun的博客-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://download.csdn.net/download/weixin_39840924/11521322?utm_medium=distribute.pc_relevant_t0.none-task-download-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-download-2~default~BlogCommendFromMachineLearnPai2~default-1.control">Python-基于深度学习的中文语音识别系统_python中文语音识别,python中文语音识别-其它代码类资源-CSDN下载</a></li>
-</ul>
-<h2 id="会员服务-搜狗听写"><a href="#会员服务-搜狗听写" class="headerlink" title="会员服务-搜狗听写"></a><a target="_blank" rel="noopener" href="http://rec.sogou.com/memberservice">会员服务-搜狗听写</a></h2><h2 id="Dragonfire"><a href="#Dragonfire" class="headerlink" title="Dragonfire"></a>Dragonfire</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mertyildiran&#x2F;Dragonfire&#x2F;master&#x2F;install.sh &amp;&amp; chmod + x install.sh &amp;&amp; sudo .&#x2F;install.sh sudo pip安装Dragonfire</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Dragonfire&#x2F;Dragonfire</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=dragonfire+speech+recognition&newwindow=1&client=ubuntu&hs=0Zw&sxsrf=ALeKk02-la6x24iYkUlr4xG-FXB3OCZ6yg:1620444351650&ei=vwSWYIiQJ4n6UqDxg_gF&oq=Dragonfire+speech+re&gs_lcp=Cgdnd3Mtd2l6EAMYADIFCCEQoAEyBQghEKABMgUIIRCgAToHCCMQsAMQJzoHCAAQRxCwAzoECAAQQzoECC4QQzoCCAA6BggAEBYQHjoHCCEQChCgAVCwE1jEN2CoSWgCcAJ4AIABvQmIAf8gkgEIMi0xMS43LTGYAQCgAQGqAQdnd3Mtd2l6yAEJwAEB&sclient=gws-wiz">dragonfire speech recognition - Google Search</a></li>
-<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Dragon_NaturallySpeaking">Dragon NaturallySpeaking - Wikipedia</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/DragonComputer/Dragonfire">DragonComputer/Dragonfire: the open-source virtual assistant for Ubuntu based Linux distributions</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.reddit.com/r/Ubuntu/comments/az8xw6/dragonfire_102_better_speech_recognition/">Dragonfire 1.0.2: Better Speech Recognition · DragonComputer/Dragonfire · GitHub : Ubuntu</a></li>
-<li><a target="_blank" rel="noopener" href="https://readthedocs.org/projects/dragonfire/downloads/pdf/latest/">Dragonfire Documentation</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/DragonComputer/Dragonfire/tree/master/debian">Dragonfire/debian at master · DragonComputer/Dragonfire</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.desdelinux.net/zh-CN/Dragonfire%E8%99%9A%E6%8B%9F%E5%8A%A9%E6%89%8BUbuntu/">Dragonfire：Ubuntu的虚拟助手从Linux</a></li>
-<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/256138/is-there-any-decent-speech-recognition-software-for-linux">Is there any decent speech recognition software for Linux? - Unix &amp; Linux Stack Exchange</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Monospark/dragonfire">Monospark/dragonfire: Speech recognition framework allowing powerful Python-based scripting and extension of Dragon NaturallySpeaking (DNS) and Windows Speech Recognition (WSR)</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">中文语音识别</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">speech recognition</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/05/20210505/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -3448,18 +3429,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -3476,6 +3445,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
               </li>
              
@@ -3488,7 +3469,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">zcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ICTV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">International Committee on Taxonomy of Viruses (ICTV)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hexo index</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo content</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3524,43 +3557,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">zcat</a>
+                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ICTV</a>
+                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">virus</a>
+                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">International Committee on Taxonomy of Viruses (ICTV)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hexo index</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo content</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3593,34 +3602,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3716,23 +3697,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">endometrial cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3744,35 +3721,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3792,7 +3741,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+                <a href="javascript:void(0)" class="js-tag color3">Sex Determination</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">endometrial cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3824,6 +3781,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
@@ -3844,18 +3813,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -3872,15 +3829,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3888,19 +3873,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3912,7 +3897,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
+                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3925,14 +3914,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Herpesviridae sequence download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4020,19 +4001,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
