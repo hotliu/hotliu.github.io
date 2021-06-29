@@ -158,6 +158,565 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210316" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/16/20210316/">20210316</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/16/20210316/" class="archive-article-date">
+  	<time datetime="2021-03-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210316</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation-Log-in-X1"><span class="toc-number">1.1.</span> <span class="toc-text">Installation Log in X1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Migration-of-Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">Migration of Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-installation-in-X1"><span class="toc-number">1.3.</span> <span class="toc-text">Hexo installation in X1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Laptop-selection"><span class="toc-number">1.4.</span> <span class="toc-text">Laptop selection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flatpak-pack-for-frequently-used-Windows-app%E2%80%99s-alternatives"><span class="toc-number">1.5.</span> <span class="toc-text">Flatpak pack for frequently used Windows app’s alternatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Downloaded-music"><span class="toc-number">1.6.</span> <span class="toc-text">Downloaded music</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-information-of-debian-package"><span class="toc-number">2.</span> <span class="toc-text">Check information of debian package</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="Installation-Log-in-X1"><a href="#Installation-Log-in-X1" class="headerlink" title="Installation Log in X1"></a>Installation Log in X1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"># Obsidian.md installation</span><br><span class="line">flatpak install flathub md.obsidian.Obsidian</span><br><span class="line">#</span><br><span class="line">sudo apt-get install typora</span><br><span class="line">#</span><br><span class="line">sudo apt install subversion # commands of SVN</span><br><span class="line">#</span><br><span class="line"># Google Chrome&#x2F;谷歌访问助手_v2.3.0.crx installation</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Google_Chrome&#x2F;Extensions&#x2F;Selected&#39;; cd $&#123;i&#125;; pcmanfm -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">sudo apt install curl</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;https:&#x2F;&#x2F;dl.google.com&#x2F;linux&#x2F;direct&#x2F;google-chrome-stable_current_amd64.deb&#39;</span><br><span class="line"># Download from Google Chrome&#x2F; Version, 89.0.4389.90-1</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;WPS&#x2F;Installer</span><br><span class="line">sudo gdebi wps-office_10.1.0.6758_amd64.deb # Thinkpad X1</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative</span><br><span class="line">sudo apt install planner</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;ProjectLibre</span><br><span class="line">sudo gdebi projectlibre_1.9.3-1.deb</span><br><span class="line">#</span><br><span class="line">sudo apt install xdotool</span><br><span class="line">##################################################</span><br><span class="line"># Installation of copyq from My Linux</span><br><span class="line">#</span><br><span class="line">sudo add-apt-repository ppa:noobslab&#x2F;indicators</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install copyq</span><br><span class="line">##################################################</span><br><span class="line"># Installation of pdftk with local files from PDF_Learning</span><br><span class="line">#</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;Not_Classified&#x2F;libgcj-common_6.4-3ubuntu1_all.deb</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;Not_Classified&#x2F;libgcj17_6.4.0-8ubuntu1_amd64.deb</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;Not_Classified&#x2F;pdftk_2.02-4build1_amd64.deb</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(c(&quot;ape&quot;, &quot;assertthat&quot;, &quot;backports&quot;, &quot;BH&quot;, &quot;cli&quot;, &quot;colorspace&quot;, &quot;crayon&quot;, &quot;crosstalk&quot;, &quot;digest&quot;, &quot;dplyr&quot;, &quot;DT&quot;, &quot;evaluate&quot;, &quot;fansi&quot;, &quot;ggplot2&quot;, &quot;glue&quot;, &quot;gtable&quot;, &quot;highr&quot;, &quot;htmltools&quot;, &quot;htmlwidgets&quot;, &quot;httpuv&quot;, &quot;jsonlite&quot;, &quot;knitr&quot;, &quot;labeling&quot;, &quot;later&quot;, &quot;lazyeval&quot;, &quot;magrittr&quot;, &quot;markdown&quot;, &quot;mime&quot;, &quot;pander&quot;, &quot;pillar&quot;, &quot;pkgconfig&quot;, &quot;plyr&quot;, &quot;promises&quot;, &quot;purrr&quot;, &quot;R6&quot;, &quot;Rcpp&quot;, &quot;readxl&quot;, &quot;reshape2&quot;, &quot;rlang&quot;, &quot;rmarkdown&quot;, &quot;rprojroot&quot;, &quot;rvcheck&quot;, &quot;scales&quot;, &quot;shiny&quot;, &quot;stringi&quot;, &quot;stringr&quot;, &quot;tibble&quot;, &quot;tidyr&quot;, &quot;tidyselect&quot;, &quot;tidytree&quot;, &quot;tinytex&quot;, &quot;utf8&quot;, &quot;withr&quot;, &quot;xfun&quot;, &quot;xtable&quot;, &quot;yaml&quot;))</span><br></pre></td></tr></table></figure>
+<h2 id="Migration-of-Hexo"><a href="#Migration-of-Hexo" class="headerlink" title="Migration of Hexo"></a>Migration of Hexo</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.programmersought.com/article/9346782032/">Hexo blog migrated to another computer - Programmer Sought</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing | Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/migration.html">Migration | Hexo</a></li>
+</ul>
+<h2 id="Hexo-installation-in-X1"><a href="#Hexo-installation-in-X1" class="headerlink" title="Hexo installation in X1"></a>Hexo installation in X1</h2><h2 id="Laptop-selection"><a href="#Laptop-selection" class="headerlink" title="Laptop selection"></a>Laptop selection</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/10026380502912.html#crumb-wrap">【酷比魔方iPlay30 Pro】【2020新款】酷比魔方 iPlay30 Pro 10.5英寸全贴合高清八核4G全网通通话平板电脑 全黑 标配+4096级压感笔(MPP2.0)【行情 报价 价格 评测】-京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/100009738707.html#crumb-wrap">【华为MateBook X Pro】华为笔记本电脑MateBook X Pro 2021款13.9英寸11代酷睿i7 16G 1TB 锐炬显卡/3K触控全面屏/多屏协同 翡冷翠【行情 报价 价格 评测】-京东</a></li>
+</ul>
+<h2 id="Flatpak-pack-for-frequently-used-Windows-app’s-alternatives"><a href="#Flatpak-pack-for-frequently-used-Windows-app’s-alternatives" class="headerlink" title="Flatpak pack for frequently used Windows app’s alternatives"></a>Flatpak pack for frequently used Windows app’s alternatives</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011469138/article/details/82320761">Ubuntu18.04 下使用Flatpak稳定安装TIM、微信、迅雷和百度云！_长岛冰茶与山水画-CSDN博客_flatpak</a></p>
+</li>
+<li><p>TIM：<a target="_blank" rel="noopener" href="https://www.lanzous.com/i1si94f">https://www.lanzous.com/i1si94f</a></p>
+</li>
+<li><p>微信：<a target="_blank" rel="noopener" href="https://www.lanzous.com/i1siabi">https://www.lanzous.com/i1siabi</a></p>
+</li>
+<li><p>迅雷：<a target="_blank" rel="noopener" href="https://www.lanzous.com/i1sic6f">https://www.lanzous.com/i1sic6f</a></p>
+</li>
+<li><p>百度云：<a target="_blank" rel="noopener" href="https://www.lanzous.com/i26eamj">https://www.lanzous.com/i26eamj</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1guT1k-YPhV3FVEp8PA4p5g">framwork.7z_免费高速下载|百度网盘-分享无限制</a></p>
+<ul>
+<li>链接: </li>
+<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1guT1k-YPhV3FVEp8PA4p5g">https://pan.baidu.com/s/1guT1k-YPhV3FVEp8PA4p5g</a> </li>
+<li>密码: </li>
+<li>kvpd</li>
+</ul>
+</li>
+</ul>
+<h2 id="Downloaded-music"><a href="#Downloaded-music" class="headerlink" title="Downloaded music"></a>Downloaded music</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br></pre></td><td class="code"><pre><span class="line">- Ed Sheeran, Kygo, Avicii, Martin Garrix, The Chainsmokers, Dua Lipa Styles - Feeling Me #3</span><br><span class="line">https:&#x2F;&#x2F;youtu.be&#x2F;aEKjvJWocRM</span><br><span class="line"></span><br><span class="line">2020年10月26日发布</span><br><span class="line"></span><br><span class="line">Ed Sheeran, Kygo, Avicii, Martin Garrix, The Chainsmokers, Dua Lipa Styles - Feeling Me #3</span><br><span class="line">All songs in this spotify playlist: https:&#x2F;&#x2F;spoti.fi&#x2F;2TJ4Dyj​</span><br><span class="line">#queenclub​ #deephouse2020​ #bestofdeephouse2020​</span><br><span class="line"></span><br><span class="line">◢Follow Queen Club:</span><br><span class="line">★ Youtube: https:&#x2F;&#x2F;fanlink.to&#x2F;YouTubeQueenClub​</span><br><span class="line">★ Instargram: www.instagram.com&#x2F;deep_house_club</span><br><span class="line">★ Twitter: https:&#x2F;&#x2F;twitter.com&#x2F;deephouse_club​</span><br><span class="line">★ Facebook: https:&#x2F;&#x2F;bit.ly&#x2F;3dzyPXD​</span><br><span class="line"></span><br><span class="line">◢Tracklist: </span><br><span class="line">0. Dj Goja x Lunis - Crazy</span><br><span class="line">https:&#x2F;&#x2F;deepuniverse.fanlink.to&#x2F;Crazy​</span><br><span class="line">1. It&#39;s Love</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ItsLoveSolven​</span><br><span class="line">2. Losing Touch</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;LosingTouch​</span><br><span class="line">3. Heartbeat - Hazzmet</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;HeartbeatHazzmet​</span><br><span class="line">4. Jon Sine - Stay feat. Gavin Beach</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;3gVQtWi​</span><br><span class="line">5. Jon Sine - Dawning</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;2QMQYHD​</span><br><span class="line">6. Gabriel Wittner - Fantasy </span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;2ZNhB4m​</span><br><span class="line">7. Nora Van Elken - Needed You (feat. Trove)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;noraneededyou​</span><br><span class="line">8. Nora Van Elken - All Night Long</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;allnightlongnora​</span><br><span class="line">9. Nico Filippe - Where</span><br><span class="line">https:&#x2F;&#x2F;bit.ly&#x2F;3hbUAPe​</span><br><span class="line">10. Under Glass - Alone</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;37vgdG1​</span><br><span class="line">11. LYOD - On My Way (ft. Tom Auton) </span><br><span class="line">https:&#x2F;&#x2F;smarturl.it&#x2F;lyod-on-my-way​</span><br><span class="line">12. LYOD, The Bayton Fields - Do It For Love</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;2F37PmY​</span><br><span class="line">13. Miza &amp; Peter - Us Feat. Chris Linton</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;2Bow8u8​</span><br><span class="line">14. Mourad Hany - Moving On</span><br><span class="line">https:&#x2F;&#x2F;EpicTonesRecords.lnk.to&#x2F;9FJ81ZqZ​</span><br><span class="line">15. Pascal Junior - Feelings</span><br><span class="line">https:&#x2F;&#x2F;EpicTonesRecords.lnk.to&#x2F;l8zxF​</span><br><span class="line">16. Pascal Junior - If I Wouldn&#39;t Know (Aldi Be Cool Remix)</span><br><span class="line">https:&#x2F;&#x2F;EpicTonesRecords.lnk.to&#x2F;btsuXi9W​</span><br><span class="line">17. Alexander Hristov - The Most (Andrey Kravtsov Remix)</span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;3lWJAYD​</span><br><span class="line">18. SVET - Somebody (Original Mix) </span><br><span class="line">https:&#x2F;&#x2F;spoti.fi&#x2F;2MMwo87​</span><br><span class="line">19. Pete Bellis &amp; Tommy - I Was Loving You</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddr21​</span><br><span class="line">20. Marc Philippe - September Rain </span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddr92​</span><br><span class="line">21. GeoM - Ashes (Original Mix)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddra8​</span><br><span class="line">22. GeoM - Back To You (Marc Philippe Remix)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddr86​</span><br><span class="line">23. Pete Bellis &amp; Tommy - Do You Wanna Know (Marc Philippe Remix)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddr47​</span><br><span class="line">24. Pete Bellis &amp; Tommy - Treat Me Right (Marc Philippe Remix)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddr32​</span><br><span class="line">25. Marc Philippe - Deepest Blue</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;dtr533​</span><br><span class="line">26. GeoM - Ashes (Original Mix)</span><br><span class="line">https:&#x2F;&#x2F;fanlink.to&#x2F;ddra8​</span><br><span class="line"></span><br><span class="line">🌿 Follow Deep Disco Records </span><br><span class="line">➤ Spotify → https:&#x2F;&#x2F;spoti.fi&#x2F;2U7HoTN​</span><br><span class="line">➤ Apple Music → https:&#x2F;&#x2F;apple.co&#x2F;2UeA9YW​ </span><br><span class="line">➤ Soundcloud → https:&#x2F;&#x2F;goo.gl&#x2F;1zaGz5​ </span><br><span class="line">➤ Website → https:&#x2F;&#x2F;goo.gl&#x2F;n2vMnq​ </span><br><span class="line"></span><br><span class="line">🌿Follow Deep Territory Records: </span><br><span class="line">➤ Spotify → https:&#x2F;&#x2F;spoti.fi&#x2F;2TlaFVM​ </span><br><span class="line">➤ Apple Music → https:&#x2F;&#x2F;apple.co&#x2F;2H2cIwg​</span><br><span class="line">➤ Soundcloud → http:&#x2F;&#x2F;bit.ly&#x2F;2vG6OsY​</span><br><span class="line"></span><br><span class="line">🌿 Music by Deep Universe</span><br><span class="line">Spotify: https:&#x2F;&#x2F;spoti.fi&#x2F;2VmRH4J​</span><br><span class="line">Facebook: https:&#x2F;&#x2F;bit.ly&#x2F;2NAXAHf​</span><br><span class="line">Instagram: https:&#x2F;&#x2F;bit.ly&#x2F;2ZeTcDb​</span><br><span class="line">Youtube: https:&#x2F;&#x2F;bit.ly&#x2F;2Be7c8p​</span><br><span class="line">Spotify: https:&#x2F;&#x2F;spoti.fi&#x2F;2VmRH4J​</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;🌿 Video by Charles Gambino</span><br><span class="line">Instagram - @CharlesGambino </span><br><span class="line">Vimeo - https:&#x2F;&#x2F;bit.ly&#x2F;2V5FwK7​</span><br><span class="line">Website - www.charlesguinto.com&quot;</span><br><span class="line"></span><br><span class="line">&quot;🌿 Video By: Gaëtan Piolot</span><br><span class="line">» Youtube: https:&#x2F;&#x2F;bit.ly&#x2F;34EUPLa​</span><br><span class="line">» Instagram: @gaetanpiolot&quot;</span><br><span class="line"></span><br><span class="line">&quot;🌿 Video by Beniツ:</span><br><span class="line">➤ Youtube: https:&#x2F;&#x2F;bit.ly&#x2F;2Q73iSw​</span><br><span class="line">➤ Instagram: https:&#x2F;&#x2F;bit.ly&#x2F;3hz7pCW​</span><br><span class="line">➤ Facebook: https:&#x2F;&#x2F;bit.ly&#x2F;2D0mdvk​&quot;</span><br><span class="line"></span><br><span class="line">&quot;🌿 Video By: Hi Hai</span><br><span class="line">»Youtube: https:&#x2F;&#x2F;bit.ly&#x2F;2Xt8OUG​ </span><br><span class="line">»Instagram: https:&#x2F;&#x2F;bit.ly&#x2F;2RsLWR0​ &quot;</span><br><span class="line">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</span><br><span class="line">♦ If any producer, label, artist or photographer has an issue with any of the music or video uploads please contact us and we will remove your work immediately. Thank you!</span><br><span class="line">♦ We strive to find the best and most enjoyable music for you guys! We hope to make your days more beautiful with the music we share ! Peace love and music.</span><br><span class="line">I&#39;m also a music producer, I&#39;m working on this project !</span><br><span class="line">🚫 If you have any problem with copyright issues, or question please do not report me, take your time to contact us via mail, and we will response within 48h - </span><br><span class="line">💌 channel@queenmusik.com 💌</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">» Thank you for watching! Have a nice day!</span><br><span class="line">» Do not forget LIKE-SHARE-COMMENT</span><br><span class="line">For copyright issues, please contact us or leave us a personal message. We will remove your material immediately. PLEASE do not choose a Youtube strike.</span><br><span class="line"></span><br><span class="line">- FEMALE VOCAL TRANCE 2021 [FULL ALBUM]</span><br><span class="line">https:&#x2F;&#x2F;youtu.be&#x2F;FWGyiSTQ0yo</span><br><span class="line"></span><br><span class="line">2021年2月20日发布</span><br><span class="line"></span><br><span class="line">For more Trance: https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;RNMSpotify​</span><br><span class="line">Subscribe to our Youtube Channel: http:&#x2F;&#x2F;bit.ly&#x2F;2jNse3f​</span><br><span class="line">FEMALE VOCAL TRANCE 2021</span><br><span class="line"></span><br><span class="line">00:00​ | 1. Aurosonic &amp; Fenna Day - You&#39;ll Be Fine</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;YoullBeFineYD​</span><br><span class="line">04:07​ | 2. C-Systems &amp; Hanna Finsen - Feeling Fine</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;FeelingFineYD​</span><br><span class="line">07:49​ | 3. Costa &amp; Sarah Russell - I Remember</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;IRememberYD​</span><br><span class="line">11:20​ | 4. Zetandel &amp; Tiff Lacey - Higher Ground (Costa &amp; Aurosonic Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;HigherGround...​</span><br><span class="line">14:58​ | 5. Stine Grove &amp; Raz Nitzan - Snow Angels</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;SnowAngelsYD​</span><br><span class="line">18:30​ | 6. 4 Strings &amp; Susanne Teutenberg - Hard To Face The Truth</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;BrandNewDayA...​</span><br><span class="line">21:58​ | 7. Susana - Dark Side of The Moon (Ferry Tayle Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;DarkSideOfTh...​</span><br><span class="line">25:42​ | 8. Ana Criado &amp; Beat Service - Whispers (Kaimo K Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;WhispersKaim...​</span><br><span class="line">29:30​ | 9. Steve Allen, Trance Classics &amp; Meredith Bull - The Love In Your Lies</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;TheLoveInYou...​</span><br><span class="line">33:18​ | 10. Jericho Frequency &amp; Maxine - Touched By Love</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;TouchedByLoveYD​</span><br><span class="line">36:39​ | 11. Tycoos &amp; Jan Johnston - The Landslide</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;TheLandslideYD​</span><br><span class="line">39:40​ | 12. Michael Angelo - Forever In Your Arms</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;ForeverInYou...​</span><br><span class="line">43:05​ | 13. Steve Allen, Paul Skelton &amp; Deirdre McLaughlin - Fairytales</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;FairytalesYD​</span><br><span class="line">46:36​ | 14. Suncatcher &amp; Exolight - Water Colour Memories (Last Soldier Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;WaterColourM...​</span><br><span class="line">50:30​ | 15. 4 Strings, Trance Classics &amp; Ellie Lawson - Safe From Harm (Omar Sherif Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;BecomingAlbumYD​</span><br><span class="line">53:45​ | 16. Michael Fearon feat. Victoria Leshchenko - Supernatural</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;SupernaturalYD​</span><br><span class="line">57:11​ | 17. Dmitry Strochenko &amp; Maxine - Daylight Snow</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;DaylightSnowYD​</span><br><span class="line">1:00:37​ | 18. Costa &amp; Tricia McTeague - Call I&#39;ll Be There</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;CallIllBeThe...​</span><br><span class="line">1:04:04​ | 19. Raz Nitzan &amp; Fenna Day - Room For Doubt (Stoneface &amp; Terminal Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;RoomForDoubt...​</span><br><span class="line">1:07:35​ | 20. Sarah Russell &amp; Philippe El Sisi - You Are (Steve Dekay Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;YouAreSteveD...​</span><br><span class="line">1:11:03​ | 21. Michael Angelo &amp; Solo feat. Chloe Langley - Every Time We Said Goodbye 2021</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;EveryTimeWeS...​</span><br><span class="line">1:14:21​ | 22. Mhammed El Alami &amp; Cathy Burton - Never Fade Away</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;NeverFadeAwayYD​</span><br><span class="line">1:17:36​ | 23. Koishii &amp; Hush feat. Gillian Gilbert - Lifetime (Passenger 75 Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;LifetimeRemi...​</span><br><span class="line">1:21:02​ | 24. Bobina &amp; Elles de Graaf - Lighthouse (Sean Tyas Edit)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;LighthouseRmxYD​</span><br><span class="line">1:24:27​ | 25. Andy Prinz &amp; Naama Hillman - Quiet of Mind (Aly &amp; Fila Remix)</span><br><span class="line">https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;QuietOfMindYD​</span><br><span class="line">P&amp;C 2021 RAZNITZANMUSIC &#x2F; RNM BUNDLES</span><br><span class="line"></span><br><span class="line">PARTNER CHANNELS:</span><br><span class="line">@Vocal Trance​ </span><br><span class="line">@Progressive Trance​ </span><br><span class="line">@UpliftingTrance​ </span><br><span class="line"></span><br><span class="line">▶https:&#x2F;&#x2F;www.RazNitzanMusic.com​</span><br><span class="line">▶https:&#x2F;&#x2F;RazNitzan.lnk.to&#x2F;RNMSpotify​</span><br><span class="line">▶https:&#x2F;&#x2F;www.twitter.com&#x2F;RazNitzan​</span><br><span class="line">▶https:&#x2F;&#x2F;www.facebook.com&#x2F;RazNitzanMusic​</span><br><span class="line">▶https:&#x2F;&#x2F;www.youtube.com&#x2F;RazNitzanMusic​ </span><br><span class="line">▶https:&#x2F;&#x2F;www.instagram.com&#x2F;RazNitzanMusic​</span><br><span class="line">▶https:&#x2F;&#x2F;soundcloud.com&#x2F;raznitzan​</span><br><span class="line"></span><br><span class="line">▶https:&#x2F;&#x2F;twitter.com&#x2F;AmsterdamTrance​</span><br><span class="line">▶https:&#x2F;&#x2F;www.facebook.com&#x2F;Amsterdam.Tr...​</span><br><span class="line">▶https:&#x2F;&#x2F;www.instagram.com&#x2F;AmsterdamTr...​</span><br><span class="line">▶https:&#x2F;&#x2F;soundcloud.com&#x2F;AmsterdamTranc...​</span><br><span class="line"></span><br><span class="line">Copyright © 2021 by RazNitzanMusic (RNM)</span><br><span class="line">#VocalTrance2021​ #Trance​ #UpliftingTrance​</span><br><span class="line"></span><br><span class="line">- Dj Dark - Summer Chill (August 2020) [Deep, Vocal, Chill Mix]</span><br><span class="line">https:&#x2F;&#x2F;youtu.be&#x2F;widtdkzOv1E</span><br><span class="line">2020年8月29日发布</span><br><span class="line"></span><br><span class="line">▶  Subscribe &amp; turn ON the 🔔 : http:&#x2F;&#x2F;short.djdark.ro&#x2F;subscribe​</span><br><span class="line">▶ 💰 Donate: http:&#x2F;&#x2F;short.djdark.ro&#x2F;donate​</span><br><span class="line">▶  Download + Tracklist: https:&#x2F;&#x2F;djdark.ro&#x2F;?p&#x3D;14251​</span><br><span class="line"></span><br><span class="line">✈ Booking: +4 0723 548 116 &#x2F; booking@bestshow.ro</span><br><span class="line">☑️ Listen on SoundCloud: http:&#x2F;&#x2F;short.djdark.ro&#x2F;summerchill​</span><br><span class="line">☑️ DOWNLOAD [Link 2]: http:&#x2F;&#x2F;short.djdark.ro&#x2F;summerchillyt​</span><br><span class="line"></span><br><span class="line">✔️ Follow Me:</span><br><span class="line">↪︎ http:&#x2F;&#x2F;short.djdark.ro&#x2F;socials​</span><br><span class="line"></span><br><span class="line">↪︎ Tracklist:</span><br><span class="line">00:00​ Alvin Whitte, Ovrtherainbovv - Be Happy</span><br><span class="line">03:42​ Jubel feat.NEIMY - Dancing In The Moonlight</span><br><span class="line">06:14​ A-Mase &amp; Sharliz, Ladynsax - Crush (Original Mix)</span><br><span class="line">11:01​ Lady Gaga, Ariana Grande - Rain On Me (Dj Dark &amp; Mentol Rework)</span><br><span class="line">14:25​ Lewis Capaldi - Before You Go (Shine Remix)</span><br><span class="line">17:49​ David Guetta feat.Sia - Titanium (A-Mase&#39;s Ibiza Sunset Remix)</span><br><span class="line">24:10​ Formal Chicken - Push The Feeling On (Extended)</span><br><span class="line">26:48​ Fugees, Dave Delly - Killin&#39; Me Softly (Dave Delly Remix)</span><br><span class="line">30:09​ Jason Derulo - Savage Love (Dj Dark &amp; Mentol x D.E.P. Remix)</span><br><span class="line">33:34​ Jay Ko &amp; Narciss x David Deejay - Sexy Thing (Extended Remix)</span><br><span class="line">36:39​ Melih Aydogan - Ayo Technology (The Distance &amp; Igi Remix)</span><br><span class="line">41:05​ MoonSound x Rachael Starr - Till There Was You (Extended)</span><br><span class="line">44:12​ Nora En Pure - Delta (Extended Mix)</span><br><span class="line">48:10​ The Suncatchers - On My Own (Alex Vnuk Remix)</span><br><span class="line">51:00​ Regard, Raye - Secrets (Consoul Trainin Remix)</span><br><span class="line">54:06​ Crazibiza - Cali Soul (Extended)</span><br><span class="line">57:14​ Jon Costa, David Novacek - Couldn&#39;t Love You More (Mr. Moudz Remix)</span><br><span class="line">01:00:13​ Yann Muller - Paroles (Original Mix)</span><br><span class="line"></span><br><span class="line">_________________________________________________________________</span><br><span class="line">🚫 If you have any problem with copyright issues, or question please do not report me, take your time to contact us via mail, and i will respond within 48h -</span><br><span class="line">💌 contact@djdark.ro 💌</span><br><span class="line"></span><br><span class="line">#djdark​ #summerchill​ #deephouse​</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Check-information-of-debian-package"><a href="#Check-information-of-debian-package" class="headerlink" title="Check information of debian package"></a>Check information of debian package</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --info xxx.deb</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php">Linux dpkg command cheat sheet for Debian and Ubuntu sysadmins</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.debian.org/doc/manuals/debian-reference/ch02.en.html">Chapter 2. Debian package management</a></li>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/39261/how-to-see-package-version-without-install">debian - How to see package version without install? - Unix &amp; Linux Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/debian-ubuntu-linux-apt-get-aptitude-show-package-version-command/?__cf_chl_captcha_tk__=94fa1c1311f2a0d895f54e7e92999ce1288f616c-1615855757-0-Ab--dlHJVuMKmm2hmFMUTmqHPaNVrpADe9vhlSIqQhwVCZ55JFEIkjzIdh9f7uuqhNB8i_nvR2Dtj4U8o-t5sonjNl7U99t2DD69Ja_2V3ftIDqAS6BFYIQh_iYBuT96YHdssmiZY9m3SNDeH5vYWgcMO476L50SxJnneIDlwmJYLEU1gd8pLCfMR4L8g72hhMwncywem_5JlVFU43fet5NAxRDgeHXHPEmFuSQ1USzoSNNKRCPKVJIKYhno41Eu7DsTPSwyT9k6qj6x7PJhuJqw_ZLofbosmj3hSwsm664aJx93gzVoEivHNv9gav_E1uxFg_Jtm15XB4RCa72y2zIb9wOCoPaGLEnCTo1pHH5y1URDVScTMGd4Kbh1y3qXoXAbDPIA1xObbiXwC-TngMOcuiL6sFhVYGvIz0R8bQLo7k6rQTsqNPjXLm_FuOuhH9hbYF62WOAka5pWQZllXG2J4Kkn49kJDR7J2ec1lXfSGU-XOKAGmQItyfoCoCQXuJ2n9bFOdDipLuw1S68kaxX916MFLxSPeETXK9RKKcTVj95fiUYpQo5XP0wYlKwCHFkFLB1rTlTvZ0wPF0F3q7T2vbSGR7Rv2dU-ryEZfZfL7fqpiDDhV-zlZPtgBqyldYhq9nVMzC79Rh0nBp5hBYgwFX7GbUeFp4LxG5bMy2XoUHmEHSxajGVpO-5WGNhK9A">Check Debian/Ubuntu Linux package version using apt-get/aptitude command - nixCraft</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Offline Wikipedia</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">flatpak</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Installation Log in X1</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/16/20210316/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210315" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/15/20210315/">20210315</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/15/20210315/" class="archive-article-date">
+  	<time datetime="2021-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210315</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Shrunk-the-size-of-PDF"><span class="toc-number">1.1.</span> <span class="toc-text">Shrunk the size of PDF</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="Shrunk-the-size-of-PDF"><a href="#Shrunk-the-size-of-PDF" class="headerlink" title="Shrunk the size of PDF"></a>Shrunk the size of PDF</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43085889/how-to-convert-a-pdf-into-jpg-with-command-line-in-linux">How to convert a PDF into JPG with command line in Linux? - Stack Overflow</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pdftoppm -jpeg -r 80 0.pdf 1</span><br><span class="line">for i in *.jpg; do img2pdf $i &gt; $i.pdf; done</span><br><span class="line">pdftk *.jpg.pdf cat output 1.pdf</span><br></pre></td></tr></table></figure>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://isisn.nsfc.gov.cn/egrantweb/psn-manage/manage_account?flag=init">账号管理|国家自然科学基金管理信息系统</a></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Offline Wikipedia</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/15/20210315/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210314" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/14/20210314/">20210314</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/14/20210314/" class="archive-article-date">
+  	<time datetime="2021-03-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210314</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E5%A4%A7%E5%85%A8"><span class="toc-number">1.1.</span> <span class="toc-text">符号大全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Best-Microsoft-Flow-Alternatives-Reviews-Features-Pros-amp-Cons-Alternative"><span class="toc-number">1.2.</span> <span class="toc-text">12 Best Microsoft Flow Alternatives - Reviews, Features, Pros &amp; Cons - Alternative</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Offline-Wikipedia"><span class="toc-number">1.3.</span> <span class="toc-text">Offline Wikipedia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Wikipedia-Database-download"><span class="toc-number">1.3.1.</span> <span class="toc-text">Wikipedia:Database download</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kiwix"><span class="toc-number">1.3.2.</span> <span class="toc-text">Kiwix</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Install-with-flatpak"><span class="toc-number">2.</span> <span class="toc-text">Install with flatpak</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#WebArchives"><span class="toc-number">2.0.1.</span> <span class="toc-text">WebArchives</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%96%E5%B0%BF%E7%97%85"><span class="toc-number">3.</span> <span class="toc-text">糖尿病</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;home&#x2F;ht&#x2F;AppImage&#x2F;Obsidian-0.11.5.AppImage</span><br><span class="line">$&#123;HOME&#125;&#x2F;AppImage&#x2F;Obsidian-*.AppImage</span><br></pre></td></tr></table></figure>
+<h2 id="符号大全"><a href="#符号大全" class="headerlink" title="符号大全"></a><a target="_blank" rel="noopener" href="http://xh.5156edu.com/page/18341.html">符号大全</a></h2><h2 id="12-Best-Microsoft-Flow-Alternatives-Reviews-Features-Pros-amp-Cons-Alternative"><a href="#12-Best-Microsoft-Flow-Alternatives-Reviews-Features-Pros-amp-Cons-Alternative" class="headerlink" title="12 Best Microsoft Flow Alternatives - Reviews, Features, Pros &amp; Cons - Alternative"></a><a target="_blank" rel="noopener" href="https://alternative.me/microsoft-flow">12 Best Microsoft Flow Alternatives - Reviews, Features, Pros &amp; Cons - Alternative</a></h2><h2 id="Offline-Wikipedia"><a href="#Offline-Wikipedia" class="headerlink" title="Offline Wikipedia"></a>Offline Wikipedia</h2><p>I tried lots in Linux environment.</p>
+<h3 id="Wikipedia-Database-download"><a href="#Wikipedia-Database-download" class="headerlink" title="Wikipedia:Database download"></a><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Database_download">Wikipedia:Database download</a></h3><h3 id="Kiwix"><a href="#Kiwix" class="headerlink" title="Kiwix"></a>Kiwix</h3><font color = red>
+    <strong>
+        <center>
+        ZIM format document needed.
+        </center>
+    </strong>
+</font>
+
+<h1 id="Install-with-flatpak"><a href="#Install-with-flatpak" class="headerlink" title="Install with flatpak"></a>Install with flatpak</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flatpak install flathub org.kiwix.desktop</span><br><span class="line">flatpak run org.kiwix.desktop</span><br><span class="line">flatpak run org.kiwix.desktop</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://flathub.org/apps/details/org.kiwix.desktop">Kiwix—Linux Apps on Flathub</a></li>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/171860/how-can-i-browse-wikipedias-offline-database-on-linux">software recommendation - How can I browse Wikipedia’s offline database on Linux? - Ask Ubuntu</a></li>
+</ul>
+<h3 id="WebArchives"><a href="#WebArchives" class="headerlink" title="WebArchives"></a>WebArchives</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.linuxuprising.com/2018/06/browse-wikipedia-offline-with.html">Browse Wikipedia Offline With WebArchives For Linux - Linux Uprising Blog</a></li>
+</ul>
+<p>Installation from <a target="_blank" rel="noopener" href="https://github.com/birros/web-archives#installation">GitHub - birros/web-archives: A web archives reader</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">flatpak remote-add flathub https:&#x2F;&#x2F;flathub.org&#x2F;repo&#x2F;flathub.flatpakrepo</span><br><span class="line">flatpak install flathub com.github.birros.WebArchives</span><br><span class="line">#</span><br><span class="line">flatpak run com.github.birros.WebArchives</span><br></pre></td></tr></table></figure>
+<h1 id="糖尿病"><a href="#糖尿病" class="headerlink" title="糖尿病"></a>糖尿病</h1><p><strong>To be organized</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Diabetes&#39;</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>1.list, download list from <a target="_blank" rel="noopener" href="http://www.diab.net.cn/cn/zhinangongshi.aspx">中华医学会糖尿病学学分会</a>, colleciton of guidelines</li>
+<li>6360650853146500005447651.pdf</li>
+<li>6360650858691812504989121.pdf</li>
+<li>6360650875834000003259241.pdf</li>
+<li>6360650885093375008213363.pdf</li>
+<li>6360650891598062506418654.pdf</li>
+<li>6360650900034000003924937.pdf</li>
+<li>国家基层糖尿病防治管理指南-2018.pdf</li>
+<li>老年人糖尿病前期干预指南-2018.pdf</li>
+<li>糖尿病-维基百科.pdf</li>
+<li>糖尿病_Learning.docx</li>
+<li>糖尿病.pdf</li>
+<li>中国2型糖尿病防治指南-2010.pdf</li>
+<li>中国 2 型糖尿病防治指南-2017.pdf</li>
+<li>中国2型糖尿病防治指南_基层版-2012.pdf</li>
+<li>中国糖尿病防治指南_科普版-2009.pdf</li>
+<li>中国I型糖尿病诊治指南-2011.pdf</li>
+<li>CHN_D1_Diabetes-prevention-guidelines.pdf</li>
+<li>Diabetes.pdf</li>
+<li>Diabetes-Wikipedia.pdf</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.diab.net.cn/cn/zhinangongshi.aspx">中华医学会糖尿病学学分会</a>, colleciton of guidelines</li>
+<li><a target="_blank" rel="noopener" href="http://www.cdgrlyy.org/common/attached/file/20180826/20180826071353_40341.pdf">20180826071353_40341.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sohu.com/a/294659406_489312">2019 AACE/ACE糖尿病综合管理指南发布！（多张流程图）_治疗</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cma.org.cn/module/download/downfile.jsp?classid=0&filename=244cfc3bb8bb4cef842158b62ec32ba6.pdf">www.cma.org.cn</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.medsci.cn/guideline/show_article.do?id=6f8a11c0016025f4">老年人糖尿病前期干预指南-指南&amp;解读指南-MedSci.cn</a></li>
+<li><a target="_blank" rel="noopener" href="https://extranet.who.int/ncdccs/Data/CHN_D1_Diabetes-prevention-guidelines.pdf">CHN_D1_Diabetes-prevention-guidelines.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.xayxfw.com/uploadfiles/2018/03/201803160832403240.pdf">糖尿病1期文章</a></li>
+<li><a target="_blank" rel="noopener" href="http://medline.org.cn/news/detail.do?newsId=14200">【指南划重点：老年人糖尿病前期的正确干预】-中华医学网-183</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.olehua.net/news/shownews.php?id=74">重磅！《中国2型糖尿病防治指南（2020版）》发布，更新要点速览 - CDS2020</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/338953341">中国2型糖尿病防治指南解读 - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://ccdas.pmphai.com/Pc/Guidelines/detail?id=4cc4c2998fa78119dd6420e024ac16a0">指南规范详情-人卫临床助手-人民卫生出版社</a></li>
+<li><a target="_blank" rel="noopener" href="http://rs.yiigle.com/CN311282202005/1198885.htm">中国成人糖尿病前期干预的专家共识 - 中华内分泌代谢杂志</a></li>
+<li><a target="_blank" rel="noopener" href="http://rs.yiigle.com/CN115791202102/1311073.htm">我国成人2型糖尿病自我管理教育与支持的现状与展望 - 中华糖尿病杂志</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.163.com/dy/article/FTREPUIA05148OVI.html">最新版《中国2型糖尿病防治指南》解读：三大指标，三大药物|低血糖|蛋白尿_网易订阅</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Offline Wikipedia</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">flatpak</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/14/20210314/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210312" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/12/20210312/">20210312</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/12/20210312/" class="archive-article-date">
+  	<time datetime="2021-03-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210312</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Skill-levels-and-gains-in-university-STEM-education-in-China-India-Russia-and-the-United-States-Nature-Human-Behaviour"><span class="toc-number">1.1.</span> <span class="toc-text">Skill levels and gains in university STEM education in China, India, Russia and the United States | Nature Human Behaviour</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="Skill-levels-and-gains-in-university-STEM-education-in-China-India-Russia-and-the-United-States-Nature-Human-Behaviour"><a href="#Skill-levels-and-gains-in-university-STEM-education-in-China-India-Russia-and-the-United-States-Nature-Human-Behaviour" class="headerlink" title="Skill levels and gains in university STEM education in China, India, Russia and the United States | Nature Human Behaviour"></a><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41562-021-01062-3">Skill levels and gains in university STEM education in China, India, Russia and the United States | Nature Human Behaviour</a></h2><p>Universities contribute to economic growth and national competitiveness by equipping students with higher-order thinking and academic skills. Despite large investments in university science, technology, engineering and mathematics (STEM) education, little is known about how the skills of STEM undergraduates compare across countries and by institutional selectivity. Here, we provide direct evidence on these issues by collecting and analysing longitudinal data on tens of thousands of computer science and electrical engineering students in China, India, Russia and the United States. We find stark differences in skill levels and gains among countries and by institutional selectivity. Compared with the United States, students in China, India and Russia do not gain critical thinking skills over four years. Furthermore, while students in India and Russia gain academic skills during the first two years, students in China do not. These gaps in skill levels and gains provide insights into the global competitiveness of STEM university students across nations and institutional types.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/12/20210312/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210311" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/11/20210311/">20210311</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/11/20210311/" class="archive-article-date">
+  	<time datetime="2021-03-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210311</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#NSFC-Application"><span class="toc-number">1.</span> <span class="toc-text">NSFC Application</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#To-be-organized"><span class="toc-number">2.</span> <span class="toc-text">To be organized</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-%E9%9A%90%E8%97%8F%E7%8A%B6%E6%80%81%E6%A0%8F-%E5%86%99%E4%BA%86-%E4%BC%9A%E4%BA%86-gif-CSDN%E5%8D%9A%E5%AE%A2"><span class="toc-number">3.</span> <span class="toc-text">Linux 搜狗输入法 隐藏状态栏_写了 &#x3D; 会了.gif-CSDN博客</span></a></li></ol>
+</div>
+
+        <h1 id="NSFC-Application"><a href="#NSFC-Application" class="headerlink" title="NSFC Application"></a>NSFC Application</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2021_国家自然科学基金&#39;; pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # NSFC</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2021_国家自然科学基金&#x2F;Draft&#x2F;1.面上项目-填报说明与撰写提纲-20201228版_Filled.doc&#39;; setsid wps $&#123;i&#125; # Guideline</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;09_02_63_HEV&#x2F;Ref&#x2F;Taxonomy&#39;; pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Ref of HEV</span><br></pre></td></tr></table></figure>
+
+<h1 id="To-be-organized"><a href="#To-be-organized" class="headerlink" title="To be organized"></a>To be organized</h1><p>[[20210329|## To be organized]]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Computer_Tips&#x2F;Google_Tips&#x2F;1&#39;;cd $&#123;i&#125;; pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Linux-搜狗输入法-隐藏状态栏-写了-会了-gif-CSDN博客"><a href="#Linux-搜狗输入法-隐藏状态栏-写了-会了-gif-CSDN博客" class="headerlink" title="Linux 搜狗输入法 隐藏状态栏_写了 = 会了.gif-CSDN博客"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39124762/article/details/113820818">Linux 搜狗输入法 隐藏状态栏_写了 = 会了.gif-CSDN博客</a></h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/11/20210311/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210310" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -835,738 +1394,6 @@
 
 
   
-    <article id="post-20210305" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/05/20210305/">20210305</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/05/20210305/" class="archive-article-date">
-  	<time datetime="2021-03-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210305</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%AF%8D%E5%BA%93%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">搜狗输入法词库下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#command-line-How-to-remove-the-password-from-a-PDF-Ask-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">command line - How to remove the password from a PDF? - Ask Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%AB%E7%94%9F%E9%83%A8%E5%85%B3%E4%BA%8E%E5%8D%B0%E5%8F%91%E3%80%8A%E6%B6%88%E6%AF%92%E6%8A%80%E6%9C%AF%E8%A7%84%E8%8C%83%E3%80%8B-2002%E5%B9%B4%E7%89%88-%E7%9A%84%E9%80%9A%E7%9F%A5-%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E5%AE%B6%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E5%A7%94%E5%91%98%E4%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">卫生部关于印发《消毒技术规范》(2002年版)的通知 - 中华人民共和国国家卫生健康委员会</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;Herpesvirus_Latent_Gene&#x2F;Ref&#x2F;Latent_Herpesvirus&#x2F;Latency_strategies_of_herpesviruses.pdf&#39;</span><br><span class="line">ls $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="搜狗输入法词库下载"><a href="#搜狗输入法词库下载" class="headerlink" title="搜狗输入法词库下载"></a>搜狗输入法词库下载</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;https:&#x2F;&#x2F;github.com&#x2F;WuLC&#x2F;ThesaurusSpider&#39;</span><br><span class="line">git clone $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;ThesaurusSpider&#x2F;SougouThesaurusSpider&#96;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="command-line-How-to-remove-the-password-from-a-PDF-Ask-Ubuntu"><a href="#command-line-How-to-remove-the-password-from-a-PDF-Ask-Ubuntu" class="headerlink" title="command line - How to remove the password from a PDF? - Ask Ubuntu"></a><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/828720/how-to-remove-the-password-from-a-pdf">command line - How to remove the password from a PDF? - Ask Ubuntu</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftk &#x2F;path&#x2F;to&#x2F;input.pdf input_pw &lt;yourpassword&gt; output out.pdf</span><br></pre></td></tr></table></figure>
-<h1 id="卫生部关于印发《消毒技术规范》-2002年版-的通知-中华人民共和国国家卫生健康委员会"><a href="#卫生部关于印发《消毒技术规范》-2002年版-的通知-中华人民共和国国家卫生健康委员会" class="headerlink" title="卫生部关于印发《消毒技术规范》(2002年版)的通知 - 中华人民共和国国家卫生健康委员会"></a><a target="_blank" rel="noopener" href="http://www.nhc.gov.cn/wjw/gfxwj/201304/3a0121cba422455b93307f070b099cf2.shtml">卫生部关于印发《消毒技术规范》(2002年版)的通知 - 中华人民共和国国家卫生健康委员会</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;eBooks&#x2F;Others&#x2F;消毒技术规范&#39;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HSV Exosome cn draft</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">B95-8-Nrf2 project</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/05/20210305/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210304" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/04/20210304/">20210304</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/04/20210304/" class="archive-article-date">
-  	<time datetime="2021-03-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210304</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">搜狗输入法安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E8%AF%8D%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">搜狗输入法词库</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><ul>
-<li>Raw data of B95-8_Nrf2 project<ul>
-<li><a target="_blank" rel="noopener" href="https://www.testlinecd.com/file/476/EBV_AN_NEW.pdf?version=202009160801">EBV_AN_NEW.pdf</a>, simple description of VCA, EBNA1 and EA-D. From <a target="_blank" rel="noopener" href="https://www.testlinecd.com/products">Products | TestLine Clinical Diagnostics s.r.o.</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&dbkey=kegg&keywords=Bortezomib">DBGET Search Result: KEGG Bortezomib</a><ul>
-<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6097472/">Combined inhibition of autophagy and Nrf2 signaling augments bortezomib-induced apoptosis by increasing ROS production and ER stress in pancreatic cancer cells</a>. Bortezomib is a direct activator of Nrf2 and HO-1 as well.</li>
-</ul>
-</li>
-<li>Sodium butyrate<ul>
-<li><a target="_blank" rel="noopener" href="https://joe.bioscientifica.com/view/journals/joe/232/1/71.xml">Sodium butyrate activates NRF2 to ameliorate diabetic nephropathy possibly via inhibition of HDAC in: Journal of Endocrinology Volume 232 Issue 1 (2017)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41419-020-2663-1">Sodium butyrate inhibits high cholesterol-induced neuronal amyloidogenesis by modulating NRF2 stabilization-mediated ROS levels: involvement of NOX2 and SOD1 | Cell Death &amp; Disease</a>, size of Nrf2 79 kD</li>
-<li><a target="_blank" rel="noopener" href="https://www.genome.jp/dbget-bin/www_bget?dr:D08998">KEGG DRUG: Sodium butyrate</a>, CAS number to be confimred.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Summary&#x2F;NFE2_Sum_Large.pptx&#39;</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>HSV cn, revised</li>
-</ul>
-<h1 id="搜狗输入法安装"><a href="#搜狗输入法安装" class="headerlink" title="搜狗输入法安装"></a>搜狗输入法安装</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/142206571">Ubuntu20.04LTS安装搜狗输入法 - 知乎</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -sL &#39;https:&#x2F;&#x2F;keyserver.ubuntu.com&#x2F;pks&#x2F;lookup?&amp;op&#x3D;get&amp;search&#x3D;0x73BC8FBCF5DE40C6ADFCFFFA9C949F2093F565FF&#39; | sudo apt-key add</span><br><span class="line">sudo apt-add-repository &#39;deb http:&#x2F;&#x2F;archive.ubuntukylin.com&#x2F;ukui focal main&#39;</span><br><span class="line">sudo apt upgrade</span><br><span class="line">#</span><br><span class="line">sudo apt install sogouimebs</span><br><span class="line">#</span><br><span class="line">sogouIme-configtool </span><br></pre></td></tr></table></figure>
-<h1 id="搜狗输入法词库"><a href="#搜狗输入法词库" class="headerlink" title="搜狗输入法词库"></a>搜狗输入法词库</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/WuLC/ThesaurusSpider/tree/master/SougouThesaurusSpider">ThesaurusSpider/SougouThesaurusSpider at master · WuLC/ThesaurusSpider · GitHub</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HSV Exosome cn draft</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">B95-8_Nrf2 project</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/04/20210304/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210303" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/03/20210303/">20210303</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/03/20210303/" class="archive-article-date">
-  	<time datetime="2021-03-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210303</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Backup"><span class="toc-number">1.</span> <span class="toc-text">Backup</span></a></li></ol>
-</div>
-
-        <h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><ul>
-<li>ht_5T_2</li>
-<li>ht_5T</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Source&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;</span><br><span class="line">Destination&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_2&#x2F;Work&#x2F;</span><br><span class="line">rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Backup</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/03/20210303/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210302" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/02/20210302/">20210302</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/02/20210302/" class="archive-article-date">
-  	<time datetime="2021-03-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210302</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">搜狗输入法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#config-SogouPY"><span class="toc-number">2.0.1.</span> <span class="toc-text">~&#x2F;.config&#x2F;SogouPY</span></a></li></ol></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Remove sogoupinyin</span><br><span class="line">dpkg -l | ag sogou</span><br><span class="line">i&#x3D;&#39;sogoupinyin&#39;</span><br><span class="line">sudo dpkg -r $&#123;i&#125;</span><br><span class="line">sudo dpkg --purge $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Ref&#x2F;Nano_Iomis&#x2F;&#39;; pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Biosafety&#x2F;Ion-e-Air&#x2F;Ref&#x2F;Nano_Iomis&#x2F;Nano_Iomis.docx&#39;; setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h1><ul>
-<li><a href="file:///media/ht/ht_5T/Work/References/Computer_Tips/Linux_Tips/My_Linux/My_Linux.html#5_tips">My Linux</a></li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/jilijelon/article/details/77962793">搜狗输入法Linux版配置文件详解_jilijelon-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/6142.html">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;fcitx-frontend-qt4&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;sogoupinyin&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;fcitx-sogoupinyin-uk&#39;</span><br><span class="line">sudo apt remove $&#123;i&#125;</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;.config&#x2F;sogou-qimpanel</span><br><span class="line">~&#x2F;.config&#x2F;SogouPY.users</span><br><span class="line">~&#x2F;.config&#x2F;SogouPY</span><br></pre></td></tr></table></figure>
-<h3 id="config-SogouPY"><a href="#config-SogouPY" class="headerlink" title="~/.config/SogouPY"></a>~/.config/SogouPY</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;home&#x2F;ht&#x2F;.config&#x2F;SogouPY&#39;</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scdlist.ini</span><br><span class="line">Correction.ini</span><br><span class="line">sogouEnv.ini</span><br><span class="line">env.ini</span><br><span class="line">sogou.version</span><br><span class="line">useSkin.txt</span><br><span class="line">pingback.time</span><br><span class="line">scd</span><br></pre></td></tr></table></figure>
-<ul>
-<li>scdlist.ini</li>
-<li>Correction.ini</li>
-<li>sogouEnv.ini</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">[Genelal]</span><br><span class="line">FirstRunSogouQimanel_2_1&#x3D;false</span><br><span class="line">ShuangPin&#x3D;false</span><br><span class="line">HintSP&#x3D;true</span><br><span class="line">AllowQuanPin&#x3D;true</span><br><span class="line">HideStatusBar&#x3D;true</span><br><span class="line">FullScreenHideSB&#x3D;true</span><br><span class="line">SmartPunc&#x3D;true</span><br><span class="line"></span><br><span class="line">[StatusInfo]</span><br><span class="line">ValueZhongYing&#x3D;fcitx-kbd</span><br><span class="line">ValueFan&#x3D;fcitx-chttrans-inactive</span><br><span class="line">ValuePunc&#x3D;fcitx-punc-inactive</span><br><span class="line">ValueQuanBan&#x3D;fcitx-fullwidth-inactive #默认的是全角fcitx-fullwidth-active,半角需要修改为fcitx-fullwidth-inactive</span><br><span class="line"></span><br><span class="line">[Key]</span><br><span class="line">SwitchCE_key&#x3D;Shift</span><br><span class="line">SwichEnglishRetainExist&#x3D;true</span><br><span class="line">FirstPageKey&#x3D;0</span><br><span class="line">SecondPageKey&#x3D;2</span><br><span class="line">SwichSogouIME&#x3D;true</span><br><span class="line">Switch2sogou&#x3D;&quot;CTRL_,&quot;</span><br><span class="line">ChttransFlag&#x3D;true</span><br><span class="line"></span><br><span class="line">[Appearance]</span><br><span class="line">CandidateNumber&#x3D;5</span><br><span class="line">UseSkin&#x3D;true</span><br><span class="line">CurrentSkin&#x3D;</span><br><span class="line">ChangeColor&#x3D;false</span><br><span class="line">ChangeFont&#x3D;true</span><br><span class="line">DefaultSkinSetFlag&#x3D;false</span><br><span class="line"></span><br><span class="line">[Advance]</span><br><span class="line">UrlMode&#x3D;true</span><br><span class="line">RemainHalfWidth&#x3D;true</span><br><span class="line">KeyPadInputDigital&#x3D;true</span><br><span class="line"></span><br><span class="line">[Cell]</span><br><span class="line">AutoUpdateThesaurus&#x3D;true</span><br><span class="line">RuncellThesaurusUpdateTip&#x3D;true</span><br><span class="line">RuncellThesaurus&#x3D;true</span><br></pre></td></tr></table></figure>
-<ul>
-<li>env.ini</li>
-<li>sogou.version</li>
-<li>useSkin.txt</li>
-<li>pingback.time</li>
-<li>scd</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log/Computing//" class="article-tag-list-link color5">Computing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/02/20210302/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210301" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/01/20210301/">20210301</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/01/20210301/" class="archive-article-date">
-  	<time datetime="2021-02-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210301</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IME-in-Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">IME in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95linux%E7%89%88%E4%BB%A5%E5%8F%8A%E5%8D%B8%E8%BD%BD%E6%96%B9%E6%B3%95-Yoki%E7%9A%84%E5%B0%8F%E7%AB%99"><span class="toc-number">2.1.</span> <span class="toc-text">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-for-linux"><span class="toc-number">2.2.</span> <span class="toc-text">搜狗输入法 for linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%AF%E9%A3%9E%E8%BE%93%E5%85%A5%E6%B3%95Linux%E7%89%88-deb%E5%8C%85%E5%92%8C%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AD%98%E5%9C%A8%E5%86%B2%E7%AA%81%EF%BC%8C%E9%99%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Linux%E6%95%99%E7%A8%8B-%E4%BA%91%E7%BD%91%E7%89%9B%E7%AB%99"><span class="toc-number">2.3.</span> <span class="toc-text">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tree-structure-by-markdown-mermaid"><span class="toc-number">3.</span> <span class="toc-text">Tree structure by markdown mermaid</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Update-Log"><span class="toc-number">3.1.</span> <span class="toc-text">Update Log</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">3.2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codes"><span class="toc-number">3.3.</span> <span class="toc-text">Codes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-number">3.4.</span> <span class="toc-text">Examples</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mermaid-in-RMD"><span class="toc-number">3.4.1.</span> <span class="toc-text">Mermaid in RMD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-shapes"><span class="toc-number">3.5.</span> <span class="toc-text">Node shapes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Default"><span class="toc-number">3.5.1.</span> <span class="toc-text">Default</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-node-with-round-edges"><span class="toc-number">3.5.2.</span> <span class="toc-text">A node with round edges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-stadium-shaped-node"><span class="toc-number">3.5.3.</span> <span class="toc-text">A stadium-shaped node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-node-in-a-cylindrical-shape"><span class="toc-number">3.5.4.</span> <span class="toc-text">A node in a cylindrical shape</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-node-in-the-form-of-a-circle"><span class="toc-number">3.5.5.</span> <span class="toc-text">A node in the form of a circle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-node-in-an-asymmetric-shape"><span class="toc-number">3.5.6.</span> <span class="toc-text">A node in an asymmetric shape</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-node-rhombus"><span class="toc-number">3.5.7.</span> <span class="toc-text">A node (rhombus)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parallelogram"><span class="toc-number">3.5.8.</span> <span class="toc-text">Parallelogram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parallelogram-alt"><span class="toc-number">3.5.9.</span> <span class="toc-text">Parallelogram alt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trapezoid"><span class="toc-number">3.5.10.</span> <span class="toc-text">Trapezoid</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Trapezoid-alt"><span class="toc-number">3.5.11.</span> <span class="toc-text">Trapezoid alt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Line-connection-without-arrow"><span class="toc-number">3.6.</span> <span class="toc-text">Line connection without arrow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pie-graph"><span class="toc-number">3.7.</span> <span class="toc-text">Pie graph</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C"><span class="toc-number">4.</span> <span class="toc-text">西部世界</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Index-of-Calibre"><span class="toc-number">5.</span> <span class="toc-text">Index of Calibre</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#39;</span><br><span class="line">pcmanfm -n $&#123;i&#125;; cd $&#123;i&#125; # Ubuntu Chinese IME</span><br><span class="line"># </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="IME-in-Ubuntu"><a href="#IME-in-Ubuntu" class="headerlink" title="IME in Ubuntu"></a>IME in Ubuntu</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;&#39;</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;sogoupinyin_2.1.0.0082_amd64.deb&#39;</span><br><span class="line">sudo gdebi $&#123;i&#125;</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;sogoupinyin_2.3.1.0112_amd64.deb&#39;</span><br><span class="line">sudo gdebi $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;sogoupinyin_2.4.0.3469_amd64.deb&#39;</span><br><span class="line">sudo dpkg -i $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#x2F;iflyime_0.9.85_amd64.deb&#39;</span><br><span class="line">sudo dpkg -i $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="在Ubuntu下安装讯飞输入法linux版以及卸载方法-Yoki的小站"><a href="#在Ubuntu下安装讯飞输入法linux版以及卸载方法-Yoki的小站" class="headerlink" title="在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站"></a><a target="_blank" rel="noopener" href="https://yoki.moe/Intstu/24.html">在Ubuntu下安装讯飞输入法linux版以及卸载方法 - Yoki的小站</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Linux_Softs&#x2F;IME&#39;</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">i&#x3D;&#39;http:&#x2F;&#x2F;packages.deepin.com&#x2F;deepin&#x2F;pool&#x2F;non-free&#x2F;i&#x2F;iflyime&#x2F;iflyime_0.9.85_amd64.deb&#39;</span><br><span class="line">axel $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="搜狗输入法-for-linux"><a href="#搜狗输入法-for-linux" class="headerlink" title="搜狗输入法 for linux"></a><a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法 for linux</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;https:&#x2F;&#x2F;ime.sogoucdn.com&#x2F;dl&#x2F;index&#x2F;1612260778&#x2F;sogoupinyin_2.4.0.3469_amd64.deb?st&#x3D;7V-ZuZNtKFI2k94u0cxIuw&amp;e&#x3D;1614591562&amp;fn&#x3D;sogoupinyin_2.4.0.3469_amd64.deb&#39;</span><br><span class="line">axel $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="讯飞输入法Linux版-deb包和搜狗输入法存在冲突，附解决方案-Linux教程-云网牛站"><a href="#讯飞输入法Linux版-deb包和搜狗输入法存在冲突，附解决方案-Linux教程-云网牛站" class="headerlink" title="讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站"></a><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/6142.html">讯飞输入法Linux版.deb包和搜狗输入法存在冲突，附解决方案_Linux教程_云网牛站</a></h2><ul>
-<li><a target="_blank" rel="noopener" href="https://ywnz.com/linuxjc/2915.html">在Deepin Linux系统中搜狗输入法占用内存很高的解决方法_Linux教程_云网牛站</a></li>
-</ul>
-<h1 id="Tree-structure-by-markdown-mermaid"><a href="#Tree-structure-by-markdown-mermaid" class="headerlink" title="Tree structure by markdown mermaid"></a>Tree structure by markdown <code>mermaid</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Computer_Tips&#x2F;ePub&#x2F;Markdown&#x2F;mermaid_Learning.docx</span><br><span class="line">setsid wps $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://150328.xyz/2020/01/22/markdown%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">使用Markdown绘制树形图 - heylypp的博客 | heylypp Blog</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/aizhaoyu/article/details/44350821?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=8ee321bd-01dd-4d89-ac4e-e886d4fd8166&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control">markdown流程图语法_aizhaoyu的专栏-CSDN博客_markdown 泳道图</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.learningtoo.eu/articles/mermaid.htm">Mermaid Graphs and Flow Charts</a>, very good instruction</li>
-</ul>
-<h2 id="Update-Log"><a href="#Update-Log" class="headerlink" title="Update Log"></a>Update Log</h2><ul>
-<li>20210311<ul>
-<li>Node shapes</li>
-<li>Line connection</li>
-<li>Font color and size will be reviewed in the future</li>
-</ul>
-</li>
-</ul>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-mermaid-diagrams</span><br><span class="line">#</span><br><span class="line">cnpm install hexo-filter-mermaid-diagrams</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog&#x2F;themes&#x2F;yilia&#x2F;_config.yml&#39;</span><br><span class="line">subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<p>Add the text as below to the file of above</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Mermaid 支持</span><br><span class="line">mermaid:</span><br><span class="line">on: true</span><br><span class="line">cdn: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;mermaid@8.4.2&#x2F;dist&#x2F;mermaid.min.js</span><br><span class="line">#cdn: &#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;mermaid&#x2F;8.3.1&#x2F;mermaid.min.js</span><br><span class="line">options: # 更多配置信息可以参考 https:&#x2F;&#x2F;mermaidjs.github.io&#x2F;#&#x2F;mermaidAPI</span><br><span class="line">theme: &#39;default&#39;</span><br><span class="line">startOnLoad: true</span><br><span class="line">flowchart:</span><br><span class="line">useMaxWidth: false</span><br><span class="line">htmlLabels: true</span><br></pre></td></tr></table></figure>
-<h2 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h2><p><br></br></p>
-<pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">	subgraph SVN Architecture</span><br><span class="line">	client1--&gt;|read &#x2F; write|SVN((SVN server))</span><br><span class="line">	client2--&gt;|read only|SVN</span><br><span class="line">	client3--&gt;|read &#x2F; write|SVN</span><br><span class="line">	client4--&gt;|read only|SVN</span><br><span class="line">	client5(...)--&gt;SVN</span><br><span class="line">	SVN---|store the data|sharedrive</span><br><span class="line">	end</span><br></pre></td></tr></table></figure></code></pre>
-<p><br></br></p>
-<pre><code>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[工具推荐] --&gt;B(文献下载)</span><br><span class="line">A --&gt;C(文献管理)</span><br><span class="line">A --&gt;D(文件同步和存储)</span><br><span class="line">A --&gt;E(翻译辅助)</span><br><span class="line">A --&gt;F(公式书写)</span><br></pre></td></tr></table></figure></code></pre>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    subgraph SVN Architecture</span><br><span class="line">    client1--&gt;|read &#x2F; write|SVN((SVN server))</span><br><span class="line">    client2--&gt;|read only|SVN</span><br><span class="line">    client3--&gt;|read &#x2F; write|SVN</span><br><span class="line">    client4--&gt;|read only|SVN</span><br><span class="line">    client5(...)--&gt;SVN</span><br><span class="line">    SVN---|store the data|sharedrive</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[工具推荐] --&gt;B(文献下载)</span><br><span class="line">A --&gt;C(文献管理)</span><br><span class="line">A --&gt;D(文件同步和存储)</span><br><span class="line">A --&gt;E(翻译辅助)</span><br><span class="line">A --&gt;F(公式书写)</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[Hard] --&gt;|Text| B(Round)</span><br><span class="line">B --&gt; C&#123;Decision&#125;</span><br><span class="line">C --&gt; |One| D[Result 1]</span><br><span class="line">C --&gt; |Two| E[Result 2]</span><br></pre></td></tr></table></figure>
-
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">id1(Start)--&gt;id2(Stop)</span><br><span class="line">style id1 fill:#f9f,stroke:#333,stroke-width:4px </span><br><span class="line">style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    B[&quot;fa:fa-twitter for peace&quot;]</span><br><span class="line">    B--&gt;C[fa:fa-ban forbidden]</span><br><span class="line">    B--&gt;D(fa:fa-spinner);</span><br><span class="line">    B--&gt;E(A fa:fa-camera-retro perhaps?);</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">journey</span><br><span class="line">  title My working day</span><br><span class="line">  section Go to work</span><br><span class="line">    Make tea: 5: Me</span><br><span class="line">    Go upstairs: 3: Me</span><br><span class="line">    Do work: 1: Me, Cat</span><br><span class="line">  section Go home</span><br><span class="line">    Go downstairs: 5: Me</span><br><span class="line">    Sit down: 3: Me</span><br></pre></td></tr></table></figure>
-<hr>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">start[&lt;font size&#x3D;6&gt;附一电子报销流程]--&gt;a1[&lt;font size&#x3D;6&gt;1.发票检验]</span><br><span class="line">a1--&gt;b1[&lt;font size&#x3D;6&gt;发票税号正确]</span><br><span class="line">b1--&lt;font size&#x3D;6&gt;是--&gt;c1[&lt;font size&#x3D;6&gt;发票下方盖公司有效印章]</span><br><span class="line">c1--&gt;d1[&lt;font size&#x3D;6&gt;发票背面填写项目]</span><br><span class="line">d1--&gt;e1[&lt;font size&#x3D;6&gt;项目名称]</span><br><span class="line">d1--&gt;e2[&lt;font size&#x3D;6&gt;项目负责人签名]</span><br><span class="line">d1--&gt;e3[&lt;font size&#x3D;6&gt;报销人签名]</span><br><span class="line">d1--&gt;e4[&lt;font size&#x3D;6&gt;审核人签名]</span><br><span class="line">start--&gt;a2[&lt;font size&#x3D;6&gt;2.填写报销单]</span><br><span class="line">a2--&gt;b2[&lt;font size&#x3D;6&gt;项目负责人审核通过]</span><br><span class="line">b2--&gt;c3[&lt;font size&#x3D;6&gt;打印报销单]</span><br><span class="line">start--&gt;a3[&lt;font size&#x3D;6&gt;3.获取入库单]</span><br><span class="line">a3--&gt;a3b1[&lt;font size&#x3D;6&gt;锐竞平台下单]</span><br><span class="line">a3b1--&gt;a3c1[&lt;font size&#x3D;6&gt;...]</span><br><span class="line">a3c1--&gt;a3d1[&lt;font size&#x3D;6&gt;在结算页面打印入库单]</span><br><span class="line">b1--&lt;font size&#x3D;6&gt;否--&gt;c2[&lt;font size&#x3D;6&gt;发票退回发票源更正]</span><br><span class="line">c2--&gt;a1</span><br><span class="line">classDef className fill:#f9f,stroke:#333,stroke-width:4px</span><br><span class="line">class start,a1,a2,a3 className;</span><br></pre></td></tr></table></figure></code></pre>
-<h3 id="Mermaid-in-RMD"><a href="#Mermaid-in-RMD" class="headerlink" title="Mermaid in RMD"></a>Mermaid in RMD</h3><pre><code>---
-title: &quot;Untitled&quot;
-author: &quot;Me&quot;
-output: html_document
----
-
-<figure class="highlight plain"><figcaption><span>setup, include</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knitr::opts_chunk$set(echo &#x3D; TRUE)</span><br></pre></td></tr></table></figure>
-## R Markdown
-This is an R Markdown document. 
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">library(DiagrammeR)</span><br><span class="line">mermaid(&quot;</span><br><span class="line">graph LR</span><br><span class="line">	A--&gt;B</span><br><span class="line">&quot;)</span><br></pre></td></tr></table></figure></code></pre>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/40803017/how-to-include-diagrammer-mermaid-flowchart-in-a-rmarkdown-file">r - How to include DiagrammeR/mermaid flowchart in a Rmarkdown file - Stack Overflow</a></li>
-<li><a target="_blank" rel="noopener" href="https://bookdown.org/yihui/rmarkdown-cookbook/diagrams.html">4.15 Create diagrams | R Markdown Cookbook</a></li>
-<li><h2 id="Node-shapes"><a href="#Node-shapes" class="headerlink" title="Node shapes"></a>Node shapes</h2></li>
-<li>See <a target="_blank" rel="noopener" href="https://github.com/mermaid-js/mermaid">GitHub - mermaid-js/mermaid: Generation of diagram and flowchart from text in a similar manner as markdown</a><ul>
-<li>Node shapes<ul>
-<li>Round, ()</li>
-<li>Default/Rectangle, []</li>
-<li>Rectangle with round corners, {}</li>
-</ul>
-</li>
-<li>A node with text<ul>
-<li>It is also possible to set text in the box that differs from the id. If this is done several times, it is the last text found for the node that will be used. Also if you define edges for the node later on, you can omit text definitions. The one previously defined will be used when rendering the box.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1[This is the text in the box]</span><br></pre></td></tr></table></figure>
-<h3 id="A-node-with-round-edges"><a href="#A-node-with-round-edges" class="headerlink" title="A node with round edges"></a>A node with round edges</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1(This is the text in the box)</span><br></pre></td></tr></table></figure>
-<h3 id="A-stadium-shaped-node"><a href="#A-stadium-shaped-node" class="headerlink" title="A stadium-shaped node"></a>A stadium-shaped node</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1[[This is the text in the box]]</span><br></pre></td></tr></table></figure>
-<h3 id="A-node-in-a-cylindrical-shape"><a href="#A-node-in-a-cylindrical-shape" class="headerlink" title="A node in a cylindrical shape"></a>A node in a cylindrical shape</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1[[This is the text in the box]]</span><br></pre></td></tr></table></figure>
-<h3 id="A-node-in-the-form-of-a-circle"><a href="#A-node-in-the-form-of-a-circle" class="headerlink" title="A node in the form of a circle"></a>A node in the form of a circle</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1((This is the text in the circle))</span><br></pre></td></tr></table></figure>
-<h3 id="A-node-in-an-asymmetric-shape"><a href="#A-node-in-an-asymmetric-shape" class="headerlink" title="A node in an asymmetric shape"></a>A node in an asymmetric shape</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1&gt;This is the text in the box]</span><br></pre></td></tr></table></figure>
-<h3 id="A-node-rhombus"><a href="#A-node-rhombus" class="headerlink" title="A node (rhombus)"></a>A node (rhombus)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1&#123;&#123;This is the text in the box&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Parallelogram"><a href="#Parallelogram" class="headerlink" title="Parallelogram"></a>Parallelogram</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1[&#x2F;This is the text in the box&#x2F;]</span><br></pre></td></tr></table></figure>
-<h3 id="Parallelogram-alt"><a href="#Parallelogram-alt" class="headerlink" title="Parallelogram alt"></a>Parallelogram alt</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    id1[\This is the text in the box\]</span><br></pre></td></tr></table></figure>
-<h3 id="Trapezoid"><a href="#Trapezoid" class="headerlink" title="Trapezoid"></a>Trapezoid</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    A[&#x2F;Christmas\]</span><br></pre></td></tr></table></figure>
-<h3 id="Trapezoid-alt"><a href="#Trapezoid-alt" class="headerlink" title="Trapezoid alt"></a>Trapezoid alt</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    B[\Go shopping&#x2F;]</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Line-connection-without-arrow"><a href="#Line-connection-without-arrow" class="headerlink" title="Line connection without arrow"></a>Line connection without arrow</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54665518/line-connection-instead-of-arrow-in-mermaid">r - Line connection (instead of arrow) in mermaid - Stack Overflow</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    a --- b</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    a --&gt; b</span><br><span class="line">	b --&gt; a</span><br></pre></td></tr></table></figure>
-<h2 id="Pie-graph"><a href="#Pie-graph" class="headerlink" title="Pie graph"></a>Pie graph</h2><ul>
-<li>The text color in legend is in black color, and the text will be hidden when with dark backgroud.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pie title Pets adopted by volunteers</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br></pre></td></tr></table></figure>
-<hr>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pie title Pets adopted by volunteers</span><br><span class="line">&quot;Dogs&quot; : 386</span><br><span class="line">&quot;Cats&quot; : 85</span><br><span class="line">&quot;Rats&quot; : 15</span><br></pre></td></tr></table></figure></code></pre>
-<h1 id="西部世界"><a href="#西部世界" class="headerlink" title="西部世界"></a>西部世界</h1><ul>
-<li><p><a target="_blank" rel="noopener" href="https://22v.net/v/759/">西部世界第一季(Westworld Season 1)迅雷下载|爱美剧</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://22v.net/v/3225/">西部世界第二季(Westworld Season 2)迅雷下载|爱美剧</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://www.msj1.com/archives/6042.html">西部世界第二季全集Westworld迅雷下载_天天看美剧</a></p>
-<pre><code>  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E01.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|714294770|101677ebd472dabc5124f417cd35157f|h=suskm54ua52b7gfvzfps5ytfw77asdrc|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E02.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|585496569|966a08127e89b5036708ecd14c741266|h=2qnvig2obtv5b3dbg2p5ixfg6ses7tpa|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E03.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|586034806|95f67dbfa4ca0fcb8dfeea52946b10e2|h=rkshwktqypqw7s6cxpucwroot76flnuo|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E04.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|586881106|6130b84e2cf21cae9ba341ad574318eb|h=5whwta2slwfrzqkkflsiht2kmjfp6nq3|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E05.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|566623388|08c3f798ae2b43f8be269cbe8a22f9d7|h=zz6scixon66altxzqta2eeiooh4dxren|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|573823264|f88e6f33e9866b6dcfa0c53cb6dc8b6e|h=rurjajbrbmwxvbeknhzlxwffejahonew|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E07.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|566219310|af89ff5fbd6ec9429a8722bbcbdb6e61|h=gvjkpwpzlsi5p5jhzng6qd5ilnaejyl3|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E08.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|577131765|431be773db9641e1110cfbc050ec0148|h=hzj436aoxvptzuncqy7mhfflsguihnwg|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E09.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|585921923|75011b40ef94d214c15755b2a450344a|h=btkqbzlnrenxrjtj6e5smkouw23fbjuk|/
-  ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S01E10.END.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.WEB-HR.AAC.1024X576.x264.mp4|900605057|edfcebc0982dbbf9f940adb5f68f9bbe|h=gf725mizkluxejw4x6pdkq2cwtgodzuz|/</code></pre>
-</li>
-</ul>
-<pre><code>    ed2k://|file|Westworld.S02E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1227202501|4DB2365C89E8FAD616EB71488A7814DE|h=QHDXTP5YWDBCDDQAJPP5ZHFDYTULVD56|/
-    ed2k://|file|WW.S02E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|980415491|C08680CE7D712CEF7CAE89A3DB280063|h=VSR45JPJ2D63CIVZFK5ZCACORTUZQVCU|/
-    ed2k://|file|WW.S02E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|982537056|90D023C232A284C53938F4DCD01B8F04|h=DY7IWXQHSY2AO64AGGGQ45MOB33AYORY|/
-    ed2k://|file|WW.S02E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1186747303|6181D7B1E0280C412797E0B8CEEB5BE0|h=BNJ6Y5HIK5ISF55LQHKM53T7VBKOB6WB|/
-    ed2k://|file|WW.S02E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1004894398|DE22668A9B29FDC154E44FE72F3533BC|h=IOH6MVQ35WAAWMGK2YWI66JDU2IA7QYG|/
-    ed2k://|file|WW.S02E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|978176189|FC9883DD61754932A6471DA6730F7E32|h=CL23LXIP4MUA6W3XCTORULKZLSBDSGUT|/
-    ed2k://|file|WW.S02E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|977697893|5BD93970D4C9FE5BA20F3EC793304FAF|h=BH5OYN3XJXNR6MVNDAHECPZ2VDCUUE3L|/
-    ed2k://|file|WW.S02E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|989543482|BFE72434A60523257CCFC7B71CBD45F7|h=HEKSFD3AJMKIXJRTOK5EIKCZ3P4GYNLQ|/
-    ed2k://|file|WW.S02E09.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|995361994|8921AABE387AA3E8AB49F6AEC139C099|h=UKBUI4IUTPX35IW57TJL2IVC5SEANYXX|/
-    ed2k://|file|WW.S02E10.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1504010214|75C6E78D7FD82F20A3C294A52AFD1868|h=BCY3Q7BI7WH42KWCYWAQUPBW6DSJAMM2|/</code></pre>
-<hr>
-<pre><code>    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E01.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|903236273|9e0d069937efdffc119ec0af78c182fb|h=wna32aqevffbqbodnscqfrlxisjnjdzn|/
-
-    magnet:?xt=urn:btih:1FF02947F68DE3EF271E2C000DB441769156EAE5&amp;dn=%e8%a5%bf%e9%83%a8%e4%b8%96%e7%95%8c.Westworld.S02E01.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce
-
-    magnet:?xt=urn:btih:709598ef3e37bac83f61f16014b8301e569757b5&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E01.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE</code></pre>
-<hr>
-<pre><code>    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E02.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|727683001|2a1ef24ffb436d10adf92d40e67609a0|h=aqnhyelyg34bxdbmoo6itiuw3l3hbpuj|/
-
-    magnet:?xt=urn:btih:b04914bd2ac96524fdf428be8f7a58ce1c2ea547&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:492371c5c55f1920fea764a9329562270b3a2d87&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E02.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E03.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|718703118|17839fe2e4a124af6ed8d5629a7cec64|h=ppjumgitr7iryrnd4snpveva6gor6hjm|/
-
-    magnet:?xt=urn:btih:c33539f68a2e220a327d3b1ce6f9da6e85b8494a&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:20065d31c2d261555cee0563b46beccd3fd10ed9&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E03.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E04.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.v2.mp4|871047935|7d3e28793b8962f01cdd13c0e026074e|h=du3yixpzzbpdjfxwlvpg2sovtpxlhipt|/
-
-    magnet:?xt=urn:btih:4743504df84702adf3ac72b1536f1b385085b9dc&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:ab6d25f7fe4d2bfdca129d17f6a27339a390ce64&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E04.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E05.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|738104755|0dff388e58b13205c89798ca560b1aea|h=fsoxcvvyj3waa4fp4fmeg2t3uelwnkjx|/
-
-    magnet:?xt=urn:btih:f6e98b0a0bc42c2a3a93ebaa581ae2352544550b&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:47a81ad39219e8234db5f1c3bc9542798dc3e9da&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E05.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|714858361|d4e6b58dcdf0842bc5c2ee9a5be4ea78|h=zmrnmzwhbzqdxglepqx36pli7ue4e233|/
-
-    magnet:?xt=urn:btih:21bf5d43dfe8c1ea9adfe596cfa5c7de9b1a4001&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:891ebb6792138aee5dca9b0651469c79e0d83073&amp;dn=%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.%E7%AC%AC%E4%BA%8C%E5%AD%A3.Westworld.S02E06.2018.HD1080P.X264.AAC.English.CHS-ENG.BTEE
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E07.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.v2.mp4|720158549|98296417e517a0ed95dabbe8176d1d1c|h=rnoimbnk5lo4mgxjtl7552fo45acptpb|/
-
-    magnet:?xt=urn:btih:25da5dcf7a157787ceead6e88e0ea0af1ac59451&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:983b3f8d2c01ef1a0771c12f23e21c55d6c51f41&amp;dn=2018.%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C%20%E7%AC%AC%E4%BA%8C%E5%AD%A3.S02E07.HD1080P%E8%8B%B1%E8%AF%AD%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97%5Bwww.bdsee.cn%5D.mp4
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E08.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.v2.mp4|724988703|0167c01654320d8cc57fe7f5fec340db|h=ajt5eyiox53xjo2j25egab4jpnpuydyn|/
-
-    magnet:?xt=urn:btih:7508642A4753673C42F98D12A15594C53F1BF8ED&amp;dn=%e8%a5%bf%e9%83%a8%e4%b8%96%e7%95%8c.Westworld.S02E08.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
-
-    magnet:?xt=urn:btih:97A709AE5F686D9473CEF8AFE179B5807B463A76&amp;dn=%e8%a5%bf%e9%83%a8%e4%b8%96%e7%95%8c.Westworld.S02E08.1080p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E09.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|734568536|975edb8274b8c4b7a50b01ba7b5e6c28|h=fvlr5qzsnii7rknq7j6nw42d4oerezrn|/
-
-    magnet:?xt=urn:btih:6a46bebe1d69c9d7aca0c4c34ea2be23b653278e&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:EC3FBF86C46846A06D86F23FDD3F0EABFEB85C86&amp;dn=%e8%a5%bf%e9%83%a8%e4%b8%96%e7%95%8c.Westworld.S02E09.1080p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce
-
-    ed2k://|file|%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C.Westworld.S02E10.END.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720p-%E4%BA%BA%E4%BA%BA%E5%BD%B1%E8%A7%86.mp4|1108996828|cc54c50c22a377f6b6a0d82b0bffc070|h=bylvoyxzgs5rj3hccec4rf7qgbt5emxr|/
-
-    magnet:?xt=urn:btih:bdcec6ac05b74211c330022c2277b40a770a38c3&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii.com:1337&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://p4p.arenabg.com:1337&amp;tr=wss://tracker.openwebtorrent.com&amp;tr=wss://tracker.btorrent.xyz&amp;tr=wss://tracker.fastcast.nz
-
-    magnet:?xt=urn:btih:7A0FC6427470417A38FEECF4FBDF255073EDE2CA&amp;dn=%e8%a5%bf%e9%83%a8%e4%b8%96%e7%95%8c.Westworld.S02E10.1080p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce</code></pre>
-<h1 id="Index-of-Calibre"><a href="#Index-of-Calibre" class="headerlink" title="Index of Calibre"></a>Index of Calibre</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;*[re:test(., &quot;^\s*[故事第卷][0123456789一二三四五六七八九十零〇百千两]*[章回部节集卷].*&quot;, &quot;i&quot;)]</span><br><span class="line"></span><br><span class="line">&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;eBooks&#x2F;名著&#x2F;Not_Classified&#x2F;十日谈.txt</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tree structure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Markdown syntax</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">西部世界</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IME in Ubuntu</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Markdown Mermaid examples</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Markdown mermaid</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">flowchart</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log/Computing//" class="article-tag-list-link color5">Computing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/01/20210301/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
@@ -1702,11 +1529,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1726,30 +1557,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">FTP</a>
               </li>
              
@@ -1759,6 +1566,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1854,35 +1673,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Guo Yifan</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1914,6 +1705,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -1923,6 +1730,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">container</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1954,27 +1765,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1986,11 +1781,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
+                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2003,6 +1822,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2046,10 +1873,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Watch charging</a>
               </li>
              
@@ -2066,15 +1889,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2126,6 +1941,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -2146,6 +1973,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -2158,7 +1989,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2170,11 +2001,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2246,11 +2073,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2259,6 +2086,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2274,11 +2109,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2287,14 +2122,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ADB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
               </li>
              
               <li class="article-tag-list-item">
