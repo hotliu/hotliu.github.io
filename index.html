@@ -158,20 +158,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-20210707" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-20210708" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/07/20210707/">20210707</a>
+      <a class="article-title" href="/2021/07/08/20210708/">20210708</a>
     </h1>
   
 
         
-        <a href="/2021/07/07/20210707/" class="archive-article-date">
-  	<time datetime="2021-07-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210707</time>
+        <a href="/2021/07/08/20210708/" class="archive-article-date">
+  	<time datetime="2021-07-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210708</time>
 </a>
         
       </header>
@@ -182,10 +182,26 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Coronavirus-sequence-download"><span class="toc-number">2.</span> <span class="toc-text">Coronavirus sequence download</span></a></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><pre><code></code></pre>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;ht.gan&#39;; ganttproject $&#123;i&#125;</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T_Backup&#x2F;eBooks</span><br><span class="line">du .&#x2F; -sh; du .&#x2F; -sk</span><br><span class="line"></span><br><span class="line">537G	.&#x2F;</span><br><span class="line">562654494	.&#x2F;</span><br><span class="line"># </span><br><span class="line">##################################################################</span><br><span class="line"># </span><br><span class="line">Dir&#x3D;eBooks</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;ht_5T&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;ht_5T&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; mkdir $&#123;Destination&#125;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Coronavirus-sequence-download"><a href="#Coronavirus-sequence-download" class="headerlink" title="Coronavirus sequence download"></a>Coronavirus sequence download</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;nuccore https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;nuccore https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;labs&#x2F;virus&#x2F;vssi&#x2F;#&#x2F;virus?SeqType_s&#x3D;Nucleotide&amp;VirusLineage_ss&#x3D;Betacoronavirus,%20taxid:694002 https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;labs&#x2F;virus&#x2F;vssi&#x2F;#&#x2F;virus?SeqType_s&#x3D;Nucleotide&amp;VirusLineage_ss&#x3D;Alphacoronavirus,%20taxid:693996 https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;labs&#x2F;virus&#x2F;vssi&#x2F;#&#x2F;virus?SeqType_s&#x3D;Nucleotide&amp;VirusLineage_ss&#x3D;Gammacoronavirus,%20taxid:694013 https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;labs&#x2F;virus&#x2F;vssi&#x2F;#&#x2F;virus?SeqType_s&#x3D;Nucleotide&amp;VirusLineage_ss&#x3D;Feline%20coronavirus,%20taxid:12663 chrome:&#x2F;&#x2F;downloads&#x2F; https:&#x2F;&#x2F;blast.ncbi.nlm.nih.gov&#x2F;Blast.cgi?PROGRAM&#x3D;blastn&amp;PAGE_TYPE&#x3D;BlastSearch&amp;LINK_LOC&#x3D;blasthome https:&#x2F;&#x2F;blast.ncbi.nlm.nih.gov&#x2F;Blast.cgi?CMD&#x3D;Get&amp;VIEW_RESULTS&#x3D;FromRes&amp;RID&#x3D;DT6BZP1C01R&amp;UNIQ_OBJ_NAME&#x3D;A_SearchResults_1lycvf_3Wk9_drTIihtY3Ro_23tp8J_1mJ2Am&amp;QUERY_INDEX&#x3D;0 https:&#x2F;&#x2F;blast.ncbi.nlm.nih.gov&#x2F;Blast.cgi&#39;</span><br><span class="line">setsid google-chrome $&#123;i&#125;</span><br><span class="line">setsid chromium-browser $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/nuccore">Betacoronavirus - Nucleotide - NCBI</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/nuccore">Feline coronavirus - Nucleotide - NCBI</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Betacoronavirus,%20taxid:694002">NCBI Virus</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Alphacoronavirus,%20taxid:693996">NCBI Virus</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Gammacoronavirus,%20taxid:694013">NCBI Virus</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Feline%20coronavirus,%20taxid:12663">NCBI Virus</a></li>
+<li><a href="chrome://downloads/">Downloads</a></li>
+<li><a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome">Nucleotide BLAST: Search nucleotide databases using a nucleotide query</a></li>
+<li><a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Get&VIEW_RESULTS=FromRes&RID=DT6BZP1C01R&UNIQ_OBJ_NAME=A_SearchResults_1lycvf_3Wk9_drTIihtY3Ro_23tp8J_1mJ2Am&QUERY_INDEX=0">NCBI Blast:NC_002306.3 Feline infectious peritonitis</a></li>
+<li><a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">NCBI Blast:NC_002306.3 Feline infectious peritonitis</a></li>
+</ul>
 
       
 
@@ -209,7 +225,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/07/20210707/">Expand all items >></a>
+          <a class="article-more-a" href="/2021/07/08/20210708/">Expand all items >></a>
         </p>
       
 
@@ -1569,6 +1585,21 @@ C -->|Two| E[Result 2]
     </td>
 </tr>
 
+<!-- <Flowchart> -->
+<tr><td colspan=2 align="center">
+    <b>Flow</b></br>
+    [<a target="_blank" rel="noopener" href="http://mermaid-js.github.io/mermaid/#/flowchart">docs</a> - <a target="_blank" rel="noopener" href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+graph TD
+a --- b
+</pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+
       
 
       
@@ -1988,10 +2019,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -2001,6 +2028,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2024,6 +2055,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -2040,15 +2083,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2068,15 +2111,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
+                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
+                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2184,6 +2247,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -2224,14 +2303,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
               </li>
              
@@ -2240,31 +2311,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2280,47 +2331,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
+                <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+                <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2436,19 +2459,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2468,15 +2499,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2492,11 +2523,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+                <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
+                <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2508,15 +2539,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">R update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2537,14 +2576,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
               </li>
              
               <li class="article-tag-list-item">
