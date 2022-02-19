@@ -158,6 +158,346 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210330" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/30/20210330/">20210330</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/30/20210330/" class="archive-article-date">
+  	<time datetime="2021-03-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210330</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Protein-Protein-Docking"><span class="toc-number">1.</span> <span class="toc-text">Protein-Protein Docking</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">1.1.</span> <span class="toc-text">Ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protein-Protein-Docking-Using-Bioinformatics-Tools-PPDock-Module"><span class="toc-number">1.2.</span> <span class="toc-text">Protein-Protein Docking Using Bioinformatics Tools (PPDock) Module</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#I-Introduction"><span class="toc-number">1.2.1.</span> <span class="toc-text">I. Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#II-Step-1-Gathering-Protein-Data-Bank-PDB-Files"><span class="toc-number">1.2.2.</span> <span class="toc-text">II. Step 1: Gathering Protein Data Bank (PDB) Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#III-Step-2-Splitting-PDB-Files-Using-DECOMP"><span class="toc-number">1.2.3.</span> <span class="toc-text">III. Step 2: Splitting PDB Files Using DECOMP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IV-Step-3-Use-GRAMM-to-Predict-the-Interactions"><span class="toc-number">1.2.4.</span> <span class="toc-text">IV. Step 3: Use GRAMM to Predict the Interactions.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#V-Step-4-Visualizing-Protein-Interactions"><span class="toc-number">1.2.5.</span> <span class="toc-text">V. Step 4: Visualizing Protein Interactions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VI-Step-5-Showing-Interfacial"><span class="toc-number">1.2.6.</span> <span class="toc-text">VI. Step 5: Showing Interfacial</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Amino-Acids"><span class="toc-number">1.2.7.</span> <span class="toc-text">Amino Acids</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protein-Protein-Docking-1"><span class="toc-number">1.3.</span> <span class="toc-text">Protein-Protein Docking</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Summary"><span class="toc-number">1.3.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docking-in-Rosetta"><span class="toc-number">1.3.2.</span> <span class="toc-text">Docking in Rosetta</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Navigating-to-the-Demos"><span class="toc-number">1.3.3.</span> <span class="toc-text">Navigating to the Demos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Preparing-Structures-for-Docking"><span class="toc-number">1.3.4.</span> <span class="toc-text">Preparing Structures for Docking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Docking"><span class="toc-number">1.3.5.</span> <span class="toc-text">Local Docking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Refinement-of-Docked-Structures"><span class="toc-number">1.3.6.</span> <span class="toc-text">Local Refinement of Docked Structures</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Global-Docking"><span class="toc-number">1.3.7.</span> <span class="toc-text">Global Docking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docking-Flexible-Proteins"><span class="toc-number">1.3.8.</span> <span class="toc-text">Docking Flexible Proteins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Symmetric-Docking"><span class="toc-number">1.3.9.</span> <span class="toc-text">Symmetric Docking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyzing-Docked-Structures"><span class="toc-number">1.3.10.</span> <span class="toc-text">Analyzing Docked Structures</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protein-Protein-Docking-From-Interaction-to-Interactome"><span class="toc-number">1.4.</span> <span class="toc-text">Protein-Protein Docking: From Interaction to Interactome</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Abstract"><span class="toc-number">1.4.1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction"><span class="toc-number">1.4.2.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Beginnings"><span class="toc-number">1.4.3.</span> <span class="toc-text">Beginnings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docking-Foundations"><span class="toc-number">1.4.4.</span> <span class="toc-text">Docking Foundations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bound-and-Unbound-Docking"><span class="toc-number">1.4.5.</span> <span class="toc-text">Bound and Unbound Docking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docking-of-Models"><span class="toc-number">1.4.6.</span> <span class="toc-text">Docking of Models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Physics-Versus-Knowledge-Based-Docking"><span class="toc-number">1.4.7.</span> <span class="toc-text">Physics Versus Knowledge-Based Docking</span></a></li></ol></li></ol></li></ol>
+</div>
+
+        <h1 id="Protein-Protein-Docking"><a href="#Protein-Protein-Docking" class="headerlink" title="Protein-Protein Docking"></a>Protein-Protein Docking</h1><h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.utep.edu/science/upbit/curriculum/ppd-dock.html">Protein-Protein Docking Using Bioinformatics Tools (PPDock) Module</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dnastar.com/workflows/protein-docking/">Protein Docking Analysis | DNASTAR</a></li>
+<li><a target="_blank" rel="noopener" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005905">High-resolution global peptide-protein docking using fragments-based PIPER-FlexPepDock</a><ul>
+<li>Peptide-protein interactions contribute a significant fraction of the protein-protein interactome. Accurate modeling of these interactions is challenging due to the vast conformational space associated with interactions of highly flexible peptides with large receptor surfaces. To address this challenge we developed a fragment based high-resolution peptide-protein docking protocol. By streamlining the Rosetta fragment picker for accurate peptide fragment ensemble generation, the PIPER docking algorithm for exhaustive fragment-receptor rigid-body docking and Rosetta FlexPepDock for flexible full-atom refinement of PIPER docked models, we successfully addressed the challenge of accurate and efficient global peptide-protein docking at high-resolution with remarkable accuracy, as validated on a small but representative set of peptide-protein complex structures well resolved by X-ray crystallography. Our approach opens up the way to high-resolution modeling of many more peptide-protein interactions and to the detailed study of peptide-protein association in general. PIPER-FlexPepDock is freely available to the academic community as a server at <a target="_blank" rel="noopener" href="http://piperfpd.furmanlab.cs.huji.ac.il/">http://piperfpd.furmanlab.cs.huji.ac.il</a>.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking">Protein-Protein Docking</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/topics/medicine-and-dentistry/docking-protein#:~:text=Protein%2Ddocking%20is%20a%20molecular,chain%20or%20a%20smaller%20molecule.">Docking Protein - an overview | ScienceDirect Topics</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Docking_(molecular)">Docking (molecular) - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Protein%E2%80%93ligand_docking">Protein–ligand docking - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41596-020-0312-x">The HDOCK server for integrated protein–protein docking | Nature Protocols</a><ul>
+<li><a target="_blank" rel="noopener" href="http://hdock.phys.hust.edu.cn/">HDOCK Server</a></li>
+<li>The HDOCK server (<a target="_blank" rel="noopener" href="http://hdock.phys.hust.edu.cn/">http://hdock.phys.hust.edu.cn/</a>) is a highly integrated suite of homology search, template-based modeling, structure prediction, macromolecular docking, biological information incorporation and job management for robust and fast protein–protein docking. With input information for receptor and ligand molecules (either amino acid sequences or Protein Data Bank structures), the server automatically predicts their interaction through a hybrid algorithm of template-based and template-free docking. The HDOCK server distinguishes itself from similar docking servers in its ability to support amino acid sequences as input and a hybrid docking strategy in which experimental information about the protein–protein binding site and small-angle X-ray scattering can be incorporated during the docking and post-docking processes. Moreover, HDOCK also supports protein–RNA/DNA docking with an intrinsic scoring function. The server delivers both template- and docking-based binding models of two molecules and allows for download and interactive visualization. The HDOCK server is user friendly and has processed &gt;30,000 docking jobs since its official release in 2017. The server can normally complete a docking job within 30 min.</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/nprot.2016.169">The ClusPro web server for protein–protein docking | Nature Protocols</a><ul>
+<li><a target="_blank" rel="noopener" href="https://cluspro.org/login.php">ClusPro 2.0: protein-protein docking</a></li>
+<li>The ClusPro server (<a target="_blank" rel="noopener" href="https://cluspro.org/">https://cluspro.org</a>) is a widely used tool for protein–protein docking. The server provides a simple home page for basic use, requiring only two files in Protein Data Bank (PDB) format. However, ClusPro also offers a number of advanced options to modify the search; these include the removal of unstructured protein regions, application of attraction or repulsion, accounting for pairwise distance restraints, construction of homo-multimers, consideration of small-angle X-ray scattering (SAXS) data, and location of heparin-binding sites. Six different energy functions can be used, depending on the type of protein. Docking with each energy parameter set results in ten models defined by centers of highly populated clusters of low-energy docked structures. This protocol describes the use of the various options, the construction of auxiliary restraints files, the selection of the energy parameters, and the analysis of the results. Although the server is heavily used, runs are generally completed in &lt;4 h.</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/">Protein-Protein Docking: From Interaction to Interactome</a></li>
+<li><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/29594778/">Protein-Protein Docking in Drug Design and Discovery - PubMed</a></li>
+<li><a target="_blank" rel="noopener" href="https://link.springer.com/protocol/10.1007%2F978-1-4939-7756-7_15">Protein–Protein Docking in Drug Design and Discovery | SpringerLink</a><ul>
+<li>Protein–protein interactions (PPIs) are responsible for a number of key physiological processes in the living cells and underlie the pathomechanism of many diseases. Nowadays, along with the concept of so-called “hot spots” in protein–protein interactions, which are well-defined interface regions responsible for most of the binding energy, these interfaces can be targeted with modulators. In order to apply structure-based design techniques to design PPIs modulators, a three-dimensional structure of protein complex has to be available. In this context in silico approaches, in particular protein–protein docking, are a valuable complement to experimental methods for elucidating 3D structure of protein complexes. Protein–protein docking is easy to use and does not require significant computer resources and time (in contrast to molecular dynamics) and it results in 3D structure of a protein complex (in contrast to sequence-based methods of predicting binding interfaces). However, protein–protein docking cannot address all the aspects of protein dynamics, in particular the global conformational changes during protein complex formation. In spite of this fact, protein–protein docking is widely used to model complexes of water-soluble proteins and less commonly to predict structures of transmembrane protein assemblies, including dimers and oligomers of G protein-coupled receptors (GPCRs). In this chapter we review the principles of protein–protein docking, available algorithms and software and discuss the recent examples, benefits, and drawbacks of protein–protein docking application to water-soluble proteins, membrane anchoring and transmembrane proteins, including GPCRs.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Protein-Protein-Docking-Using-Bioinformatics-Tools-PPDock-Module"><a href="#Protein-Protein-Docking-Using-Bioinformatics-Tools-PPDock-Module" class="headerlink" title="Protein-Protein Docking Using Bioinformatics Tools (PPDock) Module"></a>Protein-Protein Docking Using Bioinformatics Tools (PPDock) Module</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.utep.edu/science/upbit/curriculum/ppd-dock.html">Protein-Protein Docking Using Bioinformatics Tools (PPDock) Module</a></li>
+</ul>
+<h3 id="I-Introduction"><a href="#I-Introduction" class="headerlink" title="I. Introduction"></a>I. Introduction</h3><p>As cancerous cells and normal cells exhibit a few biochemical differences, many anticancer drugs affect normal rapidly growing cells in the intestine and bone marrow areas and hence are toxic. Capabilities to determine drug-target binding affinities to achieve high levels of selective drug actions on cancer cells would be very useful for designing anti-cancer therapeutics. Since the over expression of the Janus Kinase 3 (JAK-3) has been implicated in cancerous disorders like adult T-cell lymphoma/leukemia (ATLL), JAK-3 inhibition is expected to play a vital role in treatment of cancer. The objective of this project is to use docking studies to identify potential JAK-3 inhibitors from a number of putative substrates, namely anaplastic lymphoma kinase (ALK), Gene transcription factor II-I (TFII-I) etc. Let us start the process by taking ALK as a potential inhibitor. Follow the following steps to get the process done.</p>
+<h3 id="II-Step-1-Gathering-Protein-Data-Bank-PDB-Files"><a href="#II-Step-1-Gathering-Protein-Data-Bank-PDB-Files" class="headerlink" title="II. Step 1: Gathering Protein Data Bank (PDB) Files"></a>II. Step 1: Gathering Protein Data Bank (PDB) Files</h3><p>PDB files are the collection of experimentally determined three-dimensional   structures of macromolecules, which are generally used by researchers and students. The collection includes the atomic coordinates, crystallographic structure factors and NMR experimental data. It also includes name of     molecules, primary and secondary structure information, ligand and biological assembly information, details about data collection and bibliographic citations.</p>
+<p>PDB files can be found at the following website: <a target="_blank" rel="noopener" href="http://www.rcsb.org/pdb/home/home.do">http://www.rcsb.org/pdb/home/home.do</a></p>
+<p>Enter the PDB ID in the search bar as shown below </p>
+<p>Gather the crystal   structures of Jak3 and ALK (anaplastic lymphoma receptor tyrosine kinase) from   RCSB Protein Data Bank. The crystal structures are available in PDB format. The pdb file of Jak3 is 1YVJ. The pdb file of ALK is 4DCE.</p>
+<h3 id="III-Step-2-Splitting-PDB-Files-Using-DECOMP"><a href="#III-Step-2-Splitting-PDB-Files-Using-DECOMP" class="headerlink" title="III. Step 2: Splitting PDB Files Using DECOMP"></a>III. Step 2: Splitting PDB Files Using DECOMP</h3><p>DECOMP is a web-based decomposition tool for splitting PDB files. Protein information technology group of Eotvos University located in Hungary developed it. With this program, protein-ligand complexes can be identified reliably and the ligands are deposited in separate files. Missing residues and atoms in chains are handled properly and are inserted into chains for missing residues/atoms. DECOMP server can be found at the following website: <a target="_blank" rel="noopener" href="http://decomp.pitgroup.org/%C2%A0">http://decomp.pitgroup.org/</a><a target="_blank" rel="noopener" href="http://decomp.pitgroup.org/"></a></p>
+<p>Enter the PDB ID in the empty box shown in the Figure 2. The pdb files of the above two proteins are available along with their ligands. So we have to remove the ligand. 1YVJ is the Jak3 kinase domain in complex with a straurosporine analogue. So we have to separate the straurosporine from the Jak3 kinase domain. In the same way 4DCE is anaplastic lymphoma kinase in complex with a piperidine - carboxamide inhibitor. So we have to remove the inhibitor.</p>
+<p>Working with DECOMP:</p>
+<p>We have to submit the pdb files of the proteins into the server. We are provided with various options to export ligands, ions, and water molecules or to insert missing atoms or residues. Choose the option to export ligand and submitted the files. The requests are in the form of a queue i.e., first in first out and the time of output depends on the traffic in the server. The output will be in the form of a tar.gz files i.e. the compressed version. So after we extract the files from the tar.gz files we have one directory for each of the pdb’s listed. Each of these directories contains an error log with “.Error” extension the decomposed pdb file with “. pdb ” extension and separate files of ligands or ions are present if the option export ligand or ion was chosen.</p>
+<p>From this directory take the decomposed pdb file i.e., a file with “. pdb ” extension.</p>
+<h3 id="IV-Step-3-Use-GRAMM-to-Predict-the-Interactions"><a href="#IV-Step-3-Use-GRAMM-to-Predict-the-Interactions" class="headerlink" title="IV. Step 3: Use GRAMM to Predict the Interactions."></a>IV. Step 3: Use GRAMM to Predict the Interactions.</h3><p>GRAMM (Global Range Molecular Matching) is a program for protein docking. GRAMM is open source software and can be installed on the personal computer. It is developed by the Vakser’s lab (Center for Bioinformatics) belonging to university of Kansas. It can be installed on MAC, Windows and Linux operating systems. The working instructions given in this guide pertain to the windows version. It can be downloaded from the following website. Its installation instruction was also given on the same page.</p>
+<p><a target="_blank" rel="noopener" href="http://vakser.bioinformatics.ku.edu/main/resources_gramm1.03.php">http://vakser.bioinformatics.ku.edu/main/resources_gramm1.03.php</a></p>
+<p>Working with GRAMM:</p>
+<p>GRAMM has 3 parameter files rpar.gr, rmol.gr and wlist.gr files. All these files are text files. I prefer using notepad to edit these files. </p>
+<ol>
+<li>Parameters to be considered for rpar.gr file:</li>
+</ol>
+<p>The parameters for this file should be considered based on the type of molecules we work with. The options available are high resolution generic docking and low resolution generic docking. Let’s try low-resolution generic docking in this case as we are not sure about the structures of the given molecules and the parameters given for the low resolution generic docking are: </p>
+<ol start="2">
+<li>The other file is rmol.gr file. The following is the format of the file with the values I have used: </li>
+</ol>
+<p>The two molecules to which we need to see the predictions should be given here. Under the file name we should give the name of one of the files with atomic coordinates (PDB format). It should be converted in to . ent form before giving it here (1YVJ.ent). To change the file format go to command prompt in windows. To open command prompt press windows symbol on keyboard and type “ cmd ” in the search bar and then press enter. A black screen appears on your desktop, which is command prompt in windows. Now type the following commands in the command prompt to rename the files.</p>
+<p>C:\ Users\Name&gt; cd C:\ (This command takes you to C drive).</p>
+<p>C: \&gt; cd Gramm (This command takes you to Gramm directory in C drive).</p>
+<p>C:\Gramm&gt; rename 1YVJ.pdb 1YVJ.ent (This command renames the file) </p>
+<p>Under the column of the fragment you have to mention the range of atoms for which the interactions are to be found or simply you can give it as ’*’ so that the entire molecule can be considered. Under the column of the ID you can give some string of characters without spaces between them to identify your molecules. These ID’S will be used by GRAMM to name the output files.</p>
+<p>Run GRAMM with parameter scan ( gramm scan) from the terminal in the GRAMM directory i.e., type “ gramm scan” command in the command prompt and press enter. It creates a .log file and .res file. To be aware which grid has been chosen, see the output .log file. Grid is the potential docking area in which the docking protein searches so as to release maximum amount of energy up on reacting with the docked protein.</p>
+<ol start="3">
+<li>The last step is giving parameters in wlist.gr file: The following is the format of the file with the values I have used:</li>
+</ol>
+<p>.res is the file that is obtained in the step b. </p>
+<p>First match and last match here refer to the retrieval of the top 10 hits from thousands of complexes generated by Gramm. “Separate” here results in 10 separate pdb files instead of all the ten conformations in the same file. If you want all the 10 conformations in the same pdb file use “joint” Now run GRAMM with the parameter coord ( gramm coord ) from the commands prompt in the GRAMM directory i.e. type the command gramm coord in the command prompt and press enter. Place the GRAMM directory in C drive while you install.</p>
+<p>C:\ Users\Name&gt; cd C:\ (This command takes you to C drive).</p>
+<p>C: \&gt; cd Gramm (This command takes you to Gramm directory in C drive).</p>
+<p>C:\ Gramm&gt; gramm scan (Creates .res and .log file).</p>
+<p>C:\Gramm&gt;gramm coord (Creates the pdb files) </p>
+<p><em>After this you will finally get a file in . pdb format if you use</em> <em>“__joint__”</em> <em>option in wlist.gr file or 10 separate pdb files for this example if you use</em> <em>“</em> <em>seperate</em> <em>”</em> <em>option, which shows us the various ways that the given two proteins interact.</em></p>
+<h3 id="V-Step-4-Visualizing-Protein-Interactions"><a href="#V-Step-4-Visualizing-Protein-Interactions" class="headerlink" title="V. Step 4: Visualizing Protein Interactions"></a>V. Step 4: Visualizing Protein Interactions</h3><ol start="2">
+<li>Python Molecular viewer (PMV): PMV is a powerful molecular viewer that has a number of customizable features. It is distributed as a part of MGLTools , we need to download and install MGLTools to get PMV. It is developed by Molecular Graphics Laboratory of The Scripps Research Institute located in La Jolla, California. It is freely available for download at <a target="_blank" rel="noopener" href="http://mgltools.scripps.edu/">http://mgltools.scripps.edu/</a> . It can be used on windows, linux and Mac operating systems. </li>
+</ol>
+<p>Three tools that can be used to visualize the final PDF files obtained from GRAMM are:</p>
+<ol>
+<li><p>UCSF Chimera: It is a program for interactive visualization and analysis of molecular structures. High quality images and animations can be generated. It is developed by Resource for Biocomputing, Visualization and Informatics (RBVI) Department belonging to University of California, San Francisco. Download at <a target="_blank" rel="noopener" href="http://www.cgl.ucsf.edu/chimera/download.html">http://www.cgl.ucsf.edu/chimera/download.html</a> . It can be used on windows, linux and Mac operating   systems. </p>
+</li>
+<li><p>Swiss- Pdb viewer: Swiss Pdb viewer can load and display several molecules simultaneously. Each molecule is loaded into its own layer. It was developed by The SIB Swiss Institute of Bioinformatics located in Switzerland. It is freely available for download at <a target="_blank" rel="noopener" href="http://spdbv.vital-it.ch/disclaim.html">http://spdbv.vital-it.ch/disclaim.html</a> . It can be used on windows, linux and Mac operating systems. </p>
+</li>
+</ol>
+<h3 id="VI-Step-5-Showing-Interfacial"><a href="#VI-Step-5-Showing-Interfacial" class="headerlink" title="VI. Step 5: Showing Interfacial"></a>VI. Step 5: Showing Interfacial</h3><h3 id="Amino-Acids"><a href="#Amino-Acids" class="headerlink" title="Amino Acids"></a>Amino Acids</h3><p>Using servers such as SPPIDER and PISA server to get to know about the interfacial amino acids, number of hydrogen bonds, interfacial area and the amount of energy released. PISA server can be accessed at <a target="_blank" rel="noopener" href="http://www.ebi.ac.uk/msd-srv/prot_int/">http://www.ebi.ac.uk/msd-srv/prot_int/</a> . SPPIDER can be accessed at <a target="_blank" rel="noopener" href="http://sppider.cchmc.org/">http://sppider.cchmc.org/</a> . Some sample outputs are shown below</p>
+<h2 id="Protein-Protein-Docking-1"><a href="#Protein-Protein-Docking-1" class="headerlink" title="Protein-Protein Docking"></a>Protein-Protein Docking</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking">Protein-Protein Docking</a></li>
+</ul>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking##" title="Search this wiki">Search</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/">Home</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/feedback?ref=tutorials/Protein-Protein-Docking/Protein-Protein-Docking.md">Feedback</a></p>
+</li>
+</ul>
+<p>KEYWORDS: DOCKING GENERAL STRUCTURE_PREDICTION<br>Written by by Sebastian Rämisch (<a href="mailto:raemisch@scripps.edu">raemisch@scripps.edu</a>). Edited by Shourya S. Roy Burman (<a href="mailto:ssrb@jhu.edu">ssrb@jhu.edu</a>)<br>Edited Jun 24 2016</p>
+<p>Table of Contents</p>
+<ul>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#summary">Summary</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#docking-in-rosetta">Docking in Rosetta</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#navigating-to-the-demos">Navigating to the Demos</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#preparing-structures-for-docking">Preparing Structures for Docking</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-docking">Local Docking</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-refinement-of-docked-structures">Local Refinement of Docked Structures</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#global-docking">Global Docking</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#docking-flexible-proteins">Docking Flexible Proteins</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#symmetric-docking">Symmetric Docking</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#analyzing-docked-structures">Analyzing Docked Structures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#summary"></a>Summary</h3><p>Rosetta can be used to predict the bound structure of two proteins starting from unbound structures. By the end of this tutorial, you should be able to understand:</p>
+<ul>
+<li>How to prepare structures for docking</li>
+<li>How to locally dock two proteins</li>
+<li>Hoe to refine an already docked structure</li>
+<li>How to dock two proteins whose interface region is unknown</li>
+<li>How to dock flexible proteins</li>
+<li>How to dock a flexible peptide to a protein</li>
+<li>How to dock symmetric proteins</li>
+<li>How to analyse the best docked model</li>
+</ul>
+<h3 id="Docking-in-Rosetta"><a href="#Docking-in-Rosetta" class="headerlink" title="Docking in Rosetta"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#docking-in-rosetta"></a>Docking in Rosetta</h3><p>Docking in Rosetta in a two stage protocol - the first stage, where aggresive sampling is done, is done in the<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/full_atom_vs_centroid/fullatom_centroid">centroid mode</a>and the second stage where smaller movements take place is done in the full atom mode. It will internally connect the centers of the two chains with a so-called jump (see<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/fold_tree/fold_tree">Fold Tree</a>). Along this jump the chains are being pulled together (slide into contact). The<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Core_Concepts/Core_Concepts#monte-carlo-sampling">Monte Carlo</a>moves, which are selected randomly, are:</p>
+<ul>
+<li>Translations (in x,y or z direction)</li>
+<li>Rotations (around x,y, z axis)</li>
+</ul>
+<p>By default, the docking protocol assumes a fixed backbone and only does, translation, rotation and sidechain packing. A detailed algorithm can be found<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/application_documentation/docking/docking-protocol">here</a>.</p>
+<h3 id="Navigating-to-the-Demos"><a href="#Navigating-to-the-Demos" class="headerlink" title="Navigating to the Demos"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#navigating-to-the-demos"></a>Navigating to the Demos</h3><p>The demos are available at<code>$ROSETTA3/demos/tutorials/Protein-Protein-Docking</code>. All demo commands listed in this tutorial should be executed when in this directory. All the demos here use the<code>linuxgccrelease</code>binary. You may be required to change it to whatever is appropriate given your operating system and compiler.</p>
+<p>Compare your output files to the ones present in<code>output_files/expected_output</code>.</p>
+<h3 id="Preparing-Structures-for-Docking"><a href="#Preparing-Structures-for-Docking" class="headerlink" title="Preparing Structures for Docking"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#preparing-structures-for-docking"></a>Preparing Structures for Docking</h3><p>This tutorial will introduce you the main steps required for predicting the bound structure of two interacting proteins starting from the unbound structures. For this example, we will dock Colicin-D with its inhibitor, IMM. You are provided with the two refined input files<code>COL_D.pdb</code>and<code>IMM_D.pdb</code>, and a native file<code>1v74.pdb</code>in the folder<code>input_files</code>.</p>
+<p>To prepare structures for docking, be sure to refine them as described in<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/input_and_output/input_and_output#controlling-input_preparing-a-structure-by-refinement">preparing inputs tutorial</a>.</p>
+<h3 id="Local-Docking"><a href="#Local-Docking" class="headerlink" title="Local Docking"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-docking"></a>Local Docking</h3><p>Rosetta is most accurate when docking locally.**In local docking, we assume that we have some information about the binding pockets of the two proteins.**First, we must manually place the two proteins (within ~10 Å) with the binding pockets roughly facing each other as shown in this figure:<img src="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/images/COL_IMM_unbound.png" alt="unbound"></p>
+<p>We will pass the following options to indicate that i) chain B is being docked to chain A, and ii) we want to randomly perturb the ligand of the input strucure (chain B) by 3 Å translation and 8° rotation before the start of every individual simulation.</p>
+<pre><code>-partners A_B
+-dock_pert 3 8</code></pre>
+<p>If you are docking two multi-chain proteins (say one with chains A &amp; B, and the other with chains L &amp; H), the option becomes<code>-partners LH_AB</code>. Make sure that the input PDB has all the chains of each protein listed together.</p>
+<p>We will also compare the input with the bound structure 1v74.pdb by passing it as native.</p>
+<blockquote>
+<p>Ensure that the native has the same number of residues, same chain ordering and same chain IDs as the input structure. You may be required to use<code>-ignore_unrecognized_res</code>option if the native contains unusual ligands.</p>
+</blockquote>
+<p>Now to start docking, run:</p>
+<pre><code>$&gt;$ROSETTA3/main/source/bin/docking_protocol.linuxgccrelease @flag_local_docking</code></pre>
+<p>This should take ~1 minute to run and produce a structure file and a score file in<code>output_files</code>. Make sure you use<code>-nstruct 500</code>or more in production runs.</p>
+<h3 id="Local-Refinement-of-Docked-Structures"><a href="#Local-Refinement-of-Docked-Structures" class="headerlink" title="Local Refinement of Docked Structures"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-refinement-of-docked-structures"></a>Local Refinement of Docked Structures</h3><p>Sometimes docked proteins score very high in Rosetta owing to small clashes. Before refining with<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Relax_Tutorial/Relax">`relax`</a>, we need to fix the interface. Since the protein is already docked, we want to avoid large movements of the protein, so we skip the first, centroid mode stage completely and only run the high-resolution full atom mode which does not move the backbone of the docked proteins. We also want to add the rotamers of the input sidechains to our library of rotamers. We replace the flags used for<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-docking">local docking</a>by:</p>
+<pre><code>-docking_local_refine
+-use_input_sc</code></pre>
+<p>We will use the new set of flags to refine the bound structure<code>1v74.pdb</code>by running:</p>
+<pre><code>$&gt;$ROSETTA3/main/source/bin/docking_protocol.linuxgccrelease @flag_local_refine</code></pre>
+<p>This should take ~45 seconds to run and produce a structure file and a score file in<code>output_files</code>. Verify that the input structure and the output structure have the same backbone. Now you can refine further with<code>relax</code>as described in<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/input_and_output/input_and_output#controlling-input_preparing-a-structure-by-refinement">preparing inputs tutorial</a>.</p>
+<h3 id="Global-Docking"><a href="#Global-Docking" class="headerlink" title="Global Docking"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#global-docking"></a>Global Docking</h3><p>Only run global docking if absolutely no information is available about the binding sites in the protein. Global docking assumes a spherical general structure of the proteins and rotates the smaller protein (ligand) around the larger protein (receptor). It also randomizes the starting position of the unbound proteins in every run, so their position in the input structure does not matter as much.</p>
+<blockquote>
+<p>Global docking works best for small complexes (&lt;450 residues).</p>
+</blockquote>
+<p>To do global docking, we add the following three options to the options already present in global docking.</p>
+<pre><code>-spin
+-randomize1
+-randomize2</code></pre>
+<p>We will use the same input PDB as in<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-docking">local docking</a>to demostrate the differences in the output. Run:</p>
+<pre><code>$&gt;$ROSETTA3/main/source/bin/docking_protocol.linuxgccrelease @flag_global_docking</code></pre>
+<p>This should take ~1 minute to run and produce a structure file and a score file in<code>output_files</code>. You will notice that unlike the local docking case, global docking produces a docked structure, which is significantly different from the native. Compare this to the local docking instance, which should be much similar to the native.</p>
+<p>Due to the large space sampled, global docking requires a large number of runs to converge on a structure, typically 10,000-100,000.</p>
+<blockquote>
+<p>An alternative to running global docking is to find the likely binding pockets by using an FFT-based global docking programs like<a target="_blank" rel="noopener" href="https://cluspro.bu.edu/login.php">ClusPro</a>and then run multiple local docking runs.</p>
+</blockquote>
+<h3 id="Docking-Flexible-Proteins"><a href="#Docking-Flexible-Proteins" class="headerlink" title="Docking Flexible Proteins"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#docking-flexible-proteins"></a>Docking Flexible Proteins</h3><p>As mentioned in the introduction, the docking protocol in Rosetta assumes a fixed backbone. If the backbone changes a lot between the unbound and the bound conformations, we dock conformational ensembles of the proteins. Instead of docking one ligand conformation to one receptor conformation, we constantly switch between the conformations in the respective ensembles while sampling in the first stage (in centroid mode). This enables the sampling of multiple backbones with Rosetta’s fixed backbone architecture.</p>
+<p>These ensembles can be generated using unconstrained<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Relax_Tutorial/Relax">`relax`</a>. For this tutorial, we will use small ensembles - 3 COL_D and 3 IMM_D conformations. Make sure that the number of residues and the chain naming (and order) in every conformation in the ensemble is the same as that of the corresponding partner in the input file. To pass the locations of the conformational ensemble of COL_D, we will pass an ensemble list which looks like:</p>
+<pre><code>input_files/COL_D_ensemble/COL_D_0001.pdb
+input_files/COL_D_ensemble/COL_D_0002.pdb
+input_files/COL_D_ensemble/COL_D_0003.pdb</code></pre>
+<p>A similar file is made for IMM_D ensembles. These files are then passed on to docking by adding the following options to the<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#local-docking">local docking</a>:</p>
+<pre><code>-ensemble1 COL_D_ensemblelist
+-ensemble2 IMM_D_ensemblelist</code></pre>
+<p><code>-ensemble1</code>must contain the list of conformations to the protein listed first in the input PDB. Even while ensemble docking one conformation against many conformations, you must make ensemble lists for both partners.</p>
+<p>However, before we can dock the ensembles, we need to perform an additional step calling_prepacking_. Prepacking prepares the conformers in the ensemble for docking and scores them to inform the docking protocol to remove any energy contribution arising out of the inherantly different energies of the conformers. It uses the same flags except<code>-dock_pert</code>as the ensemble docking protocol. Run:</p>
+<pre><code>$&gt;$ROSETTA3/main/source/bin/docking_prepack_protocol.linuxgccrelease @flag_ensemble_prepack</code></pre>
+<p>This should run in ~30 seconds and produce prepacked PDBs in the same location as the original ensemble. It will also modify the ensemble lists with the location of the prepacked PDBs, normalized centroid scores and full atom scores.</p>
+<pre><code>input_files/COL_D_ensemble/COL_D_0001.pdb.ppk
+input_files/COL_D_ensemble/COL_D_0002.pdb.ppk
+input_files/COL_D_ensemble/COL_D_0003.pdb.ppk
+0.77058
+0
+1.00377
+-93.3588
+-94.2715
+-93.9065</code></pre>
+<p><strong>Remember that<code>COL_D_ensemblelist</code>and<code>IMM_D_ensemblelist</code>need to be regenerated if you run docking prepack again, otherwise you will get uninformative error meaasges.</strong></p>
+<p>The docking protocol expects these prepacked conformations. This will also produce a score file and an output, but you can ignore both. Now run the docking protocol.</p>
+<pre><code>$&gt;$ROSETTA3/main/source/bin/docking_protocol.linuxgccrelease @flag_ensemble_docking</code></pre>
+<p>While it is running, you will see the following in your log file:</p>
+<pre><code>...
+protocols.docking.DockingLowRes: /// Ensemble 1: on                                                           ///
+protocols.docking.DockingLowRes: /// Ensemble 2: on                                                           ///
+...
+protocols.docking.ConformerSwitchMover: Switching partner with conformer: 3
+...</code></pre>
+<p>This indicates that your ensembles have been loaded and your backbones are being switched.</p>
+<p>This should take about 3 minutes to run and produce a score file and an output.</p>
+<p>You will typically use larger ensembles (25 to 100) formations. This does significantly slow the protocol down. Also, due to a dilution of the sampling per backbone, you will have to increase the number of structures.<code>-nstruc 5000</code>or more is suggested.</p>
+<h3 id="Symmetric-Docking"><a href="#Symmetric-Docking" class="headerlink" title="Symmetric Docking"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#symmetric-docking"></a>Symmetric Docking</h3><p>Homomeric protein complexes are often symmetric. Rosetta provides the a means to use symmetry information during docking (and many other applications). Check out the<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/symmetry">symmetry documentation</a>and<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Symmetry/Symmetry">tutorials</a>to know more.</p>
+<h3 id="Analyzing-Docked-Structures"><a href="#Analyzing-Docked-Structures" class="headerlink" title="Analyzing Docked Structures"></a><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/Protein-Protein-Docking/Protein-Protein-Docking#analyzing-docked-structures"></a>Analyzing Docked Structures</h3><p>Analyzing docked structures can be tricky. Let’s look at a score file generated from ensemble docking:</p>
+<pre><code>SEQUENCE: 
+SCORE: total_score         rms        Fnat        I_sc        Irms cen_dock_ens_conf           cen_rms conf_num1 conf_num2 conf_score dock_ens_conf1 dock_ens_conf2 dslf_ca_dih dslf_cs_ang dslf_ss_dih dslf_ss_dst      fa_atr      fa_dun     fa_elec     fa_pair      fa_rep      fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb interchain_contact interchain_env interchain_pair interchain_vdw        st_rmsd description 
+SCORE:    -202.141      13.143       0.061      -3.086       5.015            -1.004            14.583     1.000     1.000    -25.732        -93.359        -83.050       0.000       0.000       0.000       0.000    -326.487      12.899      -3.158      -8.467       8.982     139.078      -3.968      -4.390      -2.692     -13.937            -20.000        -23.791          -2.002          0.357          7.729 col_complex_ensemble_dock_0001</code></pre>
+<p>The<code>total_score</code>may not indicate the best docked model as the primary contribution comes from the folding energies of the monomers. You should rely more on the interface score<code>I_sc</code>which represents the energy of the interactions across the interface.<code>I_sc</code>scores are typically much smaller than total scores (typically in the range of -2 to -10 REU). Of course they depend on the size and geometry of the interface; so they are difficult to compare across different proteins.</p>
+<p>If you provide a native structure, you get comparative data like the fraction of native contacts (<code>Fnat</code>), the CαRMSD of the ligand (<code>rms</code>) and the RMSD of the interface atoms (<code>Irms</code>). If you run ensemble docking, you will also get to know which of the conformers was finally selected for protein 1(<code>conf1</code>) and protein 2(<code>conf2</code>).</p>
+<p>You can repeat the run with_-nstruct 20000_and outputting silent files. Then you could extract the best model and create a score vs. rmsd plot.</p>
+<p>Look at<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/analysis/Analysis">Analysis</a>for further information on how to analyze your results.</p>
+<h2 id="Protein-Protein-Docking-From-Interaction-to-Interactome"><a href="#Protein-Protein-Docking-From-Interaction-to-Interactome" class="headerlink" title="Protein-Protein Docking: From Interaction to Interactome"></a>Protein-Protein Docking: From Interaction to Interactome</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/">Protein-Protein Docking: From Interaction to Interactome</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Vakser%20I%5BAuthor%5D&cauthor=true&cauthor_uid=25418159">Ilya A. Vakser</a>1,∗</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#">Author information</a><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#">Article notes</a><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#">Copyright and License information</a><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/about/disclaimer/">Disclaimer</a></p>
+<p>This article has been<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/citedby/">cited by</a>other articles in PMC.</p>
+<h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>The protein-protein docking problem is one of the focal points of activity in computational biophysics and structural biology. The three-dimensional structure of a protein-protein complex, generally, is more difficult to determine experimentally than the structure of an individual protein. Adequate computational techniques to model protein interactions are important because of the growing number of known protein structures, particularly in the context of structural genomics. Docking offers tools for fundamental studies of protein interactions and provides a structural basis for drug design. Protein-protein docking is the prediction of the structure of the complex, given the structures of the individual proteins. In the heart of the docking methodology is the notion of steric and physicochemical complementarity at the protein-protein interface. Originally, mostly high-resolution, experimentally determined (primarily by x-ray crystallography) protein structures were considered for docking. However, more recently, the focus has been shifting toward lower-resolution modeled structures. Docking approaches have to deal with the conformational changes between unbound and bound structures, as well as the inaccuracies of the interacting modeled structures, often in a high-throughput mode needed for modeling of large networks of protein interactions. The growing number of docking developers is engaged in the community-wide assessments of predictive methodologies. The development of more powerful and adequate docking approaches is facilitated by rapidly expanding information and data resources, growing computational capabilities, and a deeper understanding of the fundamental principles of protein interactions.</p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Proteins recognize each other, typically in a crowded environment, and bind in a highly specific fashion. This process involves diffusion through a densely populated milieu of different proteins and other biomolecular structures, and binding (docking) to their designated protein partner in a structurally unique and precise way. Given the large size of these macromolecules, the great structural diversity, and the high density of the biomolecular environment, this constantly reoccurring process is truly remarkable.</p>
+<p>Protein docking—prediction of the structure of a protein-protein complex from the structures of the individual proteins—has evolved significantly since its early days, by incorporating more adequate energy functions and powerful techniques to sample the energy landscapes, and by taking advantage of the rapidly growing body of knowledge on protein structures and interactions. Our current knowledge of protein interaction principles is far greater than before, helping design better docking approaches. The spectacular progress in computing hardware has obviously played a major role as well, opening new ways of thinking about modeling of protein interactions, and often allowing implementation of old but unfeasible at the time ideas. Still, some basic docking principles remain surprisingly unchanged, due to their true nature. Steric and physicochemical complementarity is still the foundation of most docking approaches, as it was in the beginning of the docking field.</p>
+<h3 id="Beginnings"><a href="#Beginnings" class="headerlink" title="Beginnings"></a>Beginnings</h3><p>The origins of the protein docking field can be traced to the earlier days of molecular modeling. Back than in the 70s, the force fields were simpler, the minds not clouded by the power of computers, and the goals clearer (e.g., to fold proteins from the sequence based on the physical forces alone).</p>
+<p>The first docking approaches dealt not with protein-protein complexes per se, but rather with protein interactions with other ligands at predetermined binding sites (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib1">1–4</a>). Despite the early times in molecular modeling, the approaches were remarkably sophisticated, implementing flexible docking, taking into account the internal coordinates of not only the ligand, but in some cases also the receptor—a challenging task largely avoided even in today’s community, with all its computing power and the history of methodology development. Protein-protein docking approaches followed shortly, implementing the global search for the docking pose in rigid-body approximation (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib5">5,6</a>).</p>
+<p>A significant uptake in the development of protein docking techniques (that continues to this day) occurred in the early 90s. Among most influential and consequential approaches put forward at that time were those based on efficient sampling techniques borrowed from computer science (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib7">7,8</a>). The docking approach based on correlation by fast Fourier transform, commonly known as FFT docking (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib7">7</a>), developed back then by an interdisciplinary group of biologists, chemists, physicists, and computer scientists, has become arguably the most popular protein docking algorithm, implemented over the years in many groups (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib9">9</a>). The reason for its popularity is that, as opposed to employing a particular search strategy that may or may not lead to the global minimum (native complex), it allows computationally feasible exhaustive search of the full six-dimensional docking space. Although the space, for the purpose of the exhaustive sampling, has to be discretized, the atomic-size grid steps still provide the “comprehensive” solution to the rigid-body docking problem.</p>
+<h3 id="Docking-Foundations"><a href="#Docking-Foundations" class="headerlink" title="Docking Foundations"></a>Docking Foundations</h3><p>The protein-protein docking problem can be formulated as the prediction of the structure of the complex, given the structures of the individual proteins. In the general case, no information other than the structure of these individual proteins is available.<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig1/">Fig. 1</a>shows major steps in the proper development of a docking approach, involving scan (<em>global search</em>) of the docking space using simplified/coarse-grained protein representations, followed by a refinement to a higher resolution (<em>local search</em>), and systematic evaluation on comprehensive benchmark sets and blind community-wide assessments.</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig1/"><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/bin/gr1.jpg" alt="An external file that holds a picture, illustration, etc.&lt;br&gt;Object name is gr1.jpg" title="An external file that holds a picture, illustration, etc.&lt;br&gt;Object name is gr1.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig1/">Figure 1</a></p>
+<p>The general scheme of protein docking methodology development. The scan (global search for complementarity) is performed on a simplified/coarse-grained representation of proteins (e.g., digitized on a grid, or discretized/approximated in other ways). The scan can be explicit (<em>free</em>) or based on similarity to known cocrystallized complexes (<em>comparative</em>). The refinement is supposed to bring back all or some structural resolution lost in the coarse-graining (e.g., by gradual transition from s smoothed intermolecular energy landscape to the one based on a physical force field, while tracking the position of the global minimum). The validity of the approach is determined by systematic benchmarking on representative sets of structures. To see this figure in color, go online.</p>
+<p>In the heart of the docking methodology is the notion of steric complementarity at the protein-protein interface. These interfaces are indeed tightly packed, as observed in cocrystallized complexes in the Protein Data Bank (PDB). The steric complementarity has been the major driving force in the development of docking approaches, often with the addition of physicochemical complementarity—hydrophobicity, electrostatics, etc. (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib10">10,11</a>), and statistics-based propensities (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib12">12,13</a>). The structural complementarity has been observed at different resolutions, from the atomic to ultralow (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib14">14–18</a>).</p>
+<p>The conformations of the protein within the complex (bound structure) and the one outside the complex (unbound structure) are different. In some cases, this difference can be neglected or approximated (rigid body docking), or taken into account through conformational search (flexible docking). The rigid body docking involves six degrees of freedom of the two rigid bodies system (e.g., three translations and three rotations in the Cartesian coordinates). The flexible docking involves a much greater number of coordinates, given the conformational search in the internal coordinates of the proteins. However, this search typically does not involve solving the elusive ‘protein folding problem’, but rather can be restricted to a much more tractable unbound-to-bound conformational transition.</p>
+<p>Originally, mostly the high-resolution, experimentally determined (primarily by x-ray crystallography) structures were considered. However, more recently, the focus has been shifting toward lower resolution modeled structures. The correct prediction of the complex does not mean the exact native (cocrystallized) complex per se, which is mathematically/computationally impossible, but rather a near-native approximation.</p>
+<p>The general question is: what is the necessary level of structural accuracy for predicted protein complexes? In protein-protein interactions, many experimental and theoretical studies require simple knowledge of the residues at the interfaces (e.g., for further experimental analysis) and have no use for atomic resolution structural details of the complex (specific atom-atom, or even residue-residue contacts across the interface). For the interface (binding site) prediction, the high-resolution protein structures, generally, are not needed. That has been extensively shown by systematic studies over a number of years (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib15">15</a>). Still, a high-resolution structure of the complex is required for a number of studies (e.g., for estimation of the binding affinity, certain approaches to inhibition of protein interactions, and such).</p>
+<h3 id="Bound-and-Unbound-Docking"><a href="#Bound-and-Unbound-Docking" class="headerlink" title="Bound and Unbound Docking"></a>Bound and Unbound Docking</h3><p>The bound docking problem, where the proteins within a cocrystallized complex are separated and redocked by a computational procedure, is a useful tool for the development of new docking approaches, but obviously has no practical value for biology. Docking becomes useful when it is able to predict complexes from the separately determined protein structures (unbound docking), thus becoming a tool for generating new knowledge.</p>
+<p>Bound docking is the easiest docking case, because by definition it does not involve conformational change. Thus, the structures match ideally at the interface and the rigid body approach is the only tool required to deliver the correct solution. The bound docking problem has been considered solved for a number of years, in the sense that the existing docking approaches reliably and routinely deliver the near-native structures of the complex among the top predictions.</p>
+<p>The approaches to the unbound docking problem have to deal with the conformational difference between the unbound and the bound structures. The change from the unbound to the bound conformation is the basis of the protein’s function in its interactions with other proteins. The intermolecular energy landscapes are characterized by conformational properties of the interacting proteins (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib19">19–21</a>). One basic direction in the docking methodology involves coarse-graining (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib22">22,23</a>). At lower levels of structural resolution, the difference between unbound and bound conformations is less significant (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib24">24,25</a>), and ultimately disappears at ultralow (but still structurally meaningful) resolution (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib15">15,24,26</a>). Such approaches allow prediction of the gross features of the complex, due to the large structural recognition factors, and the related funnel in the intermolecular energy landscape (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib27">27–29</a>). However, prediction of the higher resolution structural details of interface requires modeling of the structural flexibility, at least at the interface regions.</p>
+<p>Still, the majority of protein complexes in the nonredundant benchmark sets have small C_α_root mean-square deviation (RMSD) between bound and unbound structures. Indeed, 71% of thedockgroundset (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib30">30,31</a>) has RMSD between superimposed unbound and bound proteins &lt;2 Å for 71% of the complexes (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib31">31</a>). The benchmark set from Weng’s group (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib32">32</a>) has unbound/bound interface C_α_RMSD (between C_α_atoms of the interface residues only) &lt;2.2 Å for 86% of complexes. In a number of cases, when the RMSD is large, the conformational change upon binding is a domain shift. The domains themselves do not undergo a significant conformational change. Thus, this docking still can be addressed by a rigid body approach (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib33">33</a>).</p>
+<p>Because most docking cases can be resolved by accounting for the flexibility of the surface side chains, the statistics of side-chain conformational changes is important. The results of a systematic large-scale study indicate that short and long side chains have different propensities for the conformational changes (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib34">34</a>). Long side chains with three or more dihedral angles are often subject to large conformational transition. Shorter residues with one or two dihedral angles typically undergo local conformational changes not leading to a conformational transition. Most side chains undergo larger changes in the dihedral angle most distant from the backbone. The binding increases both polar and nonpolar interface areas. However, the increase of the nonpolar area is larger, suggesting that the protein association perturbs the unbound interfaces to increase the hydrophobic contribution to the binding free energy (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib34">34</a>). Analysis of ensembles of bound and unbound conformations points to conformational selection as the binding mechanism for proteins. The bound and the unbound spectra of conformers also significantly overlap (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib35">35</a>). An elastic network model, accounting for the mass distribution, was used to compare the binding site residues fluctuations with other surface residues, showing that, on average, the interface is more rigid (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib36">36</a>).</p>
+<p>Discretization of the conformational space into rotameric states is useful for the sampling of the conformational space in flexible docking (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib37">37,38</a>). Such rotameric libraries for the surface side chains in bound and unbound proteins were generated and used to calculate the probabilities of the rotamer transitions upon binding (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib38">38</a>). The stability of amino acids was quantified based on the transition maps. Most side chains changed conformation within the same rotamer or moved to an adjacent rotamer. The highest percentage of the transitions was observed primarily between the two most occupied rotamers (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib38">38</a>).</p>
+<h3 id="Docking-of-Models"><a href="#Docking-of-Models" class="headerlink" title="Docking of Models"></a>Docking of Models</h3><p>The docking problem is further complicated if the interacting proteins are models rather than the experimentally determined structures. The errors in such ‘double modeling’ (first of the individual proteins, then of the complex) accumulate, which presents a greater challenge, especially in higher resolution docking (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig2/">Fig. 2</a>). Thus, the use of approaches to dock these structures should be assessed by thorough benchmarking, specifically designed for protein models (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib39">39</a>). To be credible, such benchmarking has to be based on carefully curated sets of structures with levels of distortion typical for modeled proteins. A suite of models was generated for the benchmark set of the x-ray structures from thedockgroundresource (<a target="_blank" rel="noopener" href="http://dockground.bioinformatics.ku.edu/">http://dockground.bioinformatics.ku.edu</a>) by a combination of homology modeling and the nudged elastic band method (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib40">40</a>). For each monomer, six models were generated with predefined C_α_RMSD from the native structure (1, 2, …, 6 Å). The sets and the accompanying data provide a comprehensive resource for the development of docking methodology for modeled proteins (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib41">41</a>). A new approach, implementing only actual modeling of new protein structures as in the real case scenario, was used by the same group of authors to generate a larger set of models (165 complexes, with full arrays of models for each).</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig2/"><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/bin/gr2.jpg" alt="An external file that holds a picture, illustration, etc.&lt;br&gt;Object name is gr2.jpg" title="An external file that holds a picture, illustration, etc.&lt;br&gt;Object name is gr2.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/figure/fig2/">Figure 2</a></p>
+<p>Structures with the increasing level of inaccuracy. The model structures (<em>cyan</em>) are overlapped with the x-ray structure (<em>light brown</em>). To see this figure in color, go online.</p>
+<h3 id="Physics-Versus-Knowledge-Based-Docking"><a href="#Physics-Versus-Knowledge-Based-Docking" class="headerlink" title="Physics Versus Knowledge-Based Docking"></a>Physics Versus Knowledge-Based Docking</h3><p>Solving the equations of motion for two proteins in arbitrary relative orientation, using atomic resolution force fields, does not dock them in the correct configuration. The reason is the extreme complexity of the energy landscape of the system—its span in multidimensional space of its coordinates and the multiplicity of the energy minima (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib24">24,42</a>)—all compounded by the approximate nature of the landscape, with error bars that are often larger than the relative depth of the energy basins.</p>
+<p>Still, if one is interested just in the location of the global minimum of the free energy, corresponding to the native structure of the complex, with no regard to the binding pathways, there are nonphysical sampling protocols that efficiently search the landscape and deliver the solution. These protocols treat the problem as global optimization, and find the global minimum through various nonlinear programming techniques, including the most trivial (and effective) one—systematics search (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib7">7</a>). The main reason for their success, given the complexity of the landscape, is that the global minimum is significantly different from the local minima. It is not just deeper, as it is supposed to be by definition, but deeper by a significant margin (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib43">43</a>), and has a number of other distinguishing characteristics, such as size and ruggedness (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib28">28,42</a>). Thus, the unavoidable common approximations of the energy landscapes, although distorting the local minima hierarchy, are not approximate enough to eliminate the difference between the global and the local minima (or at least to remove the actual global minimum from the top candidates). Although such minimization protocols are nonphysical, because the landscape represents physics-based energy (even in its simplest form of steric complementarity, which is none other than the minimum of van der Waals energy) such approaches still pass as physical (often among nonphysicists, and physicists who know biology). Still, in many such approaches, the only physical concept is the trivial steric complementarity, and the rest are techniques borrowed from computer science and other engineering disciplines (pattern recognition, optimization, machine learning, etc.). Such approaches have been dominant in the protein docking field since its inception.</p>
+<p>The whole notion of physics though goes out the window altogether with the recent docking approaches based solely on similarity to the existing experimentally determined complexes/templates. If two similar pairs of proteins generally bind in a similar way, and one of them is cocrystallized, for the other pair there may be no need to sample the extremely complex intermolecular landscape—one can simply get straight to the presumed global minimum (the correct structure of the complex) by assuming similarity to the experimentally determined complex.</p>
+<p>Structural modeling by similarity (comparative modeling) of individual proteins has been around for a long time, since the establishment of the correlation between sequence and structure similarity in the 80s (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib44">44</a>). Such similarity suggested that if the sequence of protein A, the structure of which is to be modeled, is similar to the sequence of protein A′, the structure of which is known, one can put protein A in the same fold as protein A′. That provided a dramatic improvement in terms of prediction reliability over the proverbial ‘protein folding problem’ where the protein structure is supposed to be modeled based on the amino acid sequence alone. The atomic resolution prediction of the protein structure was reduced to the repacking of the side chains, and tweaking of the backbone (often involving flexible loops)—a difficult, but quite tractable task, incomparable with the ultimate complexity of the structure prediction from the sequence alone. The critical aspect of such approach is the availability of the experimentally determined (largely by x-ray crystallography) templates. One can date the emergence of the comparative modeling to the expansion of the PDB that at the time had become large enough to provide a meaningful pool of templates. Currently, with the rapid growth of PDB, the template-based modeling of individual proteins is a dominant approach to the prediction of protein structures (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib45">45</a>). The modeling of the folding-related physical processes is still a big challenge, and may well remain so in the future. However, the on-going expansion of PDB will arguably keep further simplifying the nonphysical prediction shortcut to the equilibrium structure, given the limited structural scope of the protein universe (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib46">46</a>), which causes the reduction of the pool of proteins with the new fold (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib45">45</a>).</p>
+<p>In protein-protein docking, the similarity between proteins in complexes can be assessed through comparison/alignment of sequences (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib47">47–49</a>), sequences and structures (threading) (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib50">50–52</a>), or just the structures (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib52">52–58</a>) because the structures of the protein to be docked are assumed to be known by the very definition of docking. However, the protein docking field, as opposed to the prediction of individual proteins, largely has not been taking advantage of the template-based modeling. One reason is that protein-protein docking is younger and thus less advanced (the protein docking community is also significantly smaller than the one in modeling of individual proteins, based on the number of participants in the community-wide prediction assessments (∼200 in CASP vs. ∼40 in CAPRI) and prediction targets (<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4213718/#bib45">45,59</a>).</p>
+<p>Another reason has been the relative success of the traditional template free (ab initio) docking, as opposed to the ab initio modeling of the individual proteins. The rigid-body docking (six degrees of freedom) is a meaningful, working approximation for many complexes, whereas any practical approximation in protein folding involves the conformational search space of far greater dimensionality.</p>
+<p>Still, the main reason for the almost comple</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Protein-Protein Docking</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PPI</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/30/20210330/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210329" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -233,6 +573,86 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/29/20210329/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210328" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/28/20210328/">20210328</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/28/20210328/" class="archive-article-date">
+  	<time datetime="2021-03-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210328</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/28/20210328/">Expand all items >></a>
         </p>
       
 
@@ -412,86 +832,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/28/HD_Management/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210328" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/28/20210328/">20210328</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/28/20210328/" class="archive-article-date">
-  	<time datetime="2021-03-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210328</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/28/20210328/">Expand all items >></a>
         </p>
       
 
@@ -1559,222 +1899,6 @@
 
 
   
-    <article id="post-20210319" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/19/20210319/">20210319</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/19/20210319/" class="archive-article-date">
-  	<time datetime="2021-03-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210319</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JX-report"><span class="toc-number">1.1.</span> <span class="toc-text">JX report</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PDF-Learning"><span class="toc-number">1.2.</span> <span class="toc-text">PDF_Learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-file-management"><span class="toc-number">1.3.</span> <span class="toc-text">Project file management</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#COVID-19-Vaccine"><span class="toc-number">2.</span> <span class="toc-text">COVID-19 Vaccine</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Additional-Information-for-Janssen%E2%80%99s-vaccine"><span class="toc-number">2.1.</span> <span class="toc-text">Additional Information for Janssen’s vaccine</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Original-documents"><span class="toc-number">2.1.1.</span> <span class="toc-text">Original documents</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Renamed-documents"><span class="toc-number">2.1.2.</span> <span class="toc-text">Renamed documents</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TUMI"><span class="toc-number">3.</span> <span class="toc-text">TUMI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Li-Ying"><span class="toc-number">4.</span> <span class="toc-text">Li Ying</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Google-Chrome-Extensions"><span class="toc-number">5.</span> <span class="toc-text">Google Chrome Extensions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Wormhole-Browse-amp-Control-phone-on-PC-Screen-Fusion-for-iOS-amp-Android"><span class="toc-number">6.</span> <span class="toc-text">Wormhole - Browse &amp; Control phone on PC, Screen Fusion for iOS &amp; Android</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Remote-control-android-phone-from-Ubuntu"><span class="toc-number">7.</span> <span class="toc-text">Remote control android phone from Ubuntu</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setsid wpp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Summary&#x2F;B95-8_Nrf2_Raw_Data_20210319.pptx</span><br><span class="line">setsid et &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;BCA&#x2F;20210318_1523_plate.xlsx</span><br><span class="line">setsid et &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;BCA&#x2F;20210318_1523.xlsx</span><br></pre></td></tr></table></figure>
-<h2 id="JX-report"><a href="#JX-report" class="headerlink" title="JX report"></a>JX report</h2><h2 id="PDF-Learning"><a href="#PDF-Learning" class="headerlink" title="PDF_Learning"></a>PDF_Learning</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ht_5T_7&#x2F;Work</span><br><span class="line">cp &#x2F;media&#x2F;ht&#x2F;ht_5T_7&#x2F;Work&#x2F;References&#x2F;Computer_Tips&#x2F;Linux_Tips&#x2F;Not_Classified&#x2F;PDF_Learning.Rmd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Computer_Tips&#x2F;Linux_Tips&#x2F;Not_Classified&#x2F;PDF_Learning.Rmd</span><br></pre></td></tr></table></figure>
-
-<h2 id="Project-file-management"><a href="#Project-file-management" class="headerlink" title="Project file management"></a>Project file management</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://zapier.com/blog/organize-files-folders/">Find Files Faster: How to Organize Files and Folders</a>, very helpful</li>
-<li><a target="_blank" rel="noopener" href="https://onlinepmcourses.com/project-document-management-organize-and-manage-project-information/">Project Document Management: How to Organize and Manage Project Information</a>, a good guidance</li>
-</ul>
-<h1 id="COVID-19-Vaccine"><a href="#COVID-19-Vaccine" class="headerlink" title="COVID-19 Vaccine"></a>COVID-19 Vaccine</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Other_Projects&#x2F;Coronavirus_Project&#x2F;Ref&#x2F;Vaccine&#x2F;Clinic_Results # create a new directory</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/pfizer-biontech-covid-19-vaccine">Pfizer-BioNTech COVID-19 Vaccine | FDA</a><ul>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/144416/download">Emergency Use Authorization for Pfizer-BioNTech COVID-19 Vaccine Review Memo</a></li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/moderna-covid-19-vaccine#additional">Moderna COVID-19 Vaccine | FDA</a><ul>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/144673/download">Moderna COVID-19 Vaccine EUA FDA review memorandum</a></li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/janssen-covid-19-vaccine">Janssen COVID-19 Vaccine | FDA</a><ul>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/146338/download">Janssen COVID-19 Vaccine EUA FDA review memorandum</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="Additional-Information-for-Janssen’s-vaccine"><a href="#Additional-Information-for-Janssen’s-vaccine" class="headerlink" title="Additional Information for Janssen’s vaccine"></a>Additional Information for Janssen’s vaccine</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/janssen-covid-19-vaccine">Janssen COVID-19 Vaccine | FDA</a>, all HTML documents were printed as PDF<ol>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/146303/download" title="Janssen COVID-19 Vaccine EUA Letter of Authorization">Letter of Authorization</a>, PDF</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/146304/download" title="Janssen COVID-19 Vaccine EUA Fact Sheet for Healthcare Providers">Fact Sheet for Healthcare Providers Administering Vaccine</a>, PDF</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/146305/download" title="Janssen COVID-19 Vaccine EUA Fact Sheet for Recipients and Caregivers">Fact Sheet for Recipients and Caregivers</a>, PDF</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/media/146338/download" title="Janssen COVID-19 Vaccine EUA FDA review memorandum">FDA Decision Memorandum</a>, PDF</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/emergency-preparedness-and-response/mcm-legal-regulatory-and-policy-framework/janssen-covid-19-vaccine-frequently-asked-questions" title="Janssen COVID-19 Vaccine Frequently Asked Questions">Frequently Asked Questions on the Janssen COVID-19 Vaccine</a>, URL/HTML</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/news-events/press-announcements/fda-issues-emergency-use-authorization-third-covid-19-vaccine" title="FDA Issues Emergency Use Authorization for Third COVID-19 Vaccine">Press Release</a>, URL/HTML</li>
-<li><a target="_blank" rel="noopener" href="https://www.fda.gov/advisory-committees/advisory-committee-calendar/vaccines-and-related-biological-products-advisory-committee-february-26-2021-meeting-announcement" title="Vaccines and Related Biological Products Advisory Committee February 26, 2021 Meeting Announcement - 02/26/2021 - 02/26/2021">02/26/2021 Advisory Committee Meeting Information</a>, URL/HTML</li>
-</ol>
-</li>
-</ul>
-<h3 id="Original-documents"><a href="#Original-documents" class="headerlink" title="Original documents"></a>Original documents</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FDA_Issues_Emergency_Use_Authorization_for_Third_COVID-19_Vaccine_FDA.pdf</span><br><span class="line">Janssen_COVID-19_Vaccine_EUA_Fact_Sheet_for_Healthcare_Providers_2021-02-27.pdf</span><br><span class="line">Janssen_COVID-19_Vaccine_EUA_Fact_Sheet_for_Recipients_and_Caregivers_2021-02-27.pdf</span><br><span class="line">Janssen_COVID-19_Vaccine_EUA_Letter_of_Authorization_2021-02-27.pdf</span><br><span class="line">Janssen_COVID-19_Vaccine_Frequently_Asked_Questions_FDA.pdf</span><br><span class="line">Vaccines_and_Related_Biological_Products_Advisory_Committee_February_26_2021_Meeting_Announcement-02_26_2021-02_26_2021_FDA.pdf</span><br><span class="line">VRBPAC-02.26.21-Meeting-Briefing-Document-FDA.pdf</span><br></pre></td></tr></table></figure>
-<h3 id="Renamed-documents"><a href="#Renamed-documents" class="headerlink" title="Renamed documents"></a>Renamed documents</h3><ul>
-<li>Moderna_COVID-19_Vaccine_review_memo.pdf</li>
-<li>Pfizer-COVID-19_Vaccine_EUA_review_memo_508ed.pdf</li>
-<li>./Janssen:<ul>
-<li>1_Janssen_COVID-19_Vaccine_EUA_Letter_of_Authorization_2021-02-27.pdf</li>
-<li>2_Janssen_COVID-19_Vaccine_EUA_Fact_Sheet_for_Healthcare_Providers_2021-02-27.pdf</li>
-<li>3_Janssen_COVID-19_Vaccine_EUA_Fact_Sheet_for_Recipients_and_Caregivers_2021-02-27.pdf</li>
-<li>4_VRBPAC-02.26.21-Meeting-Briefing-Document-FDA.pdf</li>
-<li>5_Janssen_COVID-19_Vaccine_Frequently_Asked_Questions_FDA.pdf</li>
-<li>6_FDA_Issues_Emergency_Use_Authorization_for_Third_COVID-19_Vaccine_FDA.pdf</li>
-<li>7_Vaccines_and_Related_Biological_Products_Advisory_Committee_February_26_2021_Meeting_Announcement-02_26_2021-02_26_2021_FDA.pdf</li>
-</ul>
-</li>
-</ul>
-<h1 id="TUMI"><a href="#TUMI" class="headerlink" title="TUMI"></a>TUMI</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://search.jd.com/search?enc=utf-8&qrst=1&stop=1&vt=2&suggest=1.his.0.0&keyword=tumi&cid3=12072&psort=1#J_searchWrap">tumi - 商品搜索 - 京东</a></li>
-<li><a target="_blank" rel="noopener" href="https://item.jd.com/10026330869698.html">春夏新款TUMI/途明Tahoe系列潮流简约差旅出行男士双肩背包 黑色/0798678D【图片 价格 品牌 报价】-京东</a></li>
-<li><a target="_blank" rel="noopener" href="https://item.jd.com/65091542286.html">TUMI/途明Harrison系列明星同款时尚卷顶男士休闲双肩背包 黑色/06602021D【图片 价格 品牌 报价】-京东</a></li>
-<li><a target="_blank" rel="noopener" href="https://item.jd.com/100014972342.html">【途明双肩包06602010D】途明 (TUMI) Harrison系列男性/中性商务旅行高端时尚尼龙双肩包06602010D黑色【行情 报价 价格 评测】-京东</a></li>
-</ul>
-<h1 id="Li-Ying"><a href="#Li-Ying" class="headerlink" title="Li Ying"></a>Li Ying</h1><p>李颖，你好。</p>
-<p>有关BCA标准曲线的事情具体见文内附文。我也因之留下记录。</p>
-<p>本次实验最早的记录时20210122。昨日李颖QQ留言中表示EBV激活成功，请与王湛教授讨论病毒侧蛋白与Nrf2-related蛋白的表达情况，不要妄下结论。</p>
-<p>谢谢</p>
-<p>刘宏图</p>
-<p>李颖标准曲线的改正</p>
-<p>刘宏图侧目的：</p>
-<ol>
-<li>在李颖20210222(李颖幻灯题目中日期有误)中，发现样品蛋白质浓度检测值与SDS-PAGE呈现条带浓度不符合。基于此，考察BCA记录，发现检测平行性问题，同时，标准曲线存在较为严重的离散点，因此，要求李颖完整进行BCA标准曲线的重复。</li>
-<li>李颖BCA中，使用孔板检测，出现离散点的情况下，没有使用水的特征吸收峰，对加入液体进行调校，无法判断离散点的误差属性。要求李颖改用cuvette执行检测。</li>
-<li>考虑到检测灵敏性，要求李颖进行2位有效数字检测值水平的稀释蛋白质的检测。</li>
-</ol>
-<p>李颖侧的问题：</p>
-<ol>
-<li>连续出现标准曲线出现离散点的检测结果，刘宏图仅见2次检测出现离散点。要求李颖提供20210122后所有的BCA数据。</li>
-<li>使用cuvette检测时，没有使用PC连接方式。</li>
-<li>没有获得2位有效数字检测值水平的稀释蛋白质的检测数据。</li>
-</ol>
-<p><strong>20210318_1523实验的问题</strong></p>
-<ol>
-<li>本次检测，李颖提交2个文件，没有实验的说明，推测1个检测使用cuvette，另一个检测孔板。<ul>
-<li>20210318_1523_plate.xlsx</li>
-<li>20210318_1523.xlsx</li>
-</ul>
-</li>
-<li>孔板的检测没有水的特征波长检测。</li>
-<li>数据输出格式错误。PC连接情况下，应该输出带有检测时间的表列。李颖可以向张莉索要溶菌酶检测数据作为模板。</li>
-<li>无论是孔板检测还是cuvette检测，仍然出现离散点，且该类离散现象呈现双向偏离，推测属于认为操作，不是仪器误差(仪器误差一般呈现单侧偏离)。</li>
-<li>简单的线性经验曲线(即直线的经验曲线)制作时，李颖仍然使用了横轴左侧聚集性的检测值。由于直线类经验曲线采用数值具有非线性数值，制作该类曲线时，应该首先排除这类分布异常的数据。</li>
-<li>有关数据呈现存在如下问题：<ul>
-<li>Excel文件作为实验结果的汇总，需要使用试验编号作为文件名称。例如20210318发生的这个实验编号为”A”，则该实验编号的结果输出统一使用20210318A-x.extension的格式。这里强调，分光光度计的文件输出可以统一管理，单独建立目录，在实验记录中引用该目录下的文件名(Filename.Fileextension)，并进行说明，即注释。</li>
-<li>如前描述，PC端连接时，文件输出类型错误。</li>
-<li>文件内的有效数字位数没有统一。</li>
-<li>标准曲线输出，横轴和立轴的数字单位，保留小数点后1位，有利于对数据的观察。此外，输出的标准曲线未设置具有明确含义的Title。</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/free-vpn-for-chrome-vpn-p/majdfhpaihoncoakbjgbdhglocklcgno/related?hl=en-US">Free VPN for Chrome - VPN Proxy VeePN - Chrome Web Store</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.booyagadget.com/2011/05/how-to-package-your-google-chrome-extensions-and-install.html">How To: Package your Google Chrome Extensions and Install – Booya Gadget</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.gtricks.com/chrome/3-best-bulk-image-downloader-chrome-extensions-to-download-images-in-bulk/">3 Best Bulk Image Downloader Chrome Extensions To Download Images in Bulk</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.gtricks.com/chrome/how-to-manually-download-and-install-chrome-extensions/">How To Manually Download And Install Chrome Extensions</a></li>
-<li><a target="_blank" rel="noopener" href="https://technoresult.com/how-to-install-chrome-extension-package-manually/">How to Install Chrome extension package manually? - Technoresult</a></li>
-<li><a target="_blank" rel="noopener" href="http://crxextractor.com/">Get .CRX Chrome Extension file, it’s source code and download .CRX to your computer.</a></li>
-<li><a target="_blank" rel="noopener" href="http://crxextractor.com/">Get .CRX Chrome Extension file, it’s source code and download .CRX to your computer.</a></li>
-<li><a target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/#search/computer/FMfcgxwLsmgDXsJzDFxJMRXBkcJgkRQd">Confirm co-authorship of submission to Computer Methods and Programs in Biomedicine - hotliu@gmail.com - Gmail</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.editorialmanager.com/cmpb/default.aspx">Editorial Manager®</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cmt/p/14553189.html">网站整改公告 - 博客园团队 - 博客园</a></li>
-<li><a target="_blank" rel="noopener" href="https://cyfeng.science/2020/06/15/speed-up-ubuntu-snap/">解决Ubuntu Snap下载速度慢的问题 | CO + 2Fe = COFFee</a></li>
-<li><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/9148d7635acfa1c7aa00cc26.html">水分子吸收峰 - 百度文库</a></li>
-<li><a target="_blank" rel="noopener" href="http://ftp.heanet.ie/mirrors/ubuntu-cdimage/lubuntu/releases/20.04.1/release/">Index of /mirrors/ubuntu-cdimage/lubuntu/releases/20.04.1/release</a></li>
-</ul>
-<h1 id="Google-Chrome-Extensions"><a href="#Google-Chrome-Extensions" class="headerlink" title="Google Chrome Extensions"></a>Google Chrome Extensions</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/free-vpn-for-chrome-vpn-p/majdfhpaihoncoakbjgbdhglocklcgno/related?hl=en-US">Free VPN for Chrome - VPN Proxy VeePN - Chrome Web Store</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.booyagadget.com/2011/05/how-to-package-your-google-chrome-extensions-and-install.html">How To: Package your Google Chrome Extensions and Install – Booya Gadget</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.gtricks.com/chrome/3-best-bulk-image-downloader-chrome-extensions-to-download-images-in-bulk/">3 Best Bulk Image Downloader Chrome Extensions To Download Images in Bulk</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.gtricks.com/chrome/how-to-manually-download-and-install-chrome-extensions/">How To Manually Download And Install Chrome Extensions</a></li>
-<li><a target="_blank" rel="noopener" href="https://technoresult.com/how-to-install-chrome-extension-package-manually/">How to Install Chrome extension package manually? - Technoresult</a></li>
-<li><a target="_blank" rel="noopener" href="http://crxextractor.com/">Get .CRX Chrome Extension file, it’s source code and download .CRX to your computer.</a></li>
-</ul>
-<h1 id="Wormhole-Browse-amp-Control-phone-on-PC-Screen-Fusion-for-iOS-amp-Android"><a href="#Wormhole-Browse-amp-Control-phone-on-PC-Screen-Fusion-for-iOS-amp-Android" class="headerlink" title="Wormhole - Browse &amp; Control phone on PC, Screen Fusion for iOS &amp; Android"></a><a target="_blank" rel="noopener" href="https://er.run/#download">Wormhole - Browse &amp; Control phone on PC, Screen Fusion for iOS &amp; Android</a></h1><h1 id="Remote-control-android-phone-from-Ubuntu"><a href="#Remote-control-android-phone-from-Ubuntu" class="headerlink" title="Remote control android phone from Ubuntu"></a>Remote control android phone from Ubuntu</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.omgubuntu.co.uk/2018/11/connect-android-ubuntu-gsconnect">How to Connect Your Android Phone to Ubuntu Wirelessly - OMG! Ubuntu!</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.linuxuprising.com/2019/03/control-android-devices-from-your.html">Control Android Devices From A Desktop With scrcpy (Ubuntu, Fedora, Debian, Linux Mint Installation) - Linux Uprising Blog</a>, USB connection needed</li>
-<li><a target="_blank" rel="noopener" href="https://www.omgubuntu.co.uk/2019/07/scrcpy-mirror-android-to-ubuntu-linux">How to Mirror &amp; Control Your Android Phone from the Ubuntu Desktop - OMG! Ubuntu!</a>, USB connection needed</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">COVID-19 Vaccine</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PDF_Learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/19/20210319/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/8/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/">Next &amp;raquo;</a>
@@ -1970,6 +2094,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Legado</a>
               </li>
              
@@ -1979,10 +2107,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2122,22 +2246,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -2175,6 +2283,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Minoxidil</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2235,22 +2359,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2406,6 +2514,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
@@ -2434,14 +2558,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
               </li>
              
@@ -2451,6 +2567,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">R update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2482,19 +2606,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2551,6 +2675,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2615,18 +2751,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
