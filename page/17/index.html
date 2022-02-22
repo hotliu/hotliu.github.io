@@ -158,6 +158,730 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Termux_Learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Termux-%E9%AB%98%E7%BA%A7%E7%BB%88%E7%AB%AF%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Termux 高级终端安装使用配置教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E6%8C%89%E5%B1%8F%E5%B9%95"><span class="toc-number">1.2.1.</span> <span class="toc-text">长按屏幕</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%B7%A6%E5%90%91%E5%8F%B3%E6%BB%91%E5%8A%A8"><span class="toc-number">1.2.2.</span> <span class="toc-text">从左向右滑动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD%E6%8C%89%E9%94%AE"><span class="toc-number">1.2.3.</span> <span class="toc-text">显示扩展功能按键</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">方法二</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.3.</span> <span class="toc-text">常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.4.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%8E%AF%E5%A2%83%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.</span> <span class="toc-text">目录环境结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90"><span class="toc-number">1.6.</span> <span class="toc-text">更换国内源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.6.1.</span> <span class="toc-text">设置默认编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.6.2.</span> <span class="toc-text">编辑源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E7%BC%96%E8%BE%91%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.6.3.</span> <span class="toc-text">直接编辑源文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E5%B7%A5%E5%85%B7"><span class="toc-number">1.7.</span> <span class="toc-text">安装基本工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Termux%E4%BC%98%E5%8C%96"><span class="toc-number">1.8.</span> <span class="toc-text">Termux优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E9%85%8D%E8%89%B2"><span class="toc-number">1.8.1.</span> <span class="toc-text">终端配色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%AE%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96"><span class="toc-number">1.8.2.</span> <span class="toc-text">访问外置存储优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#oh-my-zsh%E4%B8%BB%E9%A2%98%E9%85%8D%E8%89%B2"><span class="toc-number">1.8.3.</span> <span class="toc-text">oh my zsh主题配色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E9%97%AE%E5%80%99%E8%AF%AD"><span class="toc-number">1.8.4.</span> <span class="toc-text">修改启动问候语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD"><span class="toc-number">1.9.</span> <span class="toc-text">管理员身份</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E6%B2%A1%E6%9C%89root"><span class="toc-number">1.9.1.</span> <span class="toc-text">手机没有root</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%B7%B2%E7%BB%8Froot"><span class="toc-number">1.9.2.</span> <span class="toc-text">手机已经root</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8"><span class="toc-number">1.10.</span> <span class="toc-text">信息安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Metasploit"><span class="toc-number">1.10.1.</span> <span class="toc-text">Metasploit</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3metasploit%E5%90%AF%E5%8A%A8%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.10.1.1.</span> <span class="toc-text">解决metasploit启动后无法连接数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap"><span class="toc-number">1.10.2.</span> <span class="toc-text">Nmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hydra"><span class="toc-number">1.10.3.</span> <span class="toc-text">hydra</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sslscan"><span class="toc-number">1.10.4.</span> <span class="toc-text">sslscan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#whatportis"><span class="toc-number">1.10.5.</span> <span class="toc-text">whatportis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQLmap"><span class="toc-number">1.10.6.</span> <span class="toc-text">SQLmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RouterSploit"><span class="toc-number">1.10.7.</span> <span class="toc-text">RouterSploit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slowloris"><span class="toc-number">1.10.8.</span> <span class="toc-text">Slowloris</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RED-HAWK"><span class="toc-number">1.10.9.</span> <span class="toc-text">RED_HAWK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cupp"><span class="toc-number">1.10.10.</span> <span class="toc-text">Cupp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash-Buster"><span class="toc-number">1.10.11.</span> <span class="toc-text">Hash-Buster</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D-TECT"><span class="toc-number">1.10.12.</span> <span class="toc-text">D-TECT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WPSeku"><span class="toc-number">1.10.13.</span> <span class="toc-text">WPSeku</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSStrike"><span class="toc-number">1.10.14.</span> <span class="toc-text">XSStrike</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">1.10.15.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="toc-number">1.11.</span> <span class="toc-text">Python环境部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85python2-7"><span class="toc-number">1.11.1.</span> <span class="toc-text">安装python2.7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85python3"><span class="toc-number">1.11.2.</span> <span class="toc-text">安装python3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7pip%E7%89%88%E6%9C%AC"><span class="toc-number">1.11.3.</span> <span class="toc-text">升级pip版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ipython"><span class="toc-number">1.11.4.</span> <span class="toc-text">ipython</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.11.5.</span> <span class="toc-text">编辑器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nodejs"><span class="toc-number">1.12.</span> <span class="toc-text">nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">1.12.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3npm%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99"><span class="toc-number">1.12.2.</span> <span class="toc-text">解决npm安装报错</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MariaDB-MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">1.13.</span> <span class="toc-text">MariaDB(MySQL)安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85mariadb"><span class="toc-number">1.13.1.</span> <span class="toc-text">安装mariadb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE"><span class="toc-number">1.13.2.</span> <span class="toc-text">安装基本数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8mariadb%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.13.3.</span> <span class="toc-text">启动mariadb服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAtermux%E4%BC%9A%E8%AF%9D"><span class="toc-number">1.13.4.</span> <span class="toc-text">新建termux会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-number">1.13.5.</span> <span class="toc-text">修改密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.13.6.</span> <span class="toc-text">使用密码登录数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tmux"><span class="toc-number">1.14.</span> <span class="toc-text">tmux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85tmux"><span class="toc-number">1.14.1.</span> <span class="toc-text">安装tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAmysql%E4%BC%9A%E8%AF%9D"><span class="toc-number">1.14.2.</span> <span class="toc-text">新建mysql会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8mysqld%E5%B9%B6%E6%96%AD%E5%BC%80%E4%BC%9A%E8%AF%9D"><span class="toc-number">1.14.3.</span> <span class="toc-text">启动mysqld并断开会话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8mysql"><span class="toc-number">1.14.4.</span> <span class="toc-text">使用mysql</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php"><span class="toc-number">1.15.</span> <span class="toc-text">php</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85PHP"><span class="toc-number">1.15.1.</span> <span class="toc-text">安装PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6"><span class="toc-number">1.15.2.</span> <span class="toc-text">编写测试文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8WebServer"><span class="toc-number">1.15.3.</span> <span class="toc-text">启动WebServer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx"><span class="toc-number">1.16.</span> <span class="toc-text">nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nginx%E5%8C%85"><span class="toc-number">1.16.1.</span> <span class="toc-text">安装nginx包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2root%E7%94%A8%E6%88%B7"><span class="toc-number">1.16.2.</span> <span class="toc-text">切换root用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8nginx"><span class="toc-number">1.16.3.</span> <span class="toc-text">启动nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E6%AD%A2nginx%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.16.4.</span> <span class="toc-text">停止nginx服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%90%AFnginx%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.16.5.</span> <span class="toc-text">重启nginx服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx%E8%A7%A3%E6%9E%90PHP"><span class="toc-number">1.17.</span> <span class="toc-text">nginx解析PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEphp-fpm"><span class="toc-number">1.17.1.</span> <span class="toc-text">安装并配置php-fpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEnginx"><span class="toc-number">1.17.2.</span> <span class="toc-text">配置nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8Bphp%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6"><span class="toc-number">1.17.3.</span> <span class="toc-text">建立php测试文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8php-fpm%E5%92%8Cnginx"><span class="toc-number">1.17.4.</span> <span class="toc-text">启动php-fpm和nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE%E6%B5%8B%E8%AF%95"><span class="toc-number">1.17.5.</span> <span class="toc-text">浏览器访问测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAWordPress"><span class="toc-number">1.18.</span> <span class="toc-text">搭建WordPress</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-%E4%BD%BF%E7%94%A8PHP%E5%86%85%E7%BD%AE%E7%9A%84Web-Server"><span class="toc-number">1.18.1.</span> <span class="toc-text">方法一 使用PHP内置的Web Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-nginx-PHP-Mariadb"><span class="toc-number">1.18.2.</span> <span class="toc-text">方法二 nginx+PHP+Mariadb</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.19.</span> <span class="toc-text">搭建hexo博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">1.19.1.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83"><span class="toc-number">1.19.2.</span> <span class="toc-text">部署hexo博客环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#termux-ssh-%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91"><span class="toc-number">1.20.</span> <span class="toc-text">termux ssh 连接电脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E8%84%91ssh%E8%BF%9E%E6%8E%A5Termux"><span class="toc-number">1.21.</span> <span class="toc-text">电脑ssh连接Termux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Aria2%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-number">1.22.</span> <span class="toc-text">使用Aria2打造自己的下载工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85aria2"><span class="toc-number">1.22.1.</span> <span class="toc-text">安装aria2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.22.2.</span> <span class="toc-text">本地启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webui-aria2"><span class="toc-number">1.22.3.</span> <span class="toc-text">webui-aria2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%8A%9F%E8%83%BD%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB"><span class="toc-number">1.23.</span> <span class="toc-text">多功能文件分享</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85caddy"><span class="toc-number">1.23.1.</span> <span class="toc-text">安装caddy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.23.2.</span> <span class="toc-text">编写配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8caddy"><span class="toc-number">1.23.3.</span> <span class="toc-text">启动caddy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C"><span class="toc-number">1.23.4.</span> <span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Termux-api"><span class="toc-number">1.24.</span> <span class="toc-text">Termux-api</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Termux-api"><span class="toc-number">1.24.1.</span> <span class="toc-text">安装Termux-api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Termux-api%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">1.24.2.</span> <span class="toc-text">安装Termux-api软件包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%94%B5%E6%B1%A0%E4%BF%A1%E6%81%AF"><span class="toc-number">1.24.3.</span> <span class="toc-text">获取电池信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%9B%B8%E6%9C%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">1.24.4.</span> <span class="toc-text">获取相机信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%8E%E8%AE%BE%E7%BD%AE%E5%89%AA%E8%B4%B4%E6%9D%BF"><span class="toc-number">1.24.5.</span> <span class="toc-text">获取与设置剪贴板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E9%80%9A%E8%AE%AF%E5%BD%95%E5%88%97%E8%A1%A8"><span class="toc-number">1.24.6.</span> <span class="toc-text">获取通讯录列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%9F%AD%E4%BF%A1%E5%86%85%E5%AE%B9%E5%88%97%E8%A1%A8"><span class="toc-number">1.24.7.</span> <span class="toc-text">查看短信内容列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E7%9F%AD%E4%BF%A1"><span class="toc-number">1.24.8.</span> <span class="toc-text">发送短信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A8%E6%89%93%E7%94%B5%E8%AF%9D"><span class="toc-number">1.24.9.</span> <span class="toc-text">拨打电话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WiFi%E7%9B%B8%E5%85%B3"><span class="toc-number">1.24.10.</span> <span class="toc-text">WiFi相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-1"><span class="toc-number">1.24.11.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%97%A0%E8%81%8A%E7%9A%84%E5%B0%9D%E8%AF%95"><span class="toc-number">1.25.</span> <span class="toc-text">一些无聊的尝试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nyancat-%E5%BD%A9%E8%99%B9%E7%8C%AB"><span class="toc-number">1.25.1.</span> <span class="toc-text">nyancat 彩虹猫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="toc-number">1.25.2.</span> <span class="toc-text">终端二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.25.3.</span> <span class="toc-text">终端地图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B2%A1%E6%9C%89%E5%86%99%E5%88%B0%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">1.26.</span> <span class="toc-text">其他没有写到的内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Linux"><span class="toc-number">1.26.1.</span> <span class="toc-text">安装Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="toc-number">1.26.2.</span> <span class="toc-text">内网穿透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Jupyter-Notebook"><span class="toc-number">1.26.3.</span> <span class="toc-text">Python Jupyter Notebook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-number">1.26.4.</span> <span class="toc-text">下载工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.27.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Termux-高级终端安装使用配置教程"><a href="#Termux-高级终端安装使用配置教程" class="headerlink" title="Termux 高级终端安装使用配置教程"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cutesnow/p/11430833.html">Termux 高级终端安装使用配置教程</a></h1><p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2018/05/termux.html">https://www.sqlsec.com/2018/05/termux.html</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>Termux</code>是一个<code>Android</code>下一个高级的终端模拟器,开源且不需要<code>root</code>,支持<code>apt</code>管理软件包，十分方便安装软件包,完美支持<code>Python</code>,<code>PHP</code>,<code>Ruby</code>,<code>Go</code>,<code>Nodejs</code>,<code>MySQL</code>等。随着智能设备的普及和性能的不断提升，如今的手机、平板等的硬件标准已达到了初级桌面计算机的硬件标准,用心去打造完全可以把手机变成一个强大的工具.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://termux.com/">官网</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/termux/termux-app">Github项目地址</a></li>
+<li><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux">Google Play下载地址</a></li>
+</ul>
+<blockquote>
+<p>Google Play下载的版本比酷安要新,有能力建议下载Google PLay版本的.</p>
+</blockquote>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="长按屏幕"><a href="#长按屏幕" class="headerlink" title="长按屏幕"></a>长按屏幕</h3><p>显示菜单项（包括复制、粘贴、更多），此时屏幕出现可选择的复制光标</p>
+<p><img src="https://image.3001.net/images/20180501/15251424532278.png"></p>
+<pre><code>长按屏幕
+├── COPY:复制
+├── PASTE:更多
+├── More:更多
+   ├── Select URL: 选择网址
+   └── Share transcipt: 分享命令脚本
+   └── Reset: 重置
+   └── Kill process: 杀掉当前终端会话进程
+   └── Style: 风格配色
+   └── Help: 帮助文档</code></pre>
+<h3 id="从左向右滑动"><a href="#从左向右滑动" class="headerlink" title="从左向右滑动"></a>从左向右滑动</h3><p>显示隐藏式导航栏，可以新建、切换、重命名会话session和调用弹出输入法</p>
+<p><img src="https://image.3001.net/images/20180501/15251425706184.png"></p>
+<h3 id="显示扩展功能按键"><a href="#显示扩展功能按键" class="headerlink" title="显示扩展功能按键"></a>显示扩展功能按键</h3><p>扩展功能键是什么?就是PC端常用的按键如:ESC键，CTR键，TAB键,但是手机上难以操作的一些按键.</p>
+<p><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251430134084.png"></p>
+<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>从左向右滑动,显示隐藏式导航栏,长按左下角的<code>KEYBOARD</code>.</p>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>使用<code>Termux</code>快捷键:<code>音量+</code>+<code>Q</code>键</p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><p><code>Ctrl</code>键是终端用户常用的按键 - 但大多数触摸键盘都没有这个按键。为此，Termux使用<code>音量减小按钮</code>来模拟<code>Ctrl</code>键。<br>例如，在触摸键盘上按<code>音量减小</code>+ <code>L</code>发送与在硬件键盘上按<code>Ctrl + L</code>相同的输入。</p>
+<ul>
+<li><code>Ctrl+A</code> -&gt; 将光标移动到行首</li>
+<li><code>Ctrl+C</code> -&gt; 中止当前进程</li>
+<li><code>Ctrl+D</code> -&gt; 注销终端会话</li>
+<li><code>Ctrl+E</code> -&gt; 将光标移动到行尾</li>
+<li><code>Ctrl+K</code> -&gt; 从光标删除到行尾</li>
+<li><code>Ctrl+L</code> -&gt; 清除终端</li>
+<li><code>Ctrl+Z</code> -&gt; 挂起（发送SIGTSTP到）当前进程</li>
+</ul>
+<p><code>音量加键</code>也可以作为产生特定输入的<code>特殊键</code>.</p>
+<ul>
+<li><code>音量加+E</code> -&gt; Esc键</li>
+<li><code>音量加+T</code> -&gt; Tab键</li>
+<li><code>音量加+1</code> -&gt; F1（和音量增加+ 2→F2等）</li>
+<li><code>音量加+0</code> -&gt; F10</li>
+<li><code>音量加+B</code> -&gt; Alt + B，使用readline时返回一个单词</li>
+<li><code>音量加+F</code> -&gt; Alt + F，使用readline时转发一个单词</li>
+<li><code>音量加+X</code> -&gt; Alt+X</li>
+<li><code>音量加+W</code> -&gt; 向上箭头键</li>
+<li><code>音量加+A</code> -&gt; 向左箭头键</li>
+<li><code>音量加+S</code> -&gt; 向下箭头键</li>
+<li><code>音量加+D</code> -&gt; 向右箭头键</li>
+<li><code>音量加+L</code> -&gt; | （管道字符）</li>
+<li><code>音量加+H</code> -&gt; 〜（波浪号字符）</li>
+<li><code>音量加+U</code> -&gt; _ (下划线字符)</li>
+<li><code>音量加+P</code> -&gt; 上一页</li>
+<li><code>音量加+N</code> -&gt; 下一页</li>
+<li><code>音量加+.</code> -&gt; Ctrl + \（SIGQUIT）</li>
+<li><code>音量加+V</code> -&gt; 显示音量控制</li>
+<li><code>音量加+Q</code> -&gt; 显示额外的按键视图</li>
+</ul>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><p><code>Termux</code>除了支持<code>apt</code>命令外,还在此基础上封装了<code>pkg</code>命令,<code>pkg</code>命令向下兼容<code>apt</code>命令.<code>apt</code>命令大家应该都比较熟悉了,这里直接简单的介绍下<code>pkg</code>命令:</p>
+<pre><code>pkg search &lt;query&gt;              搜索包
+pkg install &lt;package&gt;           安装包
+pkg uninstall &lt;package&gt;         卸载包
+pkg reinstall &lt;package&gt;         重新安装包
+pkg update                      更新源
+pkg upgrade                     升级软件包
+pkg list-all                    列出可供安装的所有包
+pkg list-installed              列出已经安装的包
+pkg shoe &lt;package&gt;              显示某个包的详细信息
+pkg files &lt;package&gt;             显示某个包的相关文件夹路径</code></pre>
+<h2 id="目录环境结构"><a href="#目录环境结构" class="headerlink" title="目录环境结构"></a>目录环境结构</h2><pre><code>~ &gt; echo $HOME
+/data/data/com.termux/files/home
+
+ ~ &gt; echo $PREFIX
+/data/data/com.termux/files/usr
+
+ ~ &gt; echo $TMPPREFIX
+/data/data/com.termux/files/usr/tmp/zsh</code></pre>
+<p>长期使用Linux的朋友可能会发现，这个HOME路径看上去可能不太一样,为了方便,<code>Termux</code> 提供了一个特殊的环境变量:<code>PREFIX</code></p>
+<p><img src="https://image.3001.net/images/20180502/15252398558622.png"></p>
+<h2 id="更换国内源"><a href="#更换国内源" class="headerlink" title="更换国内源"></a>更换国内源</h2><p>更换<code>Termux</code>清华大学源,加快软件包下载速度.</p>
+<h3 id="设置默认编辑器"><a href="#设置默认编辑器" class="headerlink" title="设置默认编辑器"></a>设置默认编辑器</h3><pre><code>export EDITOR=vi</code></pre>
+<h3 id="编辑源文件"><a href="#编辑源文件" class="headerlink" title="编辑源文件"></a>编辑源文件</h3><pre><code>apt edit-sources</code></pre>
+<p>将原来的<code>https://termux.net</code>官方源替换为<code>http://mirrors.tuna.tsinghua.edu.cn/termux</code></p>
+<p><img src="https://image.3001.net/images/20180501/15251457797689.png"></p>
+<p>保存并退出</p>
+<h3 id="直接编辑源文件"><a href="#直接编辑源文件" class="headerlink" title="直接编辑源文件"></a>直接编辑源文件</h3><p>上面是官方推荐的方法,其实还有更简单的方法,类似于Linux下直接去编辑源文件:</p>
+<pre><code>vi  $PREFIX/etc/apt/sources.list</code></pre>
+<h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><pre><code>pkg update
+pkg install vim curl wget git unzip unrar</code></pre>
+<h2 id="Termux优化"><a href="#Termux优化" class="headerlink" title="Termux优化"></a>Termux优化</h2><h3 id="终端配色"><a href="#终端配色" class="headerlink" title="终端配色"></a>终端配色</h3><p>主要使用了<code>zsh</code>来替代<code>bash</code>作为默认<code>shell</code>.<br>使用一键安装脚本来安装,一步到位,顺便启动了外置存储,可以直接访问SD卡下的目录.</p>
+<blockquote>
+<p>执行下面这个命令确保已经安装好了curl</p>
+</blockquote>
+<pre><code>sh -c &quot;$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)&quot;  </code></pre>
+<p><img src="https://image.3001.net/images/20180501/15251492617193.png"></p>
+<p>Android6.0以上会弹框确认是否授权,<code>允许</code>授权后<code>Termux</code>可以方便的访问SD卡文件.<br>脚本允许后先后有如下两个选项:</p>
+<pre><code>Enter a number, leave blank to not to change: 14
+Enter a number, leave blank to not to change: 6</code></pre>
+<p>分别选择<code>背景色</code>和<code>字体</code><br>想要继续更改挑选配色的话,继续运行脚本来再次筛选:</p>
+<pre><code>$ ~/termux-ohmyzsh/install.sh</code></pre>
+<p><code>exit</code>重启<code>sessions</code>会话生效配置</p>
+<h3 id="访问外置存储优化"><a href="#访问外置存储优化" class="headerlink" title="访问外置存储优化"></a>访问外置存储优化</h3><p>执行过上面的<code>zsh</code>一键配置脚本后,并且授予文件访问权限的话,会在家目录生成<code>storage</code>目录，并且生成若干目录，软连接都指向外置存储卡的相应目录</p>
+<p><img src="https://image.3001.net/images/20180501/15251507436942.png"></p>
+<p><strong>创建QQ文件夹软连接</strong></p>
+<p>手机上一般经常使用手机QQ来接收文件,这里为了方便文件传输,直接在<code>storage</code>目录下创建软链接.<br><strong>QQ</strong></p>
+<pre><code>ln -s /data/data/com.termux/files/home/storage/shared/tencent/QQfile_recv QQ</code></pre>
+<p><strong>TIM</strong></p>
+<pre><code>ln -s /data/data/com.termux/files/home/storage/shared/tencent/TIMfile_recv TIM</code></pre>
+<p>最后效果图如下:</p>
+<p><img src="https://image.3001.net/images/20180501/15251516872451.png"></p>
+<p>这样可以直接在<code>home</code>目录下去访问QQ文件夹,非常方便文件的传输,大大提升了工作效率.<br><a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/termux">http://mirrors.tuna.tsinghua.edu.cn/termux</a></p>
+<h3 id="oh-my-zsh主题配色"><a href="#oh-my-zsh主题配色" class="headerlink" title="oh my zsh主题配色"></a>oh my zsh主题配色</h3><p>编辑<code>.zshrc</code>配置文件</p>
+<pre><code>$ vim .zshrc</code></pre>
+<p>第一行可以看到,默认的主题是<code>agnoster</code>主题:</p>
+<p><img src="https://image.3001.net/images/20180501/15251531807018.png"></p>
+<p>在<code>.oh-my-zsh/themes</code>目录下放着<code>oh-my-zsh</code>所有的主题配置文件.<br>下面是国光认为还不错的几款主题</p>
+<p><strong>agnoster</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251534292438.png"></p>
+<p><strong>robbyrussell</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251540733399.png"></p>
+<p><strong>jaischeema</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251541015433.png"></p>
+<p><strong>re5et</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251541397.png"></p>
+<p><strong>junkfood</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251541908342.png"></p>
+<p><strong>cloud</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251542579462.png"></p>
+<p><strong>random</strong></p>
+<p>当然如果你是个变态的话,可以尝试<code>random</code>主题,每打开一个会话配色主题都是随机的.</p>
+<pre><code>ZSH_THEME=&quot;random&quot;</code></pre>
+<h3 id="修改启动问候语"><a href="#修改启动问候语" class="headerlink" title="修改启动问候语"></a>修改启动问候语</h3><p>默认的启动问候语如下:</p>
+<p><img src="https://image.3001.net/images/20180501/15251478499802.png"></p>
+<p>这个对于初学者有一定的帮助在前期,随着对<code>Termux</code>的熟悉,这个默认的问候语就会显得比较臃肿.<br>编辑问候语文件直接修改问候语:</p>
+<pre><code>vim $PREFIX/etc/motd</code></pre>
+<p>修改完的效果如下:</p>
+<p><img src="https://image.3001.net/images/20180503/15253204397796.png"></p>
+<p>这样启动新的会话的时候看上去就会简洁很多.</p>
+<h2 id="管理员身份"><a href="#管理员身份" class="headerlink" title="管理员身份"></a>管理员身份</h2><h3 id="手机没有root"><a href="#手机没有root" class="headerlink" title="手机没有root"></a>手机没有root</h3><p>利用<code>proot</code>工具来模拟某些需要root的环境</p>
+<pre><code>pkg install proot</code></pre>
+<p>然后终端下面输入:</p>
+<pre><code>termux-chroot</code></pre>
+<p>即可模拟<code>root</code>环境<br>在这个<code>proot</code>环境下面,相当于是进入了<code>home</code>目录,可以很方便地进行一些配置.</p>
+<p><img src="https://image.3001.net/images/20180502/15252406356840.png"></p>
+<p>在管理员身份下，输入<code>exit</code>可回到普通用户身份。</p>
+<h3 id="手机已经root"><a href="#手机已经root" class="headerlink" title="手机已经root"></a>手机已经root</h3><p>安装<code>tsu</code>,这是一个<code>su</code>的termux版本,用来在termux上替代<code>su</code>:</p>
+<pre><code>pkg install tsu</code></pre>
+<p>然后终端下面输入:</p>
+<pre><code>tsu</code></pre>
+<p>即可切换<code>root</code>用户,这个时候会弹出<code>root</code>授权提示,给予其<code>root</code>权限,效果图如下:</p>
+<p><img src="https://image.3001.net/images/20180501/15251567018423.png"></p>
+<p>在管理员身份下，输入<code>exit</code>可回到普通用户身份。</p>
+<h2 id="信息安全"><a href="#信息安全" class="headerlink" title="信息安全"></a>信息安全</h2><p>因为<code>termux</code>可以很好的支持<code>Python</code>,所以几乎所有用<code>Python</code>编写的安全工具都是可以完美的运行使用的. 总的来说可玩性还是比较高的.</p>
+<h3 id="Metasploit"><a href="#Metasploit" class="headerlink" title="Metasploit"></a>Metasploit</h3><p><strong>安装Ｍetasploit</strong></p>
+<p>Termux官方提供的自动话脚本安装方法如下:</p>
+<pre><code>cd ～
+pkg install wget
+wget https://Auxilus.github.io/metasploit.sh
+bash metasploit.sh</code></pre>
+<blockquote>
+<p>注　在x86平台下自动化安装失败，想在x86平台下安装的参考　<a target="_blank" rel="noopener" href="https://wiki.termux.com/wiki/Metasploit_Framework">官方的文档</a> 手动去安装．　　</p>
+</blockquote>
+<p>这个过程平均耗时大约3分钟左右（使用国内的清华源的情况下）．　　</p>
+<p><strong>配置msf数据库缓存</strong></p>
+<p>意外发现数据库居然都配置好了，启动<code>msfconsole会</code>自动连接数据库了．　　</p>
+<p><img src="https://image.3001.net/images/20180502/15252619337456.png"></p>
+<p>接下来重建数据库缓存</p>
+<pre><code>msf &gt; db_rebuild_cache</code></pre>
+<p>这个时候立刻去搜索发现缓存依然没有建立，只能使用慢速搜索，这里其实是这个缓存建立需要时间，只要稍微等待一下就可以了．</p>
+<blockquote>
+<p>国光以前这里做过测试，缓存建立的平均时间是3分钟左右．</p>
+</blockquote>
+<p>然后就可以实现<code>msf</code>秒搜索的效果了，无需等待，感觉比电脑上还要快呐　　</p>
+<p><img src="https://image.3001.net/images/20180502/15252622202484.png"></p>
+<h4 id="解决metasploit启动后无法连接数据库"><a href="#解决metasploit启动后无法连接数据库" class="headerlink" title="解决metasploit启动后无法连接数据库"></a>解决metasploit启动后无法连接数据库</h4><p>使用自动化脚本安装好<code>Metasploit</code>后使用<code>db_status</code>发现数据库是处于连接状态的,然后在使用<code>db_rebuild_cache</code>重新建立缓存,等待大约3分钟后,便可以使用快速搜索了,没毛病~<br>但是<br>在一段日子过后,可能会出现以下情况:</p>
+<p><img src="https://image.3001.net/images/20180507/15256704978052.png"></p>
+<pre><code>msfconsole
+[-] Failed to connect to the database: could not connect to server: Connection refused
+        Is the server running on host &quot;127.0.0.1&quot; and accepting
+        TCP/IP connections on port 5432?</code></pre>
+<p>报这个错误是因为<code>postgresql</code>数据库没有启动造成的.解决方法就是启动数据库:</p>
+<blockquote>
+<p>本方法只针对termux上使用自动化脚本安装msf</p>
+</blockquote>
+<pre><code>pg_ctl -D $PREFIX/var/lib/postgresql start</code></pre>
+<p>启动数据库后重新进入<code>msfconsole</code>会发现启动没有报错了,<code>db_status</code>查看下数据库连接,也正常了:</p>
+<p><img src="https://image.3001.net/images/20180507/1525670956965.png"></p>
+<h3 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h3><p>端口扫描必备工具</p>
+<pre><code>pkg install nmap</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252522986960.png"></p>
+<h3 id="hydra"><a href="#hydra" class="headerlink" title="hydra"></a>hydra</h3><p>Hydra是著名的黑客组织THC的一款开源暴力破解工具这是一个验证性质的工具，主要目的是：展示安全研究人员从远程获取一个系统认证权限。</p>
+<pre><code>pkg install hydra</code></pre>
+<p><img src="https://image.3001.net/images/20180502/1525253245778.png!"></p>
+<h3 id="sslscan"><a href="#sslscan" class="headerlink" title="sslscan"></a>sslscan</h3><p>SSLscan主要探测基于ssl的服务，如https。SSLscan是一款探测目标服务器所支持的SSL加密算法工具。<br>SSlscan的代码托管在<a target="_blank" rel="noopener" href="https://github.com/DinoTools/sslscan">Github</a></p>
+<pre><code>pkg install sslscan</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252523713030.png"></p>
+<h3 id="whatportis"><a href="#whatportis" class="headerlink" title="whatportis"></a>whatportis</h3><p>whatportis是一款可以通过服务查询默认端口，或者是通过端口查询默认服务的工具，简单易用。在渗透测试过程中，如果需要查询某个端口绑定什么服务器，或者某个应用绑定的默认端口，可以使用whatportis查询。</p>
+<pre><code>pip2 install whatportis</code></pre>
+<p><img src="https://image.3001.net/images/20180502/1525254451611.png!"></p>
+<h3 id="SQLmap"><a href="#SQLmap" class="headerlink" title="SQLmap"></a>SQLmap</h3><p>SQLmap是一款用来检测与利用SQL注入漏洞的免费开源工具 <a target="_blank" rel="noopener" href="https://github.com/sqlmapproject/sqlmap">官方项目地址</a></p>
+<p>直接<code>git clone</code>源码</p>
+<pre><code>git clone https://github.com/sqlmapproject/sqlmap.git
+cd sqlmap
+python2 sqlmap.py</code></pre>
+<blockquote>
+<p>sqlmap支持pip安装了,所以建议直接 pip install sqlmap 来进行安装,然后终端下直接sqlmap就可以了,十分方便.</p>
+</blockquote>
+<p><img src="https://image.3001.net/images/20180502/15252521782388.png"></p>
+<h3 id="RouterSploit"><a href="#RouterSploit" class="headerlink" title="RouterSploit"></a>RouterSploit</h3><p>RouteSploit框架是一款开源的路由器等嵌入式设备漏洞检测及利用框架。</p>
+<pre><code>pip2 install requests
+git clone https://github.com/reverse-shell/routersploit
+cd routersploit
+python2 rsf.py</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252536832530.png"></p>
+<h3 id="Slowloris"><a href="#Slowloris" class="headerlink" title="Slowloris"></a>Slowloris</h3><p>低带宽的DoS工具</p>
+<pre><code>git clone https://github.com/gkbrk/slowloris.git
+cd slowloris
+chmod +x slowloris.py</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252663642248.png"></p>
+<h3 id="RED-HAWK"><a href="#RED-HAWK" class="headerlink" title="RED_HAWK"></a>RED_HAWK</h3><p>一款采用PHP语言开发的多合一型渗透测试工具，它可以帮助我们完成信息采集、SQL漏洞扫描和资源爬取等任务。</p>
+<pre><code>pkg install php
+git clone https://github.com/Tuhinshubhra/RED_HAWK.git
+cd RED_HAWK
+php rhawk.php</code></pre>
+<p><img src="https://image.3001.net/images/20180502/1525267319924.png!"></p>
+<h3 id="Cupp"><a href="#Cupp" class="headerlink" title="Cupp"></a>Cupp</h3><p>Cupp是一款用Python语言写成的可交互性的字典生成脚本。尤其适合社会工程学，当你收集到目标的具体信息后，你就可以通过这个工具来智能化生成关于目标的字典。</p>
+<pre><code>git clone https://github.com/Mebus/cupp.git
+cd cupp
+python2 cupp.py</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252677611697.png"></p>
+<h3 id="Hash-Buster"><a href="#Hash-Buster" class="headerlink" title="Hash-Buster"></a>Hash-Buster</h3><p>Hash Buster是一个用python编写的在线破解Hash的脚本，官方说5秒内破解,速度实际测试还不错哦~</p>
+<pre><code>git clone https://github.com/UltimateHackers/Hash-Buster.git
+cd Hash-Buster
+python2 hash.py</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252684925926.png"></p>
+<h3 id="D-TECT"><a href="#D-TECT" class="headerlink" title="D-TECT"></a>D-TECT</h3><p>D-TECT是一个用Python编写的先进的渗透测试工具,</p>
+<ul>
+<li><p>wordpress用户名枚举</p>
+</li>
+<li><p>敏感文件检测</p>
+</li>
+<li><p>子域名爆破</p>
+</li>
+<li><p>端口扫描</p>
+</li>
+<li><p>Wordperss扫描</p>
+</li>
+<li><p>XSS扫描</p>
+</li>
+<li><p>SQL注入扫描等</p>
+<p>  git clone <a target="_blank" rel="noopener" href="https://github.com/shawarkhanethicalhacker/D-TECT.git">https://github.com/shawarkhanethicalhacker/D-TECT.git</a><br>  cd D-TECT<br>  python2 d-tect.py</p>
+</li>
+</ul>
+<p><img src="https://image.3001.net/images/20180502/152526900352.png"></p>
+<h3 id="WPSeku"><a href="#WPSeku" class="headerlink" title="WPSeku"></a>WPSeku</h3><p>WPSeku 是一个用 Python 写的简单的 WordPress 漏洞扫描器，它可以被用来扫描本地以及远程安装的 WordPress 来找出安全问题。被评为2017年最受欢迎的十大开源黑客工具.</p>
+<pre><code>git clone https://github.com/m4ll0k/WPSeku.git
+cd WPSeku
+pip3 install -r requirements.txt
+python3 wpseku.py</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252705506839.png"></p>
+<h3 id="XSStrike"><a href="#XSStrike" class="headerlink" title="XSStrike"></a>XSStrike</h3><p>XSStrike是一种先进的XSS检测工具。它具有强大的模糊测试引擎.</p>
+<pre><code>git clone https://github.com/UltimateHackers/XSStrike.git
+cd XSStrike
+pip2 install -r requirements.txt
+python2 xsstrike</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252722868294.png"></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>因为Termux完美的支持<code>Python</code>和<code>Perl</code>等语言,所以有太多优秀的信息安全工具值得大家去发现了,这里我就不一一列举了.</p>
+<h2 id="Python环境部署"><a href="#Python环境部署" class="headerlink" title="Python环境部署"></a>Python环境部署</h2><h3 id="安装python2-7"><a href="#安装python2-7" class="headerlink" title="安装python2.7"></a>安装python2.7</h3><pre><code>pkg install python2</code></pre>
+<p>安装完成后,使用<code>python2</code>命令启动<code>python 2.7.14</code>环境.</p>
+<p><img src="https://image.3001.net/images/20180501/15251677413951.png"></p>
+<h3 id="安装python3"><a href="#安装python3" class="headerlink" title="安装python3"></a>安装python3</h3><pre><code>pkg install python</code></pre>
+<p>安装完成后,使用<code>python</code>命令启动<code>python 3.6.5</code>环境.</p>
+<p><img src="https://image.3001.net/images/20180501/152516780621.png"></p>
+<h3 id="升级pip版本"><a href="#升级pip版本" class="headerlink" title="升级pip版本"></a>升级pip版本</h3><pre><code>python2 -m pip install --upgrade pip
+python -m pip install --upgrade pip</code></pre>
+<p>这两条命令分别升级了<code>pip2</code>和<code>pip3</code>到最新版.<br><strong>pip版本查看</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251709032749.png"></p>
+<h3 id="ipython"><a href="#ipython" class="headerlink" title="ipython"></a>ipython</h3><p>ipython是一个python的交互式shell，支持变量自动补全，自动缩进，支持bash shell命令，内置了许多很有用的功能和函数。学习ipython将会让我们以一种更高的效率来使用python。<br>先安装<code>clang</code>,否则直接使用<code>pip</code>安装<code>ipython</code>会失败报错.</p>
+<pre><code>pkg install clang
+pip install ipython
+pip3.6 install ipython</code></pre>
+<p>然后分别使用<code>ipython</code>和<code>ipython2</code>进入<code>py2</code>和<code>py3</code>控制台:</p>
+<p><img src="https://image.3001.net/images/20180501/15251711666731.png"></p>
+<h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><p>终端下有<code>vim</code>神器,并且官方也已经封装了<code>vim-python</code>,对<code>vim</code>进行了Python相关的优化.</p>
+<pre><code>pkg install vim-python</code></pre>
+<p><strong>解决termux下的vim汉字乱码</strong></p>
+<p>在家目录下,新建<code>.vimrc</code>文件</p>
+<pre><code>vim .vimrc</code></pre>
+<p>添加内容如下:</p>
+<pre><code>set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030</code></pre>
+<p>然后<code>source</code>下变量:</p>
+<pre><code>source .vimrc</code></pre>
+<p><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251690917140.png"></p>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><pre><code>pkg install nodejs</code></pre>
+<p>安装比较方便,但是在安装的时候报错了</p>
+<pre><code>Cannot read property &#39;length&#39; of undefined</code></pre>
+<p>查了下是这边版本的问题</p>
+<p><img src="https://image.3001.net/images/20180501/15251603187936.png"></p>
+<p>官方的解决方法如下<br><a target="_blank" rel="noopener" href="https://github.com/rvagg/node-worker-farm/commit/0b2349c6c7ed5c51e234e418fad226875313e773">disable concurrency in case of libuv/libuv#1459</a></p>
+<p><img src="https://image.3001.net/images/20180501/15251607456224.png"></p>
+<h3 id="解决npm安装报错"><a href="#解决npm安装报错" class="headerlink" title="解决npm安装报错"></a>解决npm安装报错</h3><pre><code>vim $PREFIX/lib/node_modules/npm/node_modules/worker-farm/lib/farm.js</code></pre>
+<p>我这里修改length的是<code>4</code>,这个好像和CPU有关,总之这里的length得指定一个数字.</p>
+<p><img src="https://image.3001.net/images/20180501/15251608278605.png"></p>
+<p>然后在重新安装下<code>npm install hexo-cli -g</code>成功.</p>
+<h2 id="MariaDB-MySQL-安装"><a href="#MariaDB-MySQL-安装" class="headerlink" title="MariaDB(MySQL)安装"></a>MariaDB(MySQL)安装</h2><p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。开发这个分支的原因之一是：甲骨文公司收购了MySQL后，有将MySQL闭源的潜在风险，因此社区采用分支的方式来避开这个风险。</p>
+<h3 id="安装mariadb"><a href="#安装mariadb" class="headerlink" title="安装mariadb"></a>安装mariadb</h3><pre><code>pkg install mariadb</code></pre>
+<h3 id="安装基本数据"><a href="#安装基本数据" class="headerlink" title="安装基本数据"></a>安装基本数据</h3><pre><code>mysql_install_db</code></pre>
+<h3 id="启动mariadb服务"><a href="#启动mariadb服务" class="headerlink" title="启动mariadb服务"></a>启动mariadb服务</h3><pre><code>mysqld</code></pre>
+<p>启动完成后,这个会话就一直存活,类似与debug调试一样,只有新建会话才可以操作.</p>
+<p><img src="https://image.3001.net/images/20180501/15251762051594.png"></p>
+<p>关于隐藏会话可以使用<code>nohup</code>命令和<code>tmux</code>命令,这里我建议使用<code>tmux</code>命令</p>
+<h3 id="新建termux会话"><a href="#新建termux会话" class="headerlink" title="新建termux会话"></a>新建termux会话</h3><p>由于mariadb安装的时候没有设置密码,当前的<code>mariadb</code>密码为<code>空</code>.</p>
+<pre><code>mysql</code></pre>
+<p>直接进入<code>mariadb</code>数据库.输入<code>exit</code>退出数据库.</p>
+<p><img src="https://image.3001.net/images/20180501/15251770923501.png"></p>
+<h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><p>输入一下命令,进行密码相关的安全设置:</p>
+<pre><code>mysql_secure_installation</code></pre>
+<p><strong>输入当前输入密码</strong><br>因为是<code>空</code>密码,这里默认 <code>回车</code></p>
+<pre><code>Enter current password for root (enter for none):</code></pre>
+<p><strong>设置新密码</strong><br>这里设置新的root密码</p>
+<pre><code>Set root password? [Y/n] y
+New password:
+Re-enter new password:</code></pre>
+<p><strong>其他设置</strong><br>下面根据个人偏好来进行设置,没有绝对的要求</p>
+<pre><code>Remove anonymous users? [Y/n] Y                #是否移除匿名用户
+Disallow root login remotely? [Y/n] n          #是否不允许root远程登录
+Remove test database and access to it? [Y/n] n #是否移除test数据库
+Reload privilege tables now? [Y/n] y           #是否重新加载表的权限</code></pre>
+<h3 id="使用密码登录数据库"><a href="#使用密码登录数据库" class="headerlink" title="使用密码登录数据库"></a>使用密码登录数据库</h3><pre><code>$ mysql -uroot -p
+Enter password: ***apache2</code></pre>
+<p><img src="https://image.3001.net/images/20180501/15251777161538.png"></p>
+<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h2><p>Tmux是一个优秀的终端复用软件，类似GNU Screen，但来自于OpenBSD，采用BSD授权。一旦你熟悉了 tmux 后， 它就像一个加速器一样加速你的工作效率。</p>
+<h3 id="安装tmux"><a href="#安装tmux" class="headerlink" title="安装tmux"></a>安装tmux</h3><pre><code>pkg install tmux</code></pre>
+<h3 id="新建mysql会话"><a href="#新建mysql会话" class="headerlink" title="新建mysql会话"></a>新建mysql会话</h3><p>上面介绍的<code>mysqld</code>后会一直卡在那里,强迫症表示接受不了,<code>重启手机</code>,现在尝试使用<code>tmux</code>来管理会话.</p>
+<pre><code>tmux new -s mysql</code></pre>
+<p>可以看到最下面的提示,表明现在是在<code>mysql</code>的会话下面操作</p>
+<p><img src="https://image.3001.net/images/20180501/15251785128162.png"></p>
+<h3 id="启动mysqld并断开会话"><a href="#启动mysqld并断开会话" class="headerlink" title="启动mysqld并断开会话"></a>启动mysqld并断开会话</h3><p><strong>启动mysqld</strong></p>
+<pre><code>mysqld</code></pre>
+<p><strong>让会话后台运行</strong><br>使用快捷键组合<code>Ctrl</code>+<code>b</code> + <code>d</code>，三次按键就可以断开当前会话。</p>
+<h3 id="使用mysql"><a href="#使用mysql" class="headerlink" title="使用mysql"></a>使用mysql</h3><p>现在那个<code>mysqld</code>会话被放在后台运行了,整个界面看上去很简介,使用</p>
+<pre><code>mysql -uroot -p</code></pre>
+<p>可以优雅的使用数据库了.<br><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251788017133.gif"></p>
+<p>关于<code>tmux</code>更多进阶的用法这里不在过多介绍了.</p>
+<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><p><code>termux</code>封装的php版本是<code>php 7.2.5</code></p>
+<h3 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h3><pre><code>pkg install php</code></pre>
+<p><strong>查看下版本</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251829165152.png"></p>
+<blockquote>
+<p>自<code>PHP5.4</code>之后 PHP内置了一个Web 服务器,来在<code>termux</code>下尝试下PHP Web Server的简单使.</p>
+</blockquote>
+<h3 id="编写测试文件"><a href="#编写测试文件" class="headerlink" title="编写测试文件"></a>编写测试文件</h3><p>在家目录下建一个<code>www</code>文件夹:<code>mkdir www</code><br>在<code>www</code>文件夹下新建一个<code>index.php</code>文件,其内容为</p>
+<pre><code>&lt;?php phpinfo();?&gt;</code></pre>
+<p><img src="https://image.3001.net/images/20180501/15251831922563.png"></p>
+<h3 id="启动WebServer"><a href="#启动WebServer" class="headerlink" title="启动WebServer"></a>启动WebServer</h3><pre><code>php -S 127.0.0.1:8080 -t www/</code></pre>
+<p>浏览器访问效果如下:</p>
+<p><img src="https://image.3001.net/images/20180501/15251833614865.png"></p>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>Nginx 是一个高性能的 Web 和反向代理服务器, 它具有有很多非常优越的特性.</p>
+<h3 id="安装nginx包"><a href="#安装nginx包" class="headerlink" title="安装nginx包"></a>安装nginx包</h3><pre><code>pkg install nginx</code></pre>
+<h3 id="切换root用户"><a href="#切换root用户" class="headerlink" title="切换root用户"></a>切换root用户</h3><p>尝试下能不能解析默认的<code>index.html</code>主页<br>这个文件在<code>termux</code>上的默认位置为<code>/data/data/com.termux/files/usr/share/nginx/html/index.html</code><br><strong>切换root用户</strong></p>
+<blockquote>
+<p>默认的普通权限无法启动nginx,需要模拟<code>root</code>权限才可以</p>
+</blockquote>
+<p>没有这个命令的话,手动安装<code>pkg install proot</code>包</p>
+<pre><code>termux-chroot</code></pre>
+<p>进入模拟的root环境</p>
+<h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><p>在模拟的root环境下启动<code>nginx</code></p>
+<pre><code>nginx</code></pre>
+<p><code>termux</code>上<code>nginx</code>默认的端口是<code>8080</code><br>查看下<code>8080</code>端口是否在运行</p>
+<pre><code>netstat -an |grep 8080</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252383228620.png"></p>
+<p>然后手机本地直接访问:<code>http://127.0.0.1:8080</code> 查看下<code>nginx</code>是否正常启动.<br><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180502/15252318618015.png"></p>
+<p>这样一个默认的<code>nginx</code>服务就起来了,但是意义不大,得配置一下可以解析<code>php</code>才会有更大的意义.</p>
+<h3 id="停止nginx服务"><a href="#停止nginx服务" class="headerlink" title="停止nginx服务"></a>停止nginx服务</h3><p>这里是直接杀掉占用端口的进程,具体端口以实际情况为准.</p>
+<pre><code>fuser -k 8080/tcp</code></pre>
+<h3 id="重启nginx服务"><a href="#重启nginx服务" class="headerlink" title="重启nginx服务"></a>重启nginx服务</h3><pre><code>nginx -s reload</code></pre>
+<h2 id="nginx解析PHP"><a href="#nginx解析PHP" class="headerlink" title="nginx解析PHP"></a>nginx解析PHP</h2><p><code>nginx</code>解析<code>PHP</code>这里单独拿出一级标题来叙述,成功解析的话,下面安装<code>wordpress</code>等cms就会轻松很多.<br>nginx本身不能处理PHP，它只是个web服务器，当接收到php请求后发给php解释器处理,nginx一般是把请求发fastcgi管理进程处理,PHP-FPM是一个PHP FastCGI管理器,所以这里得先安装<code>php-fpm</code>.</p>
+<blockquote>
+<p>这里默已经安装了nginx和php,没有安装的话,使用<code>pkg install php nginx</code>来进行安装,参考上面部分进行配置</p>
+</blockquote>
+<h3 id="安装并配置php-fpm"><a href="#安装并配置php-fpm" class="headerlink" title="安装并配置php-fpm"></a>安装并配置php-fpm</h3><p><strong>安装php-fpm</strong></p>
+<pre><code>pkg install php-fpm</code></pre>
+<p><strong>配置php-fpm</strong><br>进入<code>proot</code>环境,然后编辑配置文件<code>www.conf</code>(先进proot可以更方便操作编写相关配置文件)</p>
+<pre><code>termux-chroot
+vim /etc/php-fpm.d/www.conf</code></pre>
+<p>定位搜索<code>listen</code>找到</p>
+<pre><code>listen = /data/data/com.termux/files/usr/var/run/php-fpm.sock</code></pre>
+<p>将其改为</p>
+<pre><code>listen = 127.0.0.1:9000</code></pre>
+<h3 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h3><p>在<code>proot</code>环境下,然后编辑配置文件<code>nginx.conf</code></p>
+<pre><code>vim /etc/nginx/nginx.conf</code></pre>
+<p>下面给出已经配置好的模板文件,直接编辑替换整个文件即可:</p>
+<pre><code>worker_processes  1;
+events &#123;
+    worker_connections  1024;
+&#125;
+
+
+http &#123;
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+
+    server &#123;
+
+        listen       8080;
+        server_name  localhost;
+        root   /data/data/com.termux/files/usr/share/nginx/html;
+        index  index.html index.htm;
+
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   /data/data/com.termux/files/usr/share/nginx/html;
+        &#125;
+
+
+        location ~ \.php$ &#123;
+            root           html;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  /usr/share/nginx/html$fastcgi_script_name;
+            include        fastcgi_params;
+        &#125;
+    &#125;
+
+&#125;</code></pre>
+<p>里面的网站默认路径就是<code>nginx</code>默认的网站根目录:</p>
+<pre><code>root   /data/data/com.termux/files/usr/share/nginx/html;
+fastcgi_param  SCRIPT_FILENAME  /usr/share/nginx/html$fastcgi_script_name;</code></pre>
+<p>要修改网站默认路径的话,只需要修改这两处即可.</p>
+<h3 id="建立php测试文件"><a href="#建立php测试文件" class="headerlink" title="建立php测试文件"></a>建立php测试文件</h3><p>在<code>/usr/share/nginx/html</code>目录下新建一个<code>phpinfo.php</code>文件,其内容是:<code>&lt;?php phpinfo();?&gt;</code></p>
+<p><img src="https://image.3001.net/images/20180502/15252458901236.png"></p>
+<p>went</p>
+<h3 id="启动php-fpm和nginx"><a href="#启动php-fpm和nginx" class="headerlink" title="启动php-fpm和nginx"></a>启动php-fpm和nginx</h3><p>在<code>proot</code>环境下面分别启动<code>php-fpm</code>和<code>nginx</code>,这里的<code>nginx</code>不在<code>proot</code>环境下启动后会出一些问题,感兴趣的可以自己去研究看看.</p>
+<pre><code>php-fpm
+nginx</code></pre>
+<h3 id="浏览器访问测试"><a href="#浏览器访问测试" class="headerlink" title="浏览器访问测试"></a>浏览器访问测试</h3><p>浏览器访问<code>http://127.0.0.1:8080/phpinfo.php</code> 查询<code>php</code>文件是否解析了.</p>
+<p><img src="https://image.3001.net/images/20180502/15252463292840.png"></p>
+<h2 id="搭建WordPress"><a href="#搭建WordPress" class="headerlink" title="搭建WordPress"></a>搭建WordPress</h2><p>这里只是用<code>wordpress</code>做个典型安利来讲解,类似地可以安装<code>Discuz</code>,<code>DeDecms</code>等国内主流的PHP应用程序.</p>
+<h3 id="方法一-使用PHP内置的Web-Server"><a href="#方法一-使用PHP内置的Web-Server" class="headerlink" title="方法一 使用PHP内置的Web Server"></a>方法一 使用PHP内置的Web Server</h3><p>确保安装并配置了<code>php</code>和<code>mariadb</code>,没有安装好的话,参考本文中具体细节部分来进行安装.<br><strong>新建数据库</strong></p>
+<blockquote>
+<p><code>***</code> 这里是mysql的密码</p>
+</blockquote>
+<pre><code>mysql -uroot -p*** -e&quot;create database wordpress;show databases;&quot;</code></pre>
+<p><strong>下载解压wordpress</strong></p>
+<pre><code>wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip
+pkg install unzip
+unzip wordpress-4.9.4-zh_CN.zip</code></pre>
+<p><strong>启动PHP Web Server</strong><br>到解压后的<code>wordpress</code>目录下,执行</p>
+<pre><code>cd wordpress
+php -S 127.0.0.1:8080</code></pre>
+<p>然后浏览器访问<code>127.0.0.1:8080</code>开始进行<code>wordperss</code>的安装.<br><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251896513740.png"></p>
+<h3 id="方法二-nginx-PHP-Mariadb"><a href="#方法二-nginx-PHP-Mariadb" class="headerlink" title="方法二 nginx+PHP+Mariadb"></a>方法二 nginx+PHP+Mariadb</h3><p>上面使用的方法一是直接使用PHP自带的<code>PHP Web Server</code>来运行的,看上去不够严谨~,所以这里用<code>nginx</code>来部署<code>wordpress</code>.<br>确保安装了<code>PHP</code>,<code>php-fpm</code>,<code>mariadb</code>,没有安装的话,参考本文中具体细节部分来进行安装和配置.<br><strong>新建数据</strong>和<strong>wordpress下载</strong>参考上面的<code>方法一</code>,这里主要介绍使用<code>nginx</code>去解析<code>wordpress</code>源文件.<br>当前解压后<code>wordpress</code>的绝对路径是:</p>
+<pre><code>/data/data/com.termux/files/home/wordpress</code></pre>
+<p><strong>编辑nginx.conf</strong></p>
+<pre><code>vim /etc/nginx/nginx.conf</code></pre>
+<p>修改为如下几处:</p>
+<pre><code>root   /data/data/com.termux/files/home/wordpress;
+        index  index.html index.htm index.php;
+
+fastcgi_param  SCRIPT_FILENAME  /data/data/com.termux/files/home/wordpress$fastcgi_script_name;</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15252481801600.png"></p>
+<p><strong>启动php-fpm和nginx</strong><br>在<code>proot</code>环境下面分别启动<code>php-fpm</code>和<code>nginx</code>,这里的<code>nginx</code>不在<code>proot</code>环境下启动后会出一些问题,感兴趣的可以自己去研究看看.</p>
+<pre><code>php-fpm
+nginx</code></pre>
+<p><strong>安装wordpress</strong><br>浏览器访问:<code>http://127.0.0.1:8080/wp-admin/setup-config.php</code>进行安装.<br><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180502/15252484266727.png"></p>
+<p>同理安装其他博客也就轻而易举了,可玩性大大增加~</p>
+<h2 id="搭建hexo博客"><a href="#搭建hexo博客" class="headerlink" title="搭建hexo博客"></a>搭建hexo博客</h2><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><pre><code>npm install hexo-cli -g</code></pre>
+<h3 id="部署hexo博客环境"><a href="#部署hexo博客环境" class="headerlink" title="部署hexo博客环境"></a>部署hexo博客环境</h3><p>然后建立一个目录,然后到这个目录下初始化hexo环境</p>
+<pre><code>mkdir hexoblog  #手动创建一个目录
+cd hexoblog  
+hexo init   #初始化hexo环境
+hexo g      #生成静态文件
+hexo s      #启动hexo</code></pre>
+<p><img src="https://image.3001.net/images/20180502/15251904412057.png"></p>
+<p>然后就跑起来一个最基本的hexo博客<br>关于hexo博客的详细教程,建议搭建去参考hexo官方文档,我这里重点在于 termux 其他的不作过多的叙述.<br><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180502/1525190501582.png!"></p>
+<h2 id="termux-ssh-连接电脑"><a href="#termux-ssh-连接电脑" class="headerlink" title="termux ssh 连接电脑"></a>termux ssh 连接电脑</h2><p>有时候要操作电脑,这个时候有了<code>termux</code>,躺在床上就可以操作电脑了,岂不是美滋滋~~<br>安装<code>openssh</code></p>
+<pre><code>pkg install openssh</code></pre>
+<p>然后就可以直接ssh连接你的电脑了</p>
+<blockquote>
+<p>前提是电脑安装了ssh服务</p>
+</blockquote>
+<pre><code>$ ssh sqlsec@192.168.1.8</code></pre>
+<p>手机连接操作电脑效果图:</p>
+<p><img src="https://image.3001.net/images/20180501/15251634576779.png"></p>
+<h2 id="电脑ssh连接Termux"><a href="#电脑ssh连接Termux" class="headerlink" title="电脑ssh连接Termux"></a>电脑ssh连接Termux</h2><p>emmm 这个需求比较鸡肋,但是写文字嘛就得写全了~</p>
+<p><strong>安装openssh</strong></p>
+<p>同样也需要<code>openssh</code>才可以</p>
+<pre><code>pkg install openssh</code></pre>
+<p><strong>启动sshd</strong></p>
+<p>安装完成后,<code>sshd</code>服务默认没有启动,所以得手动启动下:</p>
+<pre><code>sshd</code></pre>
+<p>因为手机上面低的端口有安全限制,所以这里的<code>openssh</code>默认的<code>sshd</code>默认的服务是<code>8022</code>端口上的.<br><code>ssh</code>的用户名用<code>whoami</code>命令看下.</p>
+<p><img src="https://image.3001.net/images/20180501/15251646896319.png"></p>
+<p>可以看到<code>sshd</code>启动后,端口才可以看到.</p>
+<p><strong>PC端生成公钥</strong></p>
+<p><code>ssh</code>登录是key公钥模式登录,首先在PC端生成秘钥:</p>
+<pre><code>sqlsec@ubuntu:-&gt; ssh-keygen -t rsa</code></pre>
+<p>执行完成后，会在家目录下创建3个文件<br><code>id_rsa</code>, <code>id_rsa.pub</code> , <code>known_hosts</code></p>
+<p><img src="https://image.3001.net/images/20180501/15251652383913.png"></p>
+<p><strong>拷贝公钥到手机</strong></p>
+<p>然后把公钥<code>id_rsa.pub</code>拷贝到手机的<code>data\data\com.termux\files\home\.ssh</code>文件夹中.</p>
+<p><strong>将公钥拷贝到验证文件中</strong></p>
+<p>在<code>Termux</code>下操作</p>
+<pre><code>cat id_rsa.pub &gt; authorized_keys</code></pre>
+<p><img src="https://image.3001.net/images/20180501/15251669649531.png"></p>
+<p><strong>PC端连接手机termux</strong></p>
+<pre><code>sqlsec@ubuntu-&gt; ssh -p8022 u0_a119@192.168.1.3</code></pre>
+<p><strong>效果图</strong></p>
+<p><img src="https://image.3001.net/images/20180501/15251672621339.png"></p>
+<p>pc端连接手机termux 真心鸡肋呀~(忍不住自己吐槽下自己)</p>
+<h2 id="使用Aria2打造自己的下载工具"><a href="#使用Aria2打造自己的下载工具" class="headerlink" title="使用Aria2打造自己的下载工具"></a>使用Aria2打造自己的下载工具</h2><p>Aria2是一个轻量级多协议和多源命令行下载实用工具。它支持 HTTP / HTTPS, FTP, SFTP, bt 和 Metalink。通过内置 Aria2 可以操作 json - rpc 和 xml - rpc。配置好的话还可以高速下载百度云文件.</p>
+<h3 id="安装aria2"><a href="#安装aria2" class="headerlink" title="安装aria2"></a>安装aria2</h3><pre><code>pkg install aria2</code></pre>
+<h3 id="本地启动服务"><a href="#本地启动服务" class="headerlink" title="本地启动服务"></a>本地启动服务</h3><pre><code>aria2c --enable-rpc --rpc-listen-all</code></pre>
+<p>这个<code>rpc</code>服务默认监听的是<code>6800</code>端口,启动后方便下面的Web界面连接操作.</p>
+<h3 id="webui-aria2"><a href="#webui-aria2" class="headerlink" title="webui-aria2"></a>webui-aria2</h3><p>这是个Aria2的热门项目,把Aria2封装在了Web平台,操作起来更加简单便捷。</p>
+<pre><code>git clone https://github.com/ziahamza/webui-aria2.git
+cd webui-aria2
+node node-server.js</code></pre>
+<blockquote>
+<p>需要node来运行,没有安装的 话使用<code>pkg install nodejs</code>来安装</p>
+</blockquote>
+<p>使用效果图 ,速度蛮快的 ,有兴趣的可以研究如何利用<code>aria2</code>来下载百度云文件,等你们来探索.</p>
+<p><img src="https://image.3001.net/images/20180502/15252753579498.png"></p>
+<h2 id="多功能文件分享"><a href="#多功能文件分享" class="headerlink" title="多功能文件分享"></a>多功能文件分享</h2><p><a target="_blank" rel="noopener" href="https://github.com/mholt/caddy">官方项目地址</a></p>
+<h3 id="安装caddy"><a href="#安装caddy" class="headerlink" title="安装caddy"></a>安装caddy</h3><p>官方:到目前为止，在Android上运行Caddy有两种方式：<code>Termux</code>和<code>adb</code>,所以那就顺便折腾一下看看吧:</p>
+<pre><code>cd ~
+curl https://getcaddy.com | bash -s personal http.filemanager</code></pre>
+<p>这一步可能执行要<code>3</code>番钟左右,耐心等待一下即可.</p>
+<h3 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h3><pre><code>cd ~
+vim Caddyfile</code></pre>
+<p>内容如下:</p>
+<pre><code>:8080 &#123;
+filemanager / /sdcard
+timeouts none
+gzip
+&#125;</code></pre>
+<p>这里的<code>8080</code>端口号可以随意指定,因为手机权限比较低,所以一般设置<code>1024</code>以上的端口.</p>
+<p>注意<code>8080</code>和<code>&#123;</code>之间有一个<code>空格</code></p>
+<p>注意<code>/ / sdcard</code> 两个斜杠之间也有一个空格</p>
+<h3 id="启动caddy"><a href="#启动caddy" class="headerlink" title="启动caddy"></a>启动caddy</h3><pre><code>caddy</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253177578355.png"></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>浏览器访问:<code>http://127.0.0.1:8080</code>即可,局域网内的用户访问手机ip地址即可.</p>
+<p>默认账号和密码为<code>admin</code>,<code>admin</code>.</p>
+<p><img src="https://image.3001.net/images/20180503/15253179015491.png"></p>
+<p>可以在设置界面里面 <code>设置简体中文</code>,可以修改<code>更新默认密码</code>.</p>
+<p>可以直接查看文件,也支持<code>Linux</code>命令搜索.</p>
+<p><img src="https://image.3001.net/images/20180503/15253180376304.png"></p>
+<p><img src="https://image.3001.net/images/20180503/1525317995747.png!"></p>
+<h2 id="Termux-api"><a href="#Termux-api" class="headerlink" title="Termux-api"></a>Termux-api</h2><p>Termux:API，用于访问手机硬件,实现更多的可玩性,可以实现如下等功能:</p>
+<ul>
+<li>访问电池信息</li>
+<li>获取相机设备信息</li>
+<li>获取本机设备信息</li>
+<li>获取设置剪贴板信息</li>
+<li>获取通讯录信息</li>
+<li>获取设置手机短信</li>
+<li>拨打号码</li>
+<li>振动设备</li>
+</ul>
+<h3 id="安装Termux-api"><a href="#安装Termux-api" class="headerlink" title="安装Termux-api"></a>安装Termux-api</h3><p><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.termux.api">Termux-api Google Play下载地址</a></p>
+<p><img src="https://image.3001.net/images/20180503/15253115369877.png"></p>
+<blockquote>
+<p>补充一下链接<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22382577">如何在电脑上下载Google play上的应用？</a></p>
+</blockquote>
+<h3 id="安装Termux-api软件包"><a href="#安装Termux-api软件包" class="headerlink" title="安装Termux-api软件包"></a>安装Termux-api软件包</h3><p>安装完<code>Termux-api</code>APP后,<code>Termux</code>里面必须安装对应的包后才可以实现操作手机底层.</p>
+<pre><code>pkg install termux-api</code></pre>
+<p>下面只列举一些可能会用到的,想要获取更多关于<code>Termux-api</code>的话,那就去参考官方文档.</p>
+<h3 id="获取电池信息"><a href="#获取电池信息" class="headerlink" title="获取电池信息"></a>获取电池信息</h3><pre><code>termux-battery-status</code></pre>
+<p>可以看到电池的-健康状况-电量百分比-温度情况等</p>
+<pre><code>&#123;
+  &quot;health&quot;: &quot;GOOD&quot;,
+  &quot;percentage&quot;: 67,
+  &quot;plugged&quot;: &quot;UNPLUGGED&quot;,
+  &quot;status&quot;: &quot;DISCHARGING&quot;,
+  &quot;temperature&quot;: 24.600000381469727
+&#125;</code></pre>
+<h3 id="获取相机信息"><a href="#获取相机信息" class="headerlink" title="获取相机信息"></a>获取相机信息</h3><pre><code>termux-camera-info</code></pre>
+<h3 id="获取与设置剪贴板"><a href="#获取与设置剪贴板" class="headerlink" title="获取与设置剪贴板"></a>获取与设置剪贴板</h3><p><strong>查看当前剪贴板内容</strong></p>
+<pre><code>termux-clipboard-get</code></pre>
+<p><strong>设置新的剪贴板内容</strong></p>
+<pre><code>termux-clipboard-set PHP是世界上最好的语言</code></pre>
+<p><strong>效果演示</strong></p>
+<p><img src="https://image.3001.net/images/20180503/15253126104329.png"></p>
+<h3 id="获取通讯录列表"><a href="#获取通讯录列表" class="headerlink" title="获取通讯录列表"></a>获取通讯录列表</h3><pre><code>termux-contact-list</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253128744968.png"></p>
+<h3 id="查看短信内容列表"><a href="#查看短信内容列表" class="headerlink" title="查看短信内容列表"></a>查看短信内容列表</h3><pre><code>termux-sms-inbox</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253131256045.png"></p>
+<h3 id="发送短信"><a href="#发送短信" class="headerlink" title="发送短信"></a>发送短信</h3><pre><code>termux-sms-send</code></pre>
+<p>支持同时发送多个号码,实现群发的效果,官方介绍如下:</p>
+<pre><code>termux-sms-send -n number(s)  recipient number(s) - separate multiple numbers by commas</code></pre>
+<p><strong>发送测试</strong></p>
+<pre><code>termux-sms-send -n 10001 cxll</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253135795603.png"></p>
+<h3 id="拨打电话"><a href="#拨打电话" class="headerlink" title="拨打电话"></a>拨打电话</h3><pre><code>termux-telephony-call</code></pre>
+<p>拨打电话给<code>10001</code>中国电信,查看下话费有没有欠费~?</p>
+<pre><code>termux-telephony-call 10001</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253140551807.png"></p>
+<h3 id="WiFi相关"><a href="#WiFi相关" class="headerlink" title="WiFi相关"></a>WiFi相关</h3><p><strong>获取当前WiFi连接信息</strong></p>
+<pre><code>termux-wifi-connectioninfo</code></pre>
+<p><strong>获取最近一次WiFi扫描信息</strong></p>
+<pre><code>termux-wifi-scaninfo</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253138725488.png"></p>
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p>直接操作调动系统底层的话,可以通过编程来实现自动定时短信发送,语音播报等 DIY空间无线</p>
+<h2 id="一些无聊的尝试"><a href="#一些无聊的尝试" class="headerlink" title="一些无聊的尝试"></a>一些无聊的尝试</h2><p>一些无聊有趣的版块,如果你是一个正经讲究人,可以跳过这个板块以节约你的阅读时间.</p>
+<h3 id="nyancat-彩虹猫"><a href="#nyancat-彩虹猫" class="headerlink" title="nyancat 彩虹猫"></a>nyancat 彩虹猫</h3><p><strong>彩虹貓</strong>（英语：<strong>Nyan Cat</strong>）是在2011年4月上传在Youtube 的视频，并且迅速爆红于网络，並在2011年YouTube浏览量最高的视频中排名第五.</p>
+<pre><code>pkg install nyancat
+nyancat</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253150101146.png"></p>
+<p>什么鬼<del>完全Get不到国外人的趣味点</del></p>
+<h3 id="终端二维码"><a href="#终端二维码" class="headerlink" title="终端二维码"></a>终端二维码</h3><p>Linux 命令行下的二维码,主要核心是这个网址:<code>http://qrenco.de/</code></p>
+<pre><code>echo &quot;http://www.sqlsec.com&quot; |curl -F-=\&lt;- qrenco.de</code></pre>
+<p><img src="https://image.3001.net/images/20180503/15253248656208.png"></p>
+<p>如果你不嫌无聊的话还可以扫描这个二维码,然后就打开我的博客了.</p>
+<h3 id="终端地图"><a href="#终端地图" class="headerlink" title="终端地图"></a>终端地图</h3><p>一个基于<code>nodejs</code>编写的命令行下的地图.</p>
+<pre><code>npm install mapscii -g
+mapscii</code></pre>
+<p>进入终端地图</p>
+<p><img src="https://image.3001.net/images/20180503/15253279325608.png"></p>
+<p><strong>操作方法</strong></p>
+<ul>
+<li>方向键 移动</li>
+<li><code>a</code>和<code>z</code>键 放大缩小</li>
+<li><code>q</code>键 退出</li>
+</ul>
+<p>终端下的地图!讲究人~ 如果你足够无聊的话,还可以尝试能不能在这个地图上找到自己所在的位置.</p>
+<h2 id="其他没有写到的内容"><a href="#其他没有写到的内容" class="headerlink" title="其他没有写到的内容"></a>其他没有写到的内容</h2><h3 id="安装Linux"><a href="#安装Linux" class="headerlink" title="安装Linux"></a>安装Linux</h3><p>甚至还可以在<code>Termux</code>里面在安装其他的<code>Linux</code>发行版.</p>
+<p>由于本文篇幅已经过长了,这里不在叙述了,感兴趣,能折腾的自己去找一些资料.下面列出目前网友们用<code>Termux</code>可以成功安装的发行版:</p>
+<ul>
+<li>Ubuntu</li>
+<li>Arch</li>
+<li>Fedora</li>
+<li>Kali Nethunter</li>
+</ul>
+<p><strong>Ubuntu</strong></p>
+<p><img src="https://image.3001.net/images/20180503/152531894937.png"></p>
+<p><strong>Fedora</strong></p>
+<p><img src="https://image.3001.net/images/20180503/15253195783545.png"></p>
+<h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p>使用<code>ngrok</code>或者<code>frp</code>可以将<code>Termux</code>上面搭建的网站映射到外网上去,<code>手机建站</code>也不是不可能了.</p>
+<h3 id="Python-Jupyter-Notebook"><a href="#Python-Jupyter-Notebook" class="headerlink" title="Python Jupyter Notebook"></a>Python Jupyter Notebook</h3><p>Jupyter notebook（又称IPython notebook），支持运行超过40种编程语言。Python的一个强大的模块,成功安装的话可以实现比<code>caddy</code>的效果,支持<code>web</code>下的终端操作,支持代码高亮运行.由于这里需要安装大量文件,加上用户需求比较少,这一块感兴趣的话可以自己去探索.</p>
+<p><img src="https://image.3001.net/images/20180503/15253189096532.png"></p>
+<h3 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><ul>
+<li>you-get</li>
+</ul>
+<p>是一款命令行工具，用来下载网页中的视频、音频、图片，支持众多网站，包含 41 家国内主流视频、音乐网站，如 网易云音乐、AB<br>站、百度贴吧、斗鱼、熊猫、爱奇艺、凤凰视频、酷狗音乐、乐视、荔枝FM、秒拍、腾讯视频、优酷土豆、央视网、芒果TV<br>等等，只需一个命令就能直接下载视频、音频以及图片回来，并且可以自动合并视频。而对于有弹幕的网站，比如 B 站，还可以将弹幕下载回来</p>
+<ul>
+<li>BaiduPCS-Go</li>
+</ul>
+<p>仿 Linux shell 文件处理命令的百度网盘命令行客户端.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/iikira/BaiduPCS-Go">项目地址</a></p>
+<p>可以完美在<code>Termux</code>上运行.</p>
+<p><img src="https://image.3001.net/images/20180503/15253199952050.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>相对来说 国外的Termux DIY的氛围比国内好很多,Youtube上的视频都有很高的播放量:</p>
+<p><img src="https://image.3001.net/images/20180503/1525326786911.png"></p>
+<p>------ 往事如烟，伴着远去的步伐而愈加朦胧。未来似雾，和着前进的风儿而逐渐清晰!</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1970/01/01/Termux_Learning/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Note_Taking" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -312,7 +1036,7 @@
 <pre><code>createpl_linux</code></pre>
 <p>for the detailed usage about the program.</p>
 <p>After generating the complex models, users may also use a third-party program like<a target="_blank" rel="noopener" href="https://modbase.compbio.ucsf.edu/foxs/">FoXS</a>to calculate the SAXS CHI values of the models based on their small-angle X-ray scattering (SAXS) profile file.</p>
-<p>© Lab of Biophysics and Molecular Modeling, <a href="mailto:&#x68;&#x75;&#97;&#x6e;&#103;&#108;&#97;&#98;&#64;&#x68;&#x75;&#115;&#116;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;">&#x68;&#x75;&#97;&#x6e;&#103;&#108;&#97;&#98;&#64;&#x68;&#x75;&#115;&#116;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;</a></p>
+<p>© Lab of Biophysics and Molecular Modeling, <a href="mailto:&#x68;&#x75;&#x61;&#x6e;&#103;&#x6c;&#97;&#x62;&#x40;&#x68;&#x75;&#115;&#116;&#46;&#101;&#x64;&#117;&#46;&#99;&#110;">&#x68;&#x75;&#x61;&#x6e;&#103;&#x6c;&#97;&#x62;&#x40;&#x68;&#x75;&#115;&#116;&#46;&#101;&#x64;&#117;&#46;&#99;&#110;</a></p>
 
       
 
@@ -326,6 +1050,60 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/1970/01/01/PPI/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Untitled" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  
+</div>
+
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1970/01/01/Untitled/">Expand all items >></a>
         </p>
       
 
@@ -423,60 +1201,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/1970/01/01/media/ht/ht_5T/Database/Virus/Bacteriophage/PhagesDB/Figures/Institutions/14169_mc_centered_rgb.png/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Untitled" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  
-</div>
-
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1970/01/01/Untitled/">Expand all items >></a>
         </p>
       
 
@@ -18105,6 +18829,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -18117,15 +18845,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18166,18 +18902,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18333,22 +19057,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -18389,11 +19097,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18402,6 +19118,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18585,18 +19309,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">File manager</a>
               </li>
              
@@ -18617,15 +19329,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18653,7 +19373,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18666,6 +19386,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18693,11 +19417,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18709,11 +19433,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18737,23 +19461,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">疾病负担</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BOD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18774,6 +19486,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">疾病负担</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BOD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18833,19 +19557,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -18985,15 +19709,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
               </li>
              
               <li class="article-tag-list-item">
