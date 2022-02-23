@@ -158,6 +158,111 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210121" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/21/20210121/">20210121</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/21/20210121/" class="archive-article-date">
+  	<time datetime="2021-01-21T15:42:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210121</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-set-%E2%80%9Cdate-modified%E2%80%9D-by-%E2%80%9Cdate-taken%E2%80%9D-with-Exiftool-Photography-Stack-Exchange"><span class="toc-number">2.</span> <span class="toc-text">How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#96;date +%Y%m%d&#96;</span><br><span class="line">printf &quot;\n\n# Working direcotries\n\n&quot; &gt;&gt; &#96;Date&#96;.md</span><br><span class="line">subl &#96;date +%Y%m%d&#96;.md</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125; # moving &#96;.xmind&#96; to there</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125; # organize documents in schedule</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1; pcmanfm -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety; pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange"><a href="#How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange" class="headerlink" title="How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange"></a><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/69188/how-to-set-date-modified-by-date-taken-with-exiftool">How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange</a></h1><p><strong>to be solved</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/103767/how-can-i-rename-files-to-match-their-exif-created-date">metadata - How can I rename files to match their EXIF “created date”? - Photography Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">FileName and Directory tags</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7923.0">Change file(s) created date from file name?</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/faq.html">ExifTool FAQ</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=8477.0">CreateDate vs CreationDate</a></li>
+<li><a target="_blank" rel="noopener" href="https://perlmaven.com/image-exiftool-how-to-change-file-creation-date">Image::ExifTool: How to change file creation date?</a></li>
+<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/27245/is-there-a-free-program-to-batch-change-photo-files-date-to-match-exif">metadata - Is there a free program to (batch) change photo file’s date to match EXIF? - Photography Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7831.0">Change filemodifydate to datetimeoriginal if it’s not the same</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ExifTool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; DIR</span><br><span class="line">#</span><br><span class="line">exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext jpg .</span><br><span class="line">#exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext mp3 .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension jpg -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%-.3nc.%%e &quot;$@&quot;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension mp3 -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%_.1nc.%%e &quot;$@&quot;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Exiftool</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/21/20210121/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210120" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1209,108 +1314,6 @@
 
 
   
-    <article id="post-20210106" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/06/20210106/">20210106</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/06/20210106/" class="archive-article-date">
-  	<time datetime="2021-01-06T01:20:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210106</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">写在最前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E7%9A%84%E7%97%9B%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">日志的痛点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bashrc-editing"><span class="toc-number">3.</span> <span class="toc-text">.bashrc editing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vision"><span class="toc-number">3.1.</span> <span class="toc-text">Vision</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dell"><span class="toc-number">3.2.</span> <span class="toc-text">Dell</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Flatpak"><span class="toc-number">4.</span> <span class="toc-text">Flatpak</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-I-Put-My-Mind-Under-Version-Control-by-Bryan-Jenks-Analytics-Vidhya-Medium"><span class="toc-number">5.</span> <span class="toc-text">How I Put My Mind Under Version Control | by Bryan Jenks | Analytics Vidhya | Medium</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">6.</span> <span class="toc-text">Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Uploading-HTML-CSS-to-GitHub"><span class="toc-number">7.</span> <span class="toc-text">Uploading HTML&#x2F;CSS to GitHub</span></a></li></ol>
-</div>
-
-        <h1 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h1><p>　　告别谷歌应该是暂时的，实在无法忍受因为Google Calendar而反复的FQ。2021年开始使用Microsoft的三件宝：</p>
-<ul>
-<li>Outlook (Calendar included)</li>
-<li>ToDo</li>
-<li>OneNote</li>
-</ul>
-<h1 id="日志的痛点"><a href="#日志的痛点" class="headerlink" title="日志的痛点"></a>日志的痛点</h1><p>　　<code>Obsidian.md</code>提供了一种构建知识网络的方法，网络构建与日志（流水帐）类记录是矛盾的。特别是针对旧的记录的回溯，可能更是麻烦。可能电子化的Zettelkasten（方案，能够解决类似</p>
-<h1 id="bashrc-editing"><a href="#bashrc-editing" class="headerlink" title=".bashrc editing"></a><code>.bashrc</code> editing</h1><h2 id="Vision"><a href="#Vision" class="headerlink" title="Vision"></a>Vision</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias D&#x3D;&#39;mate-terminal --geometry&#x3D;80x24+600+500 --working-directory&#x3D;$&#123;HOME&#125;&#x2F;Documents; exit&#39;</span><br><span class="line">alias d&#x3D;&#39;mate-terminal --geometry&#x3D;80x24+1500+500 --working-directory&#x3D;$&#123;HOME&#125;&#x2F;Downloads&#x2F;; exit&#39;</span><br></pre></td></tr></table></figure>
-<h2 id="Dell"><a href="#Dell" class="headerlink" title="Dell"></a>Dell</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias D&#x3D;&#39;mate-terminal --geometry&#x3D;80x24+10+100 --working-directory&#x3D;$&#123;HOME&#125;&#x2F;Documents; exit&#39;</span><br><span class="line">alias d&#x3D;&#39;mate-terminal --geometry&#x3D;80x24+700+100 --working-directory&#x3D;$&#123;HOME&#125;&#x2F;Downloads&#x2F;; exit&#39;</span><br></pre></td></tr></table></figure>
-<h1 id="Flatpak"><a href="#Flatpak" class="headerlink" title="Flatpak"></a>Flatpak</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://flatpak.org/">Flatpak - the future of application distribution</a></li>
-<li><a target="_blank" rel="noopener" href="https://flatpak.org/setup/Ubuntu/">Flatpak/Ubuntu</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flatpak</span><br><span class="line">sudo apt install gnome-software-plugin-flatpak</span><br><span class="line">#</span><br><span class="line"># Add the Flathub repository</span><br><span class="line">#</span><br><span class="line">flatpak remote-add --if-not-exists flathub https:&#x2F;&#x2F;flathub.org&#x2F;repo&#x2F;flathub.flatpakrepo</span><br><span class="line"># restart and install app</span><br><span class="line">#</span><br><span class="line"># Obsidian Installation</span><br><span class="line">flatpak install flathub md.obsidian.Obsidian</span><br><span class="line">#</span><br><span class="line"># Run</span><br><span class="line">flatpak run md.obsidian.Obsidian</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog&#x2F;source&#x2F;_posts&#x2F;</span><br><span class="line">flatpak run md.obsidian.Obsidian $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;lHT_Media</span><br><span class="line">flatpak run md.obsidian.Obsidian $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="How-I-Put-My-Mind-Under-Version-Control-by-Bryan-Jenks-Analytics-Vidhya-Medium"><a href="#How-I-Put-My-Mind-Under-Version-Control-by-Bryan-Jenks-Analytics-Vidhya-Medium" class="headerlink" title="How I Put My Mind Under Version Control | by Bryan Jenks | Analytics Vidhya | Medium"></a><a target="_blank" rel="noopener" href="https://medium.com/analytics-vidhya/how-i-put-my-mind-under-version-control-24caea37b8a5">How I Put My Mind Under Version Control | by Bryan Jenks | Analytics Vidhya | Medium</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subl &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;README.md</span><br><span class="line">subl &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Obsidian&#x2F;README.md</span><br></pre></td></tr></table></figure>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias Hexo&#x3D;&#39;cd &#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog; hexo clean; hexo g; hexo d&#39;</span><br><span class="line">alias Blog&#x3D;&#39;cd $&#123;HOME&#125;&#x2F;Downloads&#x2F;; subl &#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;README.md; mate-terminal --geometry&#x3D;80x24+700+100 --working-directory&#x3D;&#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;; mate-terminal --tab --working-directory&#x3D;&#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog&#x2F;; mate-terminal --tab --working-directory&#x3D;&#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog&#x2F;source&#x2F;_posts&#x2F;; cd &#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog; hexo clean; hexo g; hexo d; exit; pcmanfm -n &#x2F;media&#x2F;$&#123;USER&#125;&#x2F;ht_5T&#x2F;Management&#x2F;Blog&#x2F;Blog&#x2F;source&#x2F;_posts&#x2F;&#39;</span><br></pre></td></tr></table></figure>
-<h1 id="Uploading-HTML-CSS-to-GitHub"><a href="#Uploading-HTML-CSS-to-GitHub" class="headerlink" title="Uploading HTML/CSS to GitHub"></a>Uploading HTML/CSS to GitHub</h1><p>以下链接，没有实施。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/misswuxl/article/details/78198489">github：提交本地html到github_misswuxl的博客-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43886356/article/details/105815544">上传本地网页到github网址完整详细步骤_芝士-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/573144c45039">上传HTML文件到github上面 - 简书</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/06/20210106/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/14/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/16/">Next &amp;raquo;</a>
@@ -1430,10 +1433,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1443,6 +1442,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1774,22 +1777,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
@@ -1894,6 +1881,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -1907,6 +1910,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1930,23 +1945,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1971,10 +1978,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2018,11 +2021,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2034,11 +2037,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2062,11 +2065,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2075,18 +2078,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2099,6 +2090,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">

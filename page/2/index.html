@@ -158,6 +158,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20220107" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/07/20220107/">20220107</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/07/20220107/" class="archive-article-date">
+  	<time datetime="2022-01-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220107</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-zenhei&#x2F;fonts-wqy-zenhei_0.9.45-7ubuntu1_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-microhei&#x2F;fonts-wqy-microhei_0.2.0-beta-3_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line"># </span><br><span class="line">#########################################################################</span><br><span class="line"># knitr powerpoint</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Conferences&#x2F;Template</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="miRDB"><a href="#miRDB" class="headerlink" title="miRDB"></a>miRDB</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;miR_Base&#x2F;miRDB</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v6.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v5.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v4.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v3.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v2.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v1.0_prediction_result.txt.gz</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">lh &#96;locate -b NC_001806_HSV-1.fas&#96;</span><br><span class="line">locate -b NC_001806_HSV-1.fas</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG1&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG2&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025_1255&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Analysis&#x2F;20220109</span><br><span class="line"></span><br><span class="line">DB&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;MagicBLAST&#x2F;HSV1_Ref</span><br><span class="line">Query&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Clean_Ctrl.fa</span><br><span class="line"># </span><br></pre></td></tr></table></figure>
+<p>Ref=<br>Seq=<br>Seq_Base=<code>basename $&#123;Seq&#125;</code>; Ref_Base=<code>basename $&#123;Ref%.*&#125;</code>; BAM=${Seq_Base%.<em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code>.bam<br>magicblast -query ${Seq} -subject ${Ref} -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; ${Seq_Base%.</em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code><em>Mapped.bam # 序列中绝对禁止<code>-</code>，这类符号是经过MSA产生的<br>BAM=${Seq_Base%.*}_vs</em><code>basename $&#123;Ref_Base&#125;</code>_Mapped.bam<br>samtools sort $BAM &gt; “${BAM%.bam}.sort.bam”<br>samtools index “${BAM%.bam}.sort.bam”</p>
+<p>Query=/media/ht/ht_5T/Work/Projects/Exosome/RNA-Seq/20211203/Clean_HSV1.fa</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line"></span><br><span class="line">- [Sambamba: process your BAM data faster!](http:&#x2F;&#x2F;lomereiter.github.io&#x2F;sambamba&#x2F;)</span><br><span class="line"></span><br><span class="line"># **wkhtmltopdf**</span><br><span class="line"></span><br><span class="line">- [wkhtmltopdf](https:&#x2F;&#x2F;wkhtmltopdf.org&#x2F;downloads.html)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>i=<a target="_blank" rel="noopener" href="https://wkhtmltopdf.org/">https://wkhtmltopdf.org/</a><br>wkhtmltopdf ${i} <code>basename $&#123;i&#125;</code>.pdf<br>```</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/07/20220107/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20211210" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1443,172 +1529,6 @@ sys    0m0.661s</code></pre>
 
 
   
-    <article id="post-20210929" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/29/20210929/">20210929</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/29/20210929/" class="archive-article-date">
-  	<time datetime="2021-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210929</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VeePN-is-back"><span class="toc-number">2.</span> <span class="toc-text">VeePN is back</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QQ-in-Linux"><span class="toc-number">3.</span> <span class="toc-text">QQ in Linux</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#add-rename-command-in-termux-YouTube"><span class="toc-number">4.</span> <span class="toc-text">add rename command in termux - YouTube</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WINE-installation"><span class="toc-number">5.</span> <span class="toc-text">WINE installation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenVPN"><span class="toc-number">6.</span> <span class="toc-text">OpenVPN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenVPN3Linux-%E2%80%93-OpenVPN-Community"><span class="toc-number">6.1.</span> <span class="toc-text">OpenVPN3Linux – OpenVPN Community</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage-OpenVPN3"><span class="toc-number">6.2.</span> <span class="toc-text">Usage&#x2F;OpenVPN3</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#URL"><span class="toc-number">7.</span> <span class="toc-text">URL</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="VeePN-is-back"><a href="#VeePN-is-back" class="headerlink" title="VeePN is back"></a>VeePN is back</h1><h1 id="QQ-in-Linux"><a href="#QQ-in-Linux" class="headerlink" title="QQ in Linux"></a>QQ in Linux</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/linweilian03/Deepin-QQ-AppImage">github.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/askme765cs/Wine-QQ-TIM">GitHub - askme765cs/Wine-QQ-TIM: 提供在Linux上运行最新版腾讯QQ与TIM的解决方案 Easiest Way to Run QQ&amp;TIM on Linux</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Hackerl/Wine_Appimage/releases">Releases · Hackerl/Wine_Appimage · GitHub</a></li>
-</ul>
-<hr>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/wszqkzqk/deepin-wine-ubuntu/issues/155">dpkg: 处理软件包 deepin.com.qq.office:i386 (–install)时出错： 依赖关系问题 - 仍未被配置 · Issue #155 · wszqkzqk/deepin-wine-ubuntu · GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41548910/article/details/114751964">Ubuntu 20.10 wine、微信、QQ安装教程_修谭的博客-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Hackerl/Wine_Appimage/releases">Releases · Hackerl/Wine_Appimage · GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/askme765cs/Wine-QQ-TIM/tree/master/Wine-QQ8.9.3">Wine-QQ-TIM/Wine-QQ8.9.3 at master · askme765cs/Wine-QQ-TIM · GitHub</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/linweilian03/Deepin-QQ-AppImage">GitHub - linweilian03/Deepin-QQ-AppImage</a></li>
-</ul>
-<h1 id="add-rename-command-in-termux-YouTube"><a href="#add-rename-command-in-termux-YouTube" class="headerlink" title="add rename command in termux - YouTube"></a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=0Mu0dXwVazs">add rename command in termux - YouTube</a></h1><ul>
-<li>CLI, not for batch renaming</li>
-</ul>
-<h1 id="WINE-installation"><a href="#WINE-installation" class="headerlink" title="WINE installation"></a>WINE installation</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41548910/article/details/114751964">Ubuntu 20.10 wine、微信、QQ安装教程_修谭的博客-CSDN博客</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#如果你使用的是64位Ubuntu，则先要开启32位安装环境：</span><br><span class="line">sudo dpkg --add-architecture i386</span><br><span class="line">#然后需要下载一个PGP公钥以识别软件仓库：</span><br><span class="line">wget -nc https:&#x2F;&#x2F;dl.winehq.org&#x2F;wine-builds&#x2F;Release.key</span><br><span class="line">#添加公钥并添加软件源：</span><br><span class="line">sudo apt-key add Release.key</span><br><span class="line">sudo apt-add-repository https:&#x2F;&#x2F;dl.winehq.org&#x2F;wine-builds&#x2F;ubuntu&#x2F;</span><br><span class="line">#更新软件列表</span><br><span class="line">sudo apt-get update</span><br><span class="line">#之后就可以选择Wine版本安装了： （选一种）</span><br><span class="line">#稳定版（Stable branch）安装命令</span><br><span class="line">sudo apt-get install --install-recommends winehq-stable</span><br><span class="line">#开发版（Development branch)安装命令</span><br><span class="line">sudo apt-get install --install-recommends winehq-devel</span><br><span class="line">#发布版（Staging branch）安装命令</span><br><span class="line">sudo apt-get install --install-recommends winehq-staging</span><br><span class="line">#</span><br><span class="line">###################################################################</span><br><span class="line">#</span><br><span class="line">备注：在执行sudo apt-get update时，可能会报错如下：</span><br><span class="line"># </span><br><span class="line">W: GPG 错误：https:&#x2F;&#x2F;dl.winehq.org&#x2F;wine-builds&#x2F;ubuntu groovy InRelease: 由于没有公钥，无法验证下列签名： NO_PUBKEY 76F1A20FF987672F</span><br><span class="line"></span><br><span class="line">解决办法：</span><br><span class="line"></span><br><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 76F1A20FF987672F</span><br><span class="line">注意最后一串数字字母改成自己的那个失效的：NO_PUBKEY 76F1A20FF987672F</span><br><span class="line"></span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「修谭」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41548910&#x2F;article&#x2F;details&#x2F;114751964</span><br></pre></td></tr></table></figure>
-<h1 id="OpenVPN"><a href="#OpenVPN" class="headerlink" title="OpenVPN"></a>OpenVPN</h1><h2 id="OpenVPN3Linux-–-OpenVPN-Community"><a href="#OpenVPN3Linux-–-OpenVPN-Community" class="headerlink" title="OpenVPN3Linux – OpenVPN Community"></a><a target="_blank" rel="noopener" href="https://community.openvpn.net/openvpn/wiki/OpenVPN3Linux?_ga=2.268770545.1210878740.1633090889-1342217565.1633090887&__cf_chl_jschl_tk__=pmd_i5BaYadVg_v9N7RnuPN2M8zkpOTIn8Tw1P0oTM6J5vU-1633090969-0-gqNtZGzNAjujcnBszQm9">OpenVPN3Linux – OpenVPN Community</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Installation</span><br><span class="line">sudo apt install apt-transport-https</span><br><span class="line">wget https:&#x2F;&#x2F;swupdate.openvpn.net&#x2F;repos&#x2F;openvpn-repo-pkg-key.pub</span><br><span class="line"># Download https:&#x2F;&#x2F;swupdate.openvpn.net&#x2F;repos&#x2F;openvpn-repo-pkg-key.pub</span><br><span class="line">sudo apt-key add openvpn-repo-pkg-key.pub</span><br><span class="line"># </span><br><span class="line"># Download</span><br><span class="line"># https:&#x2F;&#x2F;swupdate.openvpn.net&#x2F;community&#x2F;openvpn3&#x2F;repos&#x2F;openvpn3-focal.list</span><br><span class="line"># </span><br><span class="line">sudo mv openvpn3-focal.list &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;openvpn3.list</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install openvpn3</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://community.openvpn.net/openvpn/wiki/OpenVPN3Linux?_ga=2.268770545.1210878740.1633090889-1342217565.1633090887&__cf_chl_jschl_tk__=pmd_i5BaYadVg_v9N7RnuPN2M8zkpOTIn8Tw1P0oTM6J5vU-1633090969-0-gqNtZGzNAjujcnBszQm9">OpenVPN3Linux – OpenVPN Community</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=ubuntu+openvpn3+installation&oq=ubuntu+openvpn3+installation&aqs=chrome..69i57j0i10l9.5329j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8">ubuntu openvpn3 installation - Google Search</a></li>
-<li><a target="_blank" rel="noopener" href="https://support.ipvanish.com/hc/en-us/articles/360007947233-OpenVPN-Setup-via-GUI-in-Ubuntu-18">OpenVPN Setup via GUI in Ubuntu 18 – IPVanish</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/OpenVPN/openvpn3-linux">GitHub - OpenVPN/openvpn3-linux: OpenVPN 3 Linux client</a></li>
-<li><a target="_blank" rel="noopener" href="https://community.openvpn.net/openvpn/wiki/OpenVPN3Linux">OpenVPN3Linux – OpenVPN Community</a></li>
-<li><a target="_blank" rel="noopener" href="https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/">OpenVPN 3 Client For Linux | OpenVPN Cloud</a></li>
-</ul>
-<h2 id="Usage-OpenVPN3"><a href="#Usage-OpenVPN3" class="headerlink" title="Usage/OpenVPN3"></a>Usage/OpenVPN3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls *.ovpn</span><br><span class="line"># </span><br><span class="line">i&#x3D;</span><br><span class="line">sudo openvpn3 session-start --config $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">pgrep openvpn | xargs sudo kill -9</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.freeopenvpn.org/private.php?cntid=Thailand&lang=en">Free OpenVPN - Private free VPN servers in Thailand</a></li>
-</ul>
-<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=wine%20%E5%90%AF%E5%8A%A8%20QQ&qs=n&form=QBRE&sp=-1&pq=wine%20qq&sc=3-7&sk=&cvid=AF84D5D7524F4DA0B05FB40F6D679375">wine 启动 QQ - 国际版 Bing</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhunong/p/13536110.html">ubuntu安装wine并运行QQ、微信 - TinaRoot - 博客园</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ubuntukylin.com/ukylin/forum.php?mod=viewthread&tid=30511">Wine安装最新版QQ(8.9.2)的简单教程 -</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34638161/article/details/81271977">wine 安装（ubuntu中安装windows下软件）_独钓寒江雪-CSDN博客_ubuntu wine</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangchangshuai0010/article/details/12057251?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link">Ubuntu下Wine使用教程_忆、瞻的专栏-CSDN博客_wine使用教程</a></li>
-<li><a target="_blank" rel="noopener" href="https://download.csdn.net/download/weixin_44024298/12918567">deepin.com.qq.im_9.1.8deepin0_i386.deb_deepin.com.qq.im-Linux其他资源-CSDN文库</a></li>
-<li><a target="_blank" rel="noopener" href="https://bbs.deepin.org/post/183719#mod=viewthread&tid=183719">[官方测试开始] QQ 9.1.8_deepin-wine－论坛－深度科技</a></li>
-<li><a target="_blank" rel="noopener" href="https://send.firefox.com/download/39309f1acee8e43d/#GiHKbqVKeIpIVpJsSia6CQ">send.firefox.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hskcool/p/14227695.html">（1 条打赏消息） - 【Linux】使用wine安装QQ/微信等常用软件</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/drivery/article/details/108905524#:~:text=Your%20system%20is%20ready%20for%20Wine%20installation.%20Use,sudo%20apt%20update%20sudo%20apt%20install%20--install-recommends%20winehq-stable">如何在Ubuntu 20.04上安装Wine 5.0_drivery的专栏-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/w851685279/article/details/105886219?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2.no_search_link">ubuntu20.04安装 deepin-wine_程序猿的博客-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.163.com/dy/article/GAU8D1920511DSSR.html">我们用Windows官方跑了跑Linux GUI，不愧是“胶水操作系统”|windows|linux|应用程序|微软_网易订阅</a></li>
-<li><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1657228465843949939&wfr=spider&for=pc">Wine5.0更新，这对Mac、Linux用户意味着什么？（附升级教程）</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/41884034">wine和crossover有什么本质区别？ - 知乎</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.qq.com/">腾讯首页</a></li>
-<li><a target="_blank" rel="noopener" href="https://tim.qq.com/download.html">TIM-下载</a></li>
-<li><a target="_blank" rel="noopener" href="https://im.qq.com/download">I’m QQ - 每一天，乐在沟通</a></li>
-<li><a target="_blank" rel="noopener" href="https://im.qq.com/pcqq">QQ PC版官方网站</a></li>
-<li><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/hotliu/Log">GitHub - hotliu/Log</a></li>
-<li><a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=notion%20%E5%88%B6%E4%BD%9C%E6%A8%A1%E6%9D%BF&qs=n&form=QBRE&sp=-1&pq=notion%20%E5%88%B6%E4%BD%9C&sc=0-9&sk=&cvid=9BB871B2F6F847F8A7229C9F07D4BEDC">notion 制作模板 - 国际版 Bing</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ifanr.com/app/1168845">高效工作必备，手把手教你玩转 Notion 模板（附下载） | 爱范儿</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.vantopics.com/zh_sc/notion-%e6%a8%a1%e6%9d%bf-%e5%a6%82%e4%bd%95%e5%88%9b%e5%bb%ba%e5%92%8c%e4%bf%ae%e6%94%b9-template-%ef%bc%9f/">Notion 模板 | 如何创建和修改 template ？ - VanTopics 大温话题</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/hotliu/Log">GitHub - hotliu/Log</a></li>
-<li><a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=station%20%E8%81%9A%E5%90%88%E8%BD%AF%E4%BB%B6%20%E5%AE%89%E5%8D%93&qs=n&form=QBRE&sp=-1&pq=station%20%E8%81%9A%E5%90%88%E8%BD%AF%E4%BB%B6&sc=0-12&sk=&cvid=18811ADF46B247379791C8EE47033AC7">station 聚合软件 安卓 - 国际版 Bing</a></li>
-<li><a target="_blank" rel="noopener" href="http://blog.sixgod.net/gameinfo/?id=322129">聚合阅读软件下载-聚合阅读安卓版下载 _安卓网</a></li>
-<li><a target="_blank" rel="noopener" href="https://sspai.com/post/52669#!">最佳网页聚合「工作站」：Station | Best Of - 少数派</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/getstation/desktop-app/releases/download/v2.0.9/Station.dmg">github.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/getstation/desktop-app#ubuntu">GitHub - getstation/desktop-app: One app to rule them all!</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ifanr.com/app/1168845">高效工作必备，手把手教你玩转 Notion 模板（附下载） | 爱范儿</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.vantopics.com/zh_sc/notion-%e6%a8%a1%e6%9d%bf-%e5%a6%82%e4%bd%95%e5%88%9b%e5%bb%ba%e5%92%8c%e4%bf%ae%e6%94%b9-template-%ef%bc%9f/">Notion 模板 | 如何创建和修改 template ？ - VanTopics 大温话题</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">openvpn</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">openvpn3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WINE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/29/20210929/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1728,10 +1648,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1741,6 +1657,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2072,22 +1992,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
@@ -2192,6 +2096,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -2205,6 +2125,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2228,23 +2160,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2269,10 +2193,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2316,11 +2236,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2332,11 +2252,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2360,11 +2280,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2373,18 +2293,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2397,6 +2305,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">

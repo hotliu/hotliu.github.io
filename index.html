@@ -158,6 +158,124 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20220223" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/23/20220223/">20220223</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/23/20220223/" class="archive-article-date">
+  	<time datetime="2022-02-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220223</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Remove-silent-part-in-a-audio-document"><span class="toc-number">2.</span> <span class="toc-text">Remove silent part in a audio document</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Set-Nemo-as-Default-File-Manager-in-Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">How to Set Nemo as Default File Manager in Ubuntu</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Nemo-File-Manager-in-Ubuntu-Unity-Desktop"><span class="toc-number">3.1.</span> <span class="toc-text">Install Nemo File Manager in Ubuntu (Unity Desktop)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-dconf-tools"><span class="toc-number">3.2.</span> <span class="toc-text">Install dconf-tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-Nemo-as-Default-File-Manager"><span class="toc-number">3.3.</span> <span class="toc-text">Set Nemo as Default File Manager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-Nautilus-Back-as-the-Default-File-Manager"><span class="toc-number">3.4.</span> <span class="toc-text">Set Nautilus Back as the Default File Manager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Un-install-Nemo"><span class="toc-number">3.5.</span> <span class="toc-text">Un-install Nemo</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="Remove-silent-part-in-a-audio-document"><a href="#Remove-silent-part-in-a-audio-document" class="headerlink" title="Remove silent part in a audio document"></a>Remove silent part in a audio document</h1><p><strong>Not confirmed</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/124734/how-to-remove-silence-part-from-mp3-that-is-extracted-from-tv-drama">ffmpeg - How to remove silence part from mp3 that is extracted from tv drama - Unix &amp; Linux Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://myconverters.com/posts/remove-background-noise-from-audio/">5 Ways to Remove Background Noise from Audio 2021</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25697596/using-ffmpeg-with-silencedetect-to-remove-audio-silence#:~:text=Use%20the%20silenceremove%20filter.%20This%20removes%20silence%20from,-i%20input.mp3%20-af%20silenceremove%3D1%3A0%3A-50dB%20output.mp3%20This%20removes%20silence">using FFMPEG with silencedetect to remove audio silence - Stack Overflow</a></li>
+</ul>
+<p>Use the <code>silenceremove</code> filter. <strong>This removes silence from the audio track only - it will leave the video unedited, i.e., things will go out of sync</strong></p>
+<p>Its arguments are a little cryptic.</p>
+<p>An example</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i input.mp3 -af silenceremove&#x3D;1:0:-50dB output.mp3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>This removes silence</p>
+<ul>
+<li>  at the beginning (indicated by the first argument <code>1</code>)</li>
+<li>  with minimum length zero (indicated by the second argument <code>0</code>)</li>
+<li>  silence is classified as anything under -50 decibels (indicated by <code>50dB</code>).</li>
+</ul>
+<p>Documentation: <a target="_blank" rel="noopener" href="https://ffmpeg.org/ffmpeg-filters.html#silenceremove">FFMPEG silence remove filter</a></p>
+<p>Also anyone looking to find the right value to classify silence as may wish to look into normalising their input audio volume to <code>0dB</code> first, to do this in ffmpeg see <a target="_blank" rel="noopener" href="https://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg">this answer</a>.</p>
+<p><strong>Edit</strong></p>
+<p>As pointed out by @mems, to detect whether your version of ffmpeg has the filter run</p>
+<p><code>ffmpeg -hide_banner -filters | grep silenceremove</code></p>
+<p>if you have the filter it’ll output something like</p>
+<p><code>silenceremove A-&gt;A Remove silence</code></p>
+<p>After reading the FFmpeg silenceremove <a target="_blank" rel="noopener" href="https://ffmpeg.org/ffmpeg-filters.html#silenceremove">documentation</a>, this is how you remove silence at the beginning and end of an audio file (keeps silence in the middle).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i &quot;INPUT.mp3&quot; -af silenceremove&#x3D;start_periods&#x3D;1:stop_periods&#x3D;1:detection&#x3D;peak &quot;OUTPUT.mp3&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="How-to-Set-Nemo-as-Default-File-Manager-in-Ubuntu"><a href="#How-to-Set-Nemo-as-Default-File-Manager-in-Ubuntu" class="headerlink" title="How to Set Nemo as Default File Manager in Ubuntu"></a>How to Set Nemo as Default File Manager in Ubuntu</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://sourcedigit.com/13826-set-nemo-default-file-manager-ubuntu/">How to Set Nemo as Default File Manager in Ubuntu</a></li>
+</ul>
+<p>By Sourabh / June 26, 2016Category: <a target="_blank" rel="noopener" href="https://sourcedigit.com/how-to/">How To</a>, <a target="_blank" rel="noopener" href="https://sourcedigit.com/ubuntu/">Ubuntu</a></p>
+<p>How to set Nemo as default file manager in Ubuntu. Change default filemanager to Nemo and make Nemo the default file browser in Ubuntu. I assume you have installed the Nemo File Manager. If not, you can follow the link given below:</p>
+<h2 id="Install-Nemo-File-Manager-in-Ubuntu-Unity-Desktop"><a href="#Install-Nemo-File-Manager-in-Ubuntu-Unity-Desktop" class="headerlink" title="Install Nemo File Manager in Ubuntu (Unity Desktop)"></a><a target="_blank" rel="noopener" href="https://sourcedigit.com/19218-install-the-latest-nemo-file-manager-on-ubuntu-via-ppa/">Install Nemo File Manager in Ubuntu (Unity Desktop)</a></h2><p>You must stop Nautilus from handling the desktop icons and use Nemo file manager. To do so, use the following commands:</p>
+<h2 id="Install-dconf-tools"><a href="#Install-dconf-tools" class="headerlink" title="Install dconf-tools"></a>Install dconf-tools</h2><p><code>  sudo apt-get install dconf-tools   gsettings set org.gnome.desktop.background show-desktop-icons false  </code></p>
+<p>Nemo is enabled by default to draw the desktop icons. Simply, start Nemo or restart the session (log out and log in).</p>
+<h2 id="Set-Nemo-as-Default-File-Manager"><a href="#Set-Nemo-as-Default-File-Manager" class="headerlink" title="Set Nemo as Default File Manager"></a>Set Nemo as Default File Manager</h2><p>To set Nemo as the default file manager and replacing Nautilus, run the following command:<br><code>  xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search  </code></p>
+<h2 id="Set-Nautilus-Back-as-the-Default-File-Manager"><a href="#Set-Nautilus-Back-as-the-Default-File-Manager" class="headerlink" title="Set Nautilus Back as the Default File Manager"></a>Set Nautilus Back as the Default File Manager</h2><p>If you want to set Nautilus back as the default file manager and replace Nemo, run the following commands:<br><code>  gsettings set org.gnome.desktop.background show-desktop-icons true   xdg-mime default nautilus.desktop inode/directory application/x-gnome-saved-search  </code></p>
+<p>The above set of commands will set Nautilus as the default file manager.</p>
+<h2 id="Un-install-Nemo"><a href="#Un-install-Nemo" class="headerlink" title="Un-install Nemo"></a>Un-install Nemo</h2><p>If you wantto un-install and remove Nemo, run the following command:<br><code>  sudo apt-get remove nemo nemo-*   sudo rm /etc/apt/sources.list.d/webupd8team-nemo-*.list  </code><br>Nemo is the official file manager for the Linux Mint OS running the Cinnamon desktop.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/23/20220223/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20220222" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,10 +303,11 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Default-file-manager-and-terminal"><span class="toc-number">2.</span> <span class="toc-text">Default file manager and terminal</span></a></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="Default-file-manager-and-terminal"><a href="#Default-file-manager-and-terminal" class="headerlink" title="Default file manager and terminal"></a>Default file manager and terminal</h1><ul>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Oligo_Order_上海生工北京合成部&#x2F;Reports # Primer reports, to be organized</span><br><span class="line"># </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Default-file-manager-and-terminal"><a href="#Default-file-manager-and-terminal" class="headerlink" title="Default file manager and terminal"></a>Default file manager and terminal</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/155897/how-to-make-nautilus-the-default-file-manager-in-lxde">How to make nautilus the default file manager in LXDE - Ask Ubuntu</a></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;home&#x2F;ht&#x2F;.config&#x2F;lxsession&#x2F;Lubuntu</span><br><span class="line"># autostart  autostart.0  desktop.conf  desktop.conf.0  desktop.conf.1</span><br><span class="line">cd ~&#x2F;.config&#x2F;lxsession&#x2F;LXDE</span><br><span class="line"># autostart  autostart.0  desktop.conf  desktop.conf.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;home&#x2F;ht&#x2F;.config&#x2F;lxsession&#x2F;Lubuntu</span><br><span class="line"># autostart  autostart.0  desktop.conf  desktop.conf.0  desktop.conf.1</span><br><span class="line">cd ~&#x2F;.config&#x2F;lxsession&#x2F;LXDE</span><br><span class="line"># autostart  autostart.0  desktop.conf  desktop.conf.0</span><br><span class="line">cd ~&#x2F;.config&#x2F;openbox</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
 
       
@@ -1601,92 +1720,6 @@
 
 
   
-    <article id="post-20220107" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/07/20220107/">20220107</a>
-    </h1>
-  
-
-        
-        <a href="/2022/01/07/20220107/" class="archive-article-date">
-  	<time datetime="2022-01-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220107</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-zenhei&#x2F;fonts-wqy-zenhei_0.9.45-7ubuntu1_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-microhei&#x2F;fonts-wqy-microhei_0.2.0-beta-3_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line"># </span><br><span class="line">#########################################################################</span><br><span class="line"># knitr powerpoint</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Conferences&#x2F;Template</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="miRDB"><a href="#miRDB" class="headerlink" title="miRDB"></a>miRDB</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;miR_Base&#x2F;miRDB</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v6.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v5.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v4.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v3.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v2.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v1.0_prediction_result.txt.gz</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">lh &#96;locate -b NC_001806_HSV-1.fas&#96;</span><br><span class="line">locate -b NC_001806_HSV-1.fas</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG1&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG2&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025_1255&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Analysis&#x2F;20220109</span><br><span class="line"></span><br><span class="line">DB&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;MagicBLAST&#x2F;HSV1_Ref</span><br><span class="line">Query&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Clean_Ctrl.fa</span><br><span class="line"># </span><br></pre></td></tr></table></figure>
-<p>Ref=<br>Seq=<br>Seq_Base=<code>basename $&#123;Seq&#125;</code>; Ref_Base=<code>basename $&#123;Ref%.*&#125;</code>; BAM=${Seq_Base%.<em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code>.bam<br>magicblast -query ${Seq} -subject ${Ref} -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; ${Seq_Base%.</em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code><em>Mapped.bam # 序列中绝对禁止<code>-</code>，这类符号是经过MSA产生的<br>BAM=${Seq_Base%.*}_vs</em><code>basename $&#123;Ref_Base&#125;</code>_Mapped.bam<br>samtools sort $BAM &gt; “${BAM%.bam}.sort.bam”<br>samtools index “${BAM%.bam}.sort.bam”</p>
-<p>Query=/media/ht/ht_5T/Work/Projects/Exosome/RNA-Seq/20211203/Clean_HSV1.fa</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line"></span><br><span class="line">- [Sambamba: process your BAM data faster!](http:&#x2F;&#x2F;lomereiter.github.io&#x2F;sambamba&#x2F;)</span><br><span class="line"></span><br><span class="line"># **wkhtmltopdf**</span><br><span class="line"></span><br><span class="line">- [wkhtmltopdf](https:&#x2F;&#x2F;wkhtmltopdf.org&#x2F;downloads.html)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>i=<a target="_blank" rel="noopener" href="https://wkhtmltopdf.org/">https://wkhtmltopdf.org/</a><br>wkhtmltopdf ${i} <code>basename $&#123;i&#125;</code>.pdf<br>```</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/07/20220107/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1806,10 +1839,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1819,6 +1848,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2150,22 +2183,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
@@ -2270,6 +2287,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -2283,6 +2316,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2306,23 +2351,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2347,10 +2384,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2394,11 +2427,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2410,11 +2443,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2438,11 +2471,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2451,18 +2484,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2475,6 +2496,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">

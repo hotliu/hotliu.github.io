@@ -158,6 +158,161 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210202" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/02/20210202/">20210202</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/02/20210202/" class="archive-article-date">
+  	<time datetime="2021-02-02T12:12:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210202</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Installation-Log"><span class="toc-number">1.</span> <span class="toc-text">Installation Log</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Backup"><span class="toc-number">2.</span> <span class="toc-text">Backup</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Result-of-tumor-HLA-G-analysis"><span class="toc-number">2.1.</span> <span class="toc-text">Result of tumor-HLA-G analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SRA-pack"><span class="toc-number">2.2.</span> <span class="toc-text">SRA pack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ensembl-database"><span class="toc-number">2.3.</span> <span class="toc-text">Ensembl database</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Organization-of-ht06"><span class="toc-number">3.</span> <span class="toc-text">Organization of ht06</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Li-Ying"><span class="toc-number">4.</span> <span class="toc-text">Li Ying</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Zhang-Li"><span class="toc-number">5.</span> <span class="toc-text">Zhang Li</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nrf2-p62-Project"><span class="toc-number">6.</span> <span class="toc-text">Nrf2&#x2F;p62 Project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NCBI-SRA-Toolkit"><span class="toc-number">7.</span> <span class="toc-text">NCBI SRA Toolkit</span></a></li></ol>
+</div>
+
+        <h1 id="Installation-Log"><a href="#Installation-Log" class="headerlink" title="Installation Log"></a>Installation Log</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NGS_Softs&#x2F;Tablet&#x2F;Installer</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NGS_Softs&#x2F;Tablet&#x2F;Installer&#x2F;tablet_linux_x64_1_20_12_24.sh</span><br><span class="line">sudo sh $&#123;i&#125; # Installed in Vision-Lubuntu</span><br></pre></td></tr></table></figure>
+<h1 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h1><h2 id="Result-of-tumor-HLA-G-analysis"><a href="#Result-of-tumor-HLA-G-analysis" class="headerlink" title="Result of tumor-HLA-G analysis"></a>Result of tumor-HLA-G analysis</h2><ul>
+<li>Move <code>.7z</code> pack to <code>/media/ht/ht_5T_5/HLA-G/SRA/Tumor/Results</code></li>
+<li></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Source&#x3D;&#x2F;home&#x2F;ht&#x2F;Downloads&#x2F;DB&#x2F;Results&#x2F;</span><br><span class="line">Destination&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;Tumor&#x2F;Results&#x2F;</span><br><span class="line">rsync -auP --update $&#123;Source&#125; $&#123;Destination&#125; # 显示过程</span><br></pre></td></tr></table></figure>
+<h2 id="SRA-pack"><a href="#SRA-pack" class="headerlink" title="SRA pack"></a>SRA pack</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Source&#x3D;&#x2F;home&#x2F;ht&#x2F;Downloads&#x2F;DB&#x2F;SRA</span><br><span class="line">Destination&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_5&#x2F;HLA-G&#x2F;SRA&#x2F;Tumor&#x2F;Backup</span><br><span class="line">Source&#x3D;$&#123;Source&#125;&#x2F;; Destination&#x3D;$&#123;Destination&#125;&#x2F;</span><br><span class="line">rsync -auP --update $&#123;Source&#125; $&#123;Destination&#125; # 显示过程</span><br></pre></td></tr></table></figure>
+<h2 id="Ensembl-database"><a href="#Ensembl-database" class="headerlink" title="Ensembl database"></a>Ensembl database</h2><h1 id="Organization-of-ht06"><a href="#Organization-of-ht06" class="headerlink" title="Organization of ht06"></a>Organization of <code>ht06</code></h1><ul>
+<li>Completely remove the directory of <code>/media/ht/ht06/Backup/Extracted</code> with <code>sudo rm -r Extracted</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;media&#x2F;ht&#x2F;ht06&#x2F;genbank</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht06&#x2F;Backup</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line">for i in *.gz; do ls $&#123;i&#125; &#x2F;media&#x2F;ht&#x2F;ht06&#x2F;genbank&#x2F;$&#123;i&#125;; diff $&#123;i&#125; &#x2F;media&#x2F;ht&#x2F;ht06&#x2F;genbank&#x2F;$&#123;i&#125;; echo &#39;&#x3D;&#x3D;&#x3D;&#x3D;&#39;; done</span><br><span class="line">#</span><br><span class="line">for i in *.gz; do diff $&#123;i&#125; &#x2F;media&#x2F;ht&#x2F;ht06&#x2F;genbank&#x2F;$&#123;i&#125;;  done &gt; &#96;TS&#96;.list</span><br></pre></td></tr></table></figure>
+<h1 id="Li-Ying"><a href="#Li-Ying" class="headerlink" title="Li Ying"></a>Li Ying</h1><ol>
+<li>HPV30</li>
+<li>Nrf2 in B95-8 project, progress</li>
+<li>Tips for SDS-PAGE<ol>
+<li>Loading</li>
+<li>Gel selection</li>
+</ol>
+</li>
+<li>支部事宜<ol>
+<li>会议</li>
+<li>网信办会议：<a target="_blank" rel="noopener" href="https://news.sina.cn/2021-02-01/detail-ikftpnny3103720.d.html?from=wap">https://news.sina.cn/2021-02-01/detail-ikftpnny3103720.d.html?from=wap</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="Zhang-Li"><a href="#Zhang-Li" class="headerlink" title="Zhang Li"></a>Zhang Li</h1><ol>
+<li>回家</li>
+<li>BES投稿</li>
+<li>实验进展</li>
+</ol>
+<h1 id="Nrf2-p62-Project"><a href="#Nrf2-p62-Project" class="headerlink" title="Nrf2/p62 Project"></a>Nrf2/p62 Project</h1><ol>
+<li>Mass spectrum/confirmation<ol>
+<li>USP15</li>
+<li>p62</li>
+</ol>
+</li>
+<li>RNA-Seq<ol>
+<li>HPV18 mRNA spectrum</li>
+<li>Heat map</li>
+</ol>
+</li>
+<li>Simulation. Protein decking/interaction</li>
+<li>ROS</li>
+</ol>
+<h1 id="NCBI-SRA-Toolkit"><a href="#NCBI-SRA-Toolkit" class="headerlink" title="NCBI SRA Toolkit"></a>NCBI SRA Toolkit</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit">01. Downloading SRA Toolkit · ncbi/sra-tools Wiki</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.9/setup-apt.sh">Cloud - apt-get install script</a> - for Debian and Ubuntu - requires sudo permissions</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh .&#x2F;setup-apt.sh</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ncbi/sra-tools/issues/27">Configure step does not work, can’t find NCBI VDB · Issue #27 · ncbi/sra-tools</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">rm -r &#x2F;ncbi-outdir</span><br><span class="line">mkdir &#x2F;ncbi</span><br><span class="line">cd &#x2F;ncbi</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;ncbi&#x2F;ngs.git</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;ncbi&#x2F;ncbi-vdb.git</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;ncbi&#x2F;sra-tools.git</span><br><span class="line">############################################</span><br><span class="line"># add sudo in front of the original commands</span><br><span class="line">############################################</span><br><span class="line">sudo ngs&#x2F;ngs-sdk&#x2F;configure --prefix&#x3D;&#x2F;software&#x2F;apps&#x2F;sratoolkit&#x2F;gcc&#x2F;64&#x2F;2.5.8</span><br><span class="line">sudo make default install -C ngs&#x2F;ngs-sdk</span><br><span class="line">sudo ncbi-vdb&#x2F;configure --prefix&#x3D;&#x2F;software&#x2F;apps&#x2F;sratoolkit&#x2F;gcc&#x2F;64&#x2F;2.5.8</span><br><span class="line">sudo make default install -C ncbi-vdb</span><br><span class="line">sudo sra-tools&#x2F;configure --prefix&#x3D;&#x2F;software&#x2F;apps&#x2F;sratoolkit&#x2F;gcc&#x2F;64&#x2F;2.5.8</span><br><span class="line">sudo make default install -C sra-tools</span><br></pre></td></tr></table></figure>
+
+<p>export LD_LIBRARY_PATH=/software/apps/sratoolkit/gcc/64/2.5.8/lib64:$LD_LIBRARY_PATH</p>
+<p>prefetch SRR000001</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">p62 Draft</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">rsync</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SRA-Tools</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/02/20210202/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210201" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1574,111 +1729,6 @@
 
 
   
-    <article id="post-20210121" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/21/20210121/">20210121</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/21/20210121/" class="archive-article-date">
-  	<time datetime="2021-01-21T15:42:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210121</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-set-%E2%80%9Cdate-modified%E2%80%9D-by-%E2%80%9Cdate-taken%E2%80%9D-with-Exiftool-Photography-Stack-Exchange"><span class="toc-number">2.</span> <span class="toc-text">How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#96;date +%Y%m%d&#96;</span><br><span class="line">printf &quot;\n\n# Working direcotries\n\n&quot; &gt;&gt; &#96;Date&#96;.md</span><br><span class="line">subl &#96;date +%Y%m%d&#96;.md</span><br></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect&#x2F;Draft</span><br><span class="line">cd $&#123;i&#125; # moving &#96;.xmind&#96; to there</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1</span><br><span class="line">cd $&#123;i&#125; # organize documents in schedule</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;Publication&#x2F;Draft&#x2F;Submission&#x2F;1; pcmanfm -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Administration&#x2F;08_03_53_Flu_Biosafety; pcmanfm -n $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange"><a href="#How-to-set-“date-modified”-by-“date-taken”-with-Exiftool-Photography-Stack-Exchange" class="headerlink" title="How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange"></a><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/69188/how-to-set-date-modified-by-date-taken-with-exiftool">How to set “date modified” by “date taken” with Exiftool? - Photography Stack Exchange</a></h1><p><strong>to be solved</strong></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/103767/how-can-i-rename-files-to-match-their-exif-created-date">metadata - How can I rename files to match their EXIF “created date”? - Photography Stack Exchange</a></li>
-<li><a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">FileName and Directory tags</a></li>
-<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7923.0">Change file(s) created date from file name?</a></li>
-<li><a target="_blank" rel="noopener" href="https://exiftool.org/faq.html">ExifTool FAQ</a></li>
-<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=8477.0">CreateDate vs CreationDate</a></li>
-<li><a target="_blank" rel="noopener" href="https://perlmaven.com/image-exiftool-how-to-change-file-creation-date">Image::ExifTool: How to change file creation date?</a></li>
-<li><a target="_blank" rel="noopener" href="https://photo.stackexchange.com/questions/27245/is-there-a-free-program-to-batch-change-photo-files-date-to-match-exif">metadata - Is there a free program to (batch) change photo file’s date to match EXIF? - Photography Stack Exchange</a></li>
-<li><a target="_blank" rel="noopener" href="https://exiftool.org/forum/index.php?topic=7831.0">Change filemodifydate to datetimeoriginal if it’s not the same</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ExifTool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; DIR</span><br><span class="line">#</span><br><span class="line">exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext jpg .</span><br><span class="line">#exiftool &#39;-filemodifydate&lt;datetimeoriginal&#39; -r -if &#39;$datetimeoriginal ne substr($filemodifydate,0,19)&#39; -ext mp3 .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool &quot;-FileModifyDate&lt;XMP:DateTimeOriginal&quot; &quot;-FileModifyDate&lt;EXIF:CreateDate&quot; &quot;-FileModifyDate&lt;XMP:CreateDate&quot; &quot;-FileModifyDate&lt;$IPTC:DateCreated $IPTC:TimeCreated&quot; &quot;-FileModifyDate&lt;EXIF:DateTimeOriginal&quot; .&#x2F;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension jpg -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%-.3nc.%%e &quot;$@&quot;</span><br><span class="line"></span><br><span class="line">exiftool -fileOrder DateTimeOriginal -recurse -extension mp3 -ignoreMinorErrors &#39;-FileName&lt;CreateDate&#39; -d %Y-%m-%d%%_.1nc.%%e &quot;$@&quot;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Exiftool</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/21/20210121/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/13/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/">Next &amp;raquo;</a>
@@ -1798,10 +1848,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1811,6 +1857,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2142,22 +2192,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
@@ -2262,6 +2296,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
@@ -2275,6 +2325,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2298,23 +2360,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2339,10 +2393,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2386,11 +2436,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2402,11 +2452,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2430,11 +2480,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2443,18 +2493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2467,6 +2505,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
