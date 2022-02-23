@@ -1347,6 +1347,123 @@
 
 
   
+    <article id="post-20210629" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/29/20210629/">20210629</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/29/20210629/" class="archive-article-date">
+  	<time datetime="2021-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210629</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#To-be-organized"><span class="toc-number">2.</span> <span class="toc-text">To be organized</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DL"><span class="toc-number">3.</span> <span class="toc-text">DL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Animal-Coronavirus"><span class="toc-number">3.1.</span> <span class="toc-text">Animal Coronavirus</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-5%E5%90%8B%E7%A1%AC%E7%9B%98%E6%94%B6%E7%BA%B3%E7%9B%92"><span class="toc-number">4.</span> <span class="toc-text">2.5吋硬盘收纳盒</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HQ"><span class="toc-number">5.</span> <span class="toc-text">HQ</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Patents"><span class="toc-number">5.1.</span> <span class="toc-text">Patents</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nrf2-project"><span class="toc-number">6.</span> <span class="toc-text">Nrf2 project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TRIM-E6"><span class="toc-number">6.1.</span> <span class="toc-text">TRIM-E6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p62-Nrf2-direct-binding"><span class="toc-number">6.2.</span> <span class="toc-text">p62-Nrf2 direct binding</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; mkdir $&#123;Destination&#125;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;</span><br><span class="line">pcmanfm -n $&#123;Source&#125;; mate-terminal --working-directory&#x3D;$&#123;Source&#125;</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; pcmanfm -n $&#123;Destination&#125;; mate-terminal --working-directory&#x3D;$&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">du .&#x2F; -sh; du .&#x2F; -sk</span><br><span class="line">#</span><br><span class="line">#######################################################</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;; \</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; mkdir $&#123;Destination&#125;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;; \</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;</span><br><span class="line">pcmanfm -n $&#123;Source&#125;; mate-terminal --working-directory&#x3D;$&#123;Source&#125;</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; pcmanfm -n $&#123;Destination&#125;; mate-terminal --working-directory&#x3D;$&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">du .&#x2F; -sh; du .&#x2F; -sk</span><br></pre></td></tr></table></figure>
+<h1 id="To-be-organized"><a href="#To-be-organized" class="headerlink" title="To be organized"></a>To be organized</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;HHOV&#x2F;20210627</span><br></pre></td></tr></table></figure>
+<h1 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h1><h2 id="Animal-Coronavirus"><a href="#Animal-Coronavirus" class="headerlink" title="Animal Coronavirus"></a>Animal Coronavirus</h2><ul>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.epub">Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.epub</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.pdf">Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.pdf</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.epub">Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.epub</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.pdf">Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.pdf</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.epub">Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.epub</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.pdf">Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.pdf</a></li>
+</ul>
+<h1 id="2-5吋硬盘收纳盒"><a href="#2-5吋硬盘收纳盒" class="headerlink" title="2.5吋硬盘收纳盒"></a>2.5吋硬盘收纳盒</h1><p>Keyword<br>2.5吋+硬盘收纳盒</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://detail.1688.com/offer/557517358739.html">eva包装盒 2.5寸硬盘包 耳机收纳包 eva收纳包 创意耳机收纳包-阿里巴巴</a></li>
+<li><a target="_blank" rel="noopener" href="https://detail.1688.com/offer/568494209484.html">2.5寸PP移动硬盘盒 硬盘收纳盒 硬盘pp盒 硬盘胶盒 硬盘保护套-阿里巴巴</a></li>
+</ul>
+<h1 id="HQ"><a href="#HQ" class="headerlink" title="HQ"></a>HQ</h1><p>检测对象待定，可能是核酸，也可能是假病毒颗粒。</p>
+<ol>
+<li>仅使用TK-3(气溶胶发生器)的实验数据，属于TK-3的功能验证实验。需要实验过程记录。</li>
+<li>仅使用HQ2020(也可以是同类型研发工程机)的实验数据，需要实验过程记录。</li>
+<li>TK-3与HQ2020联合使用时的功能验证实验。需要实验过程记录。</li>
+</ol>
+<hr>
+<p>另外需要已经完成的TK-3与HQ2020联合使用时的实验数据。需要实验过程记录。</p>
+<h2 id="Patents"><a href="#Patents" class="headerlink" title="Patents"></a>Patents</h2><ul>
+<li><a href="/media/ht/ht_5T/Work/Projects/HQ2020/Patents/%E5%8F%91%E6%98%8E%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E8%AF%B4%E6%98%8E%E4%B9%A6CN202011434015.0.pdf">发明专利申请说明书CN202011434015.0.pdf</a></li>
+<li><a href="/media/ht/ht_5T/Work/Projects/HQ2020/Patents/%E5%A4%96%E8%A7%82%E8%AE%BE%E8%AE%A1%E4%B8%93%E5%88%A9%E6%8E%88%E6%9D%83%E8%AF%B4%E6%98%8E%E4%B9%A6CN202030646657.1.pdf">外观设计专利授权说明书CN202030646657.1.pdf</a></li>
+</ul>
+<h1 id="Nrf2-project"><a href="#Nrf2-project" class="headerlink" title="Nrf2 project"></a>Nrf2 project</h1><h2 id="TRIM-E6"><a href="#TRIM-E6" class="headerlink" title="TRIM-E6"></a>TRIM-E6</h2><ul>
+<li>HR HPV E6</li>
+<li>LR HPV E6</li>
+</ul>
+<h2 id="p62-Nrf2-direct-binding"><a href="#p62-Nrf2-direct-binding" class="headerlink" title="p62-Nrf2 direct binding"></a>p62-Nrf2 direct binding</h2><ol>
+<li>Docking</li>
+<li>p62 domain analysis</li>
+<li>p62-Keap1 competition</li>
+<li>p62-related pathways</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/29/20210629/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210630" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1500,123 +1617,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/06/29/20210630/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20210629" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/29/20210629/">20210629</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/29/20210629/" class="archive-article-date">
-  	<time datetime="2021-06-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210629</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#To-be-organized"><span class="toc-number">2.</span> <span class="toc-text">To be organized</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DL"><span class="toc-number">3.</span> <span class="toc-text">DL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Animal-Coronavirus"><span class="toc-number">3.1.</span> <span class="toc-text">Animal Coronavirus</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-5%E5%90%8B%E7%A1%AC%E7%9B%98%E6%94%B6%E7%BA%B3%E7%9B%92"><span class="toc-number">4.</span> <span class="toc-text">2.5吋硬盘收纳盒</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HQ"><span class="toc-number">5.</span> <span class="toc-text">HQ</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Patents"><span class="toc-number">5.1.</span> <span class="toc-text">Patents</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nrf2-project"><span class="toc-number">6.</span> <span class="toc-text">Nrf2 project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TRIM-E6"><span class="toc-number">6.1.</span> <span class="toc-text">TRIM-E6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#p62-Nrf2-direct-binding"><span class="toc-number">6.2.</span> <span class="toc-text">p62-Nrf2 direct binding</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; mkdir $&#123;Destination&#125;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Bioinformatics&#39;</span><br><span class="line">#</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;</span><br><span class="line">pcmanfm -n $&#123;Source&#125;; mate-terminal --working-directory&#x3D;$&#123;Source&#125;</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; pcmanfm -n $&#123;Destination&#125;; mate-terminal --working-directory&#x3D;$&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">du .&#x2F; -sh; du .&#x2F; -sk</span><br><span class="line">#</span><br><span class="line">#######################################################</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;; \</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; mkdir $&#123;Destination&#125;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;; \</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; rsync -au --update $&#123;Source&#125; $&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">Dir&#x3D;&#39;Current_Audio&#39;</span><br><span class="line">Drive&#x3D;&#39;ht_5T_Backup&#39;; Source&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;</span><br><span class="line">pcmanfm -n $&#123;Source&#125;; mate-terminal --working-directory&#x3D;$&#123;Source&#125;</span><br><span class="line">Drive&#x3D;&#39;4T_5&#39;; Destination&#x3D;&quot;&#x2F;media&#x2F;ht&#x2F;$&#123;Drive&#125;&#x2F;$&#123;Dir&#125;&#x2F;&quot;; pcmanfm -n $&#123;Destination&#125;; mate-terminal --working-directory&#x3D;$&#123;Destination&#125;</span><br><span class="line">#</span><br><span class="line">du .&#x2F; -sh; du .&#x2F; -sk</span><br></pre></td></tr></table></figure>
-<h1 id="To-be-organized"><a href="#To-be-organized" class="headerlink" title="To be organized"></a>To be organized</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;HHOV&#x2F;20210627</span><br></pre></td></tr></table></figure>
-<h1 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h1><h2 id="Animal-Coronavirus"><a href="#Animal-Coronavirus" class="headerlink" title="Animal Coronavirus"></a>Animal Coronavirus</h2><ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.epub">Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.epub</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.pdf">Coronavirus_Infections_in_Companion_AnimalsVirology,_Epidemiology,_Clinical_and_Pathologic_Features.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.epub">Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.epub</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.pdf">Coronavirus_Pathogenesis_and_the_Emerging_Pathogen_Severe_Acute_Respiratory_Syndrome_Coronavirus.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.epub">Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.epub</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NGS/Pet_NGS/Ref/Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.pdf">Diagnosis_of_Feline_Infectious_PeritonitisA_Review_of_the_Current_Literature.pdf</a></li>
-</ul>
-<h1 id="2-5吋硬盘收纳盒"><a href="#2-5吋硬盘收纳盒" class="headerlink" title="2.5吋硬盘收纳盒"></a>2.5吋硬盘收纳盒</h1><p>Keyword<br>2.5吋+硬盘收纳盒</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://detail.1688.com/offer/557517358739.html">eva包装盒 2.5寸硬盘包 耳机收纳包 eva收纳包 创意耳机收纳包-阿里巴巴</a></li>
-<li><a target="_blank" rel="noopener" href="https://detail.1688.com/offer/568494209484.html">2.5寸PP移动硬盘盒 硬盘收纳盒 硬盘pp盒 硬盘胶盒 硬盘保护套-阿里巴巴</a></li>
-</ul>
-<h1 id="HQ"><a href="#HQ" class="headerlink" title="HQ"></a>HQ</h1><p>检测对象待定，可能是核酸，也可能是假病毒颗粒。</p>
-<ol>
-<li>仅使用TK-3(气溶胶发生器)的实验数据，属于TK-3的功能验证实验。需要实验过程记录。</li>
-<li>仅使用HQ2020(也可以是同类型研发工程机)的实验数据，需要实验过程记录。</li>
-<li>TK-3与HQ2020联合使用时的功能验证实验。需要实验过程记录。</li>
-</ol>
-<hr>
-<p>另外需要已经完成的TK-3与HQ2020联合使用时的实验数据。需要实验过程记录。</p>
-<h2 id="Patents"><a href="#Patents" class="headerlink" title="Patents"></a>Patents</h2><ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/HQ2020/Patents/%E5%8F%91%E6%98%8E%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E8%AF%B4%E6%98%8E%E4%B9%A6CN202011434015.0.pdf">发明专利申请说明书CN202011434015.0.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/HQ2020/Patents/%E5%A4%96%E8%A7%82%E8%AE%BE%E8%AE%A1%E4%B8%93%E5%88%A9%E6%8E%88%E6%9D%83%E8%AF%B4%E6%98%8E%E4%B9%A6CN202030646657.1.pdf">外观设计专利授权说明书CN202030646657.1.pdf</a></li>
-</ul>
-<h1 id="Nrf2-project"><a href="#Nrf2-project" class="headerlink" title="Nrf2 project"></a>Nrf2 project</h1><h2 id="TRIM-E6"><a href="#TRIM-E6" class="headerlink" title="TRIM-E6"></a>TRIM-E6</h2><ul>
-<li>HR HPV E6</li>
-<li>LR HPV E6</li>
-</ul>
-<h2 id="p62-Nrf2-direct-binding"><a href="#p62-Nrf2-direct-binding" class="headerlink" title="p62-Nrf2 direct binding"></a>p62-Nrf2 direct binding</h2><ol>
-<li>Docking</li>
-<li>p62 domain analysis</li>
-<li>p62-Keap1 competition</li>
-<li>p62-related pathways</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/29/20210629/">Expand all items >></a>
         </p>
       
 
@@ -2207,6 +2207,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -2219,31 +2223,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2268,6 +2252,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">FTP connection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Tags in Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2296,6 +2296,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2343,38 +2375,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">integrity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">vdb-validate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Macro in Linux WPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hantavirus evolution</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">LibreOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache OpenOffice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
@@ -2404,6 +2404,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2455,11 +2483,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2483,43 +2519,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2540,6 +2544,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2584,34 +2604,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2667,11 +2659,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2683,11 +2683,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2700,14 +2708,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Herpesviridae sequence download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2795,19 +2795,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">speech recognition</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2835,35 +2835,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算命</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算命</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">COVID-19</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">疾病负担</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BOD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2879,19 +2859,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
+                <a href="javascript:void(0)" class="js-tag color5">疾病负担</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
+                <a href="javascript:void(0)" class="js-tag color4">BOD</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
+                <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2908,6 +2884,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2967,6 +2959,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">COVID-19</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HGNC</a>
               </li>
              
@@ -2996,34 +2996,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Sheet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tree structure</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Markdown syntax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">西部世界</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IME in Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Markdown Mermaid examples</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Markdown mermaid</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">flowchart</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3072,6 +3044,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Zettlr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Tree structure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Markdown syntax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">西部世界</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IME in Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Markdown Mermaid examples</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Markdown mermaid</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">flowchart</a>
               </li>
              
               <li class="article-tag-list-item">
