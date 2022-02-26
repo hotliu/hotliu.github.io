@@ -1239,150 +1239,6 @@
 
 
   
-    <article id="post-20220226" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/02/20220226/">20220226</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/02/20220226/" class="archive-article-date">
-  	<time datetime="2022-02-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220202</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Primer-document-organization"><span class="toc-number">2.</span> <span class="toc-text">Primer document organization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fontconfig-warning"><span class="toc-number">3.</span> <span class="toc-text">Fontconfig warning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums"><span class="toc-number">4.</span> <span class="toc-text">How to control window properties on VLC by command-line? - The VideoLAN Forums</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Researchers-simulate-behavior-of-living-%E2%80%98minimal-cell%E2%80%99-in-three-dimensions"><span class="toc-number">5.</span> <span class="toc-text">Researchers simulate behavior of living ‘minimal cell’ in three dimensions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation"><span class="toc-number">6.</span> <span class="toc-text">Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing-biochemical-data-by-simulation"><span class="toc-number">6.1.</span> <span class="toc-text">Testing biochemical data by simulation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Structured-Abstract"><span class="toc-number">6.2.</span> <span class="toc-text">Structured Abstract</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#INTRODUCTION"><span class="toc-number">6.2.1.</span> <span class="toc-text">INTRODUCTION</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RATIONALE"><span class="toc-number">6.2.2.</span> <span class="toc-text">RATIONALE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RESULTS"><span class="toc-number">6.2.3.</span> <span class="toc-text">RESULTS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CONCLUSION"><span class="toc-number">6.2.4.</span> <span class="toc-text">CONCLUSION</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">6.3.</span> <span class="toc-text">Abstract</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Counting-protein-molecules-for-single-cell-proteomics"><span class="toc-number">7.</span> <span class="toc-text">Counting protein molecules for single-cell proteomics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract-1"><span class="toc-number">7.1.</span> <span class="toc-text">Abstract</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1&#x2F;Regular_PCR.list # Regular PCR for CD and EF fragments</span><br><span class="line">cat Regular_PCR.list | sed &#39;s&#x2F;^&#x2F;&gt;&#x2F;&#39; | sed &#39;s&#x2F;\t\t&#x2F;\n&#x2F;&#39;</span><br><span class="line">#########################################################################</span><br><span class="line"># Primer check with primerBLAST</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">rm *.txt *.csv *.asn</span><br><span class="line">#</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;NC_001806_HSV-1.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;GU734771_HSV-1_strain_F_CG.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">#########################################################################</span><br><span class="line"># Health from Samsung</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health; cd $&#123;i&#125;; nemo -n $&#123;i&#125;; i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health&#x2F;Samsung_Health.md; subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Primer-document-organization"><a href="#Primer-document-organization" class="headerlink" title="Primer document organization"></a>Primer document organization</h1><ul>
-<li>To be newly located, GU734771_HSV-1_strain_F_CG.gb</li>
-<li><a target="_blank" rel="noopener" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-134">Primer-BLAST: A tool to design target-specific primers for polymerase chain reaction | BMC Bioinformatics | Full Text</a></li>
-</ul>
-<h1 id="Fontconfig-warning"><a href="#Fontconfig-warning" class="headerlink" title="Fontconfig warning"></a>Fontconfig warning</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.cxybb.com/article/weixin_33810302/92026495">ubuntu技巧_weixin_33810302的博客-程序员宝宝 - 程序员宝宝</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fontconfig warning: &quot;&#x2F;etc&#x2F;fonts&#x2F;conf.d&#x2F;51-local.conf&quot;, line 90: Having multiple &lt;family&gt; in &lt;alias&gt; isn&#39;t supported and may not work as expected</span><br></pre></td></tr></table></figure>
-
-<h1 id="How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums"><a href="#How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums" class="headerlink" title="How to control window properties on VLC by command-line? - The VideoLAN Forums"></a><a target="_blank" rel="noopener" href="https://forum.videolan.org/viewtopic.php?t=124021">How to control window properties on VLC by command-line? - The VideoLAN Forums</a></h1><h1 id="Researchers-simulate-behavior-of-living-‘minimal-cell’-in-three-dimensions"><a href="#Researchers-simulate-behavior-of-living-‘minimal-cell’-in-three-dimensions" class="headerlink" title="Researchers simulate behavior of living ‘minimal cell’ in three dimensions"></a>Researchers simulate behavior of living ‘minimal cell’ in three dimensions</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.eurekalert.org/news-releases/940215">Researchers simulate behavior of living ‘mini | EurekAlert!</a></li>
-</ul>
-<p>Simulations offer insight into fundamental principles of life</p>
-<p><a target="_blank" rel="noopener" href="https://www.eurekalert.org/releaseguidelines">Peer-Reviewed Publication</a></p>
-<p>UNIVERSITY OF ILLINOIS AT URBANA-CHAMPAIGN, NEWS BUREAU</p>
-<p>PrintEmail App</p>
-<p> <a target="_blank" rel="noopener" href="https://www.eurekalert.org/multimedia/814360"><img src="https://earimediaprodweb.azurewebsites.net/Api/v1/Multimedia/7c5bab6c-f219-4114-b11b-6263fe9a52f6/Rendition/low-res/Content/Public" alt="Research Team"></a> </p>
-<p><strong>IMAGE: WITH THEIR COLLEAGUES, RESEARCHERS, FROM LEFT, GRADUATE STUDENT ZANE THORNBURG, CHEMISTRY PROFESSOR ZAIDA (ZAN) LUTHEY-SCHULTEN AND GRADUATE STUDENTS BENJAMIN GILBERT AND TROY BRIER SUCCESSFULLY SIMULATED A LIVING “MINIMAL CELL.” THE ADVANCE WILL AID IN CREATING COMPUTER MODELS THAT ACCURATELY PREDICT HOW LIVING CELLS WILL BEHAVE WHEN CHANGES ARE MADE TO THEIR GENOMES OR OTHER CHARACTERISTICS.</strong> <a target="_blank" rel="noopener" href="https://www.eurekalert.org/multimedia/814360">view more</a> </p>
-<p>CREDIT: PHOTO BY L. BRIAN STAUFFER</p>
-<p>CHAMPAIGN, Ill. — Scientists report that they have built a living “minimal cell” with a genome stripped down to its barest essentials – and a computer model of the cell that mirrors its behavior. By refining and testing their model, the scientists say they are developing a system for predicting how changes to the genomes, living conditions or physical characteristics of live cells will alter how they function.</p>
-<p>They report their findings in the journal <em>Cell</em>.</p>
-<p>Minimal cells have pared-down genomes that carry the genes necessary to replicate their DNA, grow, divide and perform most of the other functions that define life, said <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/RXaC6rveFi2wQUtX10ZzjQ~~/AAMFlAA~/RgRjxBW8P0QiaHR0cHM6Ly9jaGVtaXN0cnkuaWxsaW5vaXMuZWR1L3phblcDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Zaida (Zan) Luthey-Schulten</a>, a <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/RYSYusUpnrRTBkQz5qGMYA~~/AAMFlAA~/RgRjxBW8P0QfaHR0cHM6Ly9jaGVtaXN0cnkuaWxsaW5vaXMuZWR1L1cDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">chemistry</a> professor at the University of Illinois Urbana-Champaign who led the work with graduate student Zane Thornburg. “What’s new here is that we developed a three-dimensional, fully dynamic kinetic model of a living minimal cell that mimics what goes on in the actual cell,” Luthey-Schulten said.</p>
-<p>The simulation maps out the precise location and chemical characteristics of thousands of cellular components in 3D space at an atomic scale. It tracks how long it takes for these molecules to diffuse through the cell and encounter one another, what kinds of chemical reactions occur when they do, and how much energy is required for each step.</p>
-<p>To build the minimal cell, scientists at the J. Craig Venter Institute in La Jolla, California, turned to the simplest living cells – the mycoplasmas, a genus of bacteria that parasitize other organisms. In previous studies, the JCVI team built a synthetic genome missing as many nonessential genes as possible and grew the cell in an environment enriched with all the nutrients and factors needed to sustain it. For the new study, the team added back a few genes to improve the cell’s viability. This cell is simpler than any naturally occurring cell, making it easier to model on a computer.</p>
-<p>Simulating something as enormous and complex as a living cell relies on data from decades of research, Luthey-Schulten said. To build the computer model, she and her colleagues at Illinois had to account for the physical and chemical characteristics of the cell’s DNA; lipids; amino acids; and gene-transcription, translation and protein-building machinery. They also had to model how each component diffused through the cell, keeping track of the energy required for each step in the cell’s life cycle. NVIDIA graphic processing units were used to perform the simulations.  </p>
-<p>“We built a computer model based on what we knew about the minimal cell, and then we ran simulations,” Thornburg said. “And we checked to see if our simulated cell was behaving like the real thing.”</p>
-<p>The simulations gave the researchers insight into how the actual cell “balances the demands of its metabolism, genetic processes and growth,” Luthey-Schulten said. For example, the model revealed that the cell used the bulk of its energy to import essential ions and molecules across its cell membrane. This makes sense, Luthey-Schulten said, because mycoplasmas get most of what they need to survive from other organisms.</p>
-<p>The simulations also allowed Thornburg to calculate the natural lifespan of messenger RNAs, the genetic blueprints for building proteins. They also revealed a relationship between the rate at which lipids and membrane proteins were synthesized and changes in membrane surface area and cell volume.</p>
-<p>“We simulated all of the chemical reactions inside a minimal cell – from its birth until the time it divides two hours later,” Thornburg said. “From this, we get a model that tells us about how the cell behaves and how we can complexify it to change its behavior.”</p>
-<p>“We developed a three-dimensional, fully dynamic kinetic model of a living minimal cell,” Luthey-Schulten said. “Our model opens a window on the inner workings of the cell, showing us how all of the components interact and change in response to internal and external cues. This model – and other, more sophisticated models to come – will help us better understand the fundamental principles of life.”</p>
-<p>Luthey-Schulten holds the Murchison-Mallory Endowed Chair in Chemistry. She is a professor of <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/kgH1Eb3aoGY98L9hAnbzlw~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly9waHlzaWNzLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">physics</a> and an affiliate of the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/cd_LwkgqHXIhazja8JXi7w~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly9iZWNrbWFuLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Beckman Institute for Advanced Science and Technology</a>, the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/9p6XYAk7qI1vUOAKHL4-UA~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly93d3cuaWdiLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Carl. R. Woese Institute for Genomic Biology</a>, the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/puo0iOrXk0cdK94oQYfEUQ~~/AAMFlAA~/RgRjxBW8P0QgaHR0cHM6Ly9iaW9waHlzaWNzLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Center for Biophysics and Quantitative Biology</a> and the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/gJpzD4ok_kSul94ljBaBgw~~/AAMFlAA~/RgRjxBW8P0R_aHR0cHM6Ly9iZWNrbWFuLmlsbGlub2lzLmVkdS9yZXNlYXJjaC9tb2xlY3VsYXItc2NpZW5jZS1hbmQtZW5naW5lZXJpbmctcmVzZWFyY2gtdGhlbWUvdGhlb3JldGljYWwtYW5kLWNvbXB1dGF0aW9uYWwtYmlvcGh5c2ljc1cDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Theoretical and Computational Biophysics</a> group at the U. of I. She also is the co-director of the National Science Foundation’s <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/bJf5udTCO1YBo5IQkvPRBg~~/AAMFlAA~/RgRjxBW8P0QfaHR0cHM6Ly9jcGxjLmlsbGlub2lzLmVkdS9hYm91dFcDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Center for the Physics of Living Cells</a> at Illinois.</p>
-<p>The National Science Foundation and National Institutes of Health support this research.</p>
-<p><strong>Editor’s notes</strong>: </p>
-<p>To reach Zaida (Zan) Luthey-Schulten, email <a href="mailto:zan@illinois.edu">zan@illinois.edu</a>.</p>
-<p>To reach Zane Thornburg, email <a href="mailto:zanert@illinois.edu">zanert@illinois.edu</a>.</p>
-<p>The paper “Fundamental behaviors emerge from simulations of a living minimal cell” is available to members of the media from the <a href="mailto:news@illinois.edu">U. of I. News Bureau.</a></p>
-<h1 id="Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation"><a href="#Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation" class="headerlink" title="Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation"></a>Simultaneous cross-evaluation of heterogeneous <em>E. coli</em> datasets via mechanistic simulation</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751">Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation</a></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con1">DEREK N. MACKLIN</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-7257-0315">HTTPS://ORCID.ORG/0000-0002-7257-0315</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con2">TRAVIS A. AHN-HORST</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-3049-3366">HTTPS://ORCID.ORG/0000-0002-3049-3366</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con3">HEEJO CHOI</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2848-0267">HTTPS://ORCID.ORG/0000-0002-2848-0267</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con4">NICHOLAS A. RUGGERO</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-5034-9716">HTTPS://ORCID.ORG/0000-0002-5034-9716</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con5">JAVIER CARRERA</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con6">JOHN C. MASON</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-4289-7464">HTTPS://ORCID.ORG/0000-0002-4289-7464</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con7">GWANGGYU SUN</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2649-7807">HTTPS://ORCID.ORG/0000-0002-2649-7807</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con8">ERAN AGMON</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-1279-2474">HTTPS://ORCID.ORG/0000-0003-1279-2474</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con9">MIALY M. DEFELICE</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-7197-6292">HTTPS://ORCID.ORG/0000-0002-7197-6292</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#">[…]</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con21">MARKUS W. COVERT</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-5993-8912">HTTPS://ORCID.ORG/0000-0002-5993-8912</a> +12 authors <a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#tab-contributors">Authors Info &amp; Affiliations</a></p>
-<p>SCIENCE • 24 Jul 2020 • Vol 369, Issue 6502 • <a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aav3751">DOI: 10.1126/science.aav3751</a></p>
-<h2 id="Testing-biochemical-data-by-simulation"><a href="#Testing-biochemical-data-by-simulation" class="headerlink" title="Testing biochemical data by simulation"></a>Testing biochemical data by simulation</h2><p>Can a bacterial cell model vet large datasets from disparate sources? Macklin <em>et al.</em> explored whether a comprehensive mathematical model can be used to verify or find conflicts in massive amounts of data that have been reported for the bacterium <em>Escherichia coli</em>, produced in thousands of papers from hundreds of labs. Although most data were consistent, there were data that could not accommodate known biological results, such as insufficient output of RNA polymerases and ribosomes to produce measured cell-doubling times. Other analyses showed that for some essential proteins, no RNA may be transcribed or translated in a cell’s lifetime, but viability can be maintained without certain enzymes through a pool of stable metabolites produced earlier.</p>
-<p><em>Science</em>, this issue p. <a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aav3751">eaav3751</a></p>
-<h2 id="Structured-Abstract"><a href="#Structured-Abstract" class="headerlink" title="Structured Abstract"></a>Structured Abstract</h2><h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><p>The generation of biological data is presenting us with one of the most demanding analysis challenges the world has ever faced, not only in terms of storage and accessibility, but more critically in terms of its extensive heterogeneity and variability. Although issues associated with heterogeneity and variability each represent major analysis problems on their own, the challenges posed by both in combination are even more difficult but also present greater opportunities. The problems arise because assessing the data’s veracity means not only determining whether the data are reproducible but also, and perhaps more deeply, whether they are cross-consistent, meaning that the interpretations of multiple heterogeneous datasets all point to the same conclusion. The opportunities emerge because seemingly discrepant results across multiple studies and measurement modalities may not be due simply to the errors associated with particular techniques, but also to the complex, nonlinear, and highly interconnected nature of biology. Therefore, what is required are analysis methods that can integrate and evaluate multiple data types simultaneously and in the context of biological mechanisms.</p>
-<h3 id="RATIONALE"><a href="#RATIONALE" class="headerlink" title="RATIONALE"></a>RATIONALE</h3><p>Here, we present a large-scale, integrated modeling approach to simultaneously cross-evaluate millions of heterogeneous data against themselves, based on an extensive computer model of <em>Escherichia coli</em> that accounts for the function of 1214 genes (or 43% of the well-annotated genes). The model incorporates an extensive set of diverse measurements compiled from thousands of reports and accounting for many decades of research performed in laboratories around the world. Curation of these data led to the identification of &gt;19,000 parameter values, which we integrated by creating a computational model that brings molecular signaling and regulation of RNA and protein expression together with carbon and energy metabolism in the context of balanced growth. A major advantage of this modeling approach is that heterogeneous data are linked mechanistically through the simulated interaction of cellular processes, providing the most natural, intuitive interpretation of an integrated dataset. Thus, this model enabled us to assess the cross-consistency of all of these datasets as an integrated whole.</p>
-<h3 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h3><p>We assessed the cross-consistency of the parameter set and identified areas of inconsistency by populating our model with the literature-derived parameters and by running detailed simulations of cellular life cycles. Although analysis of these simulations showed that most of the data were in fact cross-consistent, we also identified critical areas in which the data incorporated in our model were not. These inconsistencies led to readily observable consequences, including that the total output of the ribosomes and RNA polymerases described by the data are not sufficient for a cell to reproduce measured doubling times, that measured metabolic parameters are neither fully compatible with each other nor with overall growth, and that essential proteins are absent during the cell cycle—and the cell is robust to this absence. After correcting for these inconsistencies, the model is capable of validatable predictions compared with previously withheld data. Finally, considering these data as a whole led to successful predictions in vitro, in this case protein half-lives.</p>
-<h3 id="CONCLUSION"><a href="#CONCLUSION" class="headerlink" title="CONCLUSION"></a>CONCLUSION</h3><p>Construction of a highly integrative and mechanistic mathematical model provided us with an opportunity to integrate and cross-validate a vast, heterogeneous dataset in <em>E. coli</em>, a process we now call “deep curation” to reflect the multiple layers of curation that we perform (analogous to “deep learning” and “deep sequencing”). By highlighting areas in which studies in <em>E. coli</em> contradict each other, our work suggests lines of fruitful experimental inquiry that may help to resolve discrepancies, leading to both new biological insights and a more coherent understanding of this critical model organism. We hope that this work, by demonstrating the value of a large-scale integrative approach to understanding, interpreting, and cross-validating large datasets, will inspire further efforts to comprehensively characterize other organisms of interest.</p>
-<p><img src="https://www.science.org/cms/10.1126/science.aav3751/asset/1a183dec-db82-43b2-a155-26a20707a6ef/assets/graphic/369_aav3751_fa.jpeg"></p>
-<p><strong>Integrating experimental and computational components, scientists constructed a model of <em>E. coli.</em></strong> Although the model described here resides as software (freely available on GitHub), the model depicted in the photo above is composed of Corning plasticware and filter tips, network cables, and Mac accessories.</p>
-<p>Art: Erik Jacobsen; Photo: Bernard Andre</p>
-<p><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#Fa">OPEN IN VIEWER</a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>The extensive heterogeneity of biological data poses challenges to analysis and interpretation. Construction of a large-scale mechanistic model of <em>Escherichia coli</em> enabled us to integrate and cross-evaluate a massive, heterogeneous dataset based on measurements reported by various groups over decades. We identified inconsistencies with functional consequences across the data, including that the total output of the ribosomes and RNA polymerases described by data are not sufficient for a cell to reproduce measured doubling times, that measured metabolic parameters are neither fully compatible with each other nor with overall growth, and that essential proteins are absent during the cell cycle—and the cell is robust to this absence. Finally, considering these data as a whole leads to successful predictions of new experimental outcomes, in this case protein half-lives.</p>
-<h1 id="Counting-protein-molecules-for-single-cell-proteomics"><a href="#Counting-protein-molecules-for-single-cell-proteomics" class="headerlink" title="Counting protein molecules for single-cell proteomics"></a>Counting protein molecules for single-cell proteomics</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35063071/">Counting protein molecules for single-cell proteomics - PubMed</a></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/?term=Slavov+N&cauthor_id=35063071">Nikolai Slavov</a> <a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35063071/#affiliation-1" title="Department of Bioengineering, Northeastern University, Boston, Massachusetts 02115, United States; Barnett Institute, Northeastern University, Boston, Massachusetts 02115, United States. Electronic address: nslavov@northeastern.edu.">1</a></p>
-<p>Affiliations expand</p>
-<ul>
-<li>  PMID: <strong>35063071</strong></li>
-<li>  PMCID: <a target="_blank" rel="noopener" href="http://www.ncbi.nlm.nih.gov/pmc/articles/pmc8855622/">PMC8855622</a></li>
-<li>  DOI: <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.cell.2021.12.013">10.1016/j.cell.2021.12.013</a></li>
-</ul>
-<h2 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h2><p>Technologies for counting protein molecules are enabling single-cell proteomics at increasing depth and scale. New advances in single-molecule methods by Brinkerhoff and colleagues promise to further increase the sensitivity of protein analysis and motivate questions about scaling up the counting of the human proteome.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/02/20220226/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-20220202" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1711,6 +1567,150 @@
 
 
   
+    <article id="post-20220226" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/02/20220226/">20220226</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/02/20220226/" class="archive-article-date">
+  	<time datetime="2022-02-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220202</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Primer-document-organization"><span class="toc-number">2.</span> <span class="toc-text">Primer document organization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fontconfig-warning"><span class="toc-number">3.</span> <span class="toc-text">Fontconfig warning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums"><span class="toc-number">4.</span> <span class="toc-text">How to control window properties on VLC by command-line? - The VideoLAN Forums</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Researchers-simulate-behavior-of-living-%E2%80%98minimal-cell%E2%80%99-in-three-dimensions"><span class="toc-number">5.</span> <span class="toc-text">Researchers simulate behavior of living ‘minimal cell’ in three dimensions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation"><span class="toc-number">6.</span> <span class="toc-text">Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Testing-biochemical-data-by-simulation"><span class="toc-number">6.1.</span> <span class="toc-text">Testing biochemical data by simulation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Structured-Abstract"><span class="toc-number">6.2.</span> <span class="toc-text">Structured Abstract</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#INTRODUCTION"><span class="toc-number">6.2.1.</span> <span class="toc-text">INTRODUCTION</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RATIONALE"><span class="toc-number">6.2.2.</span> <span class="toc-text">RATIONALE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RESULTS"><span class="toc-number">6.2.3.</span> <span class="toc-text">RESULTS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CONCLUSION"><span class="toc-number">6.2.4.</span> <span class="toc-text">CONCLUSION</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">6.3.</span> <span class="toc-text">Abstract</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Counting-protein-molecules-for-single-cell-proteomics"><span class="toc-number">7.</span> <span class="toc-text">Counting protein molecules for single-cell proteomics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract-1"><span class="toc-number">7.1.</span> <span class="toc-text">Abstract</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1&#x2F;Regular_PCR.list # Regular PCR for CD and EF fragments</span><br><span class="line">cat Regular_PCR.list | sed &#39;s&#x2F;^&#x2F;&gt;&#x2F;&#39; | sed &#39;s&#x2F;\t\t&#x2F;\n&#x2F;&#39;</span><br><span class="line">#########################################################################</span><br><span class="line"># Primer check with primerBLAST</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">rm *.txt *.csv *.asn</span><br><span class="line">#</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;NC_001806_HSV-1.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;GU734771_HSV-1_strain_F_CG.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">#########################################################################</span><br><span class="line"># Health from Samsung</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health; cd $&#123;i&#125;; nemo -n $&#123;i&#125;; i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health&#x2F;Samsung_Health.md; subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Primer-document-organization"><a href="#Primer-document-organization" class="headerlink" title="Primer document organization"></a>Primer document organization</h1><ul>
+<li>To be newly located, GU734771_HSV-1_strain_F_CG.gb</li>
+<li><a target="_blank" rel="noopener" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-134">Primer-BLAST: A tool to design target-specific primers for polymerase chain reaction | BMC Bioinformatics | Full Text</a></li>
+</ul>
+<h1 id="Fontconfig-warning"><a href="#Fontconfig-warning" class="headerlink" title="Fontconfig warning"></a>Fontconfig warning</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cxybb.com/article/weixin_33810302/92026495">ubuntu技巧_weixin_33810302的博客-程序员宝宝 - 程序员宝宝</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fontconfig warning: &quot;&#x2F;etc&#x2F;fonts&#x2F;conf.d&#x2F;51-local.conf&quot;, line 90: Having multiple &lt;family&gt; in &lt;alias&gt; isn&#39;t supported and may not work as expected</span><br></pre></td></tr></table></figure>
+
+<h1 id="How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums"><a href="#How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums" class="headerlink" title="How to control window properties on VLC by command-line? - The VideoLAN Forums"></a><a target="_blank" rel="noopener" href="https://forum.videolan.org/viewtopic.php?t=124021">How to control window properties on VLC by command-line? - The VideoLAN Forums</a></h1><h1 id="Researchers-simulate-behavior-of-living-‘minimal-cell’-in-three-dimensions"><a href="#Researchers-simulate-behavior-of-living-‘minimal-cell’-in-three-dimensions" class="headerlink" title="Researchers simulate behavior of living ‘minimal cell’ in three dimensions"></a>Researchers simulate behavior of living ‘minimal cell’ in three dimensions</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.eurekalert.org/news-releases/940215">Researchers simulate behavior of living ‘mini | EurekAlert!</a></li>
+</ul>
+<p>Simulations offer insight into fundamental principles of life</p>
+<p><a target="_blank" rel="noopener" href="https://www.eurekalert.org/releaseguidelines">Peer-Reviewed Publication</a></p>
+<p>UNIVERSITY OF ILLINOIS AT URBANA-CHAMPAIGN, NEWS BUREAU</p>
+<p>PrintEmail App</p>
+<p> <a target="_blank" rel="noopener" href="https://www.eurekalert.org/multimedia/814360"><img src="https://earimediaprodweb.azurewebsites.net/Api/v1/Multimedia/7c5bab6c-f219-4114-b11b-6263fe9a52f6/Rendition/low-res/Content/Public" alt="Research Team"></a> </p>
+<p><strong>IMAGE: WITH THEIR COLLEAGUES, RESEARCHERS, FROM LEFT, GRADUATE STUDENT ZANE THORNBURG, CHEMISTRY PROFESSOR ZAIDA (ZAN) LUTHEY-SCHULTEN AND GRADUATE STUDENTS BENJAMIN GILBERT AND TROY BRIER SUCCESSFULLY SIMULATED A LIVING “MINIMAL CELL.” THE ADVANCE WILL AID IN CREATING COMPUTER MODELS THAT ACCURATELY PREDICT HOW LIVING CELLS WILL BEHAVE WHEN CHANGES ARE MADE TO THEIR GENOMES OR OTHER CHARACTERISTICS.</strong> <a target="_blank" rel="noopener" href="https://www.eurekalert.org/multimedia/814360">view more</a> </p>
+<p>CREDIT: PHOTO BY L. BRIAN STAUFFER</p>
+<p>CHAMPAIGN, Ill. — Scientists report that they have built a living “minimal cell” with a genome stripped down to its barest essentials – and a computer model of the cell that mirrors its behavior. By refining and testing their model, the scientists say they are developing a system for predicting how changes to the genomes, living conditions or physical characteristics of live cells will alter how they function.</p>
+<p>They report their findings in the journal <em>Cell</em>.</p>
+<p>Minimal cells have pared-down genomes that carry the genes necessary to replicate their DNA, grow, divide and perform most of the other functions that define life, said <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/RXaC6rveFi2wQUtX10ZzjQ~~/AAMFlAA~/RgRjxBW8P0QiaHR0cHM6Ly9jaGVtaXN0cnkuaWxsaW5vaXMuZWR1L3phblcDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Zaida (Zan) Luthey-Schulten</a>, a <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/RYSYusUpnrRTBkQz5qGMYA~~/AAMFlAA~/RgRjxBW8P0QfaHR0cHM6Ly9jaGVtaXN0cnkuaWxsaW5vaXMuZWR1L1cDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">chemistry</a> professor at the University of Illinois Urbana-Champaign who led the work with graduate student Zane Thornburg. “What’s new here is that we developed a three-dimensional, fully dynamic kinetic model of a living minimal cell that mimics what goes on in the actual cell,” Luthey-Schulten said.</p>
+<p>The simulation maps out the precise location and chemical characteristics of thousands of cellular components in 3D space at an atomic scale. It tracks how long it takes for these molecules to diffuse through the cell and encounter one another, what kinds of chemical reactions occur when they do, and how much energy is required for each step.</p>
+<p>To build the minimal cell, scientists at the J. Craig Venter Institute in La Jolla, California, turned to the simplest living cells – the mycoplasmas, a genus of bacteria that parasitize other organisms. In previous studies, the JCVI team built a synthetic genome missing as many nonessential genes as possible and grew the cell in an environment enriched with all the nutrients and factors needed to sustain it. For the new study, the team added back a few genes to improve the cell’s viability. This cell is simpler than any naturally occurring cell, making it easier to model on a computer.</p>
+<p>Simulating something as enormous and complex as a living cell relies on data from decades of research, Luthey-Schulten said. To build the computer model, she and her colleagues at Illinois had to account for the physical and chemical characteristics of the cell’s DNA; lipids; amino acids; and gene-transcription, translation and protein-building machinery. They also had to model how each component diffused through the cell, keeping track of the energy required for each step in the cell’s life cycle. NVIDIA graphic processing units were used to perform the simulations.  </p>
+<p>“We built a computer model based on what we knew about the minimal cell, and then we ran simulations,” Thornburg said. “And we checked to see if our simulated cell was behaving like the real thing.”</p>
+<p>The simulations gave the researchers insight into how the actual cell “balances the demands of its metabolism, genetic processes and growth,” Luthey-Schulten said. For example, the model revealed that the cell used the bulk of its energy to import essential ions and molecules across its cell membrane. This makes sense, Luthey-Schulten said, because mycoplasmas get most of what they need to survive from other organisms.</p>
+<p>The simulations also allowed Thornburg to calculate the natural lifespan of messenger RNAs, the genetic blueprints for building proteins. They also revealed a relationship between the rate at which lipids and membrane proteins were synthesized and changes in membrane surface area and cell volume.</p>
+<p>“We simulated all of the chemical reactions inside a minimal cell – from its birth until the time it divides two hours later,” Thornburg said. “From this, we get a model that tells us about how the cell behaves and how we can complexify it to change its behavior.”</p>
+<p>“We developed a three-dimensional, fully dynamic kinetic model of a living minimal cell,” Luthey-Schulten said. “Our model opens a window on the inner workings of the cell, showing us how all of the components interact and change in response to internal and external cues. This model – and other, more sophisticated models to come – will help us better understand the fundamental principles of life.”</p>
+<p>Luthey-Schulten holds the Murchison-Mallory Endowed Chair in Chemistry. She is a professor of <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/kgH1Eb3aoGY98L9hAnbzlw~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly9waHlzaWNzLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">physics</a> and an affiliate of the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/cd_LwkgqHXIhazja8JXi7w~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly9iZWNrbWFuLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Beckman Institute for Advanced Science and Technology</a>, the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/9p6XYAk7qI1vUOAKHL4-UA~~/AAMFlAA~/RgRjxBW8P0QdaHR0cHM6Ly93d3cuaWdiLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Carl. R. Woese Institute for Genomic Biology</a>, the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/puo0iOrXk0cdK94oQYfEUQ~~/AAMFlAA~/RgRjxBW8P0QgaHR0cHM6Ly9iaW9waHlzaWNzLmlsbGlub2lzLmVkdS9XA3NwY0IKYeC8kOFhYpfr7VIRZGl5YUBpbGxpbm9pcy5lZHVYBAAAAAQ~">Center for Biophysics and Quantitative Biology</a> and the <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/gJpzD4ok_kSul94ljBaBgw~~/AAMFlAA~/RgRjxBW8P0R_aHR0cHM6Ly9iZWNrbWFuLmlsbGlub2lzLmVkdS9yZXNlYXJjaC9tb2xlY3VsYXItc2NpZW5jZS1hbmQtZW5naW5lZXJpbmctcmVzZWFyY2gtdGhlbWUvdGhlb3JldGljYWwtYW5kLWNvbXB1dGF0aW9uYWwtYmlvcGh5c2ljc1cDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Theoretical and Computational Biophysics</a> group at the U. of I. She also is the co-director of the National Science Foundation’s <a target="_blank" rel="noopener" href="http://links.illinois.edu/f/a/bJf5udTCO1YBo5IQkvPRBg~~/AAMFlAA~/RgRjxBW8P0QfaHR0cHM6Ly9jcGxjLmlsbGlub2lzLmVkdS9hYm91dFcDc3BjQgph4LyQ4WFil-vtUhFkaXlhQGlsbGlub2lzLmVkdVgEAAAABA~~">Center for the Physics of Living Cells</a> at Illinois.</p>
+<p>The National Science Foundation and National Institutes of Health support this research.</p>
+<p><strong>Editor’s notes</strong>: </p>
+<p>To reach Zaida (Zan) Luthey-Schulten, email <a href="mailto:zan@illinois.edu">zan@illinois.edu</a>.</p>
+<p>To reach Zane Thornburg, email <a href="mailto:zanert@illinois.edu">zanert@illinois.edu</a>.</p>
+<p>The paper “Fundamental behaviors emerge from simulations of a living minimal cell” is available to members of the media from the <a href="mailto:news@illinois.edu">U. of I. News Bureau.</a></p>
+<h1 id="Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation"><a href="#Simultaneous-cross-evaluation-of-heterogeneous-E-coli-datasets-via-mechanistic-simulation" class="headerlink" title="Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation"></a>Simultaneous cross-evaluation of heterogeneous <em>E. coli</em> datasets via mechanistic simulation</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751">Simultaneous cross-evaluation of heterogeneous E. coli datasets via mechanistic simulation</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con1">DEREK N. MACKLIN</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-7257-0315">HTTPS://ORCID.ORG/0000-0002-7257-0315</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con2">TRAVIS A. AHN-HORST</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-3049-3366">HTTPS://ORCID.ORG/0000-0002-3049-3366</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con3">HEEJO CHOI</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2848-0267">HTTPS://ORCID.ORG/0000-0002-2848-0267</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con4">NICHOLAS A. RUGGERO</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-5034-9716">HTTPS://ORCID.ORG/0000-0002-5034-9716</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con5">JAVIER CARRERA</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con6">JOHN C. MASON</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-4289-7464">HTTPS://ORCID.ORG/0000-0002-4289-7464</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con7">GWANGGYU SUN</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-2649-7807">HTTPS://ORCID.ORG/0000-0002-2649-7807</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con8">ERAN AGMON</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-1279-2474">HTTPS://ORCID.ORG/0000-0003-1279-2474</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con9">MIALY M. DEFELICE</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-7197-6292">HTTPS://ORCID.ORG/0000-0002-7197-6292</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#">[…]</a><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#con21">MARKUS W. COVERT</a> <a target="_blank" rel="noopener" href="https://orcid.org/0000-0002-5993-8912">HTTPS://ORCID.ORG/0000-0002-5993-8912</a> +12 authors <a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#tab-contributors">Authors Info &amp; Affiliations</a></p>
+<p>SCIENCE • 24 Jul 2020 • Vol 369, Issue 6502 • <a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aav3751">DOI: 10.1126/science.aav3751</a></p>
+<h2 id="Testing-biochemical-data-by-simulation"><a href="#Testing-biochemical-data-by-simulation" class="headerlink" title="Testing biochemical data by simulation"></a>Testing biochemical data by simulation</h2><p>Can a bacterial cell model vet large datasets from disparate sources? Macklin <em>et al.</em> explored whether a comprehensive mathematical model can be used to verify or find conflicts in massive amounts of data that have been reported for the bacterium <em>Escherichia coli</em>, produced in thousands of papers from hundreds of labs. Although most data were consistent, there were data that could not accommodate known biological results, such as insufficient output of RNA polymerases and ribosomes to produce measured cell-doubling times. Other analyses showed that for some essential proteins, no RNA may be transcribed or translated in a cell’s lifetime, but viability can be maintained without certain enzymes through a pool of stable metabolites produced earlier.</p>
+<p><em>Science</em>, this issue p. <a target="_blank" rel="noopener" href="https://doi.org/10.1126/science.aav3751">eaav3751</a></p>
+<h2 id="Structured-Abstract"><a href="#Structured-Abstract" class="headerlink" title="Structured Abstract"></a>Structured Abstract</h2><h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><p>The generation of biological data is presenting us with one of the most demanding analysis challenges the world has ever faced, not only in terms of storage and accessibility, but more critically in terms of its extensive heterogeneity and variability. Although issues associated with heterogeneity and variability each represent major analysis problems on their own, the challenges posed by both in combination are even more difficult but also present greater opportunities. The problems arise because assessing the data’s veracity means not only determining whether the data are reproducible but also, and perhaps more deeply, whether they are cross-consistent, meaning that the interpretations of multiple heterogeneous datasets all point to the same conclusion. The opportunities emerge because seemingly discrepant results across multiple studies and measurement modalities may not be due simply to the errors associated with particular techniques, but also to the complex, nonlinear, and highly interconnected nature of biology. Therefore, what is required are analysis methods that can integrate and evaluate multiple data types simultaneously and in the context of biological mechanisms.</p>
+<h3 id="RATIONALE"><a href="#RATIONALE" class="headerlink" title="RATIONALE"></a>RATIONALE</h3><p>Here, we present a large-scale, integrated modeling approach to simultaneously cross-evaluate millions of heterogeneous data against themselves, based on an extensive computer model of <em>Escherichia coli</em> that accounts for the function of 1214 genes (or 43% of the well-annotated genes). The model incorporates an extensive set of diverse measurements compiled from thousands of reports and accounting for many decades of research performed in laboratories around the world. Curation of these data led to the identification of &gt;19,000 parameter values, which we integrated by creating a computational model that brings molecular signaling and regulation of RNA and protein expression together with carbon and energy metabolism in the context of balanced growth. A major advantage of this modeling approach is that heterogeneous data are linked mechanistically through the simulated interaction of cellular processes, providing the most natural, intuitive interpretation of an integrated dataset. Thus, this model enabled us to assess the cross-consistency of all of these datasets as an integrated whole.</p>
+<h3 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h3><p>We assessed the cross-consistency of the parameter set and identified areas of inconsistency by populating our model with the literature-derived parameters and by running detailed simulations of cellular life cycles. Although analysis of these simulations showed that most of the data were in fact cross-consistent, we also identified critical areas in which the data incorporated in our model were not. These inconsistencies led to readily observable consequences, including that the total output of the ribosomes and RNA polymerases described by the data are not sufficient for a cell to reproduce measured doubling times, that measured metabolic parameters are neither fully compatible with each other nor with overall growth, and that essential proteins are absent during the cell cycle—and the cell is robust to this absence. After correcting for these inconsistencies, the model is capable of validatable predictions compared with previously withheld data. Finally, considering these data as a whole led to successful predictions in vitro, in this case protein half-lives.</p>
+<h3 id="CONCLUSION"><a href="#CONCLUSION" class="headerlink" title="CONCLUSION"></a>CONCLUSION</h3><p>Construction of a highly integrative and mechanistic mathematical model provided us with an opportunity to integrate and cross-validate a vast, heterogeneous dataset in <em>E. coli</em>, a process we now call “deep curation” to reflect the multiple layers of curation that we perform (analogous to “deep learning” and “deep sequencing”). By highlighting areas in which studies in <em>E. coli</em> contradict each other, our work suggests lines of fruitful experimental inquiry that may help to resolve discrepancies, leading to both new biological insights and a more coherent understanding of this critical model organism. We hope that this work, by demonstrating the value of a large-scale integrative approach to understanding, interpreting, and cross-validating large datasets, will inspire further efforts to comprehensively characterize other organisms of interest.</p>
+<p><img src="https://www.science.org/cms/10.1126/science.aav3751/asset/1a183dec-db82-43b2-a155-26a20707a6ef/assets/graphic/369_aav3751_fa.jpeg"></p>
+<p><strong>Integrating experimental and computational components, scientists constructed a model of <em>E. coli.</em></strong> Although the model described here resides as software (freely available on GitHub), the model depicted in the photo above is composed of Corning plasticware and filter tips, network cables, and Mac accessories.</p>
+<p>Art: Erik Jacobsen; Photo: Bernard Andre</p>
+<p><a target="_blank" rel="noopener" href="https://www.science.org/doi/10.1126/science.aav3751#Fa">OPEN IN VIEWER</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>The extensive heterogeneity of biological data poses challenges to analysis and interpretation. Construction of a large-scale mechanistic model of <em>Escherichia coli</em> enabled us to integrate and cross-evaluate a massive, heterogeneous dataset based on measurements reported by various groups over decades. We identified inconsistencies with functional consequences across the data, including that the total output of the ribosomes and RNA polymerases described by data are not sufficient for a cell to reproduce measured doubling times, that measured metabolic parameters are neither fully compatible with each other nor with overall growth, and that essential proteins are absent during the cell cycle—and the cell is robust to this absence. Finally, considering these data as a whole leads to successful predictions of new experimental outcomes, in this case protein half-lives.</p>
+<h1 id="Counting-protein-molecules-for-single-cell-proteomics"><a href="#Counting-protein-molecules-for-single-cell-proteomics" class="headerlink" title="Counting protein molecules for single-cell proteomics"></a>Counting protein molecules for single-cell proteomics</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35063071/">Counting protein molecules for single-cell proteomics - PubMed</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/?term=Slavov+N&cauthor_id=35063071">Nikolai Slavov</a> <a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/35063071/#affiliation-1" title="Department of Bioengineering, Northeastern University, Boston, Massachusetts 02115, United States; Barnett Institute, Northeastern University, Boston, Massachusetts 02115, United States. Electronic address: nslavov@northeastern.edu.">1</a></p>
+<p>Affiliations expand</p>
+<ul>
+<li>  PMID: <strong>35063071</strong></li>
+<li>  PMCID: <a target="_blank" rel="noopener" href="http://www.ncbi.nlm.nih.gov/pmc/articles/pmc8855622/">PMC8855622</a></li>
+<li>  DOI: <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.cell.2021.12.013">10.1016/j.cell.2021.12.013</a></li>
+</ul>
+<h2 id="Abstract-1"><a href="#Abstract-1" class="headerlink" title="Abstract"></a>Abstract</h2><p>Technologies for counting protein molecules are enabling single-cell proteomics at increasing depth and scale. New advances in single-molecule methods by Brinkerhoff and colleagues promise to further increase the sensitivity of protein analysis and motivate questions about scaling up the counting of the human proteome.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/02/20220226/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20220125" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1965,6 +1965,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
@@ -1978,26 +1986,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2017,15 +2005,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2041,19 +2029,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
+                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
+                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2133,35 +2117,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
+                <a href="javascript:void(0)" class="js-tag color2">Legado</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
+                <a href="javascript:void(0)" class="js-tag color3">Document Clean-up</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
+                <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Guo Yifan</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2193,19 +2161,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2249,6 +2233,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">rsync</a>
               </li>
              
@@ -2282,30 +2282,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2345,6 +2321,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
               </li>
              
@@ -2370,6 +2354,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2405,10 +2405,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -2422,6 +2418,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2489,27 +2489,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CEB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">COVID-19 Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">PDF_Learning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">R update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2522,6 +2506,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">R update</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CRAN update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2833,15 +2833,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Margarine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Protein-Protein Docking</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PPI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Margarine</a>
               </li>
              
               <li class="article-tag-list-item">
