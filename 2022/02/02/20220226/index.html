@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>20220226 | Hongtu Liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Working directories12345678910111213141516171819202122232425i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \cd $">
+  <meta name="description" content="Working directories123456789101112131415161718192021222324252627i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20220226">
 <meta property="og:url" content="http://example.com/2022/02/02/20220226/index.html">
 <meta property="og:site_name" content="Hongtu Liu">
-<meta property="og:description" content="Working directories12345678910111213141516171819202122232425i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \cd $">
+<meta property="og:description" content="Working directories123456789101112131415161718192021222324252627i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-26T02:54:01.292Z">
+<meta property="article:modified_time" content="2022-02-26T03:33:46.316Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta name="twitter:card" content="summary">
   
@@ -187,7 +187,7 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Primer-document-organization"><span class="toc-number">2.</span> <span class="toc-text">Primer document organization</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fontconfig-warning"><span class="toc-number">3.</span> <span class="toc-text">Fontconfig warning</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-control-window-properties-on-VLC-by-command-line-The-VideoLAN-Forums"><span class="toc-number">4.</span> <span class="toc-text">How to control window properties on VLC by command-line? - The VideoLAN Forums</span></a></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1&#x2F;Regular_PCR.list # Regular PCR for CD and EF fragments</span><br><span class="line">cat Regular_PCR.list | sed &#39;s&#x2F;^&#x2F;&gt;&#x2F;&#39; | sed &#39;s&#x2F;\t\t&#x2F;\n&#x2F;&#39;</span><br><span class="line">#########################################################################</span><br><span class="line"># Primer check with primerBLAST</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">rm *.txt *.csv *.asn</span><br><span class="line">#</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;NC_001806_HSV-1.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;GU734771_HSV-1_strain_F_CG.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">#########################################################################</span><br><span class="line"># Health from Samsung</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1&#x2F;Regular_PCR.list # Regular PCR for CD and EF fragments</span><br><span class="line">cat Regular_PCR.list | sed &#39;s&#x2F;^&#x2F;&gt;&#x2F;&#39; | sed &#39;s&#x2F;\t\t&#x2F;\n&#x2F;&#39;</span><br><span class="line">#########################################################################</span><br><span class="line"># Primer check with primerBLAST</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-1; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">rm *.txt *.csv *.asn</span><br><span class="line">#</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;NC_001806_HSV-1.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">Query&#x3D;Primer_Sum.fas</span><br><span class="line">Subject&#x3D;GU734771_HSV-1_strain_F_CG.fas</span><br><span class="line">primerBLAST $&#123;Query&#125; $&#123;Subject&#125;</span><br><span class="line">#########################################################################</span><br><span class="line"># Health from Samsung</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health; \</span><br><span class="line">cd $&#123;i&#125;; nemo -n $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;Samsung_Health&#x2F;Samsung_Health.md; \</span><br><span class="line">subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Primer-document-organization"><a href="#Primer-document-organization" class="headerlink" title="Primer document organization"></a>Primer document organization</h1><ul>
 <li>To be newly located, GU734771_HSV-1_strain_F_CG.gb</li>
 <li><a target="_blank" rel="noopener" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-134">Primer-BLAST: A tool to design target-specific primers for polymerase chain reaction | BMC Bioinformatics | Full Text</a></li>
@@ -301,18 +301,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/02/20220202/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/08/20220208/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          20220202
+          20220208
         
       </div>
     </a>
   
   
-    <a href="/2022/01/25/20220125/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">20220125</div>
+    <a href="/2022/02/02/20220202/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20220202</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -485,10 +485,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
@@ -497,15 +493,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,15 +513,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,22 +585,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">zcat</a>
               </li>
              
@@ -638,6 +610,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -670,34 +670,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -738,6 +710,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Minoxidil</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -793,14 +793,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
               </li>
              
@@ -833,7 +825,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">E-MTAB-173</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Essential</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Kaiju</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mobile phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -869,10 +897,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
               </li>
              
@@ -889,15 +913,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Word</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Flu Biosafety</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -925,30 +961,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">E-MTAB-173</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Essential</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Kaiju</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Mobile phone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">File manager</a>
               </li>
              
@@ -961,27 +973,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Word</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Flu Biosafety</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1101,11 +1101,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算命</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color3">算命</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1377,15 +1377,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">My Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">氢原子</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">氢自由基</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">My Linux</a>
               </li>
              
               <li class="article-tag-list-item">
