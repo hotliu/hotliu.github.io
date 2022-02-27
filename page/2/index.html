@@ -158,6 +158,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20220125" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/01/25/20220125/">20220125</a>
+    </h1>
+  
+
+        
+        <a href="/2022/01/25/20220125/" class="archive-article-date">
+  	<time datetime="2022-01-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220125</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RPA-probe"><span class="toc-number">2.</span> <span class="toc-text">RPA probe</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Order-forms"><span class="toc-number">2.1.</span> <span class="toc-text">Order forms</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A5%87%E8%91%A9%E7%9A%84%E6%89%B9%E9%87%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">奇葩的批量转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E7%89%A9%E6%95%B4%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">引物整理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDeep2-miR-Prediction"><span class="toc-number">5.</span> <span class="toc-text">miRDeep2, miR Prediction</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="RPA-probe"><a href="#RPA-probe" class="headerlink" title="RPA probe"></a>RPA probe</h1><ul>
+<li>p96 in summarized PDF document</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># p1489 B2</span><br></pre></td></tr></table></figure>
+
+<h2 id="Order-forms"><a href="#Order-forms" class="headerlink" title="Order forms"></a>Order forms</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Manufacturer_Manual&#x2F;TwistDx&#x2F;Handbooks&#x2F;Oligo_Order&#39;; \</span><br><span class="line">cd $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">├── Basic_oligonucleotide_forms</span><br><span class="line">│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5.xls</span><br><span class="line">│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx</span><br><span class="line">│   └── Basic_oligonucleotide_forms.7z</span><br><span class="line">├── exo_oligonucleotide_forms</span><br><span class="line">│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5-1.xls</span><br><span class="line">│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp-2.xlsx</span><br><span class="line">│   ├── 3_twistamp_exo_order_form_biosearch.xls</span><br><span class="line">│   ├── 4_twistamp_exo_order_form_generic.xls</span><br><span class="line">│   └── exo_oligonucleotide_forms.7z</span><br><span class="line">├── fpg_oligonucleotide_forms</span><br><span class="line">│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5.xls</span><br><span class="line">│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx</span><br><span class="line">│   ├── 3_twistamp_fpg_order_form_biosearch.xls</span><br><span class="line">│   ├── 4_twistamp_fpg_order_form_generic.xls</span><br><span class="line">│   └── fpg_oligonucleotide_forms.7z</span><br><span class="line">└── nfo_oligonucleotide_forms</span><br><span class="line">    ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5-1.xls</span><br><span class="line">    ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx</span><br><span class="line">    ├── 3_twistamp_nfo_order_form_biosearch.xls</span><br><span class="line">    ├── 4_twistamp_nfo_order_form_generic.xls</span><br><span class="line">    └── nfo_oligonucleotide_forms.7z</span><br><span class="line"></span><br><span class="line">4 directories, 18 files</span><br></pre></td></tr></table></figure>
+
+<p>├── Basic_oligonucleotide_forms<br>│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5.xls<br>│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx<br>│   └── Basic_oligonucleotide_forms.7z<br>├── exo_oligonucleotide_forms<br>│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5-1.xls<br>│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp-2.xlsx<br>│   ├── 3_twistamp_exo_order_form_biosearch.xls<br>│   ├── 4_twistamp_exo_order_form_generic.xls<br>│   └── exo_oligonucleotide_forms.7z<br>├── fpg_oligonucleotide_forms<br>│   ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5.xls<br>│   ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx<br>│   ├── 3_twistamp_fpg_order_form_biosearch.xls<br>│   ├── 4_twistamp_fpg_order_form_generic.xls<br>│   └── fpg_oligonucleotide_forms.7z<br>└── nfo_oligonucleotide_forms<br>    ├── 1_btioligoorder8f2d67a1f42264a8875eff0000c536f5-1.xls<br>    ├── 2_eurogentec-oligo-batch-order-v8-7-twistamp.xlsx<br>    ├── 3_twistamp_nfo_order_form_biosearch.xls<br>    ├── 4_twistamp_nfo_order_form_generic.xls<br>    └── nfo_oligonucleotide_forms.7z</p>
+<h1 id="奇葩的批量转换"><a href="#奇葩的批量转换" class="headerlink" title="奇葩的批量转换"></a>奇葩的批量转换</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/29869/converting-multiple-image-files-from-jpeg-to-pdf-format">command line - Converting multiple image files from JPEG to PDF format - Unix &amp; Linux Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/246647/convert-a-directory-of-jpeg-files-to-a-single-pdf-document">command line - Convert a directory of JPEG files to a single PDF document - Ask Ubuntu</a></li>
+</ul>
+<p>以上两个链接中，真有神奇的命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">convert *.jpg -auto-orient pictures.pdf</span><br><span class="line"># </span><br><span class="line">convert *.jpg +adjoin page-%d.pdf</span><br></pre></td></tr></table></figure>
+<p>下面的更牛！居然可以OCR。</p>
+<ol>
+<li><p>Make PDF</p>
+<p> <code>img2pdf *.jp* --output combined.pdf</code></p>
+</li>
+<li><p>(optional) OCR the output PDF</p>
+<p> <code>ocrmypdf combined.pdf combined_ocr.pdf</code></p>
+</li>
+</ol>
+<p>又知道一个新的软件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdfjam --a4paper *.jpg</span><br></pre></td></tr></table></figure>
+
+<p>下面的Shell命令组合，让人神往</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parallel convert &#39;&#123;&#125; &#123;.&#125;.pdf&#39; ::: *.jpg</span><br></pre></td></tr></table></figure>
+<p>A tiny script would do the trick. <em>(tested with ksh88 on Solaris 10)</em></p>
+<p><strong>script.ksh</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;ksh</span><br><span class="line"></span><br><span class="line">[[ $# !&#x3D; 1 ]] &amp;&amp; exit 255 # test for nr of args</span><br><span class="line"></span><br><span class="line">pdfname&#x3D;$(sed -e &#39;s&#x2F;\(.*\)\.jpg&#x2F;\1\.pdf&#x2F;&#39; &lt;(echo $&quot;1&quot;)) #replace *.jpg with *.pdf</span><br><span class="line">convert &quot;$1&quot; $pdfname</span><br></pre></td></tr></table></figure>
+<p>Then you can run <code>find</code> to execute the script:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find dir -name image\*.jpg -exec &#x2F;bin&#x2F;ksh script.ksh &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<h1 id="引物整理"><a href="#引物整理" class="headerlink" title="引物整理"></a>引物整理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;肿瘤室工作&#x2F;日常管理&#x2F;引物管理</span><br></pre></td></tr></table></figure>
+<h1 id="miRDeep2-miR-Prediction"><a href="#miRDeep2-miR-Prediction" class="headerlink" title="miRDeep2, miR Prediction"></a>miRDeep2, miR Prediction</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;miR_Base&#x2F;miR_Prediction&#x2F;miRDeep2&#x2F;Installation</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">miR</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">miR prediction</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Primer organization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/01/25/20220125/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20220123" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1474,94 +1609,6 @@ sys    0m0.661s</code></pre>
 
 
   
-    <article id="post-20211013" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/13/20211013/">20211013</a>
-    </h1>
-  
-
-        
-        <a href="/2021/10/13/20211013/" class="archive-article-date">
-  	<time datetime="2021-10-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20211013</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Open-an-Office-document-from-Mac-OSX-terminal"><span class="toc-number">2.</span> <span class="toc-text">Open an Office document from Mac OSX terminal</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Open-Google-Chrome-from-Mac-OSX-terminal"><span class="toc-number">2.1.</span> <span class="toc-text">Open Google Chrome from Mac OSX terminal</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 质粒整理</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;肿瘤室物料管理&#x2F;质粒出入库制度</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;肿瘤室物料管理&#x2F;质粒出入库制度&#x2F;李颖质粒整理&#x2F;李颖质粒表格</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">################################################################</span><br><span class="line"># Tianlong</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;qPCR&#x2F;Tianlong</span><br><span class="line">cd $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;qPCR&#x2F;Tianlong&#x2F;README.md; subl $&#123;i&#125;</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;qPCR&#x2F;Tianlong&#x2F;Analysis</span><br></pre></td></tr></table></figure>
-<h1 id="Open-an-Office-document-from-Mac-OSX-terminal"><a href="#Open-an-Office-document-from-Mac-OSX-terminal" class="headerlink" title="Open an Office document from Mac OSX terminal"></a>Open an Office document from Mac OSX terminal</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=mac+osx+terminal+launch+word&oq=mac+osx+terminal+launch+word&aqs=chrome..69i57j0i13j0i13i30j0i22i30l7.13793j0j9&client=ubuntu&sourceid=chrome&ie=UTF-8">mac osx terminal launch word - Google Search</a></li>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/8387371/how-to-startup-a-mac-os-x-application-from-command-line">macos - How to startup a Mac OS X application from command line? - Stack Overflow</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.quora.com/How-do-I-open-a-blank-Word-Document-file-through-the-terminal-in-Mac-OSX">How to open a blank Word Document file through the terminal in Mac OSX - Quora</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">osascript -e &#39;tell application &quot;Microsoft Word&quot; to create new document&#39;</span><br><span class="line">osascript -e &#39;tell application &quot;Microsoft Word&quot; to create new document&#39; -e &#39;actviate&#39;</span><br><span class="line">open &#x2F;Applications&#x2F;Microsoft\ Word.app</span><br><span class="line"># </span><br><span class="line">open -a &quot;Microsoft PowerPoint&quot; &lt;filename.ppt&gt;</span><br><span class="line"># </span><br><span class="line">open -a &quot;Microsoft PowerPoint&quot; &lt;ppt file path&gt;</span><br><span class="line"># </span><br><span class="line">open -a &quot;Microsoft Word&quot; &lt;filename.docx&gt;</span><br><span class="line">open -b com.microsoft.PowerPoint &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Open-Google-Chrome-from-Mac-OSX-terminal"><a href="#Open-Google-Chrome-from-Mac-OSX-terminal" class="headerlink" title="Open Google Chrome from Mac OSX terminal"></a>Open Google Chrome from Mac OSX terminal</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;Google\ Chrome.app&#x2F;</span><br><span class="line"></span><br><span class="line">#cd into hidden folder containing the actual executable</span><br><span class="line"></span><br><span class="line">cd Contents&#x2F;MacOS&#x2F;</span><br><span class="line"></span><br><span class="line">#Launch Chrome in a new tab</span><br><span class="line"></span><br><span class="line">.&#x2F;Google\ Chrome -new-tab</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/13/20211013/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
@@ -1681,6 +1728,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">周易大师</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
@@ -1690,6 +1749,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1706,18 +1777,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1821,22 +1880,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
@@ -1869,6 +1912,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
@@ -1894,6 +1953,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1934,30 +2009,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Minoxidil</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2029,6 +2080,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Watch charging</a>
               </li>
              
@@ -2042,10 +2097,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Shotcut</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2081,35 +2132,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo Note</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19 Data Download</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Glossary</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2141,7 +2168,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2153,15 +2196,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2185,6 +2220,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
@@ -2193,15 +2236,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">周易大师</a>
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2257,14 +2304,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HSV</a>
               </li>
              
@@ -2293,6 +2332,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">山西疾控</a>
               </li>
              
@@ -2309,11 +2356,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color3">算命</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算命</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2409,19 +2456,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
               </li>
              
               <li class="article-tag-list-item">
