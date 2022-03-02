@@ -158,6 +158,118 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20211021" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/21/20211021/">20211021</a>
+    </h1>
+  
+
+        
+        <a href="/2021/10/21/20211021/" class="archive-article-date">
+  	<time datetime="2021-10-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20211021</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SIBA"><span class="toc-number">2.</span> <span class="toc-text">SIBA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SARS-CoV-2-Download"><span class="toc-number">3.</span> <span class="toc-text">SARS-CoV-2 Download</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#URL"><span class="toc-number">4.</span> <span class="toc-text">URL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NCBI-database-download"><span class="toc-number">5.</span> <span class="toc-text">NCBI database download</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HSV-2-BWA-with-magicblast"><span class="toc-number">6.</span> <span class="toc-text">HSV-2 BWA with magicblast</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#COVID-19-data-US"><span class="toc-number">7.</span> <span class="toc-text">COVID-19 data US</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-from-HHS"><span class="toc-number">7.1.</span> <span class="toc-text">Data from HHS</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># </span><br><span class="line">#######################################################################</span><br><span class="line"># </span><br><span class="line"># not successful with the codes as below</span><br><span class="line"># ETE3 installation in X1</span><br><span class="line">&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;ETE3&#x2F;Installers&#x2F;Miniconda-latest-Linux-x86_64.sh -b -p ~&#x2F;anaconda_ete&#x2F;</span><br><span class="line"># </span><br><span class="line">export PATH&#x3D;~&#x2F;anaconda_ete&#x2F;bin:$PATH;</span><br><span class="line">conda install -c etetoolkit ete3 ete3_external_apps # with default updating</span><br><span class="line">#################</span><br><span class="line"># Check installation</span><br><span class="line">ete3 version</span><br><span class="line">ete3 build check</span><br><span class="line"># magicblast install</span><br><span class="line">axel https:&#x2F;&#x2F;ftp.ncbi.nlm.nih.gov&#x2F;blast&#x2F;executables&#x2F;magicblast&#x2F;1.6.0&#x2F;ncbi-magicblast-1.6.0-src.tar.gz</span><br><span class="line"># UGENE Pro installation</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;UGENE&#x2F;Installer</span><br><span class="line">axel https:&#x2F;&#x2F;github.com&#x2F;ugeneunipro&#x2F;ugene&#x2F;releases&#x2F;download&#x2F;40.1&#x2F;ugene-40.1-linux-x86-64.tar.gz</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="SIBA"><a href="#SIBA" class="headerlink" title="SIBA"></a>SIBA</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">OK &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;SIBA&#x2F;Ref&#x2F;3_SIBA.pdf</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;SIBA&#x2F;Ref</span><br><span class="line">ug &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;SIBA&#x2F;Ref&#x2F;3_Template.gb</span><br></pre></td></tr></table></figure>
+
+<h1 id="SARS-CoV-2-Download"><a href="#SARS-CoV-2-Download" class="headerlink" title="SARS-CoV-2 Download"></a>SARS-CoV-2 Download</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049">NCBI Virus</a></li>
+<li>Select “Download” from “SARS-CoV-2 Data Hub”</li>
+<li></li>
+</ol>
+<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.genome.jp/virushostdb/">Virus-Host Database</a></li>
+</ul>
+<h1 id="NCBI-database-download"><a href="#NCBI-database-download" class="headerlink" title="NCBI database download"></a>NCBI database download</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://linsalrob.github.io/ComputationalGenomicsManual/Databases/NCBI_Edirect.html">Using NCBI edirect to access data at NCBI | ComputationalGenomicsManual</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">einfo -email xxx@sdsu.edu -dbs | sort</span><br></pre></td></tr></table></figure>
+<h1 id="HSV-2-BWA-with-magicblast"><a href="#HSV-2-BWA-with-magicblast" class="headerlink" title="HSV-2 BWA with magicblast"></a>HSV-2 BWA with <code>magicblast</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">subl &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20191025&#x2F;README.md</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20191025&#x2F;README.md; subl $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Index RefSeq</li>
+<li>BWA with 10 sequences</li>
+</ol>
+<ul>
+<li>herpes simplex virus type 2 HSV-2 (taxid:10310)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cp &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;NC_001798_HSV-2.fas &#x2F;home&#x2F;ht&#x2F;Downloads&#x2F;HSV-2&#x2F;</span><br><span class="line">grep -o &#39;N&#39; HSV-2_Test.fas | wc -l # includes lots of N nt, in total 44470</span><br><span class="line"># </span><br><span class="line">###########################################################</span><br><span class="line"># Index</span><br><span class="line"># file:&#x2F;&#x2F;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Bioinformatics&#x2F;Bioinfo-Softs&#x2F;NCBI&#x2F;magicblast&#x2F;magicblast_Learning.html#37_Align_FASTA_with_subject_sequence_instead_of_indexed_database</span><br><span class="line"># </span><br><span class="line">cd ~&#x2F;Downloads&#x2F;HSV-2&#x2F;DB</span><br><span class="line">Input&#x3D;NC_001798_HSV-2.fas</span><br><span class="line">DatabaseName&#x3D;HSV-2</span><br><span class="line">makeblastdb -in $&#123;Input&#125; -dbtype nucl -parse_seqids -out $&#123;DatabaseName&#125;</span><br><span class="line"># </span><br><span class="line">Ref&#x3D;~&#x2F;Downloads&#x2F;HSV-2&#x2F;DB&#x2F;HSV-2</span><br><span class="line">Seq&#x3D;HSV-2_Test.fas</span><br><span class="line">Seq_Base&#x3D;&#96;basename $&#123;Seq&#125;&#96;; Ref_Base&#x3D;&#96;basename $&#123;Ref%.*&#125;&#96;; BAM&#x3D;$&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;.bam</span><br><span class="line">time magicblast -query $&#123;Seq&#125; -db $&#123;Ref&#125; -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; $&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;_Mapped.bam # 序列中绝对禁止&#96;-&#96;，这类符号是经过MSA产生的</span><br><span class="line"># </span><br><span class="line">Ref&#x3D;~&#x2F;Downloads&#x2F;HSV-2&#x2F;DB&#x2F;NC_001798_HSV-2.fas</span><br><span class="line">Seq&#x3D;HSV-2_Test.fas</span><br><span class="line">Seq_Base&#x3D;&#96;basename $&#123;Seq&#125;&#96;; Ref_Base&#x3D;&#96;basename $&#123;Ref%.*&#125;&#96;; BAM&#x3D;$&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;.bam</span><br><span class="line">time magicblast -query $&#123;Seq&#125; -subject $&#123;Ref&#125; -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; $&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;_Mapped.bam # 序列中绝对禁止&#96;-&#96;，这类符号是经过MSA产生的</span><br></pre></td></tr></table></figure>
+<pre><code>real    0m3.335s
+user    0m1.295s
+sys    0m0.661s</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BAM&#x3D;$&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;_Mapped.bam</span><br><span class="line">time samtools sort $BAM &gt; &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;</span><br><span class="line">time samtools index &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;</span><br><span class="line"># </span><br><span class="line">Ref&#x3D;</span><br><span class="line">Tablet &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="COVID-19-data-US"><a href="#COVID-19-data-US" class="headerlink" title="COVID-19 data US"></a>COVID-19 data US</h1><h2 id="Data-from-HHS"><a href="#Data-from-HHS" class="headerlink" title="Data from HHS"></a>Data from HHS</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://beta.healthdata.gov/browse?tags=hhs+covid-19">Results matching topic of hhs covid-19 | Page 1 of 2 | HealthData.gov</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/10/21/20211021/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20211013" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -2172,96 +2284,6 @@ OUTPUT.close()</code></pre>
 
 
   
-    <article id="post-20210830" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/30/20210830/">20210830</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/30/20210830/" class="archive-article-date">
-  	<time datetime="2021-08-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210830</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Organization-of-HPV30-Ref"><span class="toc-number">2.</span> <span class="toc-text">Organization of HPV30 Ref</span></a></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;CC_n_HPV&#x2F;Alpha_HPV_Project&#x2F;HPV30_Detect</span><br></pre></td></tr></table></figure>
-<h1 id="Organization-of-HPV30-Ref"><a href="#Organization-of-HPV30-Ref" class="headerlink" title="Organization of HPV30 Ref"></a>Organization of HPV30 Ref</h1><ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/CC_n_HPV/Alpha_HPV_Project/HPV30_Detect/Ref/Ref.7z">Ref.7z</a> # to be organized –&gt; Li Ying</li>
-</ul>
-<hr>
-<ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/CC_n_HPV/Alpha_HPV_Project/HPV30_Detect/Ref/1.list">1.list</a>, document list, <code>cat 20210830_1230.list | sed &quot;s|^.|/media/ht/ht_5T/Work/Projects/CC_n_HPV/Alpha_HPV_Project/HPV30_Detect/Ref|&quot; &gt; 1.list</code></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/CC_n_HPV/Alpha_HPV_Project/HPV30_Detect/Ref/2.list">2.list</a>, document list with full path, <code>cat 20210830_1230.list | xargs -I % basename % &gt; 2.list</code></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/CC_n_HPV/Alpha_HPV_Project/HPV30_Detect/Ref/20210830_1230.list">20210830_1230.list</a>, <code>find ./ -type f &gt; 20210830_1230.list</code></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/30/20210830/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
@@ -2533,6 +2555,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
@@ -2565,22 +2603,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
@@ -2606,22 +2628,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2662,6 +2668,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Minoxidil</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2793,6 +2823,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -2821,23 +2871,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2849,7 +2883,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2873,14 +2915,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Offline Wikipedia</a>
               </li>
              
@@ -2889,19 +2923,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3109,19 +3131,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3261,15 +3283,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
               </li>
              
               <li class="article-tag-list-item">
