@@ -16,7 +16,7 @@
 <meta property="og:description" content="Working directories12345678E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-zenhei&#x2F;fonts-wqy-zenhei_0.9.45-7ubuntu1_all.deb  Con">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T09:02:24.302Z">
+<meta property="article:modified_time" content="2022-03-03T11:59:55.823Z">
 <meta property="article:author" content="Hongtu Liu">
 <meta name="twitter:card" content="summary">
   
@@ -184,16 +184,19 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#samtools"><span class="toc-number">3.</span> <span class="toc-text">samtools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#wkhtmltopdf"><span class="toc-number">4.</span> <span class="toc-text">wkhtmltopdf</span></a></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-zenhei&#x2F;fonts-wqy-zenhei_0.9.45-7ubuntu1_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Failed to fetch http:&#x2F;&#x2F;cn.archive.ubuntu.com&#x2F;ubuntu&#x2F;pool&#x2F;universe&#x2F;f&#x2F;fonts-wqy-microhei&#x2F;fonts-wqy-microhei_0.2.0-beta-3_all.deb  Connection failed [IP: 91.189.91.39 80]</span><br><span class="line">E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?</span><br><span class="line"># </span><br><span class="line">#########################################################################</span><br><span class="line"># knitr powerpoint</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Conferences&#x2F;Template</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="miRDB"><a href="#miRDB" class="headerlink" title="miRDB"></a>miRDB</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;miR_Base&#x2F;miRDB</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v6.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v5.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v4.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v3.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v2.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v1.0_prediction_result.txt.gz</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">lh &#96;locate -b NC_001806_HSV-1.fas&#96;</span><br><span class="line">locate -b NC_001806_HSV-1.fas</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG1&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG2&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025_1255&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Analysis&#x2F;20220109</span><br><span class="line"></span><br><span class="line">DB&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;MagicBLAST&#x2F;HSV1_Ref</span><br><span class="line">Query&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Clean_Ctrl.fa</span><br><span class="line"># </span><br></pre></td></tr></table></figure>
-<p>Ref=<br>Seq=<br>Seq_Base=<code>basename $&#123;Seq&#125;</code>; Ref_Base=<code>basename $&#123;Ref%.*&#125;</code>; BAM=${Seq_Base%.<em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code>.bam<br>magicblast -query ${Seq} -subject ${Ref} -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; ${Seq_Base%.</em>}<em>vs</em><code>basename $&#123;Ref_Base&#125;</code><em>Mapped.bam # 序列中绝对禁止<code>-</code>，这类符号是经过MSA产生的<br>BAM=${Seq_Base%.*}_vs</em><code>basename $&#123;Ref_Base&#125;</code>_Mapped.bam<br>samtools sort $BAM &gt; “${BAM%.bam}.sort.bam”<br>samtools index “${BAM%.bam}.sort.bam”</p>
-<p>Query=/media/ht/ht_5T/Work/Projects/Exosome/RNA-Seq/20211203/Clean_HSV1.fa</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line"></span><br><span class="line">- [Sambamba: process your BAM data faster!](http:&#x2F;&#x2F;lomereiter.github.io&#x2F;sambamba&#x2F;)</span><br><span class="line"></span><br><span class="line"># **wkhtmltopdf**</span><br><span class="line"></span><br><span class="line">- [wkhtmltopdf](https:&#x2F;&#x2F;wkhtmltopdf.org&#x2F;downloads.html)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>i=<a target="_blank" rel="noopener" href="https://wkhtmltopdf.org/">https://wkhtmltopdf.org/</a><br>wkhtmltopdf ${i} <code>basename $&#123;i&#125;</code>.pdf<br>```</p>
+<h1 id="miRDB"><a href="#miRDB" class="headerlink" title="miRDB"></a>miRDB</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Database&#x2F;miR_Base&#x2F;miRDB</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v6.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;miRDB_v5.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v4.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v3.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v2.0_prediction_result.txt.gz</span><br><span class="line">wget http:&#x2F;&#x2F;mirdb.org&#x2F;download&#x2F;MirTarget2_v1.0_prediction_result.txt.gz</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">lh &#96;locate -b NC_001806_HSV-1.fas&#96;</span><br><span class="line">locate -b NC_001806_HSV-1.fas</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG1&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Experiments&#x2F;Primers&#x2F;Primer_Design&#x2F;20211117&#x2F;LNG2&#x2F;Original&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025_1255&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">j&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;CG&#x2F;20191025&#x2F;NC_001806_HSV-1.fas</span><br><span class="line">rm $&#123;j&#125;; ln -s $&#123;i&#125; $&#123;j&#125;</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Analysis&#x2F;20220109</span><br><span class="line"></span><br><span class="line">DB&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Herpesvirus_Project&#x2F;DB&#x2F;MagicBLAST&#x2F;HSV1_Ref</span><br><span class="line">Query&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Clean_Ctrl.fa</span><br><span class="line"># </span><br><span class="line">Ref&#x3D;</span><br><span class="line">Seq&#x3D;</span><br><span class="line">Seq_Base&#x3D;&#96;basename $&#123;Seq&#125;&#96;; Ref_Base&#x3D;&#96;basename $&#123;Ref%.*&#125;&#96;; BAM&#x3D;$&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;.bam</span><br><span class="line">magicblast -query $&#123;Seq&#125; -subject $&#123;Ref&#125; -infmt fasta -outfmt sam | samtools view -bS -F 4 -&gt; $&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;_Mapped.bam # 序列中绝对禁止&#96;-&#96;，这类符号是经过MSA产生的</span><br><span class="line">BAM&#x3D;$&#123;Seq_Base%.*&#125;_vs_&#96;basename $&#123;Ref_Base&#125;&#96;_Mapped.bam</span><br><span class="line">samtools sort $BAM &gt; &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;</span><br><span class="line">samtools index &quot;$&#123;BAM%.bam&#125;.sort.bam&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Query&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;Exosome&#x2F;RNA-Seq&#x2F;20211203&#x2F;Clean_HSV1.fa</span><br></pre></td></tr></table></figure>
 
+<h1 id="samtools"><a href="#samtools" class="headerlink" title="samtools"></a>samtools</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://lomereiter.github.io/sambamba/">Sambamba: process your BAM data faster!</a></li>
+</ul>
+<h1 id="wkhtmltopdf"><a href="#wkhtmltopdf" class="headerlink" title="wkhtmltopdf"></a><strong>wkhtmltopdf</strong></h1><ul>
+<li><a target="_blank" rel="noopener" href="https://wkhtmltopdf.org/downloads.html">wkhtmltopdf</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;https:&#x2F;&#x2F;wkhtmltopdf.org&#x2F;</span><br><span class="line">wkhtmltopdf $&#123;i&#125; &#96;basename $&#123;i&#125;&#96;.pdf</span><br></pre></td></tr></table></figure>
       
 
       
@@ -335,7 +338,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#miRDB"><span class="toc-number">2.</span> <span class="toc-text">miRDB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#samtools"><span class="toc-number">3.</span> <span class="toc-text">samtools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#wkhtmltopdf"><span class="toc-number">4.</span> <span class="toc-text">wkhtmltopdf</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -737,14 +740,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">p62</a>
               </li>
              
@@ -766,6 +761,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -813,6 +816,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
               </li>
              
@@ -826,10 +833,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Outline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HEV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -937,10 +940,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HSV Exosome cn draft</a>
               </li>
              
@@ -949,15 +948,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -970,6 +965,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Herpesviridae sequence download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -989,15 +992,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,6 +1060,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
@@ -1070,14 +1081,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ADB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1097,11 +1100,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算命</a>
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color3">算命</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1141,22 +1144,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
               </li>
              
@@ -1170,6 +1157,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1349,15 +1352,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Protein Assay</a>
               </li>
              
               <li class="article-tag-list-item">
