@@ -158,6 +158,127 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210507" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/07/20210507/">20210507</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/07/20210507/" class="archive-article-date">
+  	<time datetime="2021-05-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210507</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Downloading"><span class="toc-number">1.1.</span> <span class="toc-text">Downloading</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Autologin"><span class="toc-number">2.</span> <span class="toc-text">Autologin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#scrcpy"><span class="toc-number">3.</span> <span class="toc-text">scrcpy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">3.1.</span> <span class="toc-text">Ref</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ADB"><span class="toc-number">4.</span> <span class="toc-text">ADB</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h2 id="Downloading"><a href="#Downloading" class="headerlink" title="Downloading"></a>Downloading</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://ustr.gov/sites/default/files/files/reports/2021/2021NTE.pdf">2021 National Trade Estimate Report on FOREIGN TRADE BARRIERS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.wto.org/english/res_e/statis_e/wts2020_e/wts2020_e.pdf">World Trade Statistical Review 2020</a></li>
+<li><a target="_blank" rel="noopener" href="https://ustr.gov/sites/default/files/files/reports/2021/2021%20Trade%20Agenda/Online%20PDF%202021%20Trade%20Policy%20Agenda%20and%202020%20Annual%20Report.pdf">2021 Trade Policy Agenda and 2020 Annual Report OF THE PRESIDENT OF THE UNITED STATES ON THE TRADE AGREEMENTS PROGRAM</a></li>
+</ul>
+<h1 id="Autologin"><a href="#Autologin" class="headerlink" title="Autologin"></a>Autologin</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=ubuntu+autologin&newwindow=1&client=ubuntu&hs=M8O&sxsrf=ALeKk00AwdlZ5OZjvkBp-48dZ66TKke7sw:1620474667448&ei=K3uWYMbvGoP0U9PJvYAP&oq=ubuntu+autologin&gs_lcp=Cgdnd3Mtd2l6EAMyAggAMgIIADICCAAyAggAMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIICAAQFhAKEB46BwgAEEcQsAM6BwgAELADEEM6BAgjECc6BQgAEJECOgcIABCHAhAUOgQIABAKUK8oWJg1YPA7aAFwAngAgAGGCogBlSGSAQ0yLTYuMS4xLjEuMC4xmAEAoAEBqgEHZ3dzLXdpesgBCcABAQ&sclient=gws-wiz&ved=0ahUKEwiGsa7HgrrwAhUD-hQKHdNkD_AQ4dUDCA4&uact=5">ubuntu autologin - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://techpiezo.com/linux/enable-or-disable-automatic-login-in-ubuntu-20-04/">Enable or Disable Automatic Login in Ubuntu 20.04 - TechPiezo</a></li>
+<li><a target="_blank" rel="noopener" href="https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu-18-04-lts/">How to Enable/Disable Automatic Login in Ubuntu 18.04 LTS</a></li>
+</ul>
+<h1 id="scrcpy"><a href="#scrcpy" class="headerlink" title="scrcpy"></a>scrcpy</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://fosspost.org/android-inside-pc-scrcpy/">Mirror Your Android Device Inside Your PC With Scrcpy</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">scrcpy</span><br><span class="line">#</span><br><span class="line">adb shell ip route | awk &#39;&#123;print $9&#125;&#39;</span><br><span class="line">adb tcpip 5555</span><br><span class="line">#####################################</span><br><span class="line"># Unplug your device</span><br><span class="line"># adb connect DEVICE_IP:5555 </span><br><span class="line">i&#x3D;&#39;192.168.1.8&#39;</span><br><span class="line">adb connect $&#123;i&#125;:5555</span><br><span class="line">adb connect 192.168.1.8:5555</span><br></pre></td></tr></table></figure>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://medium.com/android-news/https-medium-com-kaustavj-android-tools-scrcpy-vysor-pro-like-features-for-free-f6065aa76f4b">Android Tools : scrcpy : Vysor Pro like features, for free! | by Kaustav Jaiswal | AndroidPub | Medium</a></li>
+<li><a target="_blank" rel="noopener" href="https://fossbytes.com/android-screen-mirroring-apps-pc/">6 Methods To Mirror Android Screen To PC (No Root Apps) In 2020</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hongkiat.com/blog/android-apps-remote-control-windows-mac/">5 Best Free Android Apps to Remote Control Your PC - Hongkiat</a></li>
+<li><a target="_blank" rel="noopener" href="https://fossbytes.com/android-apps-control-pc/">5 Best Apps To Control PC From Android via Bluetooth, Wifi Or Remotely Over The Internet</a></li>
+<li><a target="_blank" rel="noopener" href="https://fosspost.org/android-inside-pc-scrcpy/">Mirror Your Android Device Inside Your PC With Scrcpy</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Genymobile/scrcpy">Genymobile/scrcpy: Display and control your Android device</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The name :1.131 was not provided by any .service files</span><br></pre></td></tr></table></figure>
+<h1 id="ADB"><a href="#ADB" class="headerlink" title="ADB"></a>ADB</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/863587/adb-device-list-doesnt-show-phone">android - ADB device list doesn’t show phone - Ask Ubuntu</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrcpy</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ADB</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/07/20210507/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210505" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -3830,406 +3951,6 @@ Seq --- Goal</textarea><textarea id="flowchart-1-options" style="display: none">
 
 
   
-    <article id="post-20210418" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/18/20210418/">20210418</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/18/20210418/" class="archive-article-date">
-  	<time datetime="2021-04-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210418</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">2.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TOC"><span class="toc-number">2.1.</span> <span class="toc-text">TOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8D%E5%AF%86%E4%B8%8A%E4%BC%A0"><span class="toc-number">2.2.</span> <span class="toc-text">免密上传</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Proteomics"><span class="toc-number">3.</span> <span class="toc-text">Proteomics</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B95-8-Nrf2-Project"><span class="toc-number">4.</span> <span class="toc-text">B95-8_Nrf2 Project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Viral-Load"><span class="toc-number">4.1.</span> <span class="toc-text">Viral Load</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"># ganttproject installation</span><br><span class="line"># &#x2F;usr&#x2F;bin&#x2F;ganttproject %U</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;GanttProject&#39;; cd $&#123;i&#125;</span><br><span class="line">sudo gdebi &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;MS_Project_Alternative&#x2F;GanttProject&#x2F;ganttproject_3.0.3000-1_all.deb</span><br><span class="line">#</span><br><span class="line"># GanttProject, Command line</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ganttproject %U</span><br><span class="line">ganttproject %U</span><br><span class="line">ganttproject %U &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;ht_Gantt.gan</span><br><span class="line">#</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ganttproject %U &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;ht_Gantt.gan</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Management&#x2F;ht_Gantt.gan&#39;; &#x2F;usr&#x2F;bin&#x2F;ganttproject %U $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;ht.gan&#39;; ganttproject $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">sudo apt install img2pdf</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells&#39;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s003.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s002.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">wget https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s008.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s007.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s006.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s005.tif https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s004.tif  https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pmc&#x2F;articles&#x2F;PMC4592227&#x2F;bin&#x2F;ppat.1005195.s001.tif</span><br><span class="line">#</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;006_LMP1_and_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;006_LMP1_and_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells&#39;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">########################################################################</span><br><span class="line">#</span><br><span class="line">for i in Quercetin-induced_apoptosis_prevents_EBV_infection.pdf \</span><br><span class="line">Cordycepin_is_a_novel_chemical_suppressor_of_EBV.pdf \</span><br><span class="line">Genipin_as_a_novel_chemical_activator_of_EBV_lytic_cycle.pdf \</span><br><span class="line">Rapamycin_enhances_lytic_replication_of_EBV_in_gastric_carcinoma_cells_by_increasing_the_transcriptional_of_lytic_promoters.pdf \</span><br><span class="line">Emodin_Inhibits_EBV_Reactivation_and_Represses_NPC_Tumorigenesis.pdf \</span><br><span class="line">The_mTOR_Inhibitor_Manassantin_B_Reveals-A_Crucial_Role_of_mTORC2_Signaling_in_EBV_Reactivation.pdf \</span><br><span class="line">Inhibition_of_class_I_histone_deacetylases_by_romidepsin_potently_induces_EBV_lytic_cycle_ganciclovir.pdf \</span><br><span class="line">Pharmacologic_Activation_of_Lytic_EBV_Gene_Expression_without_Virion_Production.pdf \</span><br><span class="line">Chaetocin_reactivates_the_lytic_replication_of_EBV_from_latency_via_reactive_oxygen_species.pdf \</span><br><span class="line">EBV-encoded_EBNA1_regulates_cell_viability_by_modulating_miR34a-NOX2-ROS.pdf; do find &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;NFE&#x2F;B95-8&#x2F;Ref&#x2F; -type f | ag $&#123;i&#125;; done</span><br><span class="line">#</span><br><span class="line">227_Quercetin-induced_apoptosis_prevents_EBV_infection.pdf</span><br><span class="line">226_Cordycepin_is_a_novel_chemical_suppressor_of_EBV.pdf</span><br><span class="line">225_Genipin_as_a_novel_chemical_activator_of_EBV_lytic_cycle.pdf</span><br><span class="line">222_Rapamycin_enhances_lytic_replication_of_EBV_in_gastric_carcinoma_cells_by_increasing_the_transcriptional_of_lytic_promoters.pdf</span><br><span class="line">220_Emodin_Inhibits_EBV_Reactivation_and_Represses_NPC_Tumorigenesis.pdf</span><br><span class="line">203_The_mTOR_Inhibitor_Manassantin_B_Reveals-A_Crucial_Role_of_mTORC2_Signaling_in_EBV_Reactivation.pdf</span><br><span class="line">186_Inhibition_of_class_I_histone_deacetylases_by_romidepsin_potently_induces_EBV_lytic_cycle_ganciclovir.pdf</span><br><span class="line">184_Pharmacologic_Activation_of_Lytic_EBV_Gene_Expression_without_Virion_Production.pdf</span><br><span class="line">101_Chaetocin_reactivates_the_lytic_replication_of_EBV_from_latency_via_reactive_oxygen_species.pdf</span><br><span class="line">243_EBV-encoded_EBNA1_regulates_cell_viability_by_modulating_miR34a-NOX2-ROS.pdf</span><br><span class="line">#</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;227_Quercetin-induced_apoptosis_prevents_EBV_infection.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;226_Cordycepin_is_a_novel_chemical_suppressor_of_EBV.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;225_Genipin_as_a_novel_chemical_activator_of_EBV_lytic_cycle.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;222_Rapamycin_enhances_lytic_replication_of_EBV_in_gastric_carcinoma_cells_by_increasing_the_transcriptional_of_lytic_promoters.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;220_Emodin_Inhibits_EBV_Reactivation_and_Represses_NPC_Tumorigenesis.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;203_The_mTOR_Inhibitor_Manassantin_B_Reveals-A_Crucial_Role_of_mTORC2_Signaling_in_EBV_Reactivation.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;186_Inhibition_of_class_I_histone_deacetylases_by_romidepsin_potently_induces_EBV_lytic_cycle_ganciclovir.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;184_Pharmacologic_Activation_of_Lytic_EBV_Gene_Expression_without_Virion_Production.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;101_Chaetocin_reactivates_the_lytic_replication_of_EBV_from_latency_via_reactive_oxygen_species.pdf&#39;</span><br><span class="line">removed &#39;.&#x2F;20210414&#x2F;EBV&#x2F;EBV_Ref&#x2F;243_EBV-encoded_EBNA1_regulates_cell_viability_by_modulating_miR34a-NOX2-ROS.pdf&#39;</span><br></pre></td></tr></table></figure>
-<p>It took me four hours for update in X1.</p>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/bubkoo/hexo-toc">bubkoo/hexo-toc: 📖 Insert a markdown TOC before posts be rendered.</a></li>
-</ul>
-<h2 id="免密上传"><a href="#免密上传" class="headerlink" title="免密上传"></a>免密上传</h2><p>[[Hexo#Password free upload|免密上传]]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo init</span><br><span class="line">hexo s # INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.</span><br><span class="line">#</span><br><span class="line"># hexo n &quot;My Blog Name&quot;</span><br><span class="line">hexo n &#96;Date&#96; # add a new blog</span><br><span class="line">hexo s # check the new blog</span><br><span class="line">#</span><br><span class="line">hexo clean; hexo g</span><br><span class="line">#</span><br><span class="line">nickname.github.io</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;hotliu&#x2F;hotliu.github.io.git</span><br><span class="line">#</span><br><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line">#</span><br><span class="line">vi _config.yml</span><br><span class="line">hexo d</span><br><span class="line">#######################################</span><br><span class="line"># Theme selection</span><br><span class="line">#######################################</span><br><span class="line">#</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia</span><br><span class="line">#</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia # Time, 24&#39;00&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connecting to GitHub with SSH - GitHub Docs</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/hotliu/hotliu.github.io">hotliu/hotliu.github.io: Hexo Blog</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH and GPG keys</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account">新增 SSH 密钥到 GitHub 帐户 - GitHub Docs</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account">新增 SSH 密钥到 GitHub 帐户 - GitHub Docs</a></li>
-</ul>
-<h1 id="Proteomics"><a href="#Proteomics" class="headerlink" title="Proteomics"></a>Proteomics</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.bioinfo-scrounger.com/categories/Bioinformatics-Notes/Proteomics/">Category: Proteomics | KeapNotes blog</a></li>
-<li><a target="_blank" rel="noopener" href="http://blog.sciencenet.cn/blog-3402731-1147389.html">科学网—干货篇：蛋白质谱之“搜库” - 崔蕴博的博文</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.pibb.ac.cn/html/2015/2/20140078.htm">“自顶向下(top-down)”的蛋白质组学—蛋白质变体的规模化鉴定</a></li>
-</ul>
-<h1 id="B95-8-Nrf2-Project"><a href="#B95-8-Nrf2-Project" class="headerlink" title="B95-8_Nrf2 Project"></a>B95-8_Nrf2 Project</h1><ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/001_EBV_blocks_the_autophagic_flux_n_appropriates_the_autophagic_machinery_to_enhance_viral_replication.pdf">001_EBV_blocks_the_autophagic_flux_n_appropriates_the_autophagic_machinery_to_enhance_viral_replication.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/002_EBV_reduces_autophagy_intracellular_ROS_n_mitochondria_to_impair_monocyte_survival_n_differentiation.pdf">002_EBV_reduces_autophagy_intracellular_ROS_n_mitochondria_to_impair_monocyte_survival_n_differentiation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/002_Nrf2_Is_a_Direct_PERK_Substrate_n_Effector_of_PERK-Dependent_Cell_Survival.pdf">002_Nrf2_Is_a_Direct_PERK_Substrate_n_Effector_of_PERK-Dependent_Cell_Survival.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/003_Regulation_of_Autophagic_Activation_by_Rta_of_EBV_via_the_Extracellular_Signal-Regulated_Kinase_Pathway.pdf">003_Regulation_of_Autophagic_Activation_by_Rta_of_EBV_via_the_Extracellular_Signal-Regulated_Kinase_Pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/004_p62-mediated_Selective_autophagy_endows_virus-transformed_cells_with_insusceptibility_to_DNA_damage_under_oxidative_stress.pdf">004_p62-mediated_Selective_autophagy_endows_virus-transformed_cells_with_insusceptibility_to_DNA_damage_under_oxidative_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/005_Stimulus_duration_n_response_time_independently_influence_the_kinetics_of_lytic_cycle_reactivation_of_EBV.pdf">005_Stimulus_duration_n_response_time_independently_influence_the_kinetics_of_lytic_cycle_reactivation_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/006_LMP1_n_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells.pdf">006_LMP1_n_2A_Induce_the_Expression_of_Nrf2_Through_Akt_Signaling_Pathway_in_EBV-Transformed_B_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/007_Bortezomib_promotes_KHSV_n_EBV_lytic_cycle_by_activating_JNK_n_autophagy.pdf">007_Bortezomib_promotes_KHSV_n_EBV_lytic_cycle_by_activating_JNK_n_autophagy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/008_EBV_n_KSHV_Infection_Dysregulates_Autophagy_to_Optimize_Viral_Replication_Prevent_Immune_Recognition_n_Promote_Tumorigenesis.pdf">008_EBV_n_KSHV_Infection_Dysregulates_Autophagy_to_Optimize_Viral_Replication_Prevent_Immune_Recognition_n_Promote_Tumorigenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/009_PKC_theta_n_p38_MAPK_activate_the_EBV_lytic_cycle_through_autophagy_induction.pdf">009_PKC_theta_n_p38_MAPK_activate_the_EBV_lytic_cycle_through_autophagy_induction.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/010_Protein_Kinase_C-Independent_Activation_of_the_EBV_Lytic_Cycle.pdf">010_Protein_Kinase_C-Independent_Activation_of_the_EBV_Lytic_Cycle.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/011_Regulation_of_the_ARE_by_PKC-mediated_phosphorylation_of_Nrf2.pdf">011_Regulation_of_the_ARE_by_PKC-mediated_phosphorylation_of_Nrf2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/012_Stress-sensing_mechanisms_n_the_physiological_roles_of_the_Keap1%E2%80%93Nrf2_system_during_cellular_stress.pdf">012_Stress-sensing_mechanisms_n_the_physiological_roles_of_the_Keap1–Nrf2_system_during_cellular_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/013_NRF2_in_regulating_cancer_metabolism.pdf">013_NRF2_in_regulating_cancer_metabolism.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/014_NRF2_n_the_Hallmarks_of_Cancer.pdf">014_NRF2_n_the_Hallmarks_of_Cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/015_NRF2_addiction_in_cancer_cells.pdf">015_NRF2_addiction_in_cancer_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/016_The_Dual_Roles_of_NRF2_in_Cancer.pdf">016_The_Dual_Roles_of_NRF2_in_Cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/017_The_Nrf2_Activator_tBHQ_Differentially_Affects_Early_Events.pdf">017_The_Nrf2_Activator_tBHQ_Differentially_Affects_Early_Events.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/018_Stabilization_of_Nrf2_by_tBHQ.pdf">018_Stabilization_of_Nrf2_by_tBHQ.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/019_The_B95-8_Isolate_of_EBV_Arose_from_an_Isolate_with_a_Standard_Genome.pdf">019_The_B95-8_Isolate_of_EBV_Arose_from_an_Isolate_with_a_Standard_Genome.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/020_Transcription_n_DNA_sequence_of_the_BamHI_L_fragment_of_B95-8_EBV.pdf">020_Transcription_n_DNA_sequence_of_the_BamHI_L_fragment_of_B95-8_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/021_Growth_of_B95-8_cells_n_expression_of_EBV_lytic_phase_in_serum-free_medium.pdf">021_Growth_of_B95-8_cells_n_expression_of_EBV_lytic_phase_in_serum-free_medium.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/022_Growth_of_B95-8_Cell_line_n_production_of_human_EBV_virus_2010.pdf">022_Growth_of_B95-8_Cell_line_n_production_of_human_EBV_virus_2010.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/023_Growth_of_B95-8_Cell_line_n_production_of_human_EBV_virus_2016.pdf">023_Growth_of_B95-8_Cell_line_n_production_of_human_EBV_virus_2016.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/024_EBV_Turns_50.pdf">024_EBV_Turns_50.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/025_The_transforming_prototype_of_EBV_B95-8_is_also_a_lytic_virus.pdf">025_The_transforming_prototype_of_EBV_B95-8_is_also_a_lytic_virus.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/026_Optimizing_osmotic_pressure_removes_EBV_particles_from_B95-8_host_cells_while_maintaining_normal_activity.pdf">026_Optimizing_osmotic_pressure_removes_EBV_particles_from_B95-8_host_cells_while_maintaining_normal_activity.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/027_Enhancement_of_spontaneous_VCA_n_EA_induction_in_B95-8_cells_n_EA_induction_in_Raji_cells.pdf">027_Enhancement_of_spontaneous_VCA_n_EA_induction_in_B95-8_cells_n_EA_induction_in_Raji_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/028_Molecular_cytogenetic_characterization_of_the_EBV-producing_cell_line_B95-8_by_chromosome_sorting_n_painting.pdf">028_Molecular_cytogenetic_characterization_of_the_EBV-producing_cell_line_B95-8_by_chromosome_sorting_n_painting.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/029_Release_of_Infectious_EBV_by_Transformed_Marmoset_Leukocytes.pdf">029_Release_of_Infectious_EBV_by_Transformed_Marmoset_Leukocytes.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/030_EBV_Transformation_Cytopathic_Changes_n_Viral_Antigens_in_Squirrel_Monkey_n_Marmoset_Leukocytes.pdf">030_EBV_Transformation_Cytopathic_Changes_n_Viral_Antigens_in_Squirrel_Monkey_n_Marmoset_Leukocytes.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/031_EBV_latent_genes.pdf">031_EBV_latent_genes.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/032_Encyclopedia_of_EBV-Encoded_Lytic_Genes_An_Update.pdf">032_Encyclopedia_of_EBV-Encoded_Lytic_Genes_An_Update.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/033_TPA_Oncogenic_KRAS_confers_chemoresistance_by_upregulating_NRF2.pdf">033_TPA_Oncogenic_KRAS_confers_chemoresistance_by_upregulating_NRF2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/034_NaB_Activation_of_Lytic_EBV_Infection_by_Radiation_n_NaB_in_Vitro_n_in_Vivo.pdf">034_NaB_Activation_of_Lytic_EBV_Infection_by_Radiation_n_NaB_in_Vitro_n_in_Vivo.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/035_NaB_AMPK_synergizes_with_the_combined_treatment_of_ACA_n_NaB_to_upregulate_phase_II_detoxifying_enzyme_activities.pdf">035_NaB_AMPK_synergizes_with_the_combined_treatment_of_ACA_n_NaB_to_upregulate_phase_II_detoxifying_enzyme_activities.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/036_NaB_Butyrate-producing_probiotics_reduce_nonalcoholic_fatty_liver_disease_progression_in_rats.pdf">036_NaB_Butyrate-producing_probiotics_reduce_nonalcoholic_fatty_liver_disease_progression_in_rats.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/037_NaB_NaB_activates_NRF2_to_ameliorate_diabetic_nephropathy_possibly_via_inhibition_of_HDAC.pdf">037_NaB_NaB_activates_NRF2_to_ameliorate_diabetic_nephropathy_possibly_via_inhibition_of_HDAC.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/038_NaB_NaB_improves_antioxidant_stability_in_sub-acute_ruminal_acidosis_in_dairy_goats.pdf">038_NaB_NaB_improves_antioxidant_stability_in_sub-acute_ruminal_acidosis_in_dairy_goats.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/039_NaB_NaB_protects_against_high-fat_diet-induced_oxidative_stress_in_rat_liver_by_promoting_expression_of_Nrf2.pdf">039_NaB_NaB_protects_against_high-fat_diet-induced_oxidative_stress_in_rat_liver_by_promoting_expression_of_Nrf2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/040_BZ_induction_of_CEBP%CE%B2_mediates_EBV_lytic_activation_in_Burkitt_lymphoma.pdf">040_BZ_induction_of_CEBPβ_mediates_EBV_lytic_activation_in_Burkitt_lymphoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/041_NaB_The_enhancement_of_phase_2_enzyme_activities_by_NaB_in_normal_intestinal_epithelial_cells_is_associated_with_Nrf2_n_p53.pdf">041_NaB_The_enhancement_of_phase_2_enzyme_activities_by_NaB_in_normal_intestinal_epithelial_cells_is_associated_with_Nrf2_n_p53.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/042_NaB_NaB_attenuates_diabetes-induced_aortic_endothelial_dysfunction_via_P300-mediated_transcriptional_activation_of_Nrf2.pdf">042_NaB_NaB_attenuates_diabetes-induced_aortic_endothelial_dysfunction_via_P300-mediated_transcriptional_activation_of_Nrf2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/043_BZ_High_basal_nuclear_levels_of_Nrf2_in_acute_myeloid_leukemia_reduces_sensitivity_to_proteasome_inhibitors.pdf">043_BZ_High_basal_nuclear_levels_of_Nrf2_in_acute_myeloid_leukemia_reduces_sensitivity_to_proteasome_inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/044_BZ_HO-1_up-regulation_A_key_point_in_high-risk_neuroblastoma_resistance.pdf">044_BZ_HO-1_up-regulation_A_key_point_in_high-risk_neuroblastoma_resistance.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/046_BZ_Treatment-induced_oxidative_stress_n_cellular_antioxidant_capacity_determine_response_to_bortezomib.pdf">046_BZ_Treatment-induced_oxidative_stress_n_cellular_antioxidant_capacity_determine_response_to_bortezomib.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/047_BZ_Bortezomib_induces_HO-1_expression_in_multiple_myeloma.pdf">047_BZ_Bortezomib_induces_HO-1_expression_in_multiple_myeloma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/048_TG_Regulation_of_Nrf2_by_XBP1_in_Retinal_Pigment_Epithelium.pdf">048_TG_Regulation_of_Nrf2_by_XBP1_in_Retinal_Pigment_Epithelium.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/049_TG_Transcriptional_Regulation_of_ATF4_under_Oxidative_Stress.pdf">049_TG_Transcriptional_Regulation_of_ATF4_under_Oxidative_Stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/050_KSHV_Induces_Nrf2_Activation_in_Latently_Infected_Endothelial_Cells_through_SQSTM1_Phosphorylation_n_Interaction_with_Keap1.pdf">050_KSHV_Induces_Nrf2_Activation_in_Latently_Infected_Endothelial_Cells_through_SQSTM1_Phosphorylation_n_Interaction_with_Keap1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/051_KSHV_Cytotoxic_Drugs_Activate_KSHV_Lytic_Cycle_in_Latently_Infected_PEL_Cells_by_Inducing_a_Moderate_ROS_Increase_Controlled_by_HSF1_NRF2_n_p62.pdf">051_KSHV_Cytotoxic_Drugs_Activate_KSHV_Lytic_Cycle_in_Latently_Infected_PEL_Cells_by_Inducing_a_Moderate_ROS_Increase_Controlled_by_HSF1_NRF2_n_p62.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/052_KSHV_Activated_Nrf2_Interacts_with_KSHV_Latency_Protein_LANA-1_n_Host_Protein_KAP1_To_Mediate_Global_Lytic_Gene_Repression.pdf">052_KSHV_Activated_Nrf2_Interacts_with_KSHV_Latency_Protein_LANA-1_n_Host_Protein_KAP1_To_Mediate_Global_Lytic_Gene_Repression.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/053_TG_Promising_therapeutic_effect_of_TG_nanoparticles_on_chronic_kidney_disease_through_the_activation_of_Nrf2_n_FoxO1.pdf">053_TG_Promising_therapeutic_effect_of_TG_nanoparticles_on_chronic_kidney_disease_through_the_activation_of_Nrf2_n_FoxO1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/054_Mutant_p53_Stabilized_by_Its_Interplay_with_HSP90_Activates_a_Positive_Feed-Back_Loop_Between_NRF2_n_p62.pdf">054_Mutant_p53_Stabilized_by_Its_Interplay_with_HSP90_Activates_a_Positive_Feed-Back_Loop_Between_NRF2_n_p62.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/055_Constitutive_autophagy_contributes_to_resistance_to_TP53-mediated_apoptosis_in_EBV-positive_latency_III.pdf">055_Constitutive_autophagy_contributes_to_resistance_to_TP53-mediated_apoptosis_in_EBV-positive_latency_III.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/056_Monitoring_Keap1%E2%80%93Nrf2_interactions_in_single_live_cells.pdf">056_Monitoring_Keap1–Nrf2_interactions_in_single_live_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/057_Role_of_p62_SQSTM1_beyond_autophagy.pdf">057_Role_of_p62_SQSTM1_beyond_autophagy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/058_Contribution_of_NAD_P_H_quinone_oxidoreductase_1_to_protection_against_carcinogenesis_n_regulation_of_its_gene_by_Nrf2.pdf">058_Contribution_of_NAD_P_H_quinone_oxidoreductase_1_to_protection_against_carcinogenesis_n_regulation_of_its_gene_by_Nrf2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/059_When_autophagy_meets_cancer_through_p62_SQSTM1.pdf">059_When_autophagy_meets_cancer_through_p62_SQSTM1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/060_The_Role_of_the_Selective_Adaptor_p62_n_Ubiquitin-LikeProteins_in_Autophagy.pdf">060_The_Role_of_the_Selective_Adaptor_p62_n_Ubiquitin-LikeProteins_in_Autophagy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/061_Small_Maf_proteins_History_structure_n_function.pdf">061_Small_Maf_proteins_History_structure_n_function.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/062_Crosstalk_between_Nrf2_n_Notch_signaling.pdf">062_Crosstalk_between_Nrf2_n_Notch_signaling.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/063_Regulation_of_cell_proliferation_n_migration_by_p62_through_stabilization_of_Twist1.pdf">063_Regulation_of_cell_proliferation_n_migration_by_p62_through_stabilization_of_Twist1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/064_Nrf2_negatively_regulates_STING_indicating_a_link_between_antiviral_sensing_n_metabolic_reprogramming.pdf">064_Nrf2_negatively_regulates_STING_indicating_a_link_between_antiviral_sensing_n_metabolic_reprogramming.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/065_Mutant_p53_n_Cellular_Stress_Pathways_A_Criminal_Alliance_That_Promotes_Cancer_Progression.pdf">065_Mutant_p53_n_Cellular_Stress_Pathways_A_Criminal_Alliance_That_Promotes_Cancer_Progression.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/066_Overview_of_Nrf2_as_Therapeutic_Target_in_Epilepsy.pdf">066_Overview_of_Nrf2_as_Therapeutic_Target_in_Epilepsy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/067_P62_An_emerging_oncotarget_for_osteolytic_metastas.pdf">067_P62_An_emerging_oncotarget_for_osteolytic_metastas.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/068_Genetic_Variations_n_mRNA_Expression_of_NRF2_in_Parkinsons_Disease.pdf">068_Genetic_Variations_n_mRNA_Expression_of_NRF2_in_Parkinsons_Disease.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/069_Phorbol_Ester-dependent_Activation_of_Peroxiredoxin_I_Gene_Expression_TPA.pdf">069_Phorbol_Ester-dependent_Activation_of_Peroxiredoxin_I_Gene_Expression_TPA.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/070_Cellular_Differentiation_Regulator_BLIMP1_Induces_EBV_Lytic_Reactivation_in_Epithelial_n_B_Cells.pdf">070_Cellular_Differentiation_Regulator_BLIMP1_Induces_EBV_Lytic_Reactivation_in_Epithelial_n_B_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/071_Inactivation_of_NF-kB_by_EBV_BZLF-1-Encoded_ZEBRA_Protein_in_Human_T_Cells.pdf">071_Inactivation_of_NF-kB_by_EBV_BZLF-1-Encoded_ZEBRA_Protein_in_Human_T_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/072_EBNA-1_induces_expression_of_the_cellular_microRNA_hsa-miR-127_n_impairing_B-cell_differentiation.pdf">072_EBNA-1_induces_expression_of_the_cellular_microRNA_hsa-miR-127_n_impairing_B-cell_differentiation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/073_Detection_of_IgG_n_IgA_Ab_to_EBV_membrane_Ag_in_sera_from_patients_with_NPC_n_from_normal_individuals.pdf">073_Detection_of_IgG_n_IgA_Ab_to_EBV_membrane_Ag_in_sera_from_patients_with_NPC_n_from_normal_individuals.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/074_Expression_of_EBV_antibody_EA-IgA_Rta-IgG_n_VCA-IgA_n_SA_in_serum.pdf">074_Expression_of_EBV_antibody_EA-IgA_Rta-IgG_n_VCA-IgA_n_SA_in_serum.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells.pdf">075_Differentiation-Dependent_KLF4_Expression_Promotes_Lytic_EBV_Infection_in_Epithelial_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/076_EBV_infection_induces_aberrant_TLR_activation_pathway_n_fibroblast-myofibroblast_conversion_in_scleroderma.pdf">076_EBV_infection_induces_aberrant_TLR_activation_pathway_n_fibroblast-myofibroblast_conversion_in_scleroderma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/077_quercitrin_Inhibition_of_AP-1_n_MAPK_signaling_n_activation_of_Nrf2_ARE_pathway_by_quercitrin.pdf">077_quercitrin_Inhibition_of_AP-1_n_MAPK_signaling_n_activation_of_Nrf2_ARE_pathway_by_quercitrin.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/078_Quercetin_Interrupts_the_Positive_Feedback_Loop_Between_STAT3_n_IL-6_Promotes_Autophagy_n_Reduces_ROS.pdf">078_Quercetin_Interrupts_the_Positive_Feedback_Loop_Between_STAT3_n_IL-6_Promotes_Autophagy_n_Reduces_ROS.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/079_Combination_of_betulinic_acid_n_chidamide_synergistically_inhibits_EBV_replication_through_over-generation_of_ROS.pdf">079_Combination_of_betulinic_acid_n_chidamide_synergistically_inhibits_EBV_replication_through_over-generation_of_ROS.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/080_Chloroquine_Combination_Therapy_with_a_PI3KmTOR_Dual_Inhibitor_n_Chloroquine_Enhances_Synergistic_Apoptotic_Cell_Death_in_EBV-Infected.pdf">080_Chloroquine_Combination_Therapy_with_a_PI3KmTOR_Dual_Inhibitor_n_Chloroquine_Enhances_Synergistic_Apoptotic_Cell_Death_in_EBV-Infected.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/081_Chloroquine_triggers_EBV_replication_through_phosphorylation_of_KAP1_TRIM28_in_Burkitt_lymphoma_cells.pdf">081_Chloroquine_triggers_EBV_replication_through_phosphorylation_of_KAP1_TRIM28_in_Burkitt_lymphoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/082_Deletion_of_EBV_BFLF2_leads_to_impaired_viral_DNA_packaging_n_primary_egress_as_well_as_to_the_production_of_defective_viral_particles.pdf">082_Deletion_of_EBV_BFLF2_leads_to_impaired_viral_DNA_packaging_n_primary_egress_as_well_as_to_the_production_of_defective_viral_particles.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/083_EBV_LF2_Protein_Regulates_Viral_Replication_by_Altering_Rta_Subcellular_Localization.pdf">083_EBV_LF2_Protein_Regulates_Viral_Replication_by_Altering_Rta_Subcellular_Localization.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/084_RNAs_in_EBV_control_early_steps_of_infection.pdf">084_RNAs_in_EBV_control_early_steps_of_infection.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/085_The_EBV_EBNA-2_Gene_in_Oral_Hairy_Leukoplakia.pdf">085_The_EBV_EBNA-2_Gene_in_Oral_Hairy_Leukoplakia.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/086_TPA_Inhibition_of_Activator_Protein-1_NF-%CE%BAB_n_MAPKs_n_Induction_of_Phase_2_Detoxifying_Enzyme_Activity.pdf">086_TPA_Inhibition_of_Activator_Protein-1_NF-κB_n_MAPKs_n_Induction_of_Phase_2_Detoxifying_Enzyme_Activity.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/087_Atypical_PKC_mediates_activation_of_Nrf2_in_response_to_oxidative_stress.pdf">087_Atypical_PKC_mediates_activation_of_Nrf2_in_response_to_oxidative_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/088_Latent_n_lytic_cycle_promoters_of_EBV.pdf">088_Latent_n_lytic_cycle_promoters_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/089_Switches_of_Oncogenic_Human_Gammaherpesviruses1.pdf">089_Switches_of_Oncogenic_Human_Gammaherpesviruses1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/090_TPA_induction_of_EBV_early_antigens_in_Raji_cells_is_blocked_by_selective_PKC_inhibitors.pdf">090_TPA_induction_of_EBV_early_antigens_in_Raji_cells_is_blocked_by_selective_PKC_inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/091_Bortezomib-induced_EBV_n_KSHV_lytic_gene_expression_oncolytic_strategies.pdf">091_Bortezomib-induced_EBV_n_KSHV_lytic_gene_expression_oncolytic_strategies.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/092_bZIP_proteins_of_human_gammaherpesviruses.pdf">092_bZIP_proteins_of_human_gammaherpesviruses.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/093_Regulation_of_cellular_n_viral_protein_expression_by_the_EBV_transcriptional_regulator_Zta_Implications_for_therapy_of_EBV.pdf">093_Regulation_of_cellular_n_viral_protein_expression_by_the_EBV_transcriptional_regulator_Zta_Implications_for_therapy_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/094_Structural_basis_of_lytic_cycle_activation_by_the_EBV_ZEBRA_protein.pdf">094_Structural_basis_of_lytic_cycle_activation_by_the_EBV_ZEBRA_protein.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/095_TPA_induces_EBV_reactivation_via_NF-kappaB_n_AP-1_as_regulated_by_PKC_n_mitogen-activated_protein_kinase.pdf">095_TPA_induces_EBV_reactivation_via_NF-kappaB_n_AP-1_as_regulated_by_PKC_n_mitogen-activated_protein_kinase.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/096_Phosphorylation_of_Nrf2_at_Ser-40_by_PKC_regulates_ARE-mediated_transcription.pdf">096_Phosphorylation_of_Nrf2_at_Ser-40_by_PKC_regulates_ARE-mediated_transcription.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/097_Induction_of_EBV_lytic_cycle_in_vitro_causes_oxidative_stress_in_lymphoblastoid_B_cell_lines.pdf">097_Induction_of_EBV_lytic_cycle_in_vitro_causes_oxidative_stress_in_lymphoblastoid_B_cell_lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/098_Induction_of_EBV_Lytic_Cycle_in_Vitro_Causes_Lipid_Peroxidation_Protein_Oxidation_n_DNA_Damage_in_Lymphoblastoid_B_Cell_Lines.pdf">098_Induction_of_EBV_Lytic_Cycle_in_Vitro_Causes_Lipid_Peroxidation_Protein_Oxidation_n_DNA_Damage_in_Lymphoblastoid_B_Cell_Lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/099_Reactive_oxygen_species_production_n_antioxidant_enzyme_expression_after_EBV_lytic_cycle_induction_in_Raji_cell_line.pdf">099_Reactive_oxygen_species_production_n_antioxidant_enzyme_expression_after_EBV_lytic_cycle_induction_in_Raji_cell_line.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/102_EBV_induces_an_oxidative_stress_during_the_early_stages_of_infection_in_B_lymphocytes_epithelial_n_lymphoblastoid_cell_lines.pdf">102_EBV_induces_an_oxidative_stress_during_the_early_stages_of_infection_in_B_lymphocytes_epithelial_n_lymphoblastoid_cell_lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/103_The_role_of_oxidative_stress_in_EBV_lytic_reactivation_radioresistance_n_the_potential_preventive_n_therapeutic_implications.pdf">103_The_role_of_oxidative_stress_in_EBV_lytic_reactivation_radioresistance_n_the_potential_preventive_n_therapeutic_implications.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/104_Transcription_of_the_EBV_lytic_cycle_activator_BZLF-1_during_oxidative_stress_induction.pdf">104_Transcription_of_the_EBV_lytic_cycle_activator_BZLF-1_during_oxidative_stress_induction.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/105_Silver_nanoparticles_selectively_induce_human_oncogenic_%CE%B3-herpesvirus-related_cancer_cell_death.pdf">105_Silver_nanoparticles_selectively_induce_human_oncogenic_γ-herpesvirus-related_cancer_cell_death.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/106_Reactive_oxygen_species_drive_herpes_simplex_virus_HSV_-1-induced_proinflammatory_cytokine_production_by_murine_microglia.pdf">106_Reactive_oxygen_species_drive_herpes_simplex_virus_HSV_-1-induced_proinflammatory_cytokine_production_by_murine_microglia.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/107_Reactive_oxygen_signaling_n_MAPK_activation_distinguish_EBV-positive_versus_EBV-negative_Burkitt's_lymphoma.pdf">107_Reactive_oxygen_signaling_n_MAPK_activation_distinguish_EBV-positive_versus_EBV-negative_Burkitt’s_lymphoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/108_Combination_of_betulinic_acid_n_chidamide_synergistically_inhibits_EBV_replication_through_over-generation_of_ROS.pdf">108_Combination_of_betulinic_acid_n_chidamide_synergistically_inhibits_EBV_replication_through_over-generation_of_ROS.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/109_Bortezomib_n_SAHA_synergistically_induce_ROS-driven_caspase-dependent_apoptosis_of_NPC_n_block_replication_of_EBV.pdf">109_Bortezomib_n_SAHA_synergistically_induce_ROS-driven_caspase-dependent_apoptosis_of_NPC_n_block_replication_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/110_Calcium_mobilization_is_responsible_for_Thapsigargin_induced_EBV_lytic_reactivation_in_in_vitro_immortalized_lymphoblstoid_cell_lines.pdf">110_Calcium_mobilization_is_responsible_for_Thapsigargin_induced_EBV_lytic_reactivation_in_in_vitro_immortalized_lymphoblstoid_cell_lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/111_EBV_post-transplant_lymphoproliferative_disease_n_virus-specific_therapy-pharmacological_re-activation_of_viral_target_genes_with_arginine_butyrate.pdf">111_EBV_post-transplant_lymphoproliferative_disease_n_virus-specific_therapy-pharmacological_re-activation_of_viral_target_genes_with_arginine_butyrate.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/112_EBV_reactivation_n_therapeutic_inhibitors.pdf">112_EBV_reactivation_n_therapeutic_inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/113_EBV-targeted_therapy_in_nasopharyngeal_carcinoma.pdf">113_EBV-targeted_therapy_in_nasopharyngeal_carcinoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/114_Contribution_of_the_KSHV_n_EBV_lytic_cycles_to_tumourigenesis.pdf">114_Contribution_of_the_KSHV_n_EBV_lytic_cycles_to_tumourigenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/115_EBV_lytic_reactivation_regulation_n_its_pathogenic_role_in_carcinogenesis.pdf">115_EBV_lytic_reactivation_regulation_n_its_pathogenic_role_in_carcinogenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/116_Detection_n_characterization_of_EBV_in_clinical_specimens.pdf">116_Detection_n_characterization_of_EBV_in_clinical_specimens.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/117_EBV_Lytic_Cycle_Reactivation.pdf">117_EBV_Lytic_Cycle_Reactivation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/118_Lytic_cycle_switches_of_oncogenic_human_gammaherpesviruses.pdf">118_Lytic_cycle_switches_of_oncogenic_human_gammaherpesviruses.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/119_Regulation_n_dysregulation_of_EBV_latency.pdf">119_Regulation_n_dysregulation_of_EBV_latency.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/120_EBV-driven_B-cell_lymphoproliferative_disorders.pdf">120_EBV-driven_B-cell_lymphoproliferative_disorders.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/121_The_EBV_in_T_Cell_n_NK_Cell_Lymphomas-Time_for_a_Reassessment.pdf">121_The_EBV_in_T_Cell_n_NK_Cell_Lymphomas-Time_for_a_Reassessment.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/122_Endoplasmic_reticulum_stress_causes_EBV_lytic_replication.pdf">122_Endoplasmic_reticulum_stress_causes_EBV_lytic_replication.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/123_p62_SQSTM1-Jack_of_All_Trades_in_Health_n_Cancer.pdf">123_p62_SQSTM1-Jack_of_All_Trades_in_Health_n_Cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/124_Activation_of_SQSTM1-Keap1-Nrf2_Pathway_in_Cancer.pdf">124_Activation_of_SQSTM1-Keap1-Nrf2_Pathway_in_Cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/125_Canonical_n_non-canonical_mechanisms_of_Nrf2_activation.pdf">125_Canonical_n_non-canonical_mechanisms_of_Nrf2_activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/126_Upregulation_of_STAT3_marks_Burkitt_lymphoma_cells_refractory_to_EBV_lytic_cycle_induction_by_HDAC_inhibitors.pdf">126_Upregulation_of_STAT3_marks_Burkitt_lymphoma_cells_refractory_to_EBV_lytic_cycle_induction_by_HDAC_inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/127_Valproic_Acid_Antagonizes_the_Capacity_of_Other_HDAC_Inhibitors_To_Activate_the_EBV_Lytic_Cycle.pdf">127_Valproic_Acid_Antagonizes_the_Capacity_of_Other_HDAC_Inhibitors_To_Activate_the_EBV_Lytic_Cycle.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/128_Nitric_Oxide_Down-Regulates_EBV_Reactivation_in_Epithelial_Cell_Lines.pdf">128_Nitric_Oxide_Down-Regulates_EBV_Reactivation_in_Epithelial_Cell_Lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/129_EBV_lytic_transactivator_Zta_enhances_chemotactic_activity_through_induction_of_interleukin-8_in_NPC_cells.pdf">129_EBV_lytic_transactivator_Zta_enhances_chemotactic_activity_through_induction_of_interleukin-8_in_NPC_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/130_Changes_in_the_nasopharyngeal_carcinoma_nuclear_proteome_induced_by_the_EBNA1_reveal_potential_roles_in_metastasis_n_oxidative_stress.pdf">130_Changes_in_the_nasopharyngeal_carcinoma_nuclear_proteome_induced_by_the_EBNA1_reveal_potential_roles_in_metastasis_n_oxidative_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/131_0810619106SI.pdf">131_0810619106SI.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/131_The_EBV_nuclear_antigen-1_promotes_genomic_instability_via_induction_of_ROS.pdf">131_The_EBV_nuclear_antigen-1_promotes_genomic_instability_via_induction_of_ROS.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/132_The_EBV_nuclear_antigen-1_promotes_telomere_dysfunction_via_induction_of_oxidative_stress.pdf">132_The_EBV_nuclear_antigen-1_promotes_telomere_dysfunction_via_induction_of_oxidative_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/133_EBV-encoded_EBNA1_regulates_cell_viability_by_modulating_miR34a-NOX2-ROS_signaling_in_gastric_cancer_cells.pdf">133_EBV-encoded_EBNA1_regulates_cell_viability_by_modulating_miR34a-NOX2-ROS_signaling_in_gastric_cancer_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/134_Crosstalk_between_the_mTOR_n_Nrf2-ARE_signaling_pathways_as_a_target_in_the_improvement_of_long-term_potentiation.pdf">134_Crosstalk_between_the_mTOR_n_Nrf2-ARE_signaling_pathways_as_a_target_in_the_improvement_of_long-term_potentiation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/135_Niclosamide_inhibits_lytic_replication_of_EBV_by_disrupting_mTOR_activation2.pdf">135_Niclosamide_inhibits_lytic_replication_of_EBV_by_disrupting_mTOR_activation2.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/135_Niclosamide_inhibits_lytic_replication_of_EBV_by_disrupting_mTOR_activation.pdf">135_Niclosamide_inhibits_lytic_replication_of_EBV_by_disrupting_mTOR_activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/136_Inhibition_of_mTORC1_inhibits_lytic_replication_of_EBV_in_a_cell-type_specific_manner.pdf">136_Inhibition_of_mTORC1_inhibits_lytic_replication_of_EBV_in_a_cell-type_specific_manner.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/137_Nrf2_Transcription_Factor_Can_Directly_Regulate_mTOR.pdf">137_Nrf2_Transcription_Factor_Can_Directly_Regulate_mTOR.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/138_Chloroquine_inhibits_lytic_replication_of_KSHV_by_disrupting_mTOR_n_p38-MAPK_activation.pdf">138_Chloroquine_inhibits_lytic_replication_of_KSHV_by_disrupting_mTOR_n_p38-MAPK_activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/139_mTOR_inhibitors_induce_cell-cycle_arrest_n_inhibit_tumor_growth_in_EBV-associated_T_n_natural_killer_cell_lymphoma_cells.pdf">139_mTOR_inhibitors_induce_cell-cycle_arrest_n_inhibit_tumor_growth_in_EBV-associated_T_n_natural_killer_cell_lymphoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/140_mTOR-Mediated_Antioxidant_Activation_in_Solid_Tumor_Radioresistance.pdf">140_mTOR-Mediated_Antioxidant_Activation_in_Solid_Tumor_Radioresistance.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/141_Transcriptional_regulation_of_the_stress_response_by_mTOR.pdf">141_Transcriptional_regulation_of_the_stress_response_by_mTOR.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/143_Molecular_mechanisms_of_mTOR_regulation_by_stress.pdf">143_Molecular_mechanisms_of_mTOR_regulation_by_stress.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/144_Mazes_of_Nrf2_Regulation.pdf">144_Mazes_of_Nrf2_Regulation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/145_Global_downstream_pathway_analysis_reveals_a_dependence_of_oncogenic_Nrf2_mutation_on_the_mTOR_growth_signaling_pathway.pdf">145_Global_downstream_pathway_analysis_reveals_a_dependence_of_oncogenic_Nrf2_mutation_on_the_mTOR_growth_signaling_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/146_Inhibition_of_PI3KAKTmTOR_axis_disrupts_oxidative_stress-mediated_survival_of_melanoma_cells.pdf">146_Inhibition_of_PI3KAKTmTOR_axis_disrupts_oxidative_stress-mediated_survival_of_melanoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/147_Insights_for_Oxidative_Stress_n_mTOR_Signaling_in_Myocardial_Ischemia-Reperfusion_Injury_under_Diabetes.pdf">147_Insights_for_Oxidative_Stress_n_mTOR_Signaling_in_Myocardial_Ischemia-Reperfusion_Injury_under_Diabetes.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/148_ROS_signaling_under_metabolic_stress_cross-talk_between_AMPK_n_AKT_pathway.pdf">148_ROS_signaling_under_metabolic_stress_cross-talk_between_AMPK_n_AKT_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/149_Expression_of_EBV_latent_antigens_mTOR_n_tumor_suppression_genes_in_EBV-positive_smooth_muscle_tumors.pdf">149_Expression_of_EBV_latent_antigens_mTOR_n_tumor_suppression_genes_in_EBV-positive_smooth_muscle_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/150_EBV_encoded_LMP1_regulates_mTOR_signaling_pathway_genes_which_predict_poor_prognosis_of_nasopharyngeal_carcinoma.pdf">150_EBV_encoded_LMP1_regulates_mTOR_signaling_pathway_genes_which_predict_poor_prognosis_of_nasopharyngeal_carcinoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/151_Latent_membrane_protein_1_of_EBV_activates_phosphatidylinositol_3-kinase_to_induce_production_of_IL-10.pdf">151_Latent_membrane_protein_1_of_EBV_activates_phosphatidylinositol_3-kinase_to_induce_production_of_IL-10.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/152_Modulation_of_the_cell_growth_regulator_mTOR_by_EBV_LMP2A.pdf">152_Modulation_of_the_cell_growth_regulator_mTOR_by_EBV_LMP2A.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/153_Oncogene-induced_Nrf2_transcription_promotes_ROS_detoxification_n_tumorigenesis_NIHMS313089-supplement-1.pdf">153_Oncogene-induced_Nrf2_transcription_promotes_ROS_detoxification_n_tumorigenesis_NIHMS313089-supplement-1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/153_Oncogene-induced_Nrf2_transcription_promotes_ROS_detoxification_n_tumorigenesis.pdf">153_Oncogene-induced_Nrf2_transcription_promotes_ROS_detoxification_n_tumorigenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/154_MNNG_induces_n_cooperates_with_TB_to_enhance_EBV_reactivation_n_genome_instability_in_nasopharyngeal_carcinoma_cells.pdf">154_MNNG_induces_n_cooperates_with_TB_to_enhance_EBV_reactivation_n_genome_instability_in_nasopharyngeal_carcinoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/155_The_Keap1-Nrf2-antioxidant_response_element_pathway-a_review_of_its_regulation_by_melatonin_n_the_proteasome.pdf">155_The_Keap1-Nrf2-antioxidant_response_element_pathway-a_review_of_its_regulation_by_melatonin_n_the_proteasome.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/156_mTOR_signaling_pathway_n_mTOR_inhibitors_in_cancer_progress_n_challenges.pdf">156_mTOR_signaling_pathway_n_mTOR_inhibitors_in_cancer_progress_n_challenges.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/157_HDACi_chidamide_induces_growth_inhibition_n_apoptosis_in_NK-T_lymphoma_cells_through_ATM-Chk2-p53-p21_signalling_pathway.pdf">157_HDACi_chidamide_induces_growth_inhibition_n_apoptosis_in_NK-T_lymphoma_cells_through_ATM-Chk2-p53-p21_signalling_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/158_Therapies_based_on_targeting_EBV_lytic_replication_for_EBV-associated_malignancies.pdf">158_Therapies_based_on_targeting_EBV_lytic_replication_for_EBV-associated_malignancies.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/159_Activation_of_p62-Keap1-Nrf2_Pathway_in_Cancer.pdf">159_Activation_of_p62-Keap1-Nrf2_Pathway_in_Cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/160_p62_as_a_therapeutic_target_for_tumor.pdf">160_p62_as_a_therapeutic_target_for_tumor.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/161_p62_is_a_key_regulator_of_nutrient_sensing_in_the_mTORC1_pathway.pdf">161_p62_is_a_key_regulator_of_nutrient_sensing_in_the_mTORC1_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/162_p62-related_pathways_as_therapeutic_targets_in_hepatocellular_carcinoma.pdf">162_p62-related_pathways_as_therapeutic_targets_in_hepatocellular_carcinoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/163_Autophagy_n_its_role_in_gastric_cancer.pdf">163_Autophagy_n_its_role_in_gastric_cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/164_Autophagy_pathway_Cellular_n_molecular_mechanisms.pdf">164_Autophagy_pathway_Cellular_n_molecular_mechanisms.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/165_Role_of_p62_in_liver_physiology_n_pathogenesis.pdf">165_Role_of_p62_in_liver_physiology_n_pathogenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/166_Targeting_autophagy_in_cancer.pdf">166_Targeting_autophagy_in_cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/167_Autophagy_n_disease-unanswered_questions.pdf">167_Autophagy_n_disease-unanswered_questions.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/168_Autophagy_in_cancer-moving_from_understanding_mechanism_to_improving_therapy_responses_in_patients.pdf">168_Autophagy_in_cancer-moving_from_understanding_mechanism_to_improving_therapy_responses_in_patients.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/169_Guidelines_for_the_use_n_interpretation_of_assays_for_monitoring_autophagy_3rd_edition.pdf">169_Guidelines_for_the_use_n_interpretation_of_assays_for_monitoring_autophagy_3rd_edition.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/170_Targeting_autophagy_in_cancer_2018.pdf">170_Targeting_autophagy_in_cancer_2018.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/171_Cisplatin_induces_autophagy_to_enhance_hepatitis_B_virus_replication_via_activation_of_ROS_JNK_n_inhibition_of_the_AktmTOR_pathway.pdf">171_Cisplatin_induces_autophagy_to_enhance_hepatitis_B_virus_replication_via_activation_of_ROS_JNK_n_inhibition_of_the_AktmTOR_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/172_Autophagy_during_viral_infection%E2%80%94_a_double-edged_sword.pdf">172_Autophagy_during_viral_infection—_a_double-edged_sword.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/173_KSHV_infection_inhibits_macrophage_formation_n_survival_by_counteracting_M-CSF-induced_increase_of_ROS_c-JNK_phosphorylation_n_autophagy.pdf">173_KSHV_infection_inhibits_macrophage_formation_n_survival_by_counteracting_M-CSF-induced_increase_of_ROS_c-JNK_phosphorylation_n_autophagy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/174_FGF9-induced_changes_in_cellular_redox_status_n_HO-1_upregulation_are_FGFR-dependent_n_proceed_through_both_ERK_n_AKT_to_induce_CREB_n_Nrf2_activation.pdf">174_FGF9-induced_changes_in_cellular_redox_status_n_HO-1_upregulation_are_FGFR-dependent_n_proceed_through_both_ERK_n_AKT_to_induce_CREB_n_Nrf2_activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/175_Essential_roles_of_the_PI3_kinase-Akt_pathway_in_regulating_Nrf2-dependent_antioxidant_functions_in_the_RPE.pdf">175_Essential_roles_of_the_PI3_kinase-Akt_pathway_in_regulating_Nrf2-dependent_antioxidant_functions_in_the_RPE.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/176_Maltol_Slows_d-Galactose-Induced_Brain_Aging_Process_by_Damping_the_Nrf2HO-1-Mediated_Oxidative_Stress_in_Mice.pdf">176_Maltol_Slows_d-Galactose-Induced_Brain_Aging_Process_by_Damping_the_Nrf2HO-1-Mediated_Oxidative_Stress_in_Mice.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/177_EBV_Associated_Lymphomas_n_Epithelia_Cancers_in_Humans.pdf">177_EBV_Associated_Lymphomas_n_Epithelia_Cancers_in_Humans.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/178_Cytolytic_virus_activation_therapy_for_EBV-driven_tumors.pdf">178_Cytolytic_virus_activation_therapy_for_EBV-driven_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/179_Activation_of_lytic_cycle_of_EBV_by_suberoylanilide_hydroxamic_acid_leads_to_apoptosis_n_tumor_suppression_of_NPC.pdf">179_Activation_of_lytic_cycle_of_EBV_by_suberoylanilide_hydroxamic_acid_leads_to_apoptosis_n_tumor_suppression_of_NPC.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/180_Recurrent_chemical_reactivations_of_EBV_promotes_genome_instability_n_enhances_tumor_progression_of_nasopharyngeal_carcinoma_cells.pdf">180_Recurrent_chemical_reactivations_of_EBV_promotes_genome_instability_n_enhances_tumor_progression_of_nasopharyngeal_carcinoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/181_Identification_of_Novel_Small_Organic_Compounds_with_Diverse_Structures_for_the_Induction_of_EBV_Lytic_Cycle.pdf">181_Identification_of_Novel_Small_Organic_Compounds_with_Diverse_Structures_for_the_Induction_of_EBV_Lytic_Cycle.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/182_Intracellular_Iron_Chelation_by_a_Novel_Compound_C7_Reactivates_EBV_Lytic_Cycle_via_the_ERK-Autophagy_Axis.pdf">182_Intracellular_Iron_Chelation_by_a_Novel_Compound_C7_Reactivates_EBV_Lytic_Cycle_via_the_ERK-Autophagy_Axis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/183_Autophagy-Dependent_Reactivation_of_EBV_Lytic_Cycle_n_Combinatorial_Effects_of_Autophagy-Dependent_n_Independent_Lytic_Inducers.pdf">183_Autophagy-Dependent_Reactivation_of_EBV_Lytic_Cycle_n_Combinatorial_Effects_of_Autophagy-Dependent_n_Independent_Lytic_Inducers.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/185_Targeting_EBV_in_Nasopharyngeal_Carcinoma.pdf">185_Targeting_EBV_in_Nasopharyngeal_Carcinoma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/187_Therapeutic_Strategies_against_EBV-Associated_Cancers_Using_Proteasome_Inhibitors.pdf">187_Therapeutic_Strategies_against_EBV-Associated_Cancers_Using_Proteasome_Inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/188_TIPE1-mediated_autophagy_suppression_promotes_NPC_cell_proliferation_via_the_AMPK-mTOR_signalling_pathway.pdf">188_TIPE1-mediated_autophagy_suppression_promotes_NPC_cell_proliferation_via_the_AMPK-mTOR_signalling_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/189_Contribution_of_EBV_Reactivation_to_the_Carcinogenicity_of_Nasopharyngeal_Cancer_Cell.pdf">189_Contribution_of_EBV_Reactivation_to_the_Carcinogenicity_of_Nasopharyngeal_Cancer_Cell.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/190_Development_of_a_novel_inducer_for_EBV_lytic_therapy.pdf">190_Development_of_a_novel_inducer_for_EBV_lytic_therapy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/191_The_PERK-Nrf2_Pathway_Mediates_Endoplasmic_Reticulum_Stres.pdf">191_The_PERK-Nrf2_Pathway_Mediates_Endoplasmic_Reticulum_Stres.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/192_The_NRF2-KEAP1_Pathway_Modulates_NPC_Cell_Radiosensitivity_via_ROS_Elimination.pdf">192_The_NRF2-KEAP1_Pathway_Modulates_NPC_Cell_Radiosensitivity_via_ROS_Elimination.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/193_BDH2_triggers_ROS-induced_cell_death_n_autophagy_by_promoting_Nrf2_ubiquitination_in_gastric_cancer.pdf">193_BDH2_triggers_ROS-induced_cell_death_n_autophagy_by_promoting_Nrf2_ubiquitination_in_gastric_cancer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/194_Berbamine_induced_AMPK_activation_regulates_mTOR-SREBP-1c_axis_n_Nrf2-ARE_pathway_in_steatotic_HepG2_cells.pdf">194_Berbamine_induced_AMPK_activation_regulates_mTOR-SREBP-1c_axis_n_Nrf2-ARE_pathway_in_steatotic_HepG2_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/195_Effects_of_a_novel_biflavonoid_of_Lonicera_japonica_flower_buds_on_modulating_apoptosis_in_hepatoma_cells.pdf">195_Effects_of_a_novel_biflavonoid_of_Lonicera_japonica_flower_buds_on_modulating_apoptosis_in_hepatoma_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/196_Lanthanum_chloride_induces_autophagy_in_rat_hippocampus_through_ROS-mediated_JNK_n_AKTmTOR_signaling_pathways.pdf">196_Lanthanum_chloride_induces_autophagy_in_rat_hippocampus_through_ROS-mediated_JNK_n_AKTmTOR_signaling_pathways.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/197_Neferine_prevents_NF-%CE%BAB_translocation_n_protects_muscle_cells_from_oxidative_stress_n_apoptosis_induced_by_hypoxia.pdf">197_Neferine_prevents_NF-κB_translocation_n_protects_muscle_cells_from_oxidative_stress_n_apoptosis_induced_by_hypoxia.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/198_Neferine_prevents_autophagy_induced_by_hypoxia_through_activation_of_Akt-mTOR_pathway_n_Nrf2_in_muscle_cells.pdf">198_Neferine_prevents_autophagy_induced_by_hypoxia_through_activation_of_Akt-mTOR_pathway_n_Nrf2_in_muscle_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/199_Scoparone_improves_hepatic_inflammation_n_autophagy_in_mice_with_nonalcoholic_steatohepatitis_macrophages.pdf">199_Scoparone_improves_hepatic_inflammation_n_autophagy_in_mice_with_nonalcoholic_steatohepatitis_macrophages.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/200_Synthetic_oleanane_triterpenoids-multifunctional_drugs_with_applications_for_prevention_n_treatment_of_chronic_disease.pdf">200_Synthetic_oleanane_triterpenoids-multifunctional_drugs_with_applications_for_prevention_n_treatment_of_chronic_disease.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/201_ROS-mediated_inactivation_of_the_PI3K-AKT_pathway_is_involved_in_the_antigastric_cancer_effects_of_chaetocin.pdf">201_ROS-mediated_inactivation_of_the_PI3K-AKT_pathway_is_involved_in_the_antigastric_cancer_effects_of_chaetocin.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/202_Baicalein_enhanced_cisplatin_sensitivity_of_gastric_cancer_by_inducing_apoptosis_n_autophagy.pdf">202_Baicalein_enhanced_cisplatin_sensitivity_of_gastric_cancer_by_inducing_apoptosis_n_autophagy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/204_mTORC2_facilitates_endothelial_cell_senescence_by_suppressing_Nrf2_expression_via_Akt-GSK-3%CE%B2-C-EBP%CE%B1_pathway.pdf">204_mTORC2_facilitates_endothelial_cell_senescence_by_suppressing_Nrf2_expression_via_Akt-GSK-3β-C-EBPα_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/205_TORC2-SGK-1_signaling_integrates_external_signals_to_regulate_autophagic_turnover_of_mitochondria_via_mtROS.pdf">205_TORC2-SGK-1_signaling_integrates_external_signals_to_regulate_autophagic_turnover_of_mitochondria_via_mtROS.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/206_Activation_of_KGFR-Akt-mTOR-Nrf2_signaling_protects_human_retinal_pigment_epithelium_cells_from_Ultra-violet.pdf">206_Activation_of_KGFR-Akt-mTOR-Nrf2_signaling_protects_human_retinal_pigment_epithelium_cells_from_Ultra-violet.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/207_PF-4708671_activates_Nrf2_by_promoting_p62-dependent_autophagic_degradation_of_Keap1.pdf">207_PF-4708671_activates_Nrf2_by_promoting_p62-dependent_autophagic_degradation_of_Keap1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/208_The_antioxidant_function_of_sestrins_is_mediated_by_promotion_of_autophagic_degradation_of_Keap1_n_Nrf2_activation.pdf">208_The_antioxidant_function_of_sestrins_is_mediated_by_promotion_of_autophagic_degradation_of_Keap1_n_Nrf2_activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/209_Regulation_of_mTORC2_Signaling.pdf">209_Regulation_of_mTORC2_Signaling.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/210_Research_progress_of_mTOR_inhibitors.pdf">210_Research_progress_of_mTOR_inhibitors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/211_Mitochondrial_Perturbations_Couple_mTORC2_to_Autophagy_in_C._elegans.pdf">211_Mitochondrial_Perturbations_Couple_mTORC2_to_Autophagy_in_C._elegans.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/212_mTORC2_controls_hydrophobic_motif_phosphorylation_n_activation_of_SGK1.pdf">212_mTORC2_controls_hydrophobic_motif_phosphorylation_n_activation_of_SGK1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/213_Cellular_differentiation_regulator_BLIMP1_induces_EBV_lytic_reactivation_by_activating_transcription_R_n_Z_promoters.pdf">213_Cellular_differentiation_regulator_BLIMP1_induces_EBV_lytic_reactivation_by_activating_transcription_R_n_Z_promoters.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/214_Differentiation-Dependent_LMP1_Expression_Is_Required_for_Efficient_Lytic_EBV_Reactivation_in_Epithelial_Cells.pdf">214_Differentiation-Dependent_LMP1_Expression_Is_Required_for_Efficient_Lytic_EBV_Reactivation_in_Epithelial_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/215_Inhibition_of_EBV_Replication_in_HPV-Immortalized_Keratinocytes.pdf">215_Inhibition_of_EBV_Replication_in_HPV-Immortalized_Keratinocytes.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/216_The_p65_Isoform_of_Nrf1_Is_a_Dominant_Negative_Inhibitor_of_ARE-mediated_Transcription.pdf">216_The_p65_Isoform_of_Nrf1_Is_a_Dominant_Negative_Inhibitor_of_ARE-mediated_Transcription.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/217_Activation_of_lytic_EBV_infection_by_radiation_n_NaB_for_treating_EBV-positive_malignancies.pdf">217_Activation_of_lytic_EBV_infection_by_radiation_n_NaB_for_treating_EBV-positive_malignancies.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/218_Azacitidine_induces_demethylation_of_the_EBV_genome_in_tumors.pdf">218_Azacitidine_induces_demethylation_of_the_EBV_genome_in_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/219_Bortezomib-induced_enzyme-targeted_radiation_therapy_in_herpesvirus-associated_tumors.pdf">219_Bortezomib-induced_enzyme-targeted_radiation_therapy_in_herpesvirus-associated_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/221_Lytic_Induction_Therapy_against_EBV-Associated_Malignancies-Past_Present_n_Future.pdf">221_Lytic_Induction_Therapy_against_EBV-Associated_Malignancies-Past_Present_n_Future.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/223_Viral-Targeted_Strategies_Against_EBV-Associated_Lymphoproliferative_Diseases.pdf">223_Viral-Targeted_Strategies_Against_EBV-Associated_Lymphoproliferative_Diseases.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/224_Curcuminoids_as_EBV_Lytic_Activators_for_Adjuvant_Treatment_in_EBV-Positive_Carcinomas.pdf">224_Curcuminoids_as_EBV_Lytic_Activators_for_Adjuvant_Treatment_in_EBV-Positive_Carcinomas.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/228_Targeting_EBV_LMP1-mediated_high_oxidative_stress_suppresses_EBV_lytic_reactivation_n_sensitizes_tumors_to_radiation_therapy.pdf">228_Targeting_EBV_LMP1-mediated_high_oxidative_stress_suppresses_EBV_lytic_reactivation_n_sensitizes_tumors_to_radiation_therapy.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/228_Targeting_EBV_LMP1-mediated_high_oxidative_stress_suppresses_EBV_lytic_reactivation_n_sensitizes_tumors_to_radiation_therapy_supp.pdf">228_Targeting_EBV_LMP1-mediated_high_oxidative_stress_suppresses_EBV_lytic_reactivation_n_sensitizes_tumors_to_radiation_therapy_supp.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/229_Alterations_in_cellular_expression_in_EBV_infected_epithelial_cell_lines_n_tumors.pdf">229_Alterations_in_cellular_expression_in_EBV_infected_epithelial_cell_lines_n_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/230_CCAATEnhancer_Binding_Protein_%CE%B1_Interacts_with_ZTA_n_Mediates_ZTA-Induced_p21CIP-1_Accumulation.pdf">230_CCAATEnhancer_Binding_Protein_α_Interacts_with_ZTA_n_Mediates_ZTA-Induced_p21CIP-1_Accumulation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/231_Two_21-kilodalton_components_of_the_EBV_capsid_antigen_complex_n_their_relationship_to_ZEBRA-associated_protein_p21_ZAP21.pdf">231_Two_21-kilodalton_components_of_the_EBV_capsid_antigen_complex_n_their_relationship_to_ZEBRA-associated_protein_p21_ZAP21.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/232_Direct_Interaction_between_Nrf2_n_p21_Upregulates_the_Nrf2-Mediated_Antioxidant_Response.pdf">232_Direct_Interaction_between_Nrf2_n_p21_Upregulates_the_Nrf2-Mediated_Antioxidant_Response.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/233_Functions_of_the_EBV_EBNA1_protein_in_viral_reactivation_n_lytic_infection.pdf">233_Functions_of_the_EBV_EBNA1_protein_in_viral_reactivation_n_lytic_infection.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/234_Proteomic_profiling_of_EBNA1-host_protein_interactions_in_latent_n_lytic_EBV_infections.pdf">234_Proteomic_profiling_of_EBNA1-host_protein_interactions_in_latent_n_lytic_EBV_infections.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/235_EBNA1.pdf">235_EBNA1.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/236_EBV_EBNA1_Protein_Regulates_Viral_Latency_through_Effects_on_let-7_MicroRNA_n_Dicer.pdf">236_EBV_EBNA1_Protein_Regulates_Viral_Latency_through_Effects_on_let-7_MicroRNA_n_Dicer.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/237_EBV-encoded_EBNA1_n_ZEBRA.pdf">237_EBV-encoded_EBNA1_n_ZEBRA.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/238_LMP1_Is_a_Novel_Determinant_of_EBV_Genome_Persistence_n_Reactivation.pdf">238_LMP1_Is_a_Novel_Determinant_of_EBV_Genome_Persistence_n_Reactivation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/239_Proteasomal_inhibition_triggers_viral_oncoprotein_degradation_via_autophagy-lysosomal_pathway.pdf">239_Proteasomal_inhibition_triggers_viral_oncoprotein_degradation_via_autophagy-lysosomal_pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/240_Carcinoma-risk_variant_of_EBNA1_deregulates_EBV_episomal_latency.pdf">240_Carcinoma-risk_variant_of_EBNA1_deregulates_EBV_episomal_latency.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/241_Curcumin_Inhibits_Proliferation_of_EBV-Associated_Human_NPC_by_Inhibiting_EBV_EBNA1_Expression.pdf">241_Curcumin_Inhibits_Proliferation_of_EBV-Associated_Human_NPC_by_Inhibiting_EBV_EBNA1_Expression.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/242_In_Vivo_Dynamics_of_EBNA1-oriP_Interaction_during_Latent_n_Lytic_Replication_of_EBV.pdf">242_In_Vivo_Dynamics_of_EBNA1-oriP_Interaction_during_Latent_n_Lytic_Replication_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/244_STUB1_is_targeted_by_the_SUMO-interacting_motif_of_EBNA1_to_maintain_EBV_latency.pdf">244_STUB1_is_targeted_by_the_SUMO-interacting_motif_of_EBNA1_to_maintain_EBV_latency.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/245_EBV_EBNA3A_Is_Critical_for_Maintaining_Lymphoblastoid_Cell_Line_Growth.pdf">245_EBV_EBNA3A_Is_Critical_for_Maintaining_Lymphoblastoid_Cell_Line_Growth.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/246_EBV_BNA3C_is_required_for_cell_cycle_progression_n_growth_maintenance_of_lymphoblastoid_cells.pdf">246_EBV_BNA3C_is_required_for_cell_cycle_progression_n_growth_maintenance_of_lymphoblastoid_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/247_Mechanisms_of_B-Cell_Oncogenesis_Induced_by_EBV.pdf">247_Mechanisms_of_B-Cell_Oncogenesis_Induced_by_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/248_EBNA3B-deficient_EBV_promotes_B_cell_lymphomagenesis_in_humanized_mice_n_is_found_in_human_tumors.pdf">248_EBNA3B-deficient_EBV_promotes_B_cell_lymphomagenesis_in_humanized_mice_n_is_found_in_human_tumors.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/249_The_EBNA3_Family-Two_Oncoproteins_n_a_Tumour_Suppressor_that_Are_Central_to_the_Biology_of_EBV_in_B_Cells.pdf">249_The_EBNA3_Family-Two_Oncoproteins_n_a_Tumour_Suppressor_that_Are_Central_to_the_Biology_of_EBV_in_B_Cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/250_LMP2_blocks_reactivation_of_EBV_from_latency_following_surface_immunoglobulin_crosslinking.pdf">250_LMP2_blocks_reactivation_of_EBV_from_latency_following_surface_immunoglobulin_crosslinking.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/251_LPM2_of_EBV_regulates_reactivation_from_latency_through_dominant_negative_effects_on_protein-tyrosine_kinases.pdf">251_LPM2_of_EBV_regulates_reactivation_from_latency_through_dominant_negative_effects_on_protein-tyrosine_kinases.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/252_LMP2B_regulates_susceptibility_to_induction_of_lytic_EBV_infection.pdf">252_LMP2B_regulates_susceptibility_to_induction_of_lytic_EBV_infection.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/253_Analysis_of_EBV_gene_expression_upon_phorbol_ester_n_hydroxyurea_treatment_by_real-time_quantitative_PCR.pdf">253_Analysis_of_EBV_gene_expression_upon_phorbol_ester_n_hydroxyurea_treatment_by_real-time_quantitative_PCR.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/254_Effect_of_the_diterpene_ester_TPA_on_EBV_antigen-_n_DNA_synthesis_in_producer_n_nonproducer_cell_lines.pdf">254_Effect_of_the_diterpene_ester_TPA_on_EBV_antigen-_n_DNA_synthesis_in_producer_n_nonproducer_cell_lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/255_Histone_Hyperacetylation_Occurs_on_Promoters_of_Lytic_Cycle_Regulatory_Genes_in_EBV-Infected_Cell_Lines.pdf">255_Histone_Hyperacetylation_Occurs_on_Promoters_of_Lytic_Cycle_Regulatory_Genes_in_EBV-Infected_Cell_Lines.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/256_Suberoylanilide_hydroxamic_acid_induces_viral_lytic_cycle_in_EBV-positive_epithelial_malignancies_n_mediates_enhanced_cell_death.pdf">256_Suberoylanilide_hydroxamic_acid_induces_viral_lytic_cycle_in_EBV-positive_epithelial_malignancies_n_mediates_enhanced_cell_death.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/257_3H-1_2-dithiole-3-thione_protects_retinal_pigment_epithelium_cells_against_Ultra-violet_radiation_via_activation_of_Akt-mTORC1-dependent_Nrf2-HO-1_signaling.pdf">257_3H-1_2-dithiole-3-thione_protects_retinal_pigment_epithelium_cells_against_Ultra-violet_radiation_via_activation_of_Akt-mTORC1-dependent_Nrf2-HO-1_signaling.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/258_Endoplasmic_Reticulum_Stress-Mediated_Apoptosis_of_EBV-Transformed_B_Cells_by_Cross-Linking_of_CD70_Is_Dependent_upon_Generation_of_Reactive_Oxygen_Species_n_Activation_of_p38_MAPK_n_JNK_Pathway.pdf">258_Endoplasmic_Reticulum_Stress-Mediated_Apoptosis_of_EBV-Transformed_B_Cells_by_Cross-Linking_of_CD70_Is_Dependent_upon_Generation_of_Reactive_Oxygen_Species_n_Activation_of_p38_MAPK_n_JNK_Pathway.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/259_A_Noncanonical_Basic_Motif_of_EBV_ZEBRA_Protein_Facilitates_Recognition_of_Methylated_DNA_HighAffinity_DNA_Binding_n_Lytic_Activation.pdf">259_A_Noncanonical_Basic_Motif_of_EBV_ZEBRA_Protein_Facilitates_Recognition_of_Methylated_DNA_HighAffinity_DNA_Binding_n_Lytic_Activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/259_Copy_number_of_EBV_latent_genome_correlates_with_the_oncogenicity_by_the_activation_level_of_LMP1_n_NF-%CE%BAB.pdf">259_Copy_number_of_EBV_latent_genome_correlates_with_the_oncogenicity_by_the_activation_level_of_LMP1_n_NF-κB.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/260_Bortezomib_induces_heme_oxygenase-1_expression_in_multiple_myeloma.pdf">260_Bortezomib_induces_heme_oxygenase-1_expression_in_multiple_myeloma.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/260_Early_EBV_Genomic_Diversity_n_Convergence_toward_the_B95.8_Genome_in_Primary_Infection.pdf">260_Early_EBV_Genomic_Diversity_n_Convergence_toward_the_B95.8_Genome_in_Primary_Infection.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/261_Combined_inhibition_of_autophagy_n_Nrf2_signaling_augments_bortezomib-induced_apoptosis_by_increasing_ROS_production_n_ER_stress_in_pancreatic_cancer_cells.pdf">261_Combined_inhibition_of_autophagy_n_Nrf2_signaling_augments_bortezomib-induced_apoptosis_by_increasing_ROS_production_n_ER_stress_in_pancreatic_cancer_cells.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/261_High_EBV_Load_n_Genomic_Diversity_Are_Associated_with_Generation_of_gp350-Specific_Neutralizing_Antibodies_following_Acute_Infectious_Mononucleosis.pdf">261_High_EBV_Load_n_Genomic_Diversity_Are_Associated_with_Generation_of_gp350-Specific_Neutralizing_Antibodies_following_Acute_Infectious_Mononucleosis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/262_Degradation_of_p53_Can_Be_Targeted_by_HPV_E6_Sequences_Distinct_from_Those_Required_for_p53_Binding_n_Trans_Activation.pdf">262_Degradation_of_p53_Can_Be_Targeted_by_HPV_E6_Sequences_Distinct_from_Those_Required_for_p53_Binding_n_Trans_Activation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/262_HLA_alleles_modulate_EBV_viral_load_in_multiple_sclerosis.pdf">262_HLA_alleles_modulate_EBV_viral_load_in_multiple_sclerosis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/263_EBV_PCR_Sum.pdf">263_EBV_PCR_Sum.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/263_Rapid_determination_of_EBV_latent_or_lytic_infection_in_single_human_cells_using_in_situ_hybridization.pdf">263_Rapid_determination_of_EBV_latent_or_lytic_infection_in_single_human_cells_using_in_situ_hybridization.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/264_Enzyme_immunoassays_for_the_diagnosis_of_EBV_infection.pdf">264_Enzyme_immunoassays_for_the_diagnosis_of_EBV_infection.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/265_Oncogenic_Properties_of_the_EBV_ZEBRA_Protein.pdf">265_Oncogenic_Properties_of_the_EBV_ZEBRA_Protein.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/266_Sodium_butyrate_activates_NRF2_to_ameliorate_diabetic_nephropathy_possibly_via_inhibition_of_HDAC-J_Endocrinology.pdf">266_Sodium_butyrate_activates_NRF2_to_ameliorate_diabetic_nephropathy_possibly_via_inhibition_of_HDAC-J_Endocrinology.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/267_Sodium_butyrate_inhibits_high_cholesterol-induced_neuronal_amyloidogenesis_by_modulating_NRF2_stabilization-mediated_ROS_levels-involvement_of_NOX2_n_SOD1.pdf">267_Sodium_butyrate_inhibits_high_cholesterol-induced_neuronal_amyloidogenesis_by_modulating_NRF2_stabilization-mediated_ROS_levels-involvement_of_NOX2_n_SOD1.pdf</a></li>
-</ul>
-<hr>
-<h2 id="Viral-Load"><a href="#Viral-Load" class="headerlink" title="Viral Load"></a>Viral Load</h2><ul>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/101_Chaetocin_reactivates_the_lytic_replication_of_EBV_from_latency_via_reactive_oxygen_species.pdf">101_Chaetocin_reactivates_the_lytic_replication_of_EBV_from_latency_via_reactive_oxygen_species.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/184_Pharmacologic_Activation_of_Lytic_EBV_Gene_Expression_without_Virion_Production.pdf">184_Pharmacologic_Activation_of_Lytic_EBV_Gene_Expression_without_Virion_Production.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/186_Inhibition_of_class_I_histone_deacetylases_by_romidepsin_potently_induces_EBV_lytic_cycle_ganciclovir.pdf">186_Inhibition_of_class_I_histone_deacetylases_by_romidepsin_potently_induces_EBV_lytic_cycle_ganciclovir.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/203_The_mTOR_Inhibitor_Manassantin_B_Reveals-A_Crucial_Role_of_mTORC2_Signaling_in_EBV_Reactivation.pdf">203_The_mTOR_Inhibitor_Manassantin_B_Reveals-A_Crucial_Role_of_mTORC2_Signaling_in_EBV_Reactivation.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/220_Emodin_Inhibits_EBV_Reactivation_and_Represses_NPC_Tumorigenesis.pdf">220_Emodin_Inhibits_EBV_Reactivation_and_Represses_NPC_Tumorigenesis.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/222_Rapamycin_enhances_lytic_replication_of_EBV_in_gastric_carcinoma_cells_by_increasing_the_transcriptional_of_lytic_promoters.pdf">222_Rapamycin_enhances_lytic_replication_of_EBV_in_gastric_carcinoma_cells_by_increasing_the_transcriptional_of_lytic_promoters.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/225_Genipin_as_a_novel_chemical_activator_of_EBV_lytic_cycle.pdf">225_Genipin_as_a_novel_chemical_activator_of_EBV_lytic_cycle.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/226_Cordycepin_is_a_novel_chemical_suppressor_of_EBV.pdf">226_Cordycepin_is_a_novel_chemical_suppressor_of_EBV.pdf</a></li>
-<li><a href="/media/ht/ht_5T/Work/Projects/NFE/B95-8/Ref/EBV_DNA_load_RT-PCR/227_Quercetin-induced_apoptosis_prevents_EBV_infection.pdf">227_Quercetin-induced_apoptosis_prevents_EBV_infection.pdf</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Proteomics</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">GanttProject</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log/Computing//" class="article-tag-list-link color5">Computing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/18/20210418/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/7/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/">Next &amp;raquo;</a>
@@ -4361,15 +4082,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4382,6 +4103,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HPV</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4401,15 +4134,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Root Explorer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ES File Explorer</a>
+                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4422,10 +4147,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4517,6 +4238,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
@@ -4546,34 +4283,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4617,19 +4326,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4641,11 +4378,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4669,47 +4414,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ACNUC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4729,6 +4434,46 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">RGB color</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppImage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Outline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
               </li>
              
@@ -4742,10 +4487,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Kaiju</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4769,23 +4510,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ContraFect</a>
+                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Intralytix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">phagelux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
+                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4805,15 +4538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Nrf2-HSV</a>
+                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4825,7 +4550,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Backup</a>
+                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4845,14 +4574,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Offline map</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
               </li>
              
@@ -4865,10 +4586,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
@@ -4877,7 +4594,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">flatpak</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4897,31 +4634,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cairo-Dock</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scheme of README documents</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Bacteriophage database</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">凉山</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4934,6 +4651,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4953,14 +4674,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">山西疾控</a>
               </li>
              
@@ -4977,11 +4690,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算命</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5021,22 +4742,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Potassium Chloride</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KCl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Figma</a>
               </li>
              
@@ -5050,6 +4755,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Potassium Chloride</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KCl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5077,19 +4798,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">miR prediction</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Primer organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5141,6 +4862,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkText</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Small RNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Tree structure</a>
               </li>
              
@@ -5166,18 +4899,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">flowchart</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkText</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Small RNA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PDF Note</a>
               </li>
              
               <li class="article-tag-list-item">
