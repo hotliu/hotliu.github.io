@@ -158,6 +158,387 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20220308" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/08/20220308/">20220308</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/08/20220308/" class="archive-article-date">
+  	<time datetime="2022-03-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220308</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AlphaFold-Protein-Structure-Database"><span class="toc-number">2.</span> <span class="toc-text">AlphaFold Protein Structure Database</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Home"><span class="toc-number">3.</span> <span class="toc-text">Home</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Background"><span class="toc-number">3.0.1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-out-more"><span class="toc-number">3.0.2.</span> <span class="toc-text">Find out more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What%E2%80%99s-next"><span class="toc-number">3.0.3.</span> <span class="toc-text">What’s next?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution"><span class="toc-number">3.0.4.</span> <span class="toc-text">License and attribution</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Downloads"><span class="toc-number">3.1.</span> <span class="toc-text">Downloads</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-model-organism-proteomes"><span class="toc-number">3.1.1.</span> <span class="toc-text">Compressed prediction files for model organism proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-global-health-proteomes"><span class="toc-number">3.1.2.</span> <span class="toc-text">Compressed prediction files for global health proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-Swiss-Prot"><span class="toc-number">3.1.3.</span> <span class="toc-text">Compressed prediction files for Swiss-Prot:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution-1"><span class="toc-number">3.1.4.</span> <span class="toc-text">License and attribution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feedback"><span class="toc-number">3.1.5.</span> <span class="toc-text">Feedback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disclaimer"><span class="toc-number">3.1.6.</span> <span class="toc-text">Disclaimer</span></a></li></ol></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Book of &quot;Protein Structure Prediction&quot;</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;eBooks&#x2F;Important_Protocols&#x2F;Protein_Structure_Prediction.pdf; \</span><br><span class="line">setsid okular $&#123;i&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="AlphaFold-Protein-Structure-Database"><a href="#AlphaFold-Protein-Structure-Database" class="headerlink" title="AlphaFold Protein Structure Database"></a><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/">AlphaFold Protein Structure Database</a></h1><h1 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h1><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p><a target="_blank" rel="noopener" href="https://deepmind.com/blog/article/putting-the-power-of-alphafold-into-the-worlds-hands">AlphaFold</a> is an AI system developed by <a target="_blank" rel="noopener" href="https://deepmind.com/">DeepMind</a> that predicts a protein’s 3D structure from its amino acid sequence. It regularly achieves accuracy competitive with experiment.</p>
+<p>DeepMind and EMBL’s European Bioinformatics Institute (<a target="_blank" rel="noopener" href="http://www.ebi.ac.uk/">EMBL-EBI</a>) have partnered to create AlphaFold DB to make these predictions freely available to the scientific community. The first release covered the human proteome and the proteomes of several other <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download">key organisms</a>, while the second release added the majority of manually curated UniProt entries (<a target="_blank" rel="noopener" href="https://www.expasy.org/resources/uniprotkb-swiss-prot">Swiss-Prot</a>). In 2022 we plan to expand the database to cover a large proportion of all catalogued proteins (the over 100 million in <a target="_blank" rel="noopener" href="https://www.uniprot.org/help/uniref">UniRef90</a>).</p>
+<p><img src="https://www.alphafold.ebi.ac.uk/assets/img/Q8I3H7_1.png"></p>
+<p>Q8I3H7: May protect the malaria parasite against attack by the immune system. Mean pLDDT 85.57.</p>
+<p><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/entry/Q8I3H7">View protein</a></p>
+<p>In <a target="_blank" rel="noopener" href="https://predictioncenter.org/casp14/zscores_final.cgi">CASP14</a>, AlphaFold was the top-ranked protein structure prediction method by a large margin, producing predictions with <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/faq#faq-12">high accuracy</a>. While the system still has some <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/faq#faq-8">limitations</a>, the CASP results suggest AlphaFold has immediate potential to help us understand the structure of proteins and advance biological research.</p>
+<p>Let us know how the AlphaFold Protein Structure Database has been useful in your research, or if you have any questions not covered in the <a target="_blank" rel="noopener" href="https://alphafold.ebi.ac.uk/faq">FAQs,</a> at <a href="mailto:alphafold@deepmind.com">alphafold@deepmind.com</a>.</p>
+<p><img src="https://www.alphafold.ebi.ac.uk/assets/img/Q8W3K0.png"></p>
+<p>Q8W3K0: A potential plant disease resistance protein. Mean pLDDT 82.24.</p>
+<p><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/entry/Q8W3K0">View protein</a></p>
+<h3 id="Find-out-more"><a href="#Find-out-more" class="headerlink" title="Find out more"></a>Find out more</h3><p><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41586-021-03819-2">Methodology</a><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41586-021-03828-1">Human proteome predictions</a><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download">Downloads</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/about">About AlphaFold DB</a><a target="_blank" rel="noopener" href="https://deepmind.com/">DeepMind</a><a target="_blank" rel="noopener" href="https://www.ebi.ac.uk/about">EMBL-EBI</a></p>
+<h3 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next?"></a>What’s next?</h3><p>AlphaFold DB will continue to expand in the coming months, so if you can’t find what you’re looking for right now, please follow <a target="_blank" rel="noopener" href="https://twitter.com/DeepMind">DeepMind</a> and <a target="_blank" rel="noopener" href="https://twitter.com/emblebi">EMBL-EBI</a>’s social channels for updates. In the meantime the AlphaFold <a target="_blank" rel="noopener" href="https://github.com/deepmind/alphafold/">source code</a> and <a target="_blank" rel="noopener" href="https://bit.ly/alphafoldcolab">Colab notebook</a> can be used to predict the structures of proteins not yet in AlphaFold DB. Both resources were recently updated to support multimer prediction.</p>
+<h3 id="License-and-attribution"><a href="#License-and-attribution" class="headerlink" title="License and attribution"></a>License and attribution</h3><p>All of the data provided is freely available for both academic and commercial use under Creative Commons Attribution 4.0 (<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>) license terms. If you use this resource, please cite the following papers:</p>
+<p>Jumper, J <em>et al</em>. Highly accurate protein structure prediction with AlphaFold. <em>Nature</em> (2021).</p>
+<p>Varadi, M <em>et al</em>. AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models. <em>Nucleic Acids Research</em> (2021).</p>
+<p>The structures provided in this resource are predictions with <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/faq#faq-5">varying levels of confidence</a> and should be interpreted carefully.</p>
+<h2 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download">AlphaFold Protein Structure Database</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download#proteomes-section">Model organism proteomes</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download#global-health-section">Global health proteomes</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download#swissprot-section">Swiss-Prot</a></p>
+</li>
+</ul>
+<p>AlphaFold DB currently provides predicted structures for the organisms listed below, as well as the majority of <a target="_blank" rel="noopener" href="https://www.expasy.org/resources/uniprotkb-swiss-prot">Swiss-Prot.</a>  </p>
+<p>You can download a prediction for an individual UniProt accession by visiting the corresponding structure page (example: <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/entry/F4HVG8">https://www.alphafold.ebi.ac.uk/entry/F4HVG8</a>).  </p>
+<p>For downloading all predictions for a given species, use the download links below. Note that this option is only available on the desktop version of the site.  </p>
+<p>These uncompressed archive files (.tar) contain all the available compressed PDB and mmCIF files (.gz) for a reference proteome. In the case of proteins longer than 2700 amino acids (aa), AlphaFold provides 1400aa long, overlapping fragments. For example, Titin has predicted fragment structures named as Q8WZ42-F1 (residues 1–1400), Q8WZ42-F2 (residues 201–1600), etc. These fragments are currently only available in these proteome archive files, not on the website.  </p>
+<p>For downloading all predictions for all species, visit the FTP site: <a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold">ftp://ftp.ebi.ac.uk/pub/databases/alphafold</a></p>
+<h3 id="Compressed-prediction-files-for-model-organism-proteomes"><a href="#Compressed-prediction-files-for-model-organism-proteomes" class="headerlink" title="Compressed prediction files for model organism proteomes:"></a>Compressed prediction files for model organism proteomes:</h3><p>Species</p>
+<p>Common Name</p>
+<p>Reference Proteome</p>
+<p>Predicted Structures</p>
+<p>Download</p>
+<p>Arabidopsis thaliana</p>
+<p>Arabidopsis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000006548">UP000006548</a> </p>
+<p>27,434</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000006548_3702_ARATH_v2.tar">Download (3,678 MB)</a></p>
+<p>Caenorhabditis elegans</p>
+<p>Nematode worm</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000001940">UP000001940</a> </p>
+<p>19,694</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001940_6239_CAEEL_v2.tar">Download (2,626 MB)</a></p>
+<p>Candida albicans</p>
+<p>C. albicans</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000559">UP000000559</a> </p>
+<p>5,974</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000559_237561_CANAL_v2.tar">Download (974 MB)</a></p>
+<p>Danio rerio</p>
+<p>Zebrafish</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000437">UP000000437</a> </p>
+<p>24,664</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000437_7955_DANRE_v2.tar">Download (4,180 MB)</a></p>
+<p>Dictyostelium discoideum</p>
+<p>Dictyostelium</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002195">UP000002195</a> </p>
+<p>12,622</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002195_44689_DICDI_v2.tar">Download (2,171 MB)</a></p>
+<p>Drosophila melanogaster</p>
+<p>Fruit fly</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000803">UP000000803</a> </p>
+<p>13,458</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000803_7227_DROME_v2.tar">Download (2,195 MB)</a></p>
+<p>Escherichia coli</p>
+<p>E. coli</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000625">UP000000625</a> </p>
+<p>4,363</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000625_83333_ECOLI_v2.tar">Download (453 MB)</a></p>
+<p>Glycine max</p>
+<p>Soybean</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000008827">UP000008827</a> </p>
+<p>55,799</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000008827_3847_SOYBN_v2.tar">Download (7,211 MB)</a></p>
+<p>Homo sapiens</p>
+<p>Human</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000005640">UP000005640</a> </p>
+<p>23,391</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000005640_9606_HUMAN_v2.tar">Download (4,830 MB)</a></p>
+<p>Methanocaldococcus jannaschii</p>
+<p>M. jannaschii</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000805">UP000000805</a> </p>
+<p>1,773</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000805_243232_METJA_v2.tar">Download (172 MB)</a></p>
+<p>Mus musculus</p>
+<p>Mouse</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000589">UP000000589</a> </p>
+<p>21,615</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000589_10090_MOUSE_v2.tar">Download (3,581 MB)</a></p>
+<p>Oryza sativa</p>
+<p>Asian rice</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000059680">UP000059680</a> </p>
+<p>43,649</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000059680_39947_ORYSJ_v2.tar">Download (4,461 MB)</a></p>
+<p>Rattus norvegicus</p>
+<p>Rat</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002494">UP000002494</a> </p>
+<p>21,272</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002494_10116_RAT_v2.tar">Download (3,437 MB)</a></p>
+<p>Saccharomyces cerevisiae</p>
+<p>Budding yeast</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002311">UP000002311</a> </p>
+<p>6,040</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002311_559292_YEAST_v2.tar">Download (969 MB)</a></p>
+<p>Schizosaccharomyces pombe</p>
+<p>Fission yeast</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002485">UP000002485</a> </p>
+<p>5,128</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002485_284812_SCHPO_v2.tar">Download (783 MB)</a></p>
+<p>Zea mays</p>
+<p>Maize</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000007305">UP000007305</a> </p>
+<p>39,299</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000007305_4577_MAIZE_v2.tar">Download (5,064 MB)</a></p>
+<h3 id="Compressed-prediction-files-for-global-health-proteomes"><a href="#Compressed-prediction-files-for-global-health-proteomes" class="headerlink" title="Compressed prediction files for global health proteomes:"></a>Compressed prediction files for global health proteomes:</h3><p>Species</p>
+<p>Common Name</p>
+<p>Reference Proteome</p>
+<p>Predicted Structures</p>
+<p>Download</p>
+<p>Ajellomyces capsulatus</p>
+<p>Ajellomyces capsulatus</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000001631">UP000001631</a> </p>
+<p>9,199</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001631_447093_AJECG_v2.tar">Download (1,351 MB)</a></p>
+<p>Brugia malayi</p>
+<p>Brugia malayi</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000006672">UP000006672</a> </p>
+<p>8,743</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000006672_6279_BRUMA_v2.tar">Download (1,274 MB)</a></p>
+<p>Campylobacter jejuni</p>
+<p>C. jejuni</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000799">UP000000799</a> </p>
+<p>1,620</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000799_192222_CAMJE_v2.tar">Download (173 MB)</a></p>
+<p>Cladophialophora carrionii</p>
+<p>Cladophialophora carrionii</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000094526">UP000094526</a> </p>
+<p>11,170</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000094526_86049_9EURO1_v2.tar">Download (1,716 MB)</a></p>
+<p>Dracunculus medinensis</p>
+<p>Dracunculus medinensis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000274756">UP000274756</a> </p>
+<p>10,834</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000274756_318479_DRAME_v2.tar">Download (1,351 MB)</a></p>
+<p>Enterococcus faecium</p>
+<p>Enterococcus faecium</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000325664">UP000325664</a> </p>
+<p>2,823</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000325664_1352_ENTFC_v2.tar">Download (285 MB)</a></p>
+<p>Fonsecaea pedrosoi</p>
+<p>Fonsecaea pedrosoi</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000053029">UP000053029</a> </p>
+<p>12,509</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000053029_1442368_9EURO2_v2.tar">Download (1,999 MB)</a></p>
+<p>Haemophilus influenzae</p>
+<p>H. influenzae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000579">UP000000579</a> </p>
+<p>1,662</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000579_71421_HAEIN_v2.tar">Download (173 MB)</a></p>
+<p>Helicobacter pylori</p>
+<p>H. pylori</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000429">UP000000429</a> </p>
+<p>1,538</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000429_85962_HELPY_v2.tar">Download (165 MB)</a></p>
+<p>Klebsiella pneumoniae</p>
+<p>K. pneumoniae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000007841">UP000007841</a> </p>
+<p>5,727</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000007841_1125630_KLEPH_v2.tar">Download (554 MB)</a></p>
+<p>Leishmania infantum</p>
+<p>L. infantum</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000008153">UP000008153</a> </p>
+<p>7,924</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000008153_5671_LEIIN_v2.tar">Download (1,496 MB)</a></p>
+<p>Madurella mycetomatis</p>
+<p>Madurella mycetomatis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000078237">UP000078237</a> </p>
+<p>9,561</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000078237_100816_9PEZI1_v2.tar">Download (1,525 MB)</a></p>
+<p>Mycobacterium leprae</p>
+<p>Mycobacterium leprae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000806">UP000000806</a> </p>
+<p>1,602</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000806_272631_MYCLE_v2.tar">Download (175 MB)</a></p>
+<p>Mycobacterium tuberculosis</p>
+<p>M. tuberculosis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000001584">UP000001584</a> </p>
+<p>3,988</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001584_83332_MYCTU_v2.tar">Download (425 MB)</a></p>
+<p>Mycobacterium ulcerans</p>
+<p>Mycobacterium ulcerans</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000020681">UP000020681</a> </p>
+<p>9,033</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000020681_1299332_MYCUL_v2.tar">Download (575 MB)</a></p>
+<p>Neisseria gonorrhoeae</p>
+<p>N. gonorrhoeae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000535">UP000000535</a> </p>
+<p>2,106</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000535_242231_NEIG1_v2.tar">Download (194 MB)</a></p>
+<p>Nocardia brasiliensis</p>
+<p>Nocardia brasiliensis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000006304">UP000006304</a> </p>
+<p>8,372</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000006304_1133849_9NOCA1_v2.tar">Download (863 MB)</a></p>
+<p>Onchocerca volvulus</p>
+<p>Onchocerca volvulus</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000024404">UP000024404</a> </p>
+<p>12,047</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000024404_6282_ONCVO_v2.tar">Download (1,607 MB)</a></p>
+<p>Paracoccidioides lutzii</p>
+<p>Paracoccidioides lutzii</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002059">UP000002059</a> </p>
+<p>8,794</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002059_502779_PARBA_v2.tar">Download (1,284 MB)</a></p>
+<p>Plasmodium falciparum</p>
+<p>P. falciparum</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000001450">UP000001450</a> </p>
+<p>5,187</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001450_36329_PLAF7_v2.tar">Download (1,142 MB)</a></p>
+<p>Pseudomonas aeruginosa</p>
+<p>P. aeruginosa</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002438">UP000002438</a> </p>
+<p>5,556</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002438_208964_PSEAE_v2.tar">Download (608 MB)</a></p>
+<p>Salmonella typhimurium</p>
+<p>S. typhimurium</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000001014">UP000001014</a> </p>
+<p>4,526</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000001014_99287_SALTY_v2.tar">Download (474 MB)</a></p>
+<p>Schistosoma mansoni</p>
+<p>Schistosoma mansoni</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000008854">UP000008854</a> </p>
+<p>13,865</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000008854_6183_SCHMA_v2.tar">Download (2,524 MB)</a></p>
+<p>Shigella dysenteriae</p>
+<p>S. dysenteriae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002716">UP000002716</a> </p>
+<p>3,893</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002716_300267_SHIDS_v2.tar">Download (370 MB)</a></p>
+<p>Sporothrix schenckii</p>
+<p>Sporothrix schenckii</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000018087">UP000018087</a> </p>
+<p>8,652</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000018087_1391915_SPOS1_v2.tar">Download (1,507 MB)</a></p>
+<p>Staphylococcus aureus</p>
+<p>S. aureus</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000008816">UP000008816</a> </p>
+<p>2,888</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000008816_93061_STAA8_v2.tar">Download (271 MB)</a></p>
+<p>Streptococcus pneumoniae</p>
+<p>S. pneumoniae</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000000586">UP000000586</a> </p>
+<p>2,030</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000000586_171101_STRR6_v2.tar">Download (201 MB)</a></p>
+<p>Strongyloides stercoralis</p>
+<p>Strongyloides stercoralis</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000035681">UP000035681</a> </p>
+<p>12,613</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000035681_6248_STRER_v2.tar">Download (1,878 MB)</a></p>
+<p>Trichuris trichiura</p>
+<p>Trichuris trichiura</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000030665">UP000030665</a> </p>
+<p>9,564</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000030665_36087_TRITR_v2.tar">Download (1,350 MB)</a></p>
+<p>Trypanosoma brucei</p>
+<p>Trypanosoma brucei</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000008524">UP000008524</a> </p>
+<p>8,491</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000008524_185431_TRYB2_v2.tar">Download (1,334 MB)</a></p>
+<p>Trypanosoma cruzi</p>
+<p>T. cruzi</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000002296">UP000002296</a> </p>
+<p>19,036</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000002296_353153_TRYCC_v2.tar">Download (2,934 MB)</a></p>
+<p>Wuchereria bancrofti</p>
+<p>Wuchereria bancrofti</p>
+<p><a target="_blank" rel="noopener" href="https://www.uniprot.org/proteomes/UP000270924">UP000270924</a> </p>
+<p>12,721</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/UP000270924_6293_WUCBA_v2.tar">Download (1,404 MB)</a></p>
+<h3 id="Compressed-prediction-files-for-Swiss-Prot"><a href="#Compressed-prediction-files-for-Swiss-Prot" class="headerlink" title="Compressed prediction files for Swiss-Prot:"></a>Compressed prediction files for Swiss-Prot:</h3><p>File type</p>
+<p>Predicted Structures</p>
+<p>Download</p>
+<p>Swiss-Prot (CIF files)</p>
+<p>542,380</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/swissprot_cif_v2.tar">Download (36,896 MB)</a></p>
+<p>Swiss-Prot (PDB files)</p>
+<p>542,380</p>
+<p><a target="_blank" rel="noopener" href="https://ftp.ebi.ac.uk/pub/databases/alphafold/latest/swissprot_pdb_v2.tar">Download (26,935 MB)</a></p>
+<h3 id="License-and-attribution-1"><a href="#License-and-attribution-1" class="headerlink" title="License and attribution"></a>License and attribution</h3><p>Data is available for academic and commercial use, under a <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> license.  </p>
+<p>EMBL-EBI expects attribution (e.g. in publications, services or products) for any of its online services, databases or software in accordance with good scientific practice.  </p>
+<p>If you make use of an AlphaFold prediction, please cite the following papers:<br><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41586-021-03819-2">Jumper, J <em>et al</em>. Highly accurate protein structure prediction with AlphaFold. <em>Nature</em> (2021).</a><a target="_blank" rel="noopener" href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkab1061/6430488">Varadi, M <em>et al</em>. AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models. <em>Nucleic Acids Research</em> (2021).</a>  </p>
+<p>AlphaFold Data Copyright (2021) DeepMind Technologies Limited.</p>
+<h3 id="Feedback"><a href="#Feedback" class="headerlink" title="Feedback"></a>Feedback</h3><p>If you want to share feedback on an AlphaFold structure prediction please contact <a href="mailto:alphafold@deepmind.com">alphafold@deepmind.com</a>. If you have feedback on the website or experience any bugs please contact <a href="mailto:afdbhelp@ebi.ac.uk">afdbhelp@ebi.ac.uk</a>.</p>
+<h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>The AlphaFold Data and other information provided on this site is for theoretical modelling only, caution should be exercised in its use. It is provided ‘as-is’ without any warranty of any kind, whether expressed or implied. For clarity, no warranty is given that use of the information shall not infringe the rights of any third party. The information is not intended to be a substitute for professional medical advice, diagnosis, or treatment, and does not constitute medical or other professional advice.  </p>
+<p>Use of the AlphaFold Protein Structure Database is subject to EMBL-EBI <a target="_blank" rel="noopener" href="https://www.ebi.ac.uk/about/terms-of-use/">Terms of Use</a>.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/08/20220308/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20220306" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,7 +566,7 @@
   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Randomly-select-a-file-from-a-directory"><span class="toc-number">2.</span> <span class="toc-text">Randomly select a file from a directory</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Zinc-finger"><span class="toc-number">3.</span> <span class="toc-text">Zinc finger</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CRAN"><span class="toc-number">4.</span> <span class="toc-text">CRAN</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ITIS"><span class="toc-number">5.</span> <span class="toc-text">ITIS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Integrated-Taxonomic-Information-System-Database-Download"><span class="toc-number">5.1.</span> <span class="toc-text">Integrated Taxonomic Information System - Database Download</span></a></li></ol></li></ol>
 </div>
 
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">##############################################################</span><br><span class="line"># Journal club for NFX1</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;PABP&#x2F;Summary&#x2F;PABP_Project.pptx; \</span><br><span class="line">setsid wps $&#123;i&#125;</span><br><span class="line"># </span><br></pre></td></tr></table></figure>
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">##############################################################</span><br><span class="line"># Journal club for NFX1</span><br><span class="line"># </span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;PABP&#x2F;Summary&#x2F;PABP_Project.pptx; \</span><br><span class="line">setsid wps $&#123;i&#125;</span><br><span class="line"># NCBI-BLAST+ installation</span><br><span class="line">i&#x3D;https:&#x2F;&#x2F;ftp.ncbi.nlm.nih.gov&#x2F;blast&#x2F;executables&#x2F;blast+&#x2F;LATEST&#x2F;ncbi-blast-2.12.0+-x64-linux.tar.gz</span><br><span class="line">axel $&#123;i&#125;</span><br><span class="line">tar zxvpf *.gz</span><br></pre></td></tr></table></figure>
 <h1 id="Randomly-select-a-file-from-a-directory"><a href="#Randomly-select-a-file-from-a-directory" class="headerlink" title="Randomly select a file from a directory"></a>Randomly select a file from a directory</h1><ul>
 <li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/553674/how-to-pick-a-random-file-from-a-folder-without-repetition-using-bash">find - How to pick a random file from a folder without repetition using bash? - Unix &amp; Linux Stack Exchange</a></li>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/414164/how-can-i-select-random-files-from-a-directory-in-bash">How can I select random files from a directory in bash? - Stack Overflow</a></li>
@@ -4166,107 +4547,6 @@ if key == ord(&quot;q&quot;):
 
 
   
-    <article id="post-20220211" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/11/20220211/">20220211</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/11/20220211/" class="archive-article-date">
-  	<time datetime="2022-02-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20220211</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Primer-for-HSV-2"><span class="toc-number">2.</span> <span class="toc-text">Primer for HSV-2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Audio-Editor"><span class="toc-number">3.</span> <span class="toc-text">Audio Editor</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#INSDC"><span class="toc-number">4.</span> <span class="toc-text">INSDC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#International-Nucleotide-Sequence-Database-Collaboration"><span class="toc-number">4.1.</span> <span class="toc-text">International Nucleotide Sequence Database Collaboration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-submit-data"><span class="toc-number">4.2.</span> <span class="toc-text">How to submit data</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><h1 id="Primer-for-HSV-2"><a href="#Primer-for-HSV-2" class="headerlink" title="Primer for HSV-2"></a>Primer for HSV-2</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;Tech&#x2F;DNA_Amplification&#x2F;RPA&#x2F;Testing&#x2F;RPA_HSV-2</span><br><span class="line">cat Primer_Detection.tbl | sed &#39;s&#x2F;^&#x2F;&gt;&#x2F;&#39; | sed &#39;s&#x2F;\t&#x2F;\n&#x2F;&#39; | sed &#39;s&#x2F;G&#x2F;g&#x2F;&#39; &gt; Primer_Detection.fas</span><br></pre></td></tr></table></figure>
-<h1 id="Audio-Editor"><a href="#Audio-Editor" class="headerlink" title="Audio Editor"></a>Audio Editor</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://linuxhint.com/audio_editing_music_making_software_linux/">Best Audio Editing and Music Making Software for Linux</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.techowns.com/best-audio-editors-for-linux/">10 Best Audio Editors For Linux in 2021 (Free &amp; Paid) - TechOwns</a></li>
-<li><a target="_blank" rel="noopener" href="https://itsfoss.com/best-audio-editors-linux/">Best Audio Editors For Linux - It’s FOSS</a></li>
-</ul>
-<h1 id="INSDC"><a href="#INSDC" class="headerlink" title="INSDC"></a>INSDC</h1><p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c07f3bd-5d47-44a6-b906-8271e9558882/Untitled.png" alt="INSDC"></p>
-<p><a target="_blank" rel="noopener" href="https://www.insdc.org/">International Nucleotide Sequence Database Collaboration</a></p>
-<h2 id="International-Nucleotide-Sequence-Database-Collaboration"><a href="#International-Nucleotide-Sequence-Database-Collaboration" class="headerlink" title="International Nucleotide Sequence Database Collaboration"></a><strong>International Nucleotide Sequence Database Collaboration</strong></h2><ul>
-<li>  The International Nucleotide Sequence Database Collaboration (INSDC) is a long-standing foundational initiative that operates between <a target="_blank" rel="noopener" href="http://www.ddbj.nig.ac.jp/">DDBJ</a>, <a target="_blank" rel="noopener" href="https://www.ebi.ac.uk/">EMBL-EBI</a> and <a target="_blank" rel="noopener" href="http://www.ncbi.nlm.nih.gov/">NCBI</a>. INSDC covers the spectrum of data raw reads, through alignments and assemblies to functional annotation, enriched with contextual information relating to samples and experimental configurations.</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.notion.so/756c27c89be1407699cedae64a50279d">Untitled</a></p>
-<ul>
-<li>  The INSDC advisory board, the <a target="_blank" rel="noopener" href="https://www.insdc.org/advisors">International Advisory Committee</a>, is made up of members of each of the databases’ advisory bodies. The International Advisory Committee published a <a target="_blank" rel="noopener" href="http://science.sciencemag.org/content/352/6287/780.1">paper</a> reiterating the importance of depositing data to INSDC.</li>
-<li>  Individuals submitting data to the international sequence databases should be aware of <a target="_blank" rel="noopener" href="https://www.insdc.org/policy">INSDC policy</a>.</li>
-</ul>
-<h2 id="How-to-submit-data"><a href="#How-to-submit-data" class="headerlink" title="How to submit data"></a><strong>How to submit data</strong></h2><ul>
-<li>  For full details of how to submit data to the databases, please select a collaborating partner.</li>
-<li>  <a target="_blank" rel="noopener" href="http://www.ddbj.nig.ac.jp/">DDBJ</a>, <a target="_blank" rel="noopener" href="http://www.ebi.ac.uk/ena">ENA</a>, <a target="_blank" rel="noopener" href="http://www.ncbi.nlm.nih.gov/Genbank/index.html">GenBank</a></li>
-<li>  The INSDC Feature Table Definition Document is available <a target="_blank" rel="noopener" href="https://www.insdc.org/documents/feature-table">here</a>.</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/11/20220211/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -4410,18 +4690,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">离线语音助手</a>
               </li>
              
@@ -4435,6 +4703,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Special symbols</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4510,6 +4790,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">zcat</a>
               </li>
              
@@ -4535,22 +4831,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Comments in Rmd</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KinhDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pan.baidu.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SRA tumor cell lines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Zhang Li</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4678,19 +4958,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4806,6 +5086,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Word</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Flu Biosafety</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
@@ -4823,22 +5119,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">菲吉乐科</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Word</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Flu Biosafety</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4862,11 +5142,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4906,15 +5186,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -4974,14 +5254,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">中文语音识别</a>
               </li>
              
@@ -4998,19 +5270,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">山西疾控</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">审计</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Antibody Purification</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Water</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5034,18 +5298,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">疾病负担</a>
               </li>
              
@@ -5055,6 +5307,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Burden of Disease</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5087,6 +5351,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">山西疾控</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">审计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Antibody Purification</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Water</a>
               </li>
              
               <li class="article-tag-list-item">
