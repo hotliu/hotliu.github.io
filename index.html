@@ -182,13 +182,70 @@
       
 <div id="toc" class="toc-article">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AlphaFold-Protein-Structure-Database"><span class="toc-number">2.</span> <span class="toc-text">AlphaFold Protein Structure Database</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Home"><span class="toc-number">3.</span> <span class="toc-text">Home</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Background"><span class="toc-number">3.0.1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-out-more"><span class="toc-number">3.0.2.</span> <span class="toc-text">Find out more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What%E2%80%99s-next"><span class="toc-number">3.0.3.</span> <span class="toc-text">What’s next?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution"><span class="toc-number">3.0.4.</span> <span class="toc-text">License and attribution</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Downloads"><span class="toc-number">3.1.</span> <span class="toc-text">Downloads</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-model-organism-proteomes"><span class="toc-number">3.1.1.</span> <span class="toc-text">Compressed prediction files for model organism proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-global-health-proteomes"><span class="toc-number">3.1.2.</span> <span class="toc-text">Compressed prediction files for global health proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-Swiss-Prot"><span class="toc-number">3.1.3.</span> <span class="toc-text">Compressed prediction files for Swiss-Prot:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution-1"><span class="toc-number">3.1.4.</span> <span class="toc-text">License and attribution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feedback"><span class="toc-number">3.1.5.</span> <span class="toc-text">Feedback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disclaimer"><span class="toc-number">3.1.6.</span> <span class="toc-text">Disclaimer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Protein-Structure-Prediction"><span class="toc-number">4.</span> <span class="toc-text">Protein Structure Prediction</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MUSCLE-v5"><span class="toc-number">2.</span> <span class="toc-text">MUSCLE v5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Next-generation-MUSCLE"><span class="toc-number">2.1.</span> <span class="toc-text">Next-generation MUSCLE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Highest-accuracy-scalable-to-thousands-of-sequences"><span class="toc-number">2.2.</span> <span class="toc-text">Highest accuracy, scalable to thousands of sequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alignment-ensembles"><span class="toc-number">2.3.</span> <span class="toc-text">Alignment ensembles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Muscle-v5-commands"><span class="toc-number">2.4.</span> <span class="toc-text">Muscle v5 commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Building-MUSCLE"><span class="toc-number">2.5.</span> <span class="toc-text">Building MUSCLE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pages-4"><span class="toc-number">2.5.1.</span> <span class="toc-text">Pages 4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Clone-this-wiki-locally"><span class="toc-number">2.5.1.0.1.</span> <span class="toc-text">Clone this wiki locally</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Design-of-the-build-system"><span class="toc-number">2.5.2.</span> <span class="toc-text">Design of the build system</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building-under-Visual-Studio-on-Windows"><span class="toc-number">2.5.3.</span> <span class="toc-text">Building under Visual Studio on Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building-under-Cygwin-on-Windows"><span class="toc-number">2.5.4.</span> <span class="toc-text">Building under Cygwin on Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compiler-dependencies-and-options"><span class="toc-number">2.5.5.</span> <span class="toc-text">Compiler dependencies and options</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building-under-Linux"><span class="toc-number">2.5.6.</span> <span class="toc-text">Building under Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building-under-OSX"><span class="toc-number">2.5.7.</span> <span class="toc-text">Building under OSX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Building-using-a-github-workflow"><span class="toc-number">2.5.8.</span> <span class="toc-text">Building using a github workflow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ref"><span class="toc-number">2.6.</span> <span class="toc-text">Ref</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AlphaFold-Protein-Structure-Database"><span class="toc-number">3.</span> <span class="toc-text">AlphaFold Protein Structure Database</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Home"><span class="toc-number">3.1.</span> <span class="toc-text">Home</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Background"><span class="toc-number">3.1.1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Find-out-more"><span class="toc-number">3.1.2.</span> <span class="toc-text">Find out more</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What%E2%80%99s-next"><span class="toc-number">3.1.3.</span> <span class="toc-text">What’s next?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution"><span class="toc-number">3.1.4.</span> <span class="toc-text">License and attribution</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Downloads"><span class="toc-number">3.2.</span> <span class="toc-text">Downloads</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-model-organism-proteomes"><span class="toc-number">3.2.1.</span> <span class="toc-text">Compressed prediction files for model organism proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-global-health-proteomes"><span class="toc-number">3.2.2.</span> <span class="toc-text">Compressed prediction files for global health proteomes:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compressed-prediction-files-for-Swiss-Prot"><span class="toc-number">3.2.3.</span> <span class="toc-text">Compressed prediction files for Swiss-Prot:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License-and-attribution-1"><span class="toc-number">3.2.4.</span> <span class="toc-text">License and attribution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feedback"><span class="toc-number">3.2.5.</span> <span class="toc-text">Feedback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disclaimer"><span class="toc-number">3.2.6.</span> <span class="toc-text">Disclaimer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Protein-Structure-Prediction"><span class="toc-number">4.</span> <span class="toc-text">Protein Structure Prediction</span></a></li></ol>
 </div>
 
         <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Book of &quot;Protein Structure Prediction&quot;</span><br><span class="line">i&#x3D;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;References&#x2F;eBooks&#x2F;Important_Protocols&#x2F;Protein_Structure_Prediction.pdf; \</span><br><span class="line">setsid okular $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="AlphaFold-Protein-Structure-Database"><a href="#AlphaFold-Protein-Structure-Database" class="headerlink" title="AlphaFold Protein Structure Database"></a><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/">AlphaFold Protein Structure Database</a></h1><h1 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h1><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p><a target="_blank" rel="noopener" href="https://deepmind.com/blog/article/putting-the-power-of-alphafold-into-the-worlds-hands">AlphaFold</a> is an AI system developed by <a target="_blank" rel="noopener" href="https://deepmind.com/">DeepMind</a> that predicts a protein’s 3D structure from its amino acid sequence. It regularly achieves accuracy competitive with experiment.</p>
+<h1 id="MUSCLE-v5"><a href="#MUSCLE-v5" class="headerlink" title="MUSCLE v5"></a>MUSCLE v5</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://www.drive5.com/muscle/">MUSCLE</a></li>
+</ul>
+<h2 id="Next-generation-MUSCLE"><a href="#Next-generation-MUSCLE" class="headerlink" title="Next-generation MUSCLE"></a>Next-generation MUSCLE</h2><p>Muscle v5 is a major re-write of MUSCLE based on new algorithms.</p>
+<h2 id="Highest-accuracy-scalable-to-thousands-of-sequences"><a href="#Highest-accuracy-scalable-to-thousands-of-sequences" class="headerlink" title="Highest accuracy, scalable to thousands of sequences"></a>Highest accuracy, scalable to thousands of sequences</h2><p>Compared to previous versions, Muscle v5 is much more accurate, is often faster, and scales to much larger datasets. At the time of writing (late 2021), Muscle v5 has the highest scores on multiple alignment benchmarks including Balibase, Bralibase, Prefab and Balifam. It can align tens of thousands of sequences with high accuracy on a low-cost commodity computer (say, an 8-core Intel CPU with 32 Gb RAM). On large datasets, Muscle v5 is 20-30% more accurate than MAFFT and Clustal-Omega.</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2HmjHStpu7I"><img src="https://drive5.com/muscle5/manual/youtube_talk_muscle5.png"></a></p>
+<h2 id="Alignment-ensembles"><a href="#Alignment-ensembles" class="headerlink" title="Alignment ensembles"></a>Alignment ensembles</h2><p>Muscle v5 can generate ensembles of high-accuracy alternative alignments. All replicates have equal average accuracy on benchmark test, including the MSA made with default parameters. By comparing results of downstream analysis (trees, structure prediction…) on different replicates, you can assess the effects of alignment errors on your study.</p>
+<h2 id="Muscle-v5-commands"><a href="#Muscle-v5-commands" class="headerlink" title="Muscle v5 commands"></a>Muscle v5 commands</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/commands.html">MUSCLE documentation</a></li>
+</ul>
+<p>Align sequences to generate MSA or ensemble<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_align.html">align</a> Align sequences using the <a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/ppp_algo.html">PPP algorithm</a><br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_super5.html">super5</a> Align large datasets using the <a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/super5_algo.html">Super5 algorithm</a></p>
+<p>Manipulate ensembles<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_efastats.html">efastats</a> Report miscellaneous information about MSAs<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_efa_explode.html">efa_explode</a> Extract FASTA files from EFA file<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_fa2efa.html">fa2efa</a> Combine FASTA files into one EFA file<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_disperse.html">disperse</a> Calculate the dispersion of an ensemble<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_addconfseqs.html">addconfseqs</a> Calculate column confidences<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_letterconf.html">letterconf</a> Calculate letter confidences<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_maxcc.html">maxcc</a> Extract MSA with highest CC<br><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/cmd_resample.html">resample</a> Generate resampled ensemble</p>
+<h2 id="Building-MUSCLE"><a href="#Building-MUSCLE" class="headerlink" title="Building MUSCLE"></a>Building MUSCLE</h2><p>Robert Edgar edited this page on Jan 16 · <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE/_history">15 revisions</a></p>
+<h3 id="Pages-4"><a href="#Pages-4" class="headerlink" title="Pages 4"></a>Pages 4</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE">Building MUSCLE</a></p>
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#design-of-the-build-system">Design of the build system</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-visual-studio-on-windows">Building under Visual Studio on Windows</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-cygwin-on-windows">Building under Cygwin on Windows</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#compiler-dependencies-and-options">Compiler dependencies and options</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-linux">Building under Linux</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-osx">Building under OSX</a></li>
+<li>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-using-a-github-workflow">Building using a github workflow</a></li>
+</ul>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Contributing-to-MUSCLE">Contributing to MUSCLE</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Design-of-Makefiles-and-Visual-Studio-project-build">Design of Makefiles and Visual Studio project build</a></p>
+</li>
+<li><p>  <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/MUSCLE-wiki-home">MUSCLE wiki home</a></p>
+</li>
+</ul>
+<h5 id="Clone-this-wiki-locally"><a href="#Clone-this-wiki-locally" class="headerlink" title="Clone this wiki locally"></a>Clone this wiki locally</h5><h3 id="Design-of-the-build-system"><a href="#Design-of-the-build-system" class="headerlink" title="Design of the build system"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#design-of-the-build-system"></a>Design of the build system</h3><p>This page is a how-to. See <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Design-of-Makefiles-and-Visual-Studio-project-build">build design wiki page</a> for background on why things work this way.</p>
+<h3 id="Building-under-Visual-Studio-on-Windows"><a href="#Building-under-Visual-Studio-on-Windows" class="headerlink" title="Building under Visual Studio on Windows"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-visual-studio-on-windows"></a>Building under Visual Studio on Windows</h3><p>You can use the <a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/downloads/">free edition of Visual Studio for C++</a>. Open the <code>muscle.sln</code> solution file, select <code>Release</code> configuration for the <code>x64</code> platform and select Build Solution (F7).</p>
+<p>At the time of writing I’m using Microsoft Visual Studio Community 2022 v17.0.4, this is likely to change as updates to VS are released. Generally the project imports seamlessly into new releases. Everything in the project is pretty standard for a C++ console project, except for a pre-build step which embeds git version information into the executable so that it can be displayed at runtime. This step checks whether <a target="_blank" rel="noopener" href="https://www.cygwin.com/">Cygwin</a> is installed. If Cygwin is found, then the git version in <code>gitver.txt</code> is updated.</p>
+<h3 id="Building-under-Cygwin-on-Windows"><a href="#Building-under-Cygwin-on-Windows" class="headerlink" title="Building under Cygwin on Windows"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-cygwin-on-windows"></a>Building under Cygwin on Windows</h3><p>I don’t generally do this because the native Windows executable compiled by Visual Studio is compatible with Cygwin (though of course Cygwin paths are not interpreted, you must use native Windows paths). Using the native gcc package for Cygwin seems to produce a 32-bit exe which is limited to 2Gb RAM. You can probably compile a 64-bit exe using the <code>mingw64-x86_64-gcc</code> package; I haven’t investigated this. Please let me know if you can provide a robust recipe for compiling a 64-bit exe with OpenMP under Cygwin.</p>
+<h3 id="Compiler-dependencies-and-options"><a href="#Compiler-dependencies-and-options" class="headerlink" title="Compiler dependencies and options"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#compiler-dependencies-and-options"></a>Compiler dependencies and options</h3><p>The first post of MUSCLE v5 had several compiler portability issues. Most of these turned out to be caused by <code>typedef unsigned char byte;</code> which conflicts with <code>std::byte</code> in recent versions of C++. This is solved by <code>#define byte __mybyte__</code> in <code>myutils.cpp</code>. At the time of writing, I’ve tested the most recent code and Makefile (Version 5.1) on a wide range of compilers including gcc versions from v8 to v11 and it seems to be much more portable now.</p>
+<h3 id="Building-under-Linux"><a href="#Building-under-Linux" class="headerlink" title="Building under Linux"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-linux"></a>Building under Linux</h3><p>Change to the <code>src/</code> directory and run <code>make</code>. The Makefile requires that g++, make, sed and git are installed.</p>
+<h3 id="Building-under-OSX"><a href="#Building-under-OSX" class="headerlink" title="Building under OSX"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-under-osx"></a>Building under OSX</h3><p>Change to the <code>src/</code> directory and run <code>make</code>. The Makefile requires that gcc v11, make, sed and git are installed. Note that in recent releases of OSX, “gcc” is an alias for clang. You must install genuine gcc v11 and its OpenMP library; currently <code>brew install gcc</code> does this.</p>
+<p>Unfortunately, the OSX build creates a binary that requires gcc-11 to be installed when the binary is run (see <a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/issues/21">https://github.com/rcedgar/muscle/issues/21</a>). If you have a solution to this, please post a message to issue #21.</p>
+<h3 id="Building-using-a-github-workflow"><a href="#Building-using-a-github-workflow" class="headerlink" title="Building using a github workflow"></a><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE#building-using-a-github-workflow"></a>Building using a github workflow</h3><p>See these workflows under the .github/ directory of the repo.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/blob/main/.github/workflows/build_linux.yml">build_linux.yml</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/blob/main/.github/workflows/build_osx.yml">build_osx.yml</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/blob/main/.github/workflows/build_windows.yml">build_windows.yml</a></p>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=muscle+3.8+manual&qs=NWB&pq=muscle+3.8+man&sc=1-14&cvid=5BE590A753674AD08FBE75EACAD627A6&FORM=QBLH&sp=1">muscle 3.8 manual - Bing</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE &lt; Multiple Sequence Alignment &lt; EMBL-EBI</a></li>
+<li><a target="_blank" rel="noopener" href="https://rcc.uchicago.edu/docs/software/modules/muscle/midway2/3.8.31.html">muscle/3.8.31 — Research Computing Center Manual</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle/wiki/Building-MUSCLE">Building MUSCLE · rcedgar/muscle Wiki</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rcedgar/muscle">rcedgar/muscle: Multiple sequence alignment with top benchmark scores scalable to thousands of sequences. Generates replicate alignments, enabling assessment of downstream analyses such as trees and predicted structures.</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2020.08.07.241729v2">Petabase-scale sequence alignment catalyses viral discovery | bioRxiv</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41586-021-04332-2#data-availability">Petabase-scale sequence alignment catalyses viral discovery | Nature</a></li>
+<li><a target="_blank" rel="noopener" href="https://drive5.com/muscle5/manual/">MUSCLE documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://peerj.com/articles/10805/">Syncmers are more sensitive than minimizers for selecting conserved k‑mers in biological sequences [PeerJ]</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/2020.01.12.903351v1">URMAP, an ultra-fast read mapper | bioRxiv</a></li>
+<li><a target="_blank" rel="noopener" href="https://peerj.com/articles/5030/">Taxonomy annotation and guide tree errors in 16S rRNA databases [PeerJ]</a></li>
+<li><a target="_blank" rel="noopener" href="https://peerj.com/articles/4652/">Accuracy of taxonomy prediction for 16S rRNA and fungal ITS sequences [PeerJ]</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.biorxiv.org/content/10.1101/192211v1">Updating the 97% identity threshold for 16S ribosomal RNA OTUs | bioRxiv</a></li>
+</ul>
+<h1 id="AlphaFold-Protein-Structure-Database"><a href="#AlphaFold-Protein-Structure-Database" class="headerlink" title="AlphaFold Protein Structure Database"></a><a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/">AlphaFold Protein Structure Database</a></h1><h2 id="Home"><a href="#Home" class="headerlink" title="Home"></a>Home</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p><a target="_blank" rel="noopener" href="https://deepmind.com/blog/article/putting-the-power-of-alphafold-into-the-worlds-hands">AlphaFold</a> is an AI system developed by <a target="_blank" rel="noopener" href="https://deepmind.com/">DeepMind</a> that predicts a protein’s 3D structure from its amino acid sequence. It regularly achieves accuracy competitive with experiment.</p>
 <p>DeepMind and EMBL’s European Bioinformatics Institute (<a target="_blank" rel="noopener" href="http://www.ebi.ac.uk/">EMBL-EBI</a>) have partnered to create AlphaFold DB to make these predictions freely available to the scientific community. The first release covered the human proteome and the proteomes of several other <a target="_blank" rel="noopener" href="https://www.alphafold.ebi.ac.uk/download">key organisms</a>, while the second release added the majority of manually curated UniProt entries (<a target="_blank" rel="noopener" href="https://www.expasy.org/resources/uniprotkb-swiss-prot">Swiss-Prot</a>). In 2022 we plan to expand the database to cover a large proportion of all catalogued proteins (the over 100 million in <a target="_blank" rel="noopener" href="https://www.uniprot.org/help/uniref">UniRef90</a>).</p>
 <p><img src="https://www.alphafold.ebi.ac.uk/assets/img/Q8I3H7_1.png"></p>
 <p>Q8I3H7: May protect the malaria parasite against attack by the immune system. Mean pLDDT 85.57.</p>
@@ -4742,18 +4799,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Exiftool</a>
               </li>
              
@@ -4767,6 +4812,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Document Organization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">FTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">English Correction online</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5098,6 +5155,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
               </li>
              
@@ -5134,10 +5195,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">COVID-19  Vaccine</a>
               </li>
              
@@ -5154,10 +5211,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">B95-8-Nrf2 project</a>
               </li>
              
@@ -5167,6 +5220,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Google Patents</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">B95-8_Nrf2 project</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5350,38 +5407,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Potassium Chloride</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">KCl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">openvpn</a>
               </li>
              
@@ -5435,6 +5460,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wikipedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Potassium Chloride</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">KCl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Android File Transfer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -5562,14 +5619,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tasker</a>
               </li>
              
@@ -5579,6 +5628,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Agent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Proteomics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">GanttProject</a>
               </li>
              
               <li class="article-tag-list-item">
