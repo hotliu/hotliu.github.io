@@ -158,6 +158,164 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20211103" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/03/20211103/">20211103</a>
+    </h1>
+  
+
+        
+        <a href="/2021/11/03/20211103/" class="archive-article-date">
+  	<time datetime="2021-11-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20211103</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fix-broken-JPEG"><span class="toc-number">2.</span> <span class="toc-text">Fix broken JPEG</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection-Nature-Immunology"><span class="toc-number">3.</span> <span class="toc-text">A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection | Nature Immunology</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection"><span class="toc-number">4.</span> <span class="toc-text">A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">4.1.</span> <span class="toc-text">Abstract</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R-CRAN-update"><span class="toc-number">5.</span> <span class="toc-text">R&#x2F;CRAN update</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PCR-Efficiency"><span class="toc-number">6.</span> <span class="toc-text">PCR Efficiency</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rename"><span class="toc-number">7.</span> <span class="toc-text">Rename</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#URL"><span class="toc-number">8.</span> <span class="toc-text">URL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Chromium-X1"><span class="toc-number">8.1.</span> <span class="toc-text">Chromium&#x2F;X1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Google-Chrome-X1"><span class="toc-number">8.2.</span> <span class="toc-text">Google Chrome&#x2F;X1</span></a></li></ol></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;肿瘤室工作&#x2F;教育部论文评审</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T_10&#x2F;eBooks&#x2F;Masterpiece&#x2F;Quran</span><br><span class="line"># </span><br><span class="line">#####################################################</span><br><span class="line"># </span><br><span class="line">ffmpeg -i &lt;input&gt; -filter:v fps&#x3D;fps&#x3D;30 &lt;output&gt;</span><br><span class="line"></span><br><span class="line">i&#x3D;1.mp4</span><br><span class="line">ffmpeg -i $&#123;i&#125; -filter:v fps&#x3D;fps&#x3D;5 $&#123;i%.*&#125;_Treated.mp4</span><br><span class="line"></span><br><span class="line">ffmpeg -i input.mov -r 24 -y output.mov</span><br><span class="line"></span><br><span class="line">i&#x3D;1.mp4</span><br><span class="line">ffmpeg -i $&#123;i&#125; -r 5 -y $&#123;i%.*&#125;_5.mp4</span><br><span class="line"></span><br><span class="line">MP4Box -add test_track1.h264:fps&#x3D;30 -new 2.mp4</span><br><span class="line"></span><br><span class="line">MP4Box -add $&#123;i&#125;#video -raw 1 -new test; MP4Box -add test_track1.h264:fps&#x3D;5 -new $&#123;i%.mp4&#125;_5FPS.mp4</span><br><span class="line"></span><br><span class="line">-FileModifyDate</span><br><span class="line"></span><br><span class="line">exiftool -d &quot;%Y%m%d_%H%M%S&quot;  -CreateDate sample.jpg</span><br><span class="line"></span><br><span class="line">exiftool -d &quot;%Y%m%d_%H%M%S&quot;  -FileModifyDate *.*</span><br><span class="line"></span><br><span class="line">find . -depth -execdir rename -v &#39;s&#x2F;[\[\]]+&#x2F;\_&#x2F;g&#39; &#123;&#125; \;</span><br><span class="line"></span><br><span class="line">find .&#x2F; -name &quot;*_?.*&quot; -depth -execdir rename -v &#39;s&#x2F;\_&#x2F;&#x2F;&#39; &#123;&#125; \;</span><br><span class="line"></span><br><span class="line">exiftool -b -ThumbnailImage -w $HOME&#x2F;recovered&#x2F;%f_thumb.%e -ext JPG &lt;input directory&gt;</span><br><span class="line"></span><br><span class="line">exiftool -b -ThumbnailImage -w $HOME&#x2F;recovered&#x2F;%f_thumb.%e -ext JPG .&#x2F;</span><br><span class="line"></span><br><span class="line">cd ~&#x2F;recovered</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Fix-broken-JPEG"><a href="#Fix-broken-JPEG" class="headerlink" title="Fix broken JPEG"></a>Fix broken JPEG</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/1230879/how-to-repair-corrupted-jpeg-files-that-still-have-their-thumbnails">data recovery - How to repair corrupted JPEG files that still have their thumbnails? - Ask Ubuntu</a></li>
+<li><a target="_blank" rel="noopener" href="http://manpages.ubuntu.com/manpages/bionic/man1/recoverjpeg.1.html">Ubuntu Manpage: recoverjpeg - recover jpeg pictures from a filesystem image</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.quora.com/How-can-I-recover-a-corrupt-JPG-image-using-Linux">How to recover a corrupt JPG image using Linux - Quora</a></li>
+<li><a target="_blank" rel="noopener" href="https://superuser.com/questions/611058/repair-broken-jpg-files">linux - Repair broken jpg files - Super User</a></li>
+</ul>
+<h1 id="A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection-Nature-Immunology"><a href="#A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection-Nature-Immunology" class="headerlink" title="A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection | Nature Immunology"></a><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z">A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection | Nature Immunology</a></h1><ul>
+<li>  Perspective</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#article-info">Published: 18 October 2021</a></li>
+</ul>
+<h1 id="A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection"><a href="#A-global-effort-to-dissect-the-human-genetic-basis-of-resistance-to-SARS-CoV-2-infection" class="headerlink" title="A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection"></a>A global effort to dissect the human genetic basis of resistance to SARS-CoV-2 infection</h1><ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Evangelos-Andreakos">Evangelos Andreakos</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Laurent-Abel">Laurent Abel</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Donald_C_-Vinh">Donald C. Vinh</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-El_bieta-Kaja">Elżbieta Kaja</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Beth_A_-Drolet">Beth A. Drolet</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Qian-Zhang">Qian Zhang</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Cliona-O_Farrelly">Cliona O’Farrelly</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Giuseppe-Novelli">Giuseppe Novelli</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Carlos-Rodr_guez_Gallego">Carlos Rodríguez-Gallego</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Filomeen-Haerynck">Filomeen Haerynck</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Carolina-Prando">Carolina Prando</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Aurora-Pujol">Aurora Pujol</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#group-1">COVID Human Genetic Effort</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Helen_C_-Su">Helen C. Su</a>, </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Jean_Laurent-Casanova">Jean-Laurent Casanova</a> &amp; </li>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#auth-Andr_s_N_-Spaan">András N. Spaan</a> </li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.nature.com/ni"><em>Nature Immunology</em></a> (2021)<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z#citeas">Cite this article</a></p>
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41590-021-01030-z/metrics">Metricsdetails</a></li>
+</ul>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>SARS-CoV-2 infections display tremendous interindividual variability, ranging from asymptomatic infections to life-threatening disease. Inborn errors of, and autoantibodies directed against, type I interferons (IFNs) account for about 20% of critical COVID-19 cases among SARS-CoV-2-infected individuals. By contrast, the genetic and immunological determinants of resistance to infection per se remain unknown. Following the discovery that autosomal recessive deficiency in the DARC chemokine receptor confers resistance to <em>Plasmodium vivax</em>, autosomal recessive deficiencies of chemokine receptor 5 (CCR5) and the enzyme FUT2 were shown to underlie resistance to HIV-1 and noroviruses, respectively. Along the same lines, we propose a strategy for identifying, recruiting, and genetically analyzing individuals who are naturally resistant to SARS-CoV-2 infection.</p>
+<h1 id="R-CRAN-update"><a href="#R-CRAN-update" class="headerlink" title="R/CRAN update"></a>R/CRAN update</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.rstudio.com/products/rstudio/download/#download">Download the RStudio IDE - RStudio</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.rstudio.com/2021/10/12/rstudio-connect-2021-09-0-tableau-analytics-extensions/">RStudio Connect 2021.09.0 Tableau Analytics Extensions | RStudio Blog</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;CRAN&#x2F;RStudio&#x2F;Installers&#x2F;Desktop&#x2F;rstudio-2021.09.0-351-amd64.deb # RStudio Desktop updated</span><br><span class="line"># </span><br><span class="line"></span><br><span class="line">install.packages(c(&quot;caret&quot;, &quot;coin&quot;, &quot;corpcor&quot;, &quot;cpp11&quot;, &quot;digest&quot;, &quot;e1071&quot;, &quot;fastICA&quot;, &quot;future&quot;, &quot;ipred&quot;, &quot;knitr&quot;, &quot;labelled&quot;, &quot;libcoin&quot;, &quot;lubridate&quot;, &quot;mime&quot;, &quot;parallelly&quot;, &quot;party&quot;, &quot;progressr&quot;, &quot;questionr&quot;, &quot;RcppArmadillo&quot;, &quot;readr&quot;, &quot;recipes&quot;, &quot;rlang&quot;, &quot;rmarkdown&quot;, &quot;shiny&quot;, &quot;stringi&quot;, &quot;tidyr&quot;, &quot;tinytex&quot;, &quot;tzdb&quot;, &quot;visNetwork&quot;, &quot;vroom&quot;, &quot;xfun&quot;))</span><br><span class="line"># </span><br><span class="line">install.packages(c(&quot;caret&quot;, &quot;coin&quot;, &quot;digest&quot;, &quot;e1071&quot;, &quot;fastICA&quot;, &quot;ipred&quot;, &quot;libcoin&quot;, &quot;lubridate&quot;, &quot;mime&quot;, &quot;party&quot;, &quot;RcppArmadillo&quot;, &quot;readr&quot;, &quot;recipes&quot;, &quot;rlang&quot;, &quot;stringi&quot;, &quot;tidyr&quot;, &quot;tzdb&quot;, &quot;vroom&quot;, &quot;xfun&quot;))</span><br><span class="line"># </span><br><span class="line">##############################################################</span><br><span class="line"># </span><br><span class="line">for ( i in c(&quot;caret&quot;, &quot;coin&quot;, &quot;digest&quot;, &quot;e1071&quot;, &quot;fastICA&quot;, &quot;ipred&quot;, &quot;libcoin&quot;, &quot;lubridate&quot;, &quot;mime&quot;, &quot;party&quot;, &quot;RcppArmadillo&quot;, &quot;readr&quot;, &quot;recipes&quot;, &quot;rlang&quot;, &quot;stringi&quot;, &quot;tidyr&quot;, &quot;tzdb&quot;, &quot;vroom&quot;, &quot;xfun&quot;)) &#123; cat(i, &quot;\n&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;); install.packages(i, dependencies &#x3D; TRUE)&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># for ( i in c(&quot;caret&quot;, &quot;coin&quot;, &quot;digest&quot;, &quot;e1071&quot;, &quot;fastICA&quot;, &quot;ipred&quot;, &quot;libcoin&quot;, &quot;lubridate&quot;, &quot;mime&quot;, &quot;party&quot;, &quot;RcppArmadillo&quot;, &quot;readr&quot;, &quot;recipes&quot;, &quot;rlang&quot;, &quot;stringi&quot;, &quot;tidyr&quot;, &quot;tzdb&quot;, &quot;vroom&quot;, &quot;xfun&quot;)) &#123; cat(i)&#125;</span><br><span class="line"># </span><br><span class="line">install.packages(&quot;flextable&quot;, dependencies &#x3D; TRUE)</span><br><span class="line"># </span><br><span class="line">sudo apt install libcurl # Shell command</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="PCR-Efficiency"><a href="#PCR-Efficiency" class="headerlink" title="PCR Efficiency"></a>PCR Efficiency</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=pcr+efficiency&oq=pcr+effici&aqs=chrome.0.0i512l2j69i57j0i20i263i512j0i512l6.3049j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8">pcr efficiency - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.thermofisher.com/de/de/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/real-time-pcr-basics/real-time-pcr-troubleshooting-tool/gene-expression-quantitation-troubleshooting/poor-pcr-efficiency.html#:~:text=The%20efficiency%20of%20the%20PCR%20should%20be%20between%2090%E2%80%93100,the%20PCR%20has%20poor%20efficiency.">Poor PCR Efficiency | Thermo Fisher Scientific - DE</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.thermofisher.com/de/de/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/real-time-pcr-basics/efficiency-real-time-pcr-qpcr.html">Efficiency of Real-Time PCR | Thermo Fisher Scientific - DE</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4822216/">How good is a PCR efficiency estimate: Recommendations for precise and robust qPCR efficiency assessments</a></li>
+<li><a target="_blank" rel="noopener" href="https://biosistemika.com/blog/qpcr-efficiency-over-100/">Understanding qPCR Efficiency and Why It Exceeds 100% | BioSistemika</a></li>
+</ul>
+<h1 id="Rename"><a href="#Rename" class="headerlink" title="Rename"></a>Rename</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25152995/linux-shell-renaming-files-to-creation-time">linux-shell: renaming files to creation time - Stack Overflow</a></li>
+</ul>
+<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h2 id="Chromium-X1"><a href="#Chromium-X1" class="headerlink" title="Chromium/X1"></a>Chromium/X1</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=pcr+efficiency&oq=pcr+effici&aqs=chrome.0.0i512l2j69i57j0i20i263i512j0i512l6.3049j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8">pcr efficiency - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.thermofisher.com/de/de/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/real-time-pcr-basics/real-time-pcr-troubleshooting-tool/gene-expression-quantitation-troubleshooting/poor-pcr-efficiency.html#:~:text=The%20efficiency%20of%20the%20PCR%20should%20be%20between%2090%E2%80%93100,the%20PCR%20has%20poor%20efficiency.">Poor PCR Efficiency | Thermo Fisher Scientific - DE</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.thermofisher.com/de/de/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/real-time-pcr-basics/efficiency-real-time-pcr-qpcr.html">Efficiency of Real-Time PCR | Thermo Fisher Scientific - DE</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4822216/">How good is a PCR efficiency estimate: Recommendations for precise and robust qPCR efficiency assessments</a></li>
+<li><a target="_blank" rel="noopener" href="https://biosistemika.com/blog/qpcr-efficiency-over-100/">Understanding qPCR Efficiency and Why It Exceeds 100% | BioSistemika</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=linux+howto+fix+jpeg+command+line&newwindow=1&client=ubuntu&sxsrf=AOaemvIR04j1zjebDtzxYLW8Tv6T6G8JxA:1636309102773&ei=bhiIYY3qLsKajLsPudmQiAk&oq=linux+howto+fix+jpeg+command+line&gs_lcp=Cgdnd3Mtd2l6EAMyCgghEBYQChAdEB5KBAhBGABQAFgAYABoAHAAeACAAeMCiAHjApIBAzMtMZgBAA&sclient=gws-wiz&ved=0ahUKEwiN2cC27ob0AhVCDWMBHbksBJEQ4dUDCA4&uact=5">linux howto fix jpeg command line - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/582892/how-to-repair-corrupted-jpeg-file-that-still-get-their-thumbail-done-correctly">data recovery - How to repair Corrupted jpeg file that still get their thumbail done correctly? - Unix &amp; Linux Stack Exchange</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nucleustechnologies.com/blog/free-methods-to-repair-corrupt-jpeg-files/">Best Free Methods to Repair Corrupt JPEG Files in 2021</a></li>
+<li><a target="_blank" rel="noopener" href="https://ubuntuforums.org/showthread.php?t=2279499">[SOLVED] Anyone know of linux program to recover corrupted jpeg files</a></li>
+<li><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/1230879/how-to-repair-corrupted-jpeg-files-that-still-have-their-thumbnails">data recovery - How to repair corrupted JPEG files that still have their thumbnails? - Ask Ubuntu</a></li>
+<li><a target="_blank" rel="noopener" href="http://manpages.ubuntu.com/manpages/bionic/man1/recoverjpeg.1.html">Ubuntu Manpage: recoverjpeg - recover jpeg pictures from a filesystem image</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.quora.com/How-can-I-recover-a-corrupt-JPG-image-using-Linux">How to recover a corrupt JPG image using Linux - Quora</a></li>
+<li><a target="_blank" rel="noopener" href="https://superuser.com/questions/611058/repair-broken-jpg-files">linux - Repair broken jpg files - Super User</a></li>
+</ul>
+<h2 id="Google-Chrome-X1"><a href="#Google-Chrome-X1" class="headerlink" title="Google Chrome/X1"></a>Google Chrome/X1</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mailhz.qiye.163.com/js6/main.jsp?sid=D0uAUCm8RDN9V9d6pjt3YvEa2bsq5OAI&hl=zh_CN#module=thread.ThreadModule%7C%7B%22area%22%3A%22normal%22%2C%22isThread%22%3Atrue%2C%22viewType%22%3A%22%22%2C%22id%22%3A%22ADUAnQCLEs16k5frXf6OMKpL%22%2C%22fid%22%3A1%7D">病毒病所</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.editorialmanager.com/thelancetid/default1.aspx">Editorial Manager®</a></li>
+<li><a href="chrome://downloads/">Downloads</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.notion.so/Create-links-backlinks-cb3c406403c940b68af52de121e05474">Create links &amp; backlinks</a></li>
+<li><a target="_blank" rel="noopener" href="https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html#ref-R-flextable">10.3 Other packages for creating tables | R Markdown Cookbook</a></li>
+<li><a href="file:///media/ht/ht_5T/Work/References/Computer_Tips/Linux_Tips/Not_Classified/PDF_Learning.html">PDF Learning</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/hotliu/2e324b1cf5c91f20a4d076418af45d62">README.md</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hotliu/Log/blob/master/README.md">Log/README.md at master · hotliu/Log</a></li>
+<li><a target="_blank" rel="noopener" href="https://hotliu.github.io/">Hongtu Liu</a></li>
+<li><a target="_blank" rel="noopener" href="https://lwss.cdgdc.edu.cn/#/thesis/review/assess/index?thReviewAssessT=%5Bobject%20Object%5D">论文评审——学位论文质量监测服务平台</a></li>
+<li><a target="_blank" rel="noopener" href="http://192.168.1.7/">Phone Drive</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/11/03/20211103/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20211031" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1678,221 +1836,9 @@ sys    0m0.661s</code></pre>
 
 
   
-    <article id="post-20210909" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/09/20210909/">20210909</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/09/20210909/" class="archive-article-date">
-  	<time datetime="2021-09-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210909</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Figma"><span class="toc-number">2.</span> <span class="toc-text">Figma</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Water"><span class="toc-number">3.</span> <span class="toc-text">Water</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#URL"><span class="toc-number">4.</span> <span class="toc-text">URL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Water-1"><span class="toc-number">4.1.</span> <span class="toc-text">Water</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chinese-conversion"><span class="toc-number">5.</span> <span class="toc-text">Chinese conversion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8ubuntu16-04%E4%B8%8A%E4%BD%BF%E7%94%A8opencc%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.1.</span> <span class="toc-text">在ubuntu16.04上使用opencc工具进行转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%AE%9E%E7%8E%B0%E4%B8%AD%E6%96%87%E7%9A%84%E7%B9%81%E7%AE%80%E8%BD%AC%E6%8D%A2"><span class="toc-number">5.2.</span> <span class="toc-text">python实现中文的繁简转换</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ls *.jpg | xargs -I % img2pdf % &gt; %.pdf</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T_10&#x2F;eBooks&#x2F;History&#x2F;四库全书&#x2F;Git</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;kr-shadow&#x2F;KR2.git</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;kr-shadow&#x2F;KR2</span><br><span class="line"># </span><br><span class="line">for i in &#123;1..5&#125;; do git clone https:&#x2F;&#x2F;github.com&#x2F;kr-shadow&#x2F;KR$&#123;i&#125;; done</span><br><span class="line">for i in &#123;1,3,4,5&#125;; do git clone https:&#x2F;&#x2F;github.com&#x2F;kr-shadow&#x2F;KR$&#123;i&#125;; done</span><br><span class="line"># </span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;kr-shadow&#x2F;KR3 # 1628</span><br><span class="line">KR1, 721</span><br><span class="line">KR2, 539</span><br><span class="line">KR4, 1268</span><br><span class="line">KR5, 1655</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T_10&#x2F;eBooks&#x2F;History&#x2F;四库全书&#x2F;Git&#x2F;</span><br><span class="line"># </span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Design_n_Prototyping&#x2F;Figma&#x2F;Instructions&#x2F;1</span><br><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Stored_Softs&#x2F;Cross_Platform_Softs&#x2F;Design_n_Prototyping&#x2F;Figma&#x2F;Instructions&#x2F;</span><br></pre></td></tr></table></figure>
-<h1 id="Figma"><a href="#Figma" class="headerlink" title="Figma"></a>Figma</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://flathub.org/apps/details/io.github.Figma_Linux.figma_linux">Figma for Linux—Linux Apps on Flathub</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Installation</span><br><span class="line">flatpak install flathub io.github.Figma_Linux.figma_linuxcontent_copy</span><br><span class="line"># Run</span><br><span class="line">flatpak run io.github.Figma_Linux.figma_linuxcontent_copy</span><br></pre></td></tr></table></figure>
-<h1 id="Water"><a href="#Water" class="headerlink" title="Water"></a>Water</h1><ul>
-<li><a target="_blank" rel="noopener" href="http://www.xianzhidaquan.com/m/product.php?id=5486">乾隆盘山志 16卷附首5卷 乾隆20年刻本 PDF下载 | 宗教资料 | 县志下载 | 中国县志大全</a><h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h2 id="Water-1"><a href="#Water-1" class="headerlink" title="Water"></a>Water</h2></li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=%E8%81%96%E7%A5%96%E4%BB%81%E7%9A%87%E5%B8%9D&newwindow=1&client=ubuntu&sxsrf=AOaemvIXsXl3gaJYNZM4XBoV6po6pKyzZg:1631324101130&ei=xQc8YZG8B5CH9u8PkeiMsAs&oq=%E8%81%96%E7%A5%96%E4%BB%81%E7%9A%87%E5%B8%9D&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGABQgMTkAViAxOQBYLPH5AFoAHAAeACAAQCIAQCSAQCYAQCgAQKgAQHAAQE&sclient=gws-wiz&ved=0ahUKEwjRsr7s4_XyAhWQg_0HHRE0A7YQ4dUDCA4&uact=5">www.google.com</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.xianzhidaquan.com/m/product.php?id=5486">乾隆盘山志 16卷附首5卷 乾隆20年刻本 PDF下载 | 宗教资料 | 县志下载 | 中国县志大全</a></li>
-<li><a target="_blank" rel="noopener" href="http://js.ifeng.com/xz/humanity/detail_2015_06/05/3975653_0.shtml">徐州清代名僧智朴_江苏频道_凤凰网</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%99%BA%E6%9C%B4%E7%A6%85%E5%B8%88/2738231">智朴禅师_百度百科</a></li>
-<li><a target="_blank" rel="noopener" href="https://sina.cn/?sourceurl=https://k.sina.cn/article_1960785875_74df37d302000raxy.html&sourcefrom=kd">手机新浪网</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%99%BA%E6%9C%B4%E7%A6%85%E5%B8%88/2738231">智朴禅师_百度百科</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/reference/2738231/7628xrVImAitg4RwDD0dyDhjGuL8zembP3HGfJXg5aIsI-NSuHXrjPAW8EiUBpLceSp2GobYUuNPAmJd4epJBYh3_EILu3M">baike.baidu.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://m.fx361.com/news/2019/0401/4956006.html">盘山佛教的发展_参考网</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%9B%98%E5%B1%B1/697272">盘山（中国5A级旅游景区）_百度百科</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.tjdag.gov.cn/zh_tjdag/wangShangZT/ZhuanTiZT/tjdag/wszt/ztzt/dazdhsgsztjkz/9856929/index.html">来自盘山抗日根据地的歌声 —— 抗战歌谣背后的故事</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=%E7%9B%98%E5%B1%B1%E5%BF%97+txt&oq=%E7%9B%98%E5%B1%B1%E5%BF%97+txt&aqs=chrome..69i57.1663j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8">盘山志 txt - Google Search</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.gukebook.com/CVJy_1310649092.html">修真十书盘山语录卷共1.6万字精彩大结局_最新章节列表_王志谨</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/kr-shadow/KR2">github.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/">github.com</a></li>
-<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%99%BA%E6%9C%B4%E7%A6%85%E5%B8%88/2738231#2">baike.baidu.com</a></li>
-<li><a href="chrome://downloads/">Downloads</a></li>
-</ul>
-<h1 id="Chinese-conversion"><a href="#Chinese-conversion" class="headerlink" title="Chinese conversion"></a>Chinese conversion</h1><h2 id="在ubuntu16-04上使用opencc工具进行转换"><a href="#在ubuntu16-04上使用opencc工具进行转换" class="headerlink" title="在ubuntu16.04上使用opencc工具进行转换"></a>在ubuntu16.04上使用opencc工具进行转换</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_35757704/article/details/87972491">Linux上简体繁体文件的相互转换_呆萌的代Ma-CSDN博客_linux 繁体转简体</a></li>
-</ul>
-<p>1.安装<br>    sudo apt-get install opencc</p>
-<p>2.简体 —-》 繁体<br>    opencc -i 简体.txt -o 繁体.txt -c zhs2zht.ini</p>
-<p>3.繁体 —-》 简体<br>    opencc -i 繁体.txt -o 简体.txt -c zht2zhs.ini</p>
-<p>注：</p>
-<p>1.-i 后是需要转的文件  -o后是转换后的文件名<br>2.-c后是转换的规则，为固定写法<br>3.简体中文是Simplified Chinese /繁体中文是 Traditional Chinese</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T_10&#x2F;eBooks&#x2F;History&#x2F;四库全书&#x2F;Git&#x2F;1</span><br><span class="line">find . -type f -name &quot;*.txt&quot; &gt; 1.list</span><br><span class="line">opencc -i 1.list -o 2.list -c t2s # 繁转简</span><br><span class="line">find . -type f -name &quot;*.txt&quot; &gt; 3.list</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line">for i in *.txt; do opencc -i $&#123;i&#125; -o $&#123;i&#125;.text -c t2s; done</span><br></pre></td></tr></table></figure>
-<p>下面是opencc的可用配置：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>s2t.json</td>
-<td>简体到繁体</td>
-</tr>
-<tr>
-<td>t2s.json</td>
-<td>繁体到简体</td>
-</tr>
-<tr>
-<td>s2tw.json</td>
-<td>简体到台湾正体</td>
-</tr>
-<tr>
-<td>tw2s.json</td>
-<td>台湾正体到简体</td>
-</tr>
-<tr>
-<td>s2hk.json</td>
-<td>简体到香港繁体（香港小学学习字词表标准）</td>
-</tr>
-<tr>
-<td>hk2s.json</td>
-<td>香港繁体（香港小学学习字词表标准）到简体</td>
-</tr>
-<tr>
-<td>s2twp.json</td>
-<td>简体到繁体（台湾正体标准）并转换为台湾常用词汇</td>
-</tr>
-<tr>
-<td>tw2sp.json</td>
-<td>繁体（台湾正体标准）到简体并转换为中国大陆常用词汇</td>
-</tr>
-</tbody></table>
-<h2 id="python实现中文的繁简转换"><a href="#python实现中文的繁简转换" class="headerlink" title="python实现中文的繁简转换"></a>python实现中文的繁简转换</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/ec253132d58e04d69bf8734e50ba0cf3.html">python实现中文的繁简转换 - 华为云</a></li>
-</ul>
-<p>_<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/ec253132d58e04d69bf8734e50ba0cf3.html#">作者：中科小白</a>_时间: 2021-02-05 10:05:22</p>
-<p><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic-A-1.html">标签：</a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic_cfc089f7d2c4bd1de60b70fd7f8fd40a.html" title="数据处理">数据处理</a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic_23eeeb4347bdd26bfc6b7ee9a3b755dd.html" title="python">python</a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic_4b6f37b410ab9ed029b3dae11ec453d8.html" title="繁简体转换">繁简体转换</a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic_aaad0fe5f5fc7cad2b93f10a1be56ac0.html" title="中文预处理">中文预处理</a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/articles/topic_6980b87ce069c57e24d9a49c7e77a2fb.html" title="opencc-python">opencc-python</a></p>
-<p>【摘要】我们在对中文语料作预处理时，往往会遇到繁简体转换的问题，这也是预处理环节的重要一环。 python支持繁简体转换的库有许多，常用是opencc，但是由于直接安装opencc或是opencc-python现在会遇到许多路径、编译的问题，因此给大家推荐一种安装方式。网址见：<a target="_blank" rel="noopener" href="https://pypi.org/project/opencc-python-reimplemented/">https://pypi.org/project/opencc-python-reimplemented/</a> 安装命令： …</p>
-<p><a target="_blank" rel="noopener" href="https://activity.huaweicloud.com/cps/index.html?organic_ytg_arc">### [云推官招募计划]<br>推荐新用户注册并下单即可获得现金奖励<br>上新</a></p>
-<p><a target="_blank" rel="noopener" href="https://education.huaweicloud.com/programs/2708d678-5dbb-4be2-afc4-88ae69f0dca3/about?isAuth=0&amp?organic">### [免费课程]<br>Python编程学习路径<br>上新</a></p>
-<p><a target="_blank" rel="noopener" href="https://activity.huaweicloud.com/free_test/index.html?organic_arc">### [免费套餐]<br>1核2G 2核4G云服务器免费 云数据库0元试用<br>热销</a></p>
-<p><a target="_blank" rel="noopener" href="https://activity.huaweicloud.com/Developer_0820.html?organic_arc">### [开发利器]<br>开发者专享优惠，解决研发效率、集成难题<br>公告</a></p>
-<p>我们在对中文语料作预处理时，往往会遇到繁简体转换的问题，这也是预处理环节的重要一环。</p>
-<p>python支持繁简体转换的库有许多，常用是opencc，但是由于直接安装opencc或是opencc-python现在会遇到许多路径、编译的问题，因此给大家推荐一种安装方式。网址见：<a target="_blank" rel="noopener" href="https://pypi.org/project/opencc-python-reimplemented/">https://pypi.org/project/opencc-python-reimplemented/</a></p>
-<p>安装命令：</p>
-<pre><code>pip install opencc-python-reimplemented</code></pre>
-<p>安装后会显示：</p>
-<pre><code>...
-Successfully installed opencc-python-reimplemented-0.1.5</code></pre>
-<p>调用库的示例demo：</p>
-<pre><code>&gt;&gt;&gt; from opencc import OpenCC
-&gt;&gt;&gt; a = &#39;我是中国人&#39;
-&gt;&gt;&gt; b = OpenCC(&#39;s2t&#39;).convert(a)
-&gt;&gt;&gt; print(b)
-我是中國人</code></pre>
-<p>如果是对整个文件进行繁简体转换，需要用到文件读写函数，给出我的一个脚本示例：</p>
-<pre><code>from opencc import OpenCC
-
-INPUT = open(&#39;/data1/usertest/syb/Name-Entity-Recognition/wikiextractor/extracted/AA/wiki_01&#39;)
-a = INPUT.read()
-b = OpenCC(&#39;t2s&#39;).convert(a)
-OUTPUT = open(&#39;./zh_wiki_01&#39;,&#39;w&#39;)
-OUTPUT.write(b)
-OUTPUT.close()</code></pre>
-<p>以上给出的示例中都是将繁体转换为简体，即’s2t’模式，该库中还支持许多其他模式，如’t2s‘（简体到繁体）、’s2tw’（简体到台湾标准繁体）、’tw2s’（台湾标准简体到繁体）等。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Figma</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Chinese conversion</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OpenCC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">中文简繁转换</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/09/20210909/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -2021,15 +1967,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2209,34 +2155,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Usage of my mobile device</a>
               </li>
              
@@ -2277,19 +2195,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+                <a href="javascript:void(0)" class="js-tag color2">Ji Tianjiao</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+                <a href="javascript:void(0)" class="js-tag color2">Size reduction of PDF</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+                <a href="javascript:void(0)" class="js-tag color5">tBHQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
+                <a href="javascript:void(0)" class="js-tag color3">Tert-Butylhydroquinone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Authentication Required</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gene Report</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">BioGPS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2306,6 +2236,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">rsync</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SRA-Tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2334,6 +2280,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Microsoft Office</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2373,6 +2335,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">E-MTAB-173</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Essential</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Kaiju</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mobile phone</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Hexo categories</a>
               </li>
              
@@ -2385,27 +2375,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">pdftk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">PDF password</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MUSCLE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MSA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bacteriophage</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Phage RnD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2489,35 +2459,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NCBI Datasets</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HFMD</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NSFC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">E-MTAB-173</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Essential</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Kaiju</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Mobile phone</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2529,15 +2475,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Virus proliferation cell free system</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CEB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Installation Log in X1</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2569,6 +2515,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">凉山项目</a>
               </li>
              
@@ -2593,11 +2543,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
+                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2609,11 +2559,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrcpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">恢复真实容量</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ADB</a>
+                <a href="javascript:void(0)" class="js-tag color1">Pen drive Encrypting</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2641,15 +2591,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">COVID-19</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Vaccine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2709,19 +2671,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Collison</a>
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nebulizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">气溶胶发生器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thesis Nrf2</a>
+                <a href="javascript:void(0)" class="js-tag color5">Gist</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2734,14 +2688,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">R</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Gist</a>
               </li>
              
               <li class="article-tag-list-item">
