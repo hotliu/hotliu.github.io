@@ -158,6 +158,749 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20210703" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/03/20210703/">20210703</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/03/20210703/" class="archive-article-date">
+  	<time datetime="2021-07-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210703</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+    
+
+      
+<div id="toc" class="toc-article">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B4%85%E6%A8%93%E5%A4%A2-%E8%87%BA%E5%A4%A7%E9%96%8B%E6%94%BE%E5%BC%8F%E8%AA%B2%E7%A8%8B-NTU-OpenCourseWare"><span class="toc-number">2.</span> <span class="toc-text">紅樓夢 - 臺大開放式課程 (NTU OpenCourseWare)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">文具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Powershell-BASH"><span class="toc-number">4.</span> <span class="toc-text">Powershell&#x2F;BASH</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E5%92%8C%E5%88%86%E4%BA%AB-Windows-PowerShell-%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B-%E6%8A%80%E6%9C%AF%E5%92%8C%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81"><span class="toc-number">4.1.</span> <span class="toc-text">收集和分享 Windows PowerShell 相关教程,技术和最新动态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E9%9B%86%E5%92%8C%E5%88%86%E4%BA%AB-Windows-PowerShell-%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B-%E6%8A%80%E6%9C%AF%E5%92%8C%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81-1"><span class="toc-number">4.2.</span> <span class="toc-text">收集和分享 Windows PowerShell 相关教程,技术和最新动态</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BASH%E5%92%8CPowerShell%E5%91%BD%E4%BB%A4%E5%AF%B9%E7%85%A7%E8%A1%A8-5"><span class="toc-number">5.</span> <span class="toc-text">BASH和PowerShell命令对照表 5</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E8%A1%A8%E8%AF%84%E8%AE%BA-%E5%8F%96%E6%B6%88%E5%9B%9E%E5%A4%8D"><span class="toc-number">5.0.1.</span> <span class="toc-text">发表评论 取消回复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9D%A1%E8%AF%84%E8%AE%BA-%E2%80%9CBASH%E5%92%8CPowerShell%E5%91%BD%E4%BB%A4%E5%AF%B9%E7%85%A7%E8%A1%A8%E2%80%9D"><span class="toc-number">5.1.</span> <span class="toc-text">5 条评论 “BASH和PowerShell命令对照表”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%AF%BC%E8%88%AA"><span class="toc-number">5.1.1.</span> <span class="toc-text">文章导航</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Yuji-Miyahara"><span class="toc-number">6.</span> <span class="toc-text">Yuji Miyahara</span></a></li></ol>
+</div>
+
+        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;YouTubes&#x2F;Book_Reading&#x2F;红楼梦&#39;; cd $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Projects&#x2F;止吐环&#39;; cd $&#123;i&#125;</span><br><span class="line"># </span><br><span class="line">PC &#x2F;media&#x2F;ht&#x2F;ht_5T_9&#x2F;ht_RS&#x2F;Audio</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.marxists.org/">Marxists Internet Archive</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html">BASH和PowerShell命令对照表 – PowerShell 中文博客</a></li>
+</ul>
+<h1 id="紅樓夢-臺大開放式課程-NTU-OpenCourseWare"><a href="#紅樓夢-臺大開放式課程-NTU-OpenCourseWare" class="headerlink" title="紅樓夢 - 臺大開放式課程 (NTU OpenCourseWare)"></a><a target="_blank" rel="noopener" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S120/1">紅樓夢 - 臺大開放式課程 (NTU OpenCourseWare)</a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axel &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT09V01.mp4&#39;</span><br><span class="line">axel &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT08V01.mp4&#39;</span><br><span class="line">axel &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT07V01.mp4&#39;</span><br><span class="line">axel &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT06V01.mp4&#39;</span><br><span class="line">#</span><br><span class="line">axel &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT08V01.mp4&#39;  &#39;http:&#x2F;&#x2F;140.112.161.118&#x2F;dl_video.php?fn&#x3D;100S116_CT07V01.mp4&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="文具"><a href="#文具" class="headerlink" title="文具"></a>文具</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.google.com/search?q=%E6%89%93%E9%92%89%E5%99%A8&oq=%E6%89%93%E9%92%89%E5%99%A8&aqs=chrome..69i57.987j0j7&client=ubuntu&sourceid=chrome&ie=UTF-8">打钉器 - Google Search</a></li>
+<li><a target="_blank" rel="noopener" href="https://search.jd.com/Search?keyword=%E8%AE%A2%E4%B9%A6%E5%99%A8&enc=utf-8&wq=%E8%AE%A2%E4%B9%A6%E5%99%A8&pvid=d8c80e1846484c24acb99e09b0ad802b">订书器 - 商品搜索 - 京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/10041991927.html">可得优（KW-triO） 5990电动订书机智能感应全自动装订订书器订书机可订25页【图片 价格 品牌 报价】-京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/1586822.html">【国誉SLN-MSH110D】日本国誉(KOKUYO)学生办公便携式环保无针订书机 10枚装订 32<em>121</em>100mm 黑 SLN-MSH110D【行情 报价 价格 评测】-京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/10606513684.html">日本国誉无针订书机压纹 MPH105 新型办公订书器 钉书机 可装订5枚纸 白色【图片 价格 品牌 报价】-京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/69674744532.html">德国（MASTERPROOF)电动射钉机 打钉枪两用 码钉枪打钉机木工电动多用 电动气钉机射钉机 门钉直钉两用电动码钉枪+取钉器+收纳盒【图片 价格 品牌 报价】-京东</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/5821597.html">【勒塔LT-NG193】勒塔(LETA) 重型手动三用打钉枪(送门钉U型钉T钉各500枚)打钉机码钉机射钉器LT-NG193【行情 报价 价格 评测】-京东</a></li>
+</ul>
+<h1 id="Powershell-BASH"><a href="#Powershell-BASH" class="headerlink" title="Powershell/BASH"></a>Powershell/BASH</h1><p><a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#content">Skip to content</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.pstips.net/"><img src="https://www.pstips.net/wp-content/uploads/2013/11/PSTips-Logo.png" alt="首页"></a></p>
+<h2 id="收集和分享-Windows-PowerShell-相关教程-技术和最新动态"><a href="#收集和分享-Windows-PowerShell-相关教程-技术和最新动态" class="headerlink" title="收集和分享 Windows PowerShell 相关教程,技术和最新动态"></a>收集和分享 Windows PowerShell 相关教程,技术和最新动态</h2><h2 id="收集和分享-Windows-PowerShell-相关教程-技术和最新动态-1"><a href="#收集和分享-Windows-PowerShell-相关教程-技术和最新动态-1" class="headerlink" title="收集和分享 Windows PowerShell 相关教程,技术和最新动态"></a>收集和分享 Windows PowerShell 相关教程,技术和最新动态</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.pstips.net/#">PowerShell资源</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/powershell-online-tutorials">PowerShell 在线教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell-%e8%a7%86%e9%a2%91%e6%95%99%e7%a8%8b">PowerShell 视频教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell/powershell-team-blog">PowerShell团队博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell/powershell-news">PowerShell 资讯</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/toolbox.html">开发工具</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/dwqa-questions">PowerShell交流中心</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/dwqa-ask-question">PowerShell在线提问</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/dwqa-questions">PowerShell交流中心</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/ebook">PowerShell 电子书</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/ebook/cn">中文电子书</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/ebook/en">英文电子书</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/site-online-announce.html">关于本站</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/cat/%e7%ab%99%e5%86%85%e5%85%ac%e5%91%8a">站内公告</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/wp-admin/profile.php">用户中心</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/insert-code">在博客上贴PowerShell代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/resolve-the-invalid-key-issue-when-reret-password.html">解决QQ邮箱重置密码链接无效的问题</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/wp-login.php">登陆</a></li>
+</ul>
+<p>主菜单</p>
+<p><a target="_blank" rel="noopener" href="https://www.pstips.net/" title="PowerShell 中文博客">首页</a> » <a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell" title="Powershell">Powershell</a> » <a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell/powershell-tips" title="Powershell小技巧">Powershell小技巧</a> » BASH和PowerShell命令对照表</p>
+<h1 id="BASH和PowerShell命令对照表-5"><a href="#BASH和PowerShell命令对照表-5" class="headerlink" title="BASH和PowerShell命令对照表 5"></a>BASH和PowerShell命令对照表 <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#tc-comment-title" title="5 评论开启 BASH和PowerShell命令对照表">5</a></h1><p><a target="_blank" rel="noopener" href="https://www.pstips.net/2016/12/05" title="下午 4:57">2016年12月5日</a>  在 <a target="_blank" rel="noopener" href="https://www.pstips.net/cat/powershell/powershell-tips" title="参看所有文章 Powershell小技巧">Powershell小技巧</a> 来自 <a target="_blank" rel="noopener" href="https://www.pstips.net/author/jailman" title="参看所有文章 jailman">jailman</a></p>
+<hr>
+<p>(adsbygoogle = window.adsbygoogle || []).push({});</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ash</td>
+<td><strong>PowerShell</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td><strong>Scripting Basics</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Put a “shebang” at the beginning of the file:<code>  &lt;br&gt;#!/bin/bash</code>  <br>Change permissions on script file to allow execution.</td>
+<td>Give the file a ps1 extension. For downloaded scripts, unblock the file under file properties in Windows Explorer.</td>
+<td>Steps for making scripting files run. In PowerShell, the first time you do scripting, you will need to set the appropriate security settings: run PowerShell as administrator and type <code>set-executionpolicy remotesigned</code>.</td>
+</tr>
+<tr>
+<td><code>source (or) .</code></td>
+<td><code>.</code></td>
+<td>shell built-in: execute the commands in a file</td>
+</tr>
+<tr>
+<td><code>echo _String_</code></td>
+<td><code>echo _String_</code> (or)  <br><code>Write-Host _String_</code></td>
+<td>Prints <em>String</em> to the screen. In PowerShell, <code>Write-Host</code> forces the output to the screen instead of being a return value.</td>
+</tr>
+<tr>
+<td><code>_var_=0</code>  <br>(No spaces around =)</td>
+<td><code>$_var_ = 0</code></td>
+<td>Creates a variable <em>$var</em>. In BASH, do not put whitespace around the equals sign, and do not use a $ in the variable assignment.</td>
+</tr>
+<tr>
+<td><code>let _var_=$_var_+5</code> (or)<code>  &lt;br&gt;_var_=$(( $_var_ + 5 ))</code></td>
+<td><code>$_var_ += 5</code></td>
+<td>Add 5 to $<em>var</em></td>
+</tr>
+<tr>
+<td><code># _comment_</code></td>
+<td><code># _comment_</code></td>
+<td>A comment</td>
+</tr>
+<tr>
+<td><strong>Strings</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>= !=</code></td>
+<td><code>-eq -ne -ceq -cne</code></td>
+<td>String comparisons. In BASH, be sure the strings litereals are in quotes.</td>
+</tr>
+<tr>
+<td><code>&quot;&quot; | gm</code></td>
+<td></td>
+<td>Get a list of non-static string members</td>
+</tr>
+<tr>
+<td><code>[string] | gm -static</code></td>
+<td></td>
+<td>Get a list of static string members</td>
+</tr>
+<tr>
+<td><code>$&#123;_string_#_text_to_remove_&#125;</code></td>
+<td><code>_string_.TrimStart(&quot;_characters_&quot;)</code></td>
+<td>Removes the specified characters/text from the beginning of the string.</td>
+</tr>
+<tr>
+<td><code>$&#123;_string_%_text_to_remove_&#125;</code></td>
+<td><code>_string_.TrimEnd(&quot;_characters_&quot;)</code></td>
+<td>Removes the specified characters/text from the end of the string.  Suppose $fnm == helloThere.txt; then ${fnm%.???} is helloThere</td>
+</tr>
+<tr>
+<td><strong>Pattern Matching</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td><code>select-string</code></td>
+<td>print lines matching a pattern</td>
+</tr>
+<tr>
+<td><code>sed</code></td>
+<td><code>-replace</code></td>
+<td>performs string transformations</td>
+</tr>
+<tr>
+<td><strong>Booleans and Conditions</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>true  false</code></td>
+<td><code>$true  $false</code></td>
+<td>Boolean literals</td>
+</tr>
+<tr>
+<td><code>-lt -gt -le -ge -eq -ne</code></td>
+<td><code>-lt -gt -le -ge -eq -ne</code></td>
+<td>Arithmetic relational operators</td>
+</tr>
+<tr>
+<td></td>
+<td><code>-like</code></td>
+<td>True if a string matches a wildcard pattern</td>
+</tr>
+<tr>
+<td></td>
+<td><code>-match</code></td>
+<td>True if a string matches a regular expressions</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Where-Object &#123; _condition_ &#125;</code></td>
+<td>Used to filter input by a condition. Remember that $_ refers to the current object being tested.</td>
+</tr>
+<tr>
+<td><code>-z $_var_</code></td>
+<td><code>$_var_ -eq $null</code></td>
+<td>True if $<em>var</em> is null</td>
+</tr>
+<tr>
+<td><code>-n $_var_</code></td>
+<td><code>$_var_ -ne $null</code></td>
+<td>True if $<em>var</em> is not null (contains one or more characters)</td>
+</tr>
+<tr>
+<td><code>-o -a</code></td>
+<td><code>-or -and</code></td>
+<td>Logical <em>or</em> and <em>and</em></td>
+</tr>
+<tr>
+<td><code>-e _file_</code></td>
+<td><code>Test-Path _file_</code></td>
+<td>True if <em>file</em> exists.</td>
+</tr>
+<tr>
+<td><code>! -e _file_</code></td>
+<td><code>! (Test-Path _file_)</code></td>
+<td>True if <em>file</em> does not exist.</td>
+</tr>
+<tr>
+<td><code>-d _file_</code></td>
+<td><code>_file_.PSISContainer</code></td>
+<td>True if <em>file</em> is a directory. In PowerShell, if <em>file</em> is not a file variable, be sure to get the file object first with <code>gi</code>.</td>
+</tr>
+<tr>
+<td><code>-s _file_</code></td>
+<td></td>
+<td>True if <em>file</em> exists and has a size greater than zero.</td>
+</tr>
+<tr>
+<td><code>_file1_ -nt _file2_</code></td>
+<td></td>
+<td>True if <em>file1</em> is newer (according to modification date) than <em>file2</em></td>
+</tr>
+<tr>
+<td><code>_file1_ -ot _file2_</code></td>
+<td></td>
+<td>True if <em>file1</em> is older (according to modification date) than <em>file2</em></td>
+</tr>
+<tr>
+<td><strong>Control Structures</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>if [ _condition_ ]  &lt;br&gt;then  &lt;br&gt;_codeblock_  &lt;br&gt;fi</code></td>
+<td><code>if (_condition_) &#123;  &lt;br&gt;_codeblock_  &lt;br&gt;&#125;</code></td>
+<td>If statement. In BASH, be sure to leave a space between the condition and the bracket.</td>
+</tr>
+<tr>
+<td><code>if [ _condition_ ]  &lt;br&gt;then  &lt;br&gt;_codeblock_  &lt;br&gt;elif [ _condition_ ]  &lt;br&gt;then  &lt;br&gt;_codeblock_  &lt;br&gt;else  &lt;br&gt;_codeblock_  &lt;br&gt;fi</code></td>
+<td><code>if (_condition_) &#123;  &lt;br&gt;_codeblock_  &lt;br&gt;&#125;  &lt;br&gt;elseif (_condition_) &#123;  &lt;br&gt;_codeblock_  &lt;br&gt;&#125;  &lt;br&gt;else &#123;  &lt;br&gt;_codeblock_  &lt;br&gt;&#125;</code></td>
+<td>If – else if – else statement</td>
+</tr>
+<tr>
+<td><code>var=0  &lt;br&gt;while [ $var -lt 10 ]  &lt;br&gt;do  &lt;br&gt;echo $var  &lt;br&gt;var=$(( $var + 1 ))  &lt;br&gt;done</code></td>
+<td><code>$var = 0  &lt;br&gt;while ($var -lt 10) &#123;  &lt;br&gt;echo $var  &lt;br&gt;$var++  &lt;br&gt;&#125;</code></td>
+<td>Prints numbers 0 through 9.</td>
+</tr>
+<tr>
+<td><code>for ((i=0; i &lt; 10; i++)) do  &lt;br&gt;echo $i  &lt;br&gt;done</code></td>
+<td><code>for ($i=0;$i -lt 10; $i++)  &lt;br&gt;&#123;  &lt;br&gt;echo $i  &lt;br&gt;&#125;</code></td>
+<td>Prints numbers 0 through 9.</td>
+</tr>
+<tr>
+<td><code>for _var_ in $_array_  &lt;br&gt;do  &lt;br&gt;_codeblock_  &lt;br&gt;done</code></td>
+<td><code>foreach ($_var_ in $_array_)  &lt;br&gt;&#123;  &lt;br&gt;_codeblock_  &lt;br&gt;&#125;</code></td>
+<td>For each loop</td>
+</tr>
+<tr>
+<td><code>continue  break</code></td>
+<td><code>continue  break</code></td>
+<td>Loop controls: continue stops current loop iteration and begins the next; break exits the loop currently being executed.</td>
+</tr>
+<tr>
+<td><code>basename _file_</code></td>
+<td><code>_file_.name</code></td>
+<td>The name of <em>file</em> without the path. In PowerShell, remember to first get the file object.</td>
+</tr>
+<tr>
+<td><code>dirname _file_</code></td>
+<td><code>_file_.directoryname</code></td>
+<td>The name directory <em>file</em> is in. In PowerShell, remember to first get the file object.</td>
+</tr>
+<tr>
+<td><code>stat -c%s $_file_</code> (or)  <br><code>$(stat -c%s $_file_)</code></td>
+<td><code>_file_.length</code></td>
+<td>The number of bytes in <em>file</em>. In PowerShell, remember to first get the file object.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>_file_.LastWriteTime</code></td>
+<td>The last modified time for <em>file</em>. Remember to first get the file object.</td>
+</tr>
+<tr>
+<td><code>_files_=`ls` </code> (or)  <br><code>_files_=$(ls)</code> (or)  <br><code>_files_=*</code></td>
+<td><code>$_files_ = Get-Item *</code></td>
+<td>Store a list of the files in the current working directory in <em>$files</em>. In PowerShell, check out the -exclude flag as well as the Get-ChildItem cmdlet.</td>
+</tr>
+<tr>
+<td><code>|  &gt;  &gt;&gt;  2&gt;  2&gt;&gt;</code></td>
+<td><code>|  &gt;  &gt;&gt;  2&gt;  2&gt;&gt;</code></td>
+<td>Piping, output and error redirection. In BASH, output redirected to <code>/dev/null</code> is gone. In PowerShell, output redirected to <code>$null</code> is gone.</td>
+</tr>
+<tr>
+<td><code>_printArg_()  &lt;br&gt;&#123;  &lt;br&gt;_echo_ $1  &lt;br&gt;&#125;</code></td>
+<td><code>function _printArg_  &lt;br&gt;&#123;  &lt;br&gt;param ($_p1_)  &lt;br&gt;_echo $p1_  &lt;br&gt;&#125;</code></td>
+<td>function to print the first argument to the screen.</td>
+</tr>
+<tr>
+<td><code>_return_five_()  &lt;br&gt;&#123;  &lt;br&gt;return _5_  &lt;br&gt;&#125;&lt;br&gt;&lt;br&gt;</code><br><br><code>_return_five_  &lt;br&gt;echo $?</code></td>
+<td><code>function _return_five_  &lt;br&gt;&#123;  &lt;br&gt;echo _5_</code>  (or)  <code>return _5_  &lt;br&gt;&#125;&lt;br&gt;&lt;br&gt;</code><br><br><code>$_value_ = _return_five_  &lt;br&gt;echo $_value_</code></td>
+<td>Function returns 5, which is printed after the function call. In PowerShell, any output in a function that is not caught is returned. The return statement merely ends the function. The return value of a BASH function is stored in the variable $?.</td>
+</tr>
+<tr>
+<td><strong>File Information/Operations</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td></td>
+<td>Listing of files. For bash, learn the options of <code>-lisa, -r, -R</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ls</code></td>
+<td>Listing of files. For PowerShell, learn <code>-f, -r, -filter,</code> and <code>-exclude</code></td>
+</tr>
+<tr>
+<td><code>tree</code></td>
+<td><code>tree</code></td>
+<td>Graphically displays the directory structure of a drive or path.</td>
+</tr>
+<tr>
+<td><code>cat</code></td>
+<td><code>cat</code></td>
+<td>List the contents of a file on the <code>stdout</code></td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td><code>more</code></td>
+<td>List the contents of a file on the <code>stdout</code>, pausing after each page</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td><code>mkdir</code></td>
+<td>Creates a directory.</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td><code>rmdir</code></td>
+<td>Deletes a folder if it is empty</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td><code>pwd</code></td>
+<td>print working directory</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td><code>cd</code></td>
+<td>Change the current directory to the one given as argument.</td>
+</tr>
+<tr>
+<td><code>pushd</code></td>
+<td><code>pushd</code></td>
+<td>Saves the current directory name on the stack, and then cd’s the one given as argument.</td>
+</tr>
+<tr>
+<td><code>popd</code></td>
+<td><code>popd</code></td>
+<td>Pop off the top-most name on the stack, and then cd to it</td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td><code>mv</code></td>
+<td>Moves or renames files. In PowerShell, check out the -force and -WhatIf flags. In BASH, check out the -f flag.</td>
+</tr>
+<tr>
+<td><code>cp -r</code></td>
+<td><code>cp -r</code></td>
+<td>Copies files and directory trees recursively.</td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td><code>cp</code></td>
+<td>Copies files. In PowerShell, check out the -force and -WhatIf flags. In BASH, check out the -f flag.</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td><code>rm</code></td>
+<td>Deletes a file. Check out the -r flag. In PowerShell, check out the -force and -WhatIf flags. In BASH, check out the -f flag.</td>
+</tr>
+<tr>
+<td><code>cat</code></td>
+<td><code>cat</code></td>
+<td>show the contents of each file in sequence</td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td><code>more</code></td>
+<td>pagination</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td><code>rm</code></td>
+<td>Remove files</td>
+</tr>
+<tr>
+<td><code>ln</code></td>
+<td></td>
+<td>Link (hard or soft) to an existing file.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>mklink</code></td>
+<td>Link (hard or soft) to an existing file. Type <code>cmd /c mklink</code> to use it in PowerShell</td>
+</tr>
+<tr>
+<td><code>chmod</code></td>
+<td><code>attrib</code></td>
+<td>Change file permissions/attributes</td>
+</tr>
+<tr>
+<td></td>
+<td><code>icacls</code></td>
+<td>Displays or modifies access control lists (ACLs) of files</td>
+</tr>
+<tr>
+<td><code>chown</code></td>
+<td><code>icacls</code></td>
+<td>Change ownership of a file. In PowerShell, multiple steps are necessary</td>
+</tr>
+<tr>
+<td><code>umask</code></td>
+<td></td>
+<td>get/set the file mode creation mask; packed vector of bits controlling the initial permissions on a newly created file</td>
+</tr>
+<tr>
+<td><code>du</code></td>
+<td><code>measure</code></td>
+<td>Disk space Used. In PowerShell, try <code>gci . -r | measure -property length -sum</code></td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td><code>Measure-Object</code></td>
+<td>word count, etc.</td>
+</tr>
+<tr>
+<td><code>od</code></td>
+<td></td>
+<td>Octal dump of file content. Almost always used with -x for hexadecimal dump</td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td></td>
+<td>Translate/substitute characters; useful in improving interoperability</td>
+</tr>
+<tr>
+<td></td>
+<td><code>assoc</code></td>
+<td>List associations of commands with extensions. Type <code>cmd /c assoc</code> to use it in PowerShell</td>
+</tr>
+<tr>
+<td><code>file</code></td>
+<td></td>
+<td>Heuristically determine the type of file content</td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td><code>select-string</code></td>
+<td>Search for a string in a file’s content. For now, learn it without regexp.</td>
+</tr>
+<tr>
+<td><code>find</code></td>
+<td><code>gci</code></td>
+<td>Locate a file. By name, etc. For now, learn it without regexp.</td>
+</tr>
+<tr>
+<td><code>which</code></td>
+<td></td>
+<td>Gives the full path name of a command</td>
+</tr>
+<tr>
+<td></td>
+<td><code>where</code></td>
+<td>Gives the full path name of a command.  Type <code>cmd /c where</code> to use it in PowerShell</td>
+</tr>
+<tr>
+<td><code>diff</code></td>
+<td><code>diff</code></td>
+<td>List the differences between two text files</td>
+</tr>
+<tr>
+<td><code>cmp, diff</code></td>
+<td><code>compare, diff</code></td>
+<td>show the differences between two files</td>
+</tr>
+<tr>
+<td></td>
+<td><code>gci . -r | sort length -descending | select -first 10</code></td>
+<td>get a list of the 10 largest files in the current directory (recursive)</td>
+</tr>
+<tr>
+<td><code>vi</code></td>
+<td><a target="_blank" rel="noopener" href="http://www.vim.org/"><code>vim</code></a></td>
+<td>A powerful text editor. For now, learn to edit simple text files with it.</td>
+</tr>
+<tr>
+<td><code>kate, leafpad</code></td>
+<td><code>notepad</code></td>
+<td>Simple text editors.</td>
+</tr>
+<tr>
+<td><code>emacs</code></td>
+<td><a target="_blank" rel="noopener" href="http://www.gnu.org/software/emacs"><code>emacs</code></a></td>
+<td>A very powerful multi-purpose text editor. For now, learn to edit simple text files with it.</td>
+</tr>
+<tr>
+<td><strong>Processes</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td><code>Measure-Command</code></td>
+<td>times commands, etc.</td>
+</tr>
+<tr>
+<td><code>ps</code></td>
+<td><code>ps</code></td>
+<td>shows current processes</td>
+</tr>
+<tr>
+<td></td>
+<td><code>gps | sort ws | select -last 5</code></td>
+<td>Get a list of the 5 processes using the most memory</td>
+</tr>
+<tr>
+<td></td>
+<td><code>gsv | where &#123;$_.Status -eq &quot;Stopped&quot;&#125;</code></td>
+<td>Get a list of stopped services</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td></td>
+<td>like ps, but with continuous updates</td>
+</tr>
+<tr>
+<td><code>bg</code></td>
+<td></td>
+<td>place a STOPped process in the background</td>
+</tr>
+<tr>
+<td><code>fg</code></td>
+<td></td>
+<td>bring a backgrounded process to foreground</td>
+</tr>
+<tr>
+<td><code>kill</code></td>
+<td><code>kill</code></td>
+<td>kills a running program</td>
+</tr>
+<tr>
+<td><code>ltrace</code></td>
+<td></td>
+<td>show lib calls made</td>
+</tr>
+<tr>
+<td><code>strace</code></td>
+<td></td>
+<td>show sys calls made</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>man</code></td>
+<td><code>man</code></td>
+<td>show reference pages</td>
+</tr>
+<tr>
+<td><code>set</code></td>
+<td><code>set</code></td>
+<td>set the values of shell variables</td>
+</tr>
+<tr>
+<td><code>set</code></td>
+<td><code>gv</code></td>
+<td>get and show the values of shell variables</td>
+</tr>
+<tr>
+<td><code>env</code></td>
+<td><code>ls env:\</code></td>
+<td>lists the current environment variables</td>
+</tr>
+<tr>
+<td><code>$PATH</code></td>
+<td><code>$env:path</code></td>
+<td>the search path</td>
+</tr>
+<tr>
+<td><code>links</code></td>
+<td></td>
+<td>WWW/News/Mail browser</td>
+</tr>
+<tr>
+<td><code>sftp, filezilla</code></td>
+<td><code> filezilla</code></td>
+<td>transfer files securely to/from a remote machine</td>
+</tr>
+<tr>
+<td><code>ssh, putty</code></td>
+<td><code> sshclient, putty</code></td>
+<td>remote login securely</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td></td>
+<td>who is on the system, and what they are doing</td>
+</tr>
+<tr>
+<td><code>df</code></td>
+<td><code>gdr</code></td>
+<td>show mounted volumes, etc.</td>
+</tr>
+</tbody></table>
+<p>原文链接： <a target="_blank" rel="noopener" href="http://cecs.wright.edu/~pmateti/Courses/233/Labs/Scripting/bashVsPowerShellTable.html">BASH and PowerShell Quick Reference</a></p>
+<p>×用微信扫描并分享</p>
+<p><strong>本文链接：</strong> <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html">https://www.pstips.net/bash-and-powershell-quick-reference.html</a><br><strong><em>请尊重原作者和编辑的辛勤劳动,欢迎转载,并注明出处!</em></strong></p>
+<p>暂时没有相关文章。</p>
+<hr>
+<h3 id="发表评论-取消回复"><a href="#发表评论-取消回复" class="headerlink" title="发表评论 取消回复"></a>发表评论 <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#respond">取消回复</a></h3><p>您的电子邮箱地址不会被公开。 必填项已用*标注</p>
+<p>评论</p>
+<p>显示名称 *</p>
+<p>电子邮箱地址 *</p>
+<p>网站地址</p>
+<h2 id="5-条评论-“BASH和PowerShell命令对照表”"><a href="#5-条评论-“BASH和PowerShell命令对照表”" class="headerlink" title="5 条评论 “BASH和PowerShell命令对照表”"></a>5 条评论 “BASH和PowerShell命令对照表”</h2><ul>
+<li><p><img src="https://thirdqq.qlogo.cn/g?b=oidb&k=TF3a1fT5A32KFcYGFVLu3Q&s=100&t=1555746093"></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html?replytocom=17417#respond">回复 ↓</a></p>
+<p>  <a target="_blank" rel="noopener" href="http://www.pstips.net/">Mooser Lee</a> <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#comment-17417">2016年12月5日 于 下午 10:34</a></p>
+<p>  感谢jailman，个人觉得这个表格内容总结的很不错，就复制了过来。<br>  等有时间了再把右边的描述列翻译过来。</p>
+<ul>
+<li><p><img src="https://secure.gravatar.com/avatar/675ca62c5c86fca0c8844e4afd3d353b?s=80&d=monsterid&r=g"></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html?replytocom=17420#respond">回复 ↓</a></p>
+<p>  jailman 文章作者 <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#comment-17420">2016年12月6日 于 上午 10:22</a></p>
+<p>  作为一名linux管理员有时使用powershell是有些无所适从的，因为一些命令用习惯了而powershell没有的话就需要gow，cygwin的辅助。<br>  当然powershell依然是强大和值得推崇的。</p>
+</li>
+</ul>
+</li>
+<li><p><img src="https://secure.gravatar.com/avatar/675ca62c5c86fca0c8844e4afd3d353b?s=80&d=monsterid&r=g"></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html?replytocom=17419#respond">回复 ↓</a></p>
+<p>  jailman 文章作者 <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#comment-17419">2016年12月6日 于 上午 10:09</a></p>
+<p>  赞！</p>
+</li>
+<li><p><img src="https://secure.gravatar.com/avatar/f51263f9e690b3ea42f481e9f13bda98?s=80&d=monsterid&r=g"></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html?replytocom=18207#respond">回复 ↓</a></p>
+<p>  Benben <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#comment-18207">2018年7月26日 于 下午 4:52</a></p>
+<p>  谢谢分享， MARK</p>
+</li>
+<li><p><img src="https://secure.gravatar.com/avatar/23891011850437c6943f907230e3658b?s=80&d=monsterid&r=g"></p>
+<p>  <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html?replytocom=18441#respond">回复 ↓</a></p>
+<p>  winds <a target="_blank" rel="noopener" href="https://www.pstips.net/bash-and-powershell-quick-reference.html#comment-18441">2019年8月27日 于 上午 10:28</a></p>
+<p>  谢谢,这表太好了,一目了然的语法区别和说明.</p>
+</li>
+</ul>
+<hr>
+<h3 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/disable-left-click-of-mouse-in-console.html">← powershell 运行界面 禁用鼠标左键</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.pstips.net/setup-powershell-on-centos.html">CentOS上面安装PowerShell →</a></li>
+</ul>
+<hr>
+<p>· © 2021 <a target="_blank" rel="noopener" href="https://www.pstips.net/" title="PowerShell 中文博客">PowerShell 中文博客</a> · <a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">[沪ICP备14006567号]</a> ·</p>
+<p> /* &lt;![CDATA[ <em>/ var viewsCacheL10n = {“admin_ajax_url”:”https:\/\/<a target="_blank" rel="noopener" href="http://www.pstips.net///wp-admin///admin-ajax.php&quot;,&quot;post_id&quot;:&quot;6009&quot;%7D">www.pstips.net\\/wp-admin\\/admin-ajax.php&quot;,&quot;post_id&quot;:&quot;6009&quot;}</a>; /</em> ]]&gt; */</p>
+<h1 id="Yuji-Miyahara"><a href="#Yuji-Miyahara" class="headerlink" title="Yuji Miyahara"></a>Yuji Miyahara</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://cn.bing.com/search?q=%20Yuji%20Miyahara&qs=n&form=QBRE&sp=-1&pq=yuji%20miyahara&sc=0-13&sk=&cvid=80BC9609FBE24B819B56FA941D0D2B8C">Yuji Miyahara - 国内版 Bing</a></li>
+<li><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/author/37302222600">https://ieeexplore.ieee.org/author/37302222600</a></li>
+<li><a target="_blank" rel="noopener" href="https://sbm.hqu.edu.cn/info/1030/3469.htm">首届“精准医疗和生物医学技术”国际研讨会会议日程-华侨大学医学院</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/03/20210703/">Expand all items >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20210630" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1150,104 +1893,6 @@ a --- b
 
 
   
-    <article id="post-20210610" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/10/20210610/">20210610</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/10/20210610/" class="archive-article-date">
-  	<time datetime="2021-06-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>20210610</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-    
-
-      
-<div id="toc" class="toc-article">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-directories"><span class="toc-number">1.</span> <span class="toc-text">Working directories</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#URL"><span class="toc-number">2.</span> <span class="toc-text">URL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Long-COVID-19"><span class="toc-number">2.1.</span> <span class="toc-text">Long COVID-19</span></a></li></ol></li></ol>
-</div>
-
-        <h1 id="Working-directories"><a href="#Working-directories" class="headerlink" title="Working directories"></a>Working directories</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Closing&#x2F;Summary&#x2F;Print&#x2F;Tech</span><br><span class="line">wps *.docx &amp;</span><br><span class="line">#</span><br><span class="line">setsid wps &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Closing&#x2F;Summary&#x2F;Print&#x2F;Tech&#x2F;*.doc &#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Closing&#x2F;Summary&#x2F;Print&#x2F;Tech&#x2F;*.docx</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;Closing&#x2F;Summary.docx&#39;</span><br><span class="line">setsid wps $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Management&#x2F;BigData_Frame_20210425_1305.xlsx&#39;</span><br><span class="line">setsid wps $&#123;i&#125;</span><br><span class="line">#</span><br><span class="line">i&#x3D;&#39;&#x2F;media&#x2F;ht&#x2F;ht_5T&#x2F;Work&#x2F;Funding&#x2F;2017_重大专项&#x2F;Application&#x2F;20170809_预申报书&#x2F;预申报书提交版.pdf&#39;</span><br><span class="line">setsid okular $&#123;i&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h2 id="Long-COVID-19"><a href="#Long-COVID-19" class="headerlink" title="Long COVID-19"></a>Long COVID-19</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/prevalenceofongoingsymptomsfollowingcoronaviruscovid19infectionintheuk/1april2021">Prevalence of ongoing symptoms following coronavirus (COVID-19) infection in the UK - Office for National Statistics (ons.gov.uk)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/d41586-021-01511-z">The four most urgent questions about long COVID (nature.com)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41591-021-01283-z">Post-acute COVID-19 syndrome | Nature Medicine</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.medrxiv.org/content/10.1101/2020.12.24.20248802v3">Characterizing Long COVID in an International Cohort: 7 Months of Symptoms and Their Impact | medRxiv</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Long COVID-19</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Log//" class="article-tag-list-link color4">Log</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/10/20210610/">Expand all items >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
@@ -1367,6 +2012,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">QR Code</a>
               </li>
              
@@ -1379,27 +2028,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">p62 Draft</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PHMG</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Smallpdf</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1440,6 +2073,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Image attached</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HPV30</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Nrf2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HPV</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1567,19 +2212,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1592,10 +2249,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">container</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">E-MTAB-1733</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1635,19 +2288,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">p62</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">E7</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">wget</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Endometrial Cancer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wang Jiao</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1660,6 +2321,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">HLA-G</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">miRBase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RNA-Seq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1704,10 +2373,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HEV</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Yin Wenjiao</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1787,6 +2452,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">QQ浏览器</a>
               </li>
              
@@ -1800,10 +2469,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">EBV Detection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo Categories</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1856,26 +2521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">STGCN Model</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">BaiduNetDisk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SRA analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HLA-G analysis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HEV Sequence Download</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AnyDesk update</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1939,10 +2584,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HSV</a>
               </li>
              
@@ -1952,6 +2593,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Monkey B virus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1995,15 +2640,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算命</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">七千人大会</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Long COVID-19</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算命</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2039,22 +2684,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pH meter</a>
               </li>
              
@@ -2083,6 +2712,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Figma</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Chinese conversion</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OpenCC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">中文简繁转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">R</a>
               </li>
              
@@ -2092,14 +2737,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">miR</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2124,6 +2761,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Wikipedia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HSV-1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Exosome</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2235,15 +2880,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Margarine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Protein-Protein Docking</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PPI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Margarine</a>
               </li>
              
               <li class="article-tag-list-item">
